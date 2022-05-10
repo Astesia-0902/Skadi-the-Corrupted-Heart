@@ -54,10 +54,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
+     <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
