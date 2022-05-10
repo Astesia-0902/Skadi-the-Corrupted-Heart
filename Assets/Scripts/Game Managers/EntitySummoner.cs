@@ -7,11 +7,12 @@ namespace Game_Managers
     public class EntitySummoner : MonoBehaviour
     {
         public static List<Attacker> AttackersInGame;
+        public static List<Transform> AttackerTransformsInGame; //这个“多余”的List是给Jobs System用的
         public static Dictionary<int, GameObject> AttackerPrefebs;
         public static Dictionary<int, Queue<Attacker>> AttackerSpawnPool;
 
         private static bool _isInitialized;
-        
+
         public static void Initialize()
         {
             if (!_isInitialized)
@@ -19,9 +20,10 @@ namespace Game_Managers
                 AttackersInGame = new List<Attacker>();
                 AttackerPrefebs = new Dictionary<int, GameObject>();
                 AttackerSpawnPool = new Dictionary<int, Queue<Attacker>>();
-                AttackerSummonData[] attackerSummonDatas = Resources.LoadAll<AttackerSummonData>("Attackers");
+                AttackerTransformsInGame = new List<Transform>();
+                AttackerSummonData[] attackerSummonData = Resources.LoadAll<AttackerSummonData>("Attackers");
 
-                foreach (AttackerSummonData item in attackerSummonDatas)
+                foreach (AttackerSummonData item in attackerSummonData)
                 {
                     AttackerPrefebs.Add(item.attackerID, item.attackerPrefeb);
                     AttackerSpawnPool.Add(item.attackerID, new Queue<Attacker>());
@@ -43,13 +45,13 @@ namespace Game_Managers
         public static Attacker SpawnAttacker(int attackerID)
         {
             Attacker spawnedAttacker;
-            
+
             //检查生成单位的ID是否合法
             if (AttackerPrefebs.ContainsKey(attackerID))
             {
                 //这个队列暂存了之前嗝屁的同类型单位，如果这个队列不为空，就优先使用这个队列里的资源，节省性能
                 Queue<Attacker> referencedQueue = AttackerSpawnPool[attackerID];
-                
+
                 if (referencedQueue.Count > 0)
                 {
                     spawnedAttacker = referencedQueue.Dequeue();
@@ -58,8 +60,9 @@ namespace Game_Managers
                 else
                 {
                     //如果队列中没有现成的资源，就生成一个新的
+                    //TODO:修改敌人出生的位置
                     GameObject newAttacker =
-                        Instantiate(AttackerPrefebs[attackerID], Vector3.zero, Quaternion.identity);
+                        Instantiate(AttackerPrefebs[attackerID], GameLoopManager.NodesPosition[0], Quaternion.identity);
                     spawnedAttacker = newAttacker.GetComponent<Attacker>();
                     spawnedAttacker.Initialize();
                 }
@@ -69,9 +72,10 @@ namespace Game_Managers
                 Debug.Log("Designated Attacker doesn't exist.");
                 return null;
             }
-            
+
             //更新当前场景内单位的列表
             AttackersInGame.Add(spawnedAttacker);
+            AttackerTransformsInGame.Add(spawnedAttacker.transform);
             spawnedAttacker.id = attackerID;
             return spawnedAttacker;
         }
@@ -85,6 +89,7 @@ namespace Game_Managers
             AttackerSpawnPool[attackerToBeRemoved.id].Enqueue(attackerToBeRemoved);
             attackerToBeRemoved.gameObject.SetActive(false);
             AttackersInGame.Remove(attackerToBeRemoved);
+            AttackerTransformsInGame.Remove(attackerToBeRemoved.transform);
         }
     }
 }

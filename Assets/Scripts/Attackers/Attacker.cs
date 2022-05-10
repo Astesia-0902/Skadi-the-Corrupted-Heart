@@ -1,9 +1,11 @@
+using Game_Managers;
 using UnityEngine;
 
 namespace Attackers
 {
     public class Attacker : MonoBehaviour
     {
+        public int nodeIndex;
         public float maxHealth;
         public float currentHealth;
         public float moveSpeed;
@@ -12,6 +14,9 @@ namespace Attackers
         public void Initialize()
         {
             currentHealth = maxHealth;
+            nodeIndex = 0;
+            //TODO:由于有多个出生点，这里可能需要修改
+            transform.position = GameLoopManager.NodesPosition[0];
         }
     }
 }

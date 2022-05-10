@@ -52,29 +52,31 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
- <Reference Include="UnityEngine">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AIModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ARModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AccessibilityModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AndroidJNIModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AnimationModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AssetBundleModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs"/>
+      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs"/>
+      <Compile Include="Assets\Scripts\Attackers\Attacker.cs"/>
+      <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs"/>
+      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs"/>
+      <Reference Include="UnityEngine">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AIModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ARModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AccessibilityModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AndroidJNIModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AnimationModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AssetBundleModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AudioModule">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
@@ -268,43 +270,64 @@
  <Reference Include="UnityEditor.PackageManagerUIModule">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.SceneTemplateModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UIElementsModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UIElementsSamplesModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UIServiceModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UIServiceModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UnityConnectModule">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="netstandard">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.Win32.Primitives">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.AppContext">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections.Concurrent">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections.NonGeneric">
- <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
- </Reference>
- <Reference Include="System.Collections.Specialized">
+      <Reference Include="UnityEditor.SceneTemplateModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEditor.UIElementsModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEditor.UIElementsSamplesModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEditor.UIServiceModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UIServiceModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEditor.UnityConnectModule">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+      </Reference>
+      <Reference Include="Newtonsoft.Json">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Unsafe">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Collections.LowLevel.ILSupport">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.collections@1.2.3/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil.Pdb">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil.Mdb">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil.Rocks">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
+      </Reference>
+      <Reference Include="netstandard">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Win32.Primitives">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
+      </Reference>
+      <Reference Include="System.AppContext">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Collections.Concurrent">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Collections">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Collections.NonGeneric">
+          <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Collections.Specialized">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
  </Reference>
  <Reference Include="System.ComponentModel">
@@ -643,24 +666,45 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
+      <Reference Include="Unity.Timeline">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.TextMeshPro">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEditor.UI">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.PlasticSCM.Editor">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Rider.Editor">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UI">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Collections">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Mathematics">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Jobs">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Mathematics.Editor">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Jobs.Editor">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Editor">
+          <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+      </Reference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
