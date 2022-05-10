@@ -52,11 +52,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
+     <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -285,20 +286,17 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <Reference Include="Unity.Collections.LowLevel.ILSupport">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.collections@1.2.3/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Collections.LowLevel.ILSupport">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.collections@1.2.3/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+ <Reference Include="Unity.Burst.Cecil.Mdb">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Cecil.Pdb">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Burst.Cecil.Mdb">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Cecil">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
@@ -657,6 +655,12 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Burst">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Jobs">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -672,38 +676,32 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <Reference Include="Unity.Burst.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Collections">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Burst">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Jobs">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Burst.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PlasticSCM.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
