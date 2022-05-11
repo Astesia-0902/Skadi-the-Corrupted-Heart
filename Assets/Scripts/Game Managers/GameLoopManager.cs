@@ -101,6 +101,7 @@ namespace Game_Managers
             {
                 EntitySummoner.AttackersInGame[i].nodeIndex = nodeIndex[i];
 
+                //进攻方的目标节点为最后一个时，视为到达终点。
                 if (EntitySummoner.AttackersInGame[i].nodeIndex == NodesPosition.Length)
                 {
                     //TODO：进攻方到达了目标点
