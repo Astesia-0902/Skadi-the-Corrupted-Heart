@@ -13,6 +13,7 @@ namespace Attackers
 
         public void Initialize()
         {
+            gameObject.SetActive(true);
             currentHealth = maxHealth;
             nodeIndex = 0;
             //TODO:由于有多个出生点，这里可能需要修改

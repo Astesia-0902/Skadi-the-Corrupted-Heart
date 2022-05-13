@@ -23,8 +23,14 @@ namespace Game_Managers
             _attackersToRemove = new Queue<Attacker>();
             _attackersIDToSummon = new Queue<int>();
 
+            //TODO:未来将会有多条进攻路线，且由玩家自由选择
             NodesPosition = new Vector3[nodesParent.childCount];
+            for (int i = 0; i < NodesPosition.Length; i++)
+            {
+                NodesPosition[i] = nodesParent.GetChild(i).position;
+            }
 
+            loopFlag = true;
             StartCoroutine(GameLoop());
         }
 

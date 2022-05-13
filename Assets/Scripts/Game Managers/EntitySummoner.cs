@@ -13,7 +13,7 @@ namespace Game_Managers
 
         private static bool _isInitialized;
 
-        public static void Initialize()
+        public void Awake()
         {
             if (!_isInitialized)
             {
@@ -21,14 +21,13 @@ namespace Game_Managers
                 AttackerPrefebs = new Dictionary<int, GameObject>();
                 AttackerSpawnPool = new Dictionary<int, Queue<Attacker>>();
                 AttackerTransformsInGame = new List<Transform>();
-                AttackerSummonData[] attackerSummonData = Resources.LoadAll<AttackerSummonData>("Attackers");
-
-                foreach (AttackerSummonData item in attackerSummonData)
-                {
-                    AttackerPrefebs.Add(item.attackerID, item.attackerPrefeb);
-                    AttackerSpawnPool.Add(item.attackerID, new Queue<Attacker>());
-                }
-
+                // AttackerSummonData[] attackerSummonData = Resources.LoadAll<AttackerSummonData>("Attackers");
+                //
+                // foreach (AttackerSummonData item in attackerSummonData)
+                // {
+                //     AttackerPrefebs.Add(item.attackerID, item.attackerPrefeb);
+                //     AttackerSpawnPool.Add(item.attackerID, new Queue<Attacker>());
+                // }
                 _isInitialized = true;
             }
             else
@@ -37,12 +36,31 @@ namespace Game_Managers
             }
         }
 
+        public static void SummonAttacker(AttackerSummonData attackerSummonData)
+        {
+            AddAttackerData(attackerSummonData);
+            SpawnAttacker(attackerSummonData.attackerID);
+        }
+
+        private static void AddAttackerData(AttackerSummonData attackerSummonData)
+        {
+            if (!AttackerPrefebs.ContainsKey(attackerSummonData.attackerID))
+            {
+                AttackerPrefebs.Add(attackerSummonData.attackerID, attackerSummonData.attackerPrefeb);
+            }
+
+            if (!AttackerSpawnPool.ContainsKey(attackerSummonData.attackerID))
+            {
+                AttackerSpawnPool.Add(attackerSummonData.attackerID, new Queue<Attacker>());
+            }
+        }
+
         /// <summary>
         /// 生成进攻单位
         /// </summary>
         /// <param name="attackerID"></param>
         /// <returns></returns>
-        public static Attacker SpawnAttacker(int attackerID)
+        private static Attacker SpawnAttacker(int attackerID)
         {
             Attacker spawnedAttacker;
 
