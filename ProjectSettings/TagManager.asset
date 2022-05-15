@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Low Ground
+  - Placeable Low
+  - Placeable High
   layers:
   - Default
   - TransparentFX

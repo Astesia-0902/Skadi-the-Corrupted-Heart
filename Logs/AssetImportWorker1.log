@@ -1,0 +1,857 @@
+Using pre-set license
+Built from '2020.3/china_unity/release' branch; Version is '2020.3.24f1c2 (f3616f7ef48a) revision 15950191'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16192 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\UnityEditor\2020.3.24f1c2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/UnityProject/Skadi the Corrupted Heart
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+51206
+Successfully changed project path to: D:/UnityProject/Skadi the Corrupted Heart
+D:/UnityProject/Skadi the Corrupted Heart
+Using Asset Import Pipeline V2.
+AS: AutoStreaming module initializing.Refreshing native plugins compatible for Editor in 41.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.24f1c2 (f3616f7ef48a)
+[Subsystems] Discovering subsystems at path D:/UnityEditor/2020.3.24f1c2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProject/Skadi the Corrupted Heart/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
+    Vendor:   
+    VRAM:     4019 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed'
+Mono path[1] = 'D:/UnityEditor/2020.3.24f1c2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/UnityEditor/2020.3.24f1c2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/UnityEditor/2020.3.24f1c2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001137 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 40.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.594 seconds
+Domain Reload Profiling:
+	ReloadAssembly (595ms)
+		BeginReloadAssembly (49ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (464ms)
+			LoadAssemblies (47ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (147ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (179ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (40ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (90ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005602 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.454 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5455ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (5245ms)
+			LoadAssemblies (2322ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (314ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (2452ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (2206ms)
+				ProcessInitializeOnLoadMethodAttributes (128ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.35 seconds
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2223 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.8 MB.
+System memory in use after: 114.5 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2637.
+Total: 4.939700 ms (FindLiveObjects: 0.374900 ms CreateObjectMapping: 0.145400 ms MarkObjects: 3.563100 ms  DeleteObjects: 0.854600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/愚人号 spine资源/enemy_1230_dsbudr_Atlas.asset
+  artifactKey: Guid(31e9c1b5fce991748975c63b32ca4798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1230_dsbudr_Atlas.asset using Guid(31e9c1b5fce991748975c63b32ca4798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8ece87fd1acae1c9db6d929eb827cad') in 0.055870 seconds 
+  Import took 0.058990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/愚人号 spine资源/enemy_1231_dsrunr_2_Material.mat
+  artifactKey: Guid(3b5082e13c2861d4c9d3f5cf79f346c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1231_dsrunr_2_Material.mat using Guid(3b5082e13c2861d4c9d3f5cf79f346c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e31a343b955d4ff5d8d80fb2805161f3') in 0.191469 seconds 
+  Import took 0.194842 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/愚人号 spine资源/enemy_1235_dsbskr_2_Material.mat
+  artifactKey: Guid(aa0c21f385f385e47a4ede07aa4a2b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1235_dsbskr_2_Material.mat using Guid(aa0c21f385f385e47a4ede07aa4a2b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7f55b957087962eb8e6be13860f203') in 0.018347 seconds 
+  Import took 0.021433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/愚人号 spine资源/enemy_1235_dsbskr_2.png
+  artifactKey: Guid(8d8405292d4a4c548832a745598a00e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1235_dsbskr_2.png using Guid(8d8405292d4a4c548832a745598a00e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d66a516f77dff0785b455cda329b9c4') in 0.020889 seconds 
+  Import took 0.024056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/愚人号 spine资源/enemy_1230_dsbudr.atlas.txt
+  artifactKey: Guid(0b6e87fcf824c62448793daae663f470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1230_dsbudr.atlas.txt using Guid(0b6e87fcf824c62448793daae663f470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09aa4843b89fa9217c84c4574691872e') in 0.099720 seconds 
+  Import took 0.102828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/愚人号 spine资源/enemy_1232_dssalr.png
+  artifactKey: Guid(a11e2d26cb3a46e47b3658322237c1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1232_dssalr.png using Guid(a11e2d26cb3a46e47b3658322237c1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb4e01ff20983c2192dc472acfb7e1a3') in 0.011617 seconds 
+  Import took 0.014580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/愚人号 spine资源/enemy_1230_dsbudr_2_Material.mat
+  artifactKey: Guid(8eca0756297c8bd4381b5e4debcdb6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1230_dsbudr_2_Material.mat using Guid(8eca0756297c8bd4381b5e4debcdb6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9a2eb5bd95dbac3de0bbb31fbcf3ee2') in 0.017835 seconds 
+  Import took 0.020872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/愚人号 spine资源/enemy_1232_dssalr_2.png
+  artifactKey: Guid(9c681f885b795b34aae50cf98fca91e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1232_dssalr_2.png using Guid(9c681f885b795b34aae50cf98fca91e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc23b5a33eeab4fc2bd5a6bb95783946') in 0.019114 seconds 
+  Import took 0.022652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/愚人号 spine资源/enemy_1230_dsbudr_2.png
+  artifactKey: Guid(852ea593c96f36c4eb97062afb000968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1230_dsbudr_2.png using Guid(852ea593c96f36c4eb97062afb000968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc65cbe9fc3ea7922f45a9fc7a38ed74') in 0.014743 seconds 
+  Import took 0.017654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/愚人号 spine资源/enemy_1233_dsshtr_2_Atlas.asset
+  artifactKey: Guid(868d78349fe3cb942b2fc34e65aca368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1233_dsshtr_2_Atlas.asset using Guid(868d78349fe3cb942b2fc34e65aca368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1d6686b41e729b4a23bfd2164dbc212') in 0.014911 seconds 
+  Import took 0.017976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/愚人号 spine资源/enemy_1234_dsubrl_2_Atlas.asset
+  artifactKey: Guid(9d89f36aec3d2584c99a46da4606c857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1234_dsubrl_2_Atlas.asset using Guid(9d89f36aec3d2584c99a46da4606c857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a6e19310111149d76cb48bc1b91214') in 0.004795 seconds 
+  Import took 0.007583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/愚人号 spine资源/enemy_1233_dsshtr_Atlas.asset
+  artifactKey: Guid(e40eef224d1f951488814a0e7dcb1116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1233_dsshtr_Atlas.asset using Guid(e40eef224d1f951488814a0e7dcb1116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0cbc332f7812ddd9251e48cb79816cb') in 0.005409 seconds 
+  Import took 0.008322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/愚人号 spine资源/enemy_1231_dsrunr_2_Atlas.asset
+  artifactKey: Guid(b5df2d9f3af41b641a81a1e5483aa4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1231_dsrunr_2_Atlas.asset using Guid(b5df2d9f3af41b641a81a1e5483aa4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '882d957f465a5b5eda3692ef0073c35a') in 0.223012 seconds 
+  Import took 0.226073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/愚人号 spine资源/enemy_1233_dsshtr_2.png
+  artifactKey: Guid(61980f4b86318e149b6097c0f20e32fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1233_dsshtr_2.png using Guid(61980f4b86318e149b6097c0f20e32fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '009520669898a932828640f853b84ef0') in 0.025863 seconds 
+  Import took 0.029052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/愚人号 spine资源/enemy_1529_dsdevr_Atlas.asset
+  artifactKey: Guid(288834b9c05e67742a9167cb4be277ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1529_dsdevr_Atlas.asset using Guid(288834b9c05e67742a9167cb4be277ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3af9c136653bfcf1ab9ea75e42ee083') in 0.005158 seconds 
+  Import took 0.008621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/愚人号 spine资源/enemy_1234_dsubrl_2_Material.mat
+  artifactKey: Guid(9dccd6537b9eb5d4d98f389e6ad21d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1234_dsubrl_2_Material.mat using Guid(9dccd6537b9eb5d4d98f389e6ad21d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eefe10c18e92214dc65317ce0519c199') in 0.009602 seconds 
+  Import took 0.013139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/愚人号 spine资源/enemy_1231_dsrunr_Material.mat
+  artifactKey: Guid(ea535cb142300d54fa2c0a5a6f18262b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1231_dsrunr_Material.mat using Guid(ea535cb142300d54fa2c0a5a6f18262b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a3d79bf08feecbefab3f59c37e91b6f') in 0.026270 seconds 
+  Import took 0.029545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/愚人号 spine资源/enemy_1234_dsubrl_2.png
+  artifactKey: Guid(d19be8b0f9b1cc842ace42dae8fb6fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1234_dsubrl_2.png using Guid(d19be8b0f9b1cc842ace42dae8fb6fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0836d3f55a15a955eec3cb4e8952da') in 0.009334 seconds 
+  Import took 0.012603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/愚人号 spine资源/enemy_1235_dsbskr.png
+  artifactKey: Guid(5bde92a1bf93ae449b6b574877cf8f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1235_dsbskr.png using Guid(5bde92a1bf93ae449b6b574877cf8f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e295183c572e6c25e4db2e798b71e84b') in 0.015453 seconds 
+  Import took 0.018465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/愚人号 spine资源/enemy_1235_dsbskr_Material.mat
+  artifactKey: Guid(accaae8f3cee49d408dcc05536adbec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1235_dsbskr_Material.mat using Guid(accaae8f3cee49d408dcc05536adbec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55c6686f72e2b67a720e6728a8e354e5') in 0.009003 seconds 
+  Import took 0.012048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/愚人号 spine资源/enemy_1231_dsrunr_Atlas.asset
+  artifactKey: Guid(468e0c26c3635214185f7e6ed8d761da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1231_dsrunr_Atlas.asset using Guid(468e0c26c3635214185f7e6ed8d761da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858b7c76b5bb6fc3a1d3b6cf47bc05a7') in 0.004869 seconds 
+  Import took 0.008238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/愚人号 spine资源/enemy_1235_dsbskr_2_Atlas.asset
+  artifactKey: Guid(df32869b5fcace04fa4a732f3578ea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1235_dsbskr_2_Atlas.asset using Guid(df32869b5fcace04fa4a732f3578ea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ac60196f01ebe4896c3f2026802847') in 0.004874 seconds 
+  Import took 0.008068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/愚人号 spine资源/enemy_1233_dsshtr_Material.mat
+  artifactKey: Guid(48a8be07697ca2c4da46a3801aa99c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1233_dsshtr_Material.mat using Guid(48a8be07697ca2c4da46a3801aa99c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa38e1c7df82fde6f27f1d398da9c3c6') in 0.010526 seconds 
+  Import took 0.013752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/愚人号 spine资源/enemy_1235_dsbskr_Atlas.asset
+  artifactKey: Guid(62aa92cba318ac8458b5c23a5840faba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1235_dsbskr_Atlas.asset using Guid(62aa92cba318ac8458b5c23a5840faba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5752708ac6f14a9e64ec91b9c454b216') in 0.005111 seconds 
+  Import took 0.008277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/愚人号 spine资源/enemy_1232_dssalr_2_Atlas.asset
+  artifactKey: Guid(3033f0b3b2534224ba9182643c211775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1232_dssalr_2_Atlas.asset using Guid(3033f0b3b2534224ba9182643c211775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f778c2df4d4a7960459b6ed9591ffc0') in 0.004849 seconds 
+  Import took 0.007929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/愚人号 spine资源/enemy_1234_dsubrl_Atlas.asset
+  artifactKey: Guid(fb3f5c7989759a545aafeb6c4a84a54c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1234_dsubrl_Atlas.asset using Guid(fb3f5c7989759a545aafeb6c4a84a54c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '659419c2a19a62ea105199b5f2c2d030') in 0.005081 seconds 
+  Import took 0.008248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/愚人号 spine资源/enemy_1529_dsdevr_Material.mat
+  artifactKey: Guid(04796f12daeebbe428bf809e99e1102e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1529_dsdevr_Material.mat using Guid(04796f12daeebbe428bf809e99e1102e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8136baec8e688b9596463796a81d98e') in 0.021821 seconds 
+  Import took 0.024975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/愚人号 spine资源/enemy_1233_dsshtr.png
+  artifactKey: Guid(690c6207bb1eaa241b6fa96f76753025) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1233_dsshtr.png using Guid(690c6207bb1eaa241b6fa96f76753025) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd65b3d4a6ea4f43f0167d0530f0977ca') in 0.008639 seconds 
+  Import took 0.012518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/愚人号 spine资源/enemy_1232_dssalr_2_Material.mat
+  artifactKey: Guid(2c0ce4da3a68f0f4194284ee8c8f4f56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1232_dssalr_2_Material.mat using Guid(2c0ce4da3a68f0f4194284ee8c8f4f56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82335cfbdd0003a4ab1e02de49ff982c') in 0.009979 seconds 
+  Import took 0.013178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/愚人号 spine资源/enemy_1231_dsrunr_2.png
+  artifactKey: Guid(f9e278c0f88e9e246a817e1b2b723374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1231_dsrunr_2.png using Guid(f9e278c0f88e9e246a817e1b2b723374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '246897908c836f94883b7c5c160aca0b') in 0.026163 seconds 
+  Import took 0.029377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/愚人号 spine资源/enemy_1233_dsshtr_2_Material.mat
+  artifactKey: Guid(81f241ba25e845a48b33a42ba8a0cea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1233_dsshtr_2_Material.mat using Guid(81f241ba25e845a48b33a42ba8a0cea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cecd0b1d530947981368469f04e8999') in 0.019673 seconds 
+  Import took 0.022765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/愚人号 spine资源/enemy_1529_dsdevr.png
+  artifactKey: Guid(4ed963eb29b0e9c4c8e211abec320b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1529_dsdevr.png using Guid(4ed963eb29b0e9c4c8e211abec320b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acf48e8a8c84db71fbc2112205b9c983') in 0.017554 seconds 
+  Import took 0.020708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/愚人号 spine资源/enemy_1230_dsbudr.png
+  artifactKey: Guid(2295d5d919bbf1c499fea178cfc63920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1230_dsbudr.png using Guid(2295d5d919bbf1c499fea178cfc63920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8c3bfa6d86ea1d2d558d3af7654b38') in 0.014368 seconds 
+  Import took 0.017432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/愚人号 spine资源/enemy_1232_dssalr_Atlas.asset
+  artifactKey: Guid(39dc1a822c225fc4fa2d9e234ac1fd90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1232_dssalr_Atlas.asset using Guid(39dc1a822c225fc4fa2d9e234ac1fd90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29bbaf3b5d0965c4b120044d6a48d247') in 0.005045 seconds 
+  Import took 0.008278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/愚人号 spine资源/enemy_1230_dsbudr_2_Atlas.asset
+  artifactKey: Guid(09d25bed9a755f54092beeee75fbd5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1230_dsbudr_2_Atlas.asset using Guid(09d25bed9a755f54092beeee75fbd5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78b6cfc47a49b75eddbd760d0b6927f2') in 0.004721 seconds 
+  Import took 0.007912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/愚人号 spine资源/enemy_1230_dsbudr_Material.mat
+  artifactKey: Guid(7cbd39735502f744c94d4690a9c3b1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1230_dsbudr_Material.mat using Guid(7cbd39735502f744c94d4690a9c3b1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed26bc7e4b9ead5ef034b806cba798bd') in 0.019421 seconds 
+  Import took 0.023604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/愚人号 spine资源/enemy_1232_dssalr_Material.mat
+  artifactKey: Guid(f802bfc3a63b8544d939a33c7eb0958f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1232_dssalr_Material.mat using Guid(f802bfc3a63b8544d939a33c7eb0958f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '962dd3eb112ed547a982c096e298e42a') in 0.028138 seconds 
+  Import took 0.032185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/愚人号 spine资源/enemy_1231_dsrunr.png
+  artifactKey: Guid(d2b0ab83bc21c8a4cbaef456c8c30416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1231_dsrunr.png using Guid(d2b0ab83bc21c8a4cbaef456c8c30416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479a134625324f9104b938a6bc047d7c') in 0.007335 seconds 
+  Import took 0.010390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/愚人号 spine资源/enemy_1234_dsubrl.png
+  artifactKey: Guid(7b537444d7e8b5945909a901e1cde6a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1234_dsubrl.png using Guid(7b537444d7e8b5945909a901e1cde6a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e89c833f7155a2bd92298c853a7ab3de') in 0.009532 seconds 
+  Import took 0.012655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/愚人号 spine资源/enemy_1234_dsubrl_Material.mat
+  artifactKey: Guid(24a3752867429064a8f99f32268e74b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/愚人号 spine资源/enemy_1234_dsubrl_Material.mat using Guid(24a3752867429064a8f99f32268e74b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b138a949c0f1973ddc309b4f69586fea') in 0.009061 seconds 
+  Import took 0.012185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1082.823459 seconds.
+  path: Assets/Scripts/Attackers/AttackerSummonData.cs
+  artifactKey: Guid(40deb6bf86c9d2b408a631b3786d2d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Attackers/AttackerSummonData.cs using Guid(40deb6bf86c9d2b408a631b3786d2d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed78711153d46ed62e092e04bb5232a8') in 0.009194 seconds 
+  Import took 0.028132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2625.809448 seconds.
+  path: Assets/Rendering/Material/Enter Pont.mat
+  artifactKey: Guid(9265fbe8fb9075744b7d3f28e38c5aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rendering/Material/Enter Pont.mat using Guid(9265fbe8fb9075744b7d3f28e38c5aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4edd435012b2a5ac682153d9690b1ab') in 0.054277 seconds 
+  Import took 0.063780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Rendering/Material/Spwan Point.mat
+  artifactKey: Guid(97641eb39e89e82458e54a2196b4de25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rendering/Material/Spwan Point.mat using Guid(97641eb39e89e82458e54a2196b4de25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2560d8c14d7445d2ea86de1930493bbc') in 0.011651 seconds 
+  Import took 0.014963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 105.812557 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff9740b082b3a460a6c30c54ae5e68e5') in 0.006419 seconds 
+  Import took 0.010036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10530.426020 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(fcd8b0d61f652bd46b4235973d018aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(fcd8b0d61f652bd46b4235973d018aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b994d6e59247aa68768f63dc95f5b43b') in 0.093998 seconds 
+  Import took 0.141247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.309281 seconds.
+  path: Assets/Scripts/Tile
+  artifactKey: Guid(822e7f4e1bb842f4fbfdc7036e253419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Tile using Guid(822e7f4e1bb842f4fbfdc7036e253419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c96e95a758121e8462884033d7e5b2a4') in 0.005272 seconds 
+  Import took 0.009280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.293617 seconds.
+  path: Assets/Scripts/Tile/Tile.cs
+  artifactKey: Guid(a7ad2755d43e0074482a96802c32501d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Tile/Tile.cs using Guid(a7ad2755d43e0074482a96802c32501d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f7be9346dfec5190d606335c9c2d1e') in 0.006899 seconds 
+  Import took 0.012031 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.072789 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.346 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1347ms)
+		BeginReloadAssembly (236ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (114ms)
+		EndReloadAssembly (1039ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (335ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (450ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (324ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2195 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 117.3 MB.
+
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 2682.
+Total: 12.241000 ms (FindLiveObjects: 0.280800 ms CreateObjectMapping: 0.106400 ms MarkObjects: 8.656500 ms  DeleteObjects: 3.195500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 212.301685 seconds.
+  path: Assets/Scripts/Tile/Tile.cs
+  artifactKey: Guid(a7ad2755d43e0074482a96802c32501d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Tile/Tile.cs using Guid(a7ad2755d43e0074482a96802c32501d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcbf65ad3596146d266dbaaf481ac534') in 0.007540 seconds 
+  Import took 0.024153 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006875 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.279 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1279ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1069ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (360ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (459ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (115ms)
+				ProcessInitializeOnLoadAttributes (322ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2195 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 117.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2685.
+Total: 4.656700 ms (FindLiveObjects: 0.209300 ms CreateObjectMapping: 0.069400 ms MarkObjects: 3.408200 ms  DeleteObjects: 0.969000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007059 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.751 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1752ms)
+		BeginReloadAssembly (214ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (70ms)
+		EndReloadAssembly (1406ms)
+			LoadAssemblies (179ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (610ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (465ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (337ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2195 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 117.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2688.
+Total: 4.264900 ms (FindLiveObjects: 0.201300 ms CreateObjectMapping: 0.094900 ms MarkObjects: 3.060600 ms  DeleteObjects: 0.907100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006809 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.270 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1270ms)
+		BeginReloadAssembly (124ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (1086ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (349ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (477ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (342ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2195 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 117.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2691.
+Total: 4.806800 ms (FindLiveObjects: 0.209300 ms CreateObjectMapping: 0.094500 ms MarkObjects: 3.589100 ms  DeleteObjects: 0.912700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005765 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.299 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1299ms)
+		BeginReloadAssembly (125ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (1115ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (357ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (493ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (113ms)
+				ProcessInitializeOnLoadAttributes (352ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2195 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.7 MB.
+System memory in use after: 117.5 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2694.
+Total: 4.190500 ms (FindLiveObjects: 0.202700 ms CreateObjectMapping: 0.092200 ms MarkObjects: 2.964200 ms  DeleteObjects: 0.930500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 428.542764 seconds.
+  path: Assets/Prefebs/Map
+  artifactKey: Guid(e62b9396925feb44b94236cc2297064f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Map using Guid(e62b9396925feb44b94236cc2297064f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6709d1bc0a427483125cb1064790721') in 0.009809 seconds 
+  Import took 0.013680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.001806 seconds.
+  path: Assets/Prefebs/Map/Tiles
+  artifactKey: Guid(97bf6ebf05dc28f4cabeb8279ea55178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Map/Tiles using Guid(97bf6ebf05dc28f4cabeb8279ea55178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a256b11d27cd9ff7f69bdd6d7c80305') in 0.005210 seconds 
+  Import took 0.008560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.683619 seconds.
+  path: Assets/Prefebs/Map/Tiles/Tile.prefab
+  artifactKey: Guid(347358b10ad9f1344b8d206564f2621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Map/Tiles/Tile.prefab using Guid(347358b10ad9f1344b8d206564f2621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bad435c132c4d21246aeb44acde58fea') in 0.179896 seconds 
+  Import took 0.183877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.969930 seconds.
+  path: Assets/Prefebs/Map/Tiles/Ground Placeable.prefab
+  artifactKey: Guid(347358b10ad9f1344b8d206564f2621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Map/Tiles/Ground Placeable.prefab using Guid(347358b10ad9f1344b8d206564f2621d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f85901e0bb024fc04c6c50c266336ac') in 0.010381 seconds 
+  Import took 0.014360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.009126 seconds.
+  path: Assets/Prefebs/Map/Tiles/Tile (75).prefab
+  artifactKey: Guid(2d6ca483f48b5f640986b648a89d0eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Map/Tiles/Tile (75).prefab using Guid(2d6ca483f48b5f640986b648a89d0eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69efca592bb009674698f4f69bcb367f') in 0.029869 seconds 
+  Import took 0.033376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.159823 seconds.
+  path: Assets/Prefebs/Map/Tiles/Highland Placeable.prefab
+  artifactKey: Guid(2d6ca483f48b5f640986b648a89d0eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Map/Tiles/Highland Placeable.prefab using Guid(2d6ca483f48b5f640986b648a89d0eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '084ecfcea3ad518808384b0950b5af62') in 0.012989 seconds 
+  Import took 0.017013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 175.174008 seconds.
+  path: Assets/Spine Examples/spine-unity-examples.asmdef
+  artifactKey: Guid(8f5163e4753269348a069fd2fedcba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spine Examples/spine-unity-examples.asmdef using Guid(8f5163e4753269348a069fd2fedcba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0869ce31b88f9f6e70799cfc7f3d10d') in 0.006413 seconds 
+  Import took 0.010400 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

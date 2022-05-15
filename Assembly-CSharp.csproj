@@ -58,6 +58,34 @@
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
+     <Compile Include="Assets\Scripts\Tile\Tile.cs" />
+     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
+     <None Include="Assets\Spine\version.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl_2.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl_2.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr_2.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr_2.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr_2.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1529_dsdevr.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr_2.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr_2.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr_2.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr.atlas.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr_2.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1529_dsdevr.skel.txt" />
+     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr_2.skel.txt" />
  <Reference Include="UnityEngine">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -705,6 +733,22 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{3b4a44a7-b41a-95d4-5c99-f2eea379ddaf}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{56b9e0e4-e88f-a998-11bb-bc6811ed5d8a}</Project>
+      <Name>spine-unity-examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{d070aece-dfe0-b6b9-7946-f0a4fbc2323f}</Project>
+      <Name>spine-unity-examples-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{9ccfece9-a9cb-ab07-1da8-b14d9026904b}</Project>
+      <Name>spine-unity-editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
