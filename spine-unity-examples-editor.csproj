@@ -52,8 +52,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\SkeletonUtility Modules\Editor\SkeletonRagdollInspector.cs" />
      <Compile Include="Assets\Spine Examples\Scripts\Sample Components\SkeletonUtility Modules\Editor\SkeletonRagdoll2DInspector.cs" />
+     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\SkeletonUtility Modules\Editor\SkeletonRagdollInspector.cs" />
      <None Include="Assets\Spine Examples\Scripts\Sample Components\SkeletonUtility Modules\Editor\spine-unity-examples-editor.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

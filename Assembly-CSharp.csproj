@@ -53,12 +53,12 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
+     <Compile Include="Assets\Scripts\Tile\Tile.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
      <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Scripts\Tile\Tile.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Spine\version.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.skel.txt" />
@@ -683,20 +683,11 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Burst">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Jobs">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -704,17 +695,14 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Burst.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Collections">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PlasticSCM.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
@@ -725,14 +713,30 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Burst">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Jobs">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Collections">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{d070aece-dfe0-b6b9-7946-f0a4fbc2323f}</Project>
+      <Name>spine-unity-examples-editor</Name>
+    </ProjectReference>
     <ProjectReference Include="spine-unity.csproj">
       <Project>{3b4a44a7-b41a-95d4-5c99-f2eea379ddaf}</Project>
       <Name>spine-unity</Name>
@@ -740,10 +744,6 @@
     <ProjectReference Include="spine-unity-examples.csproj">
       <Project>{56b9e0e4-e88f-a998-11bb-bc6811ed5d8a}</Project>
       <Name>spine-unity-examples</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{d070aece-dfe0-b6b9-7946-f0a4fbc2323f}</Project>
-      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
       <Project>{9ccfece9-a9cb-ab07-1da8-b14d9026904b}</Project>

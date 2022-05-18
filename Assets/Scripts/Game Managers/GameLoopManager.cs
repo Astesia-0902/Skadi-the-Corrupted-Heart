@@ -9,6 +9,7 @@ using UnityEngine.Jobs;
 
 namespace Game_Managers
 {
+    //TODO：目前实现多个进攻路线的思路是将Game Loop Manager中控制进攻方移动的部分分离出来，多挂载几个物体，每个物体赋予各自的NodeParent
     public class GameLoopManager : Singleton<GameLoopManager>
     {
         private static Queue<Attacker> _attackersToRemove;
