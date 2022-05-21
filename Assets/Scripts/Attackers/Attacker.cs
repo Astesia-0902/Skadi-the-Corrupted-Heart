@@ -10,17 +10,19 @@ namespace Attackers
         public float currentHealth;
         public float moveSpeed;
         public int id;
+        public int spawnPoint;
 
         private Transform rangeParent;
 
-        public void Initialize()
+        public void Initialize(NodeLoopManager nodeLoopManager)
         {
+            spawnPoint = nodeLoopManager.spawnPointID;
             rangeParent = transform.GetChild(1);
             gameObject.SetActive(true);
             currentHealth = maxHealth;
             nodeIndex = 0;
             //TODO:由于有多个出生点，这里可能需要修改
-            transform.position = GameLoopManager.NodesPosition[0];
+            transform.position = nodeLoopManager.NodesPosition[0];
         }
         
         /// <summary>

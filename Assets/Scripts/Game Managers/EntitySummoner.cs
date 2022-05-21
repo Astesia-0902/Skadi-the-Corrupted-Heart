@@ -36,10 +36,10 @@ namespace Game_Managers
             }
         }
 
-        public static void SummonAttacker(AttackerSummonData attackerSummonData)
+        public static void SummonAttacker(AttackerSummonData attackerSummonData, NodeLoopManager node)
         {
             AddAttackerData(attackerSummonData);
-            SpawnAttacker(attackerSummonData.attackerID);
+            SpawnAttacker(attackerSummonData.attackerID, node);
         }
 
         private static void AddAttackerData(AttackerSummonData attackerSummonData)
@@ -60,7 +60,7 @@ namespace Game_Managers
         /// </summary>
         /// <param name="attackerID"></param>
         /// <returns></returns>
-        private static Attacker SpawnAttacker(int attackerID)
+        private static Attacker SpawnAttacker(int attackerID, NodeLoopManager node)
         {
             Attacker spawnedAttacker;
 
@@ -73,16 +73,16 @@ namespace Game_Managers
                 if (referencedQueue.Count > 0)
                 {
                     spawnedAttacker = referencedQueue.Dequeue();
-                    spawnedAttacker.Initialize();
+                    spawnedAttacker.Initialize(node);
                 }
                 else
                 {
                     //如果队列中没有现成的资源，就生成一个新的
                     //TODO:修改敌人出生的位置
                     GameObject newAttacker =
-                        Instantiate(AttackerPrefebs[attackerID], GameLoopManager.NodesPosition[0], Quaternion.identity);
+                        Instantiate(AttackerPrefebs[attackerID], node.NodesPosition[0], Quaternion.identity);
                     spawnedAttacker = newAttacker.GetComponent<Attacker>();
-                    spawnedAttacker.Initialize();
+                    spawnedAttacker.Initialize(node);
                 }
             }
             else

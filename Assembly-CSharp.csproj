@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
+     <Compile Include="Assets\Scripts\ButtonTemp.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Spine\version.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.skel.txt" />
