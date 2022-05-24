@@ -46,7 +46,7 @@ namespace Defenders
         private List<Attacker> GetAllTargetsInRange()
         {
             List<Attacker> targetsInRange = new List<Attacker>();
-            foreach (Attacker attacker in EntitySummoner.AttackersInGame)
+            foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
             {
                 if (CheckInRange(attacker.transform))
                     targetsInRange.Add(attacker);

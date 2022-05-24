@@ -52,7 +52,7 @@ namespace Game_Managers
                 {
                     for (int i = 0; i < attackersToRemove.Count; i++)
                     {
-                        EntitySummoner.RemoveAttacker(attackersToRemove.Dequeue());
+                        EntitySummoner.Instance.RemoveAttacker(attackersToRemove.Dequeue());
                     }
                 }
 
@@ -66,20 +66,20 @@ namespace Game_Managers
             //不需要GC，速度快，生成和销毁代价低，适合作为ECS中的临时数据结构，Native可以直接调用。缺点是功能不如List多。
             //顺便一提，NativeArray包含在Unity.Collection这个命名空间，而不是System.Collection
             NativeArray<int> nodeIndex =
-                new NativeArray<int>(EntitySummoner.AttackersInGame.Count, Allocator.TempJob); //临时作业分配
+                new NativeArray<int>(EntitySummoner.Instance.attackersInGame.Count, Allocator.TempJob); //临时作业分配
             NativeArray<float> attackerSpeed =
-                new NativeArray<float>(EntitySummoner.AttackersInGame.Count, Allocator.TempJob);
+                new NativeArray<float>(EntitySummoner.Instance.attackersInGame.Count, Allocator.TempJob);
             NativeArray<Vector3> nodesToUse = new NativeArray<Vector3>(NodesPosition, Allocator.TempJob);
             //同样地，这个数据类型也是Jobs System下的，可以大量并行地处理Transform
             TransformAccessArray attackerAccess = //desiredJobCount:需要同时并行处理数据的数量
-                new TransformAccessArray(EntitySummoner.AttackerTransformsInGame.ToArray(), 2);
+                new TransformAccessArray(EntitySummoner.Instance.attackerTransformsInGame.ToArray(), 2);
 
-            for (int i = 0; i < EntitySummoner.AttackersInGame.Count; i++)
+            for (int i = 0; i < EntitySummoner.Instance.attackersInGame.Count; i++)
             {
-                if (EntitySummoner.AttackersInGame[i].spawnPoint == spawnPointID)
+                if (EntitySummoner.Instance.attackersInGame[i].spawnPoint == spawnPointID)
                 {
-                    nodeIndex[i] = EntitySummoner.AttackersInGame[i].nodeIndex;
-                    attackerSpeed[i] = EntitySummoner.AttackersInGame[i].moveSpeed;
+                    nodeIndex[i] = EntitySummoner.Instance.attackersInGame[i].nodeIndex;
+                    attackerSpeed[i] = EntitySummoner.Instance.attackersInGame[i].moveSpeed;
                 }
             }
 
@@ -98,19 +98,19 @@ namespace Game_Managers
             moveJobHandle.Complete();
 
             //在一轮调度完成以后，检查进攻单位的路径点是否是终点
-            for (int i = 0; i < EntitySummoner.AttackersInGame.Count; i++)
+            for (int i = 0; i < EntitySummoner.Instance.attackersInGame.Count; i++)
             {
                 //确保数组下标和AttackersInGame对齐
                 if (nodeIndex[i] == 0)
                     continue;
                 
-                EntitySummoner.AttackersInGame[i].nodeIndex = nodeIndex[i];
+                EntitySummoner.Instance.attackersInGame[i].nodeIndex = nodeIndex[i];
 
                 //进攻方的目标节点为最后一个时，视为到达终点。
-                if (EntitySummoner.AttackersInGame[i].nodeIndex == NodesPosition.Length)
+                if (EntitySummoner.Instance.attackersInGame[i].nodeIndex == NodesPosition.Length)
                 {
                     //TODO：进攻方到达了目标点
-                    EnqueueAttackerToRemove(EntitySummoner.AttackersInGame[i]);
+                    EnqueueAttackerToRemove(EntitySummoner.Instance.attackersInGame[i]);
                 }
             }
 

@@ -16,7 +16,7 @@ namespace Tool_Scripts
             get { return _instance; }
         }
 
-        protected void Awake()
+        protected virtual void Awake()
         {
             if (_instance != null)
             {

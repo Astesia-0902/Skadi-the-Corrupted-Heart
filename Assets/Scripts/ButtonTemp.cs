@@ -14,11 +14,11 @@ public class ButtonTemp : MonoBehaviour
     private void Awake()
     {
         thisButton = GetComponent<Button>();
-        thisButton.onClick.AddListener(CallSummon);
+        //thisButton.onClick.AddListener(CallSummon);
     }
 
-    private void CallSummon()
-    {
-        EntitySummoner.SummonAttacker(attackerSummonData, nodeLoopManager);
-    }
+    // private void CallSummon()
+    // {
+    //     EntitySummoner.Instance.SummonAttacker(attackerSummonData, nodeLoopManager);
+    // }
 }

@@ -1,0 +1,181 @@
+
+token_10002_kalts_mon3tr.png
+size: 117,1017
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+C_Body_I
+  rotate: true
+  xy: 2, 922
+  size: 93, 112
+  orig: 93, 112
+  offset: 0, 0
+  index: -1
+C_Body_II
+  rotate: true
+  xy: 2, 450
+  size: 66, 70
+  orig: 66, 70
+  offset: 0, 0
+  index: -1
+C_Body_III
+  rotate: false
+  xy: 2, 242
+  size: 64, 55
+  orig: 64, 55
+  offset: 0, 0
+  index: -1
+C_Body_IV
+  rotate: true
+  xy: 2, 518
+  size: 60, 73
+  orig: 60, 73
+  offset: 0, 0
+  index: -1
+C_Foot_L_A
+  rotate: true
+  xy: 70, 420
+  size: 26, 41
+  orig: 26, 41
+  offset: 0, 0
+  index: -1
+C_Foot_L_B
+  rotate: true
+  xy: 87, 533
+  size: 67, 27
+  orig: 67, 27
+  offset: 0, 0
+  index: -1
+C_Foot_L_C
+  rotate: false
+  xy: 59, 57
+  size: 56, 127
+  orig: 56, 127
+  offset: 0, 0
+  index: -1
+C_Foot_R_A
+  rotate: false
+  xy: 70, 271
+  size: 36, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: -1
+C_Foot_R_B
+  rotate: true
+  xy: 87, 602
+  size: 47, 28
+  orig: 47, 28
+  offset: 0, 0
+  index: -1
+C_Foot_R_C
+  rotate: true
+  xy: 2, 865
+  size: 55, 110
+  orig: 55, 110
+  offset: 0, 0
+  index: -1
+C_Hand_L_A
+  rotate: true
+  xy: 70, 359
+  size: 33, 39
+  orig: 33, 39
+  offset: 0, 0
+  index: -1
+C_Hand_L_B
+  rotate: false
+  xy: 68, 239
+  size: 34, 30
+  orig: 34, 30
+  offset: 0, 0
+  index: -1
+C_Hand_L_C
+  rotate: false
+  xy: 2, 299
+  size: 66, 149
+  orig: 66, 149
+  offset: 0, 0
+  index: -1
+C_Hand_R_A
+  rotate: true
+  xy: 77, 496
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1
+C_Hand_R_B
+  rotate: true
+  xy: 70, 306
+  size: 51, 36
+  orig: 51, 36
+  offset: 0, 0
+  index: -1
+C_Hand_R_C
+  rotate: false
+  xy: 2, 29
+  size: 55, 155
+  orig: 55, 158
+  offset: 0, 3
+  index: -1
+C_Head
+  rotate: true
+  xy: 2, 778
+  size: 85, 109
+  orig: 85, 109
+  offset: 0, 0
+  index: -1
+C_Mon3tr
+  rotate: true
+  xy: 2, 651
+  size: 40, 100
+  orig: 40, 100
+  offset: 0, 0
+  index: -1
+C_Mon3tr_II
+  rotate: true
+  xy: 2, 693
+  size: 39, 103
+  orig: 39, 103
+  offset: 0, 0
+  index: -1
+C_Mon3tr_III
+  rotate: true
+  xy: 2, 734
+  size: 42, 104
+  orig: 42, 104
+  offset: 0, 0
+  index: -1
+C_Mon3tr_Light
+  rotate: false
+  xy: 59, 2
+  size: 53, 53
+  orig: 53, 53
+  offset: 0, 0
+  index: -1
+C_Mouth
+  rotate: false
+  xy: 2, 186
+  size: 64, 54
+  orig: 64, 54
+  offset: 0, 0
+  index: -1
+C_Mouth_L
+  rotate: false
+  xy: 74, 448
+  size: 41, 46
+  orig: 41, 46
+  offset: 0, 0
+  index: -1
+C_Mouth_R
+  rotate: true
+  xy: 70, 394
+  size: 24, 41
+  orig: 24, 41
+  offset: 0, 0
+  index: -1
+C_Neck
+  rotate: true
+  xy: 2, 580
+  size: 69, 83
+  orig: 69, 85
+  offset: 0, 2
+  index: -1

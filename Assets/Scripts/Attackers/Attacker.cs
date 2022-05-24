@@ -1,3 +1,4 @@
+using System;
 using Game_Managers;
 using UnityEngine;
 
@@ -14,6 +15,11 @@ namespace Attackers
 
         private Transform rangeParent;
 
+        private void Awake()
+        {
+            //Initialize();
+        }
+
         public void Initialize(NodeLoopManager nodeLoopManager)
         {
             spawnPoint = nodeLoopManager.spawnPointID;
@@ -21,7 +27,6 @@ namespace Attackers
             gameObject.SetActive(true);
             currentHealth = maxHealth;
             nodeIndex = 0;
-            //TODO:由于有多个出生点，这里可能需要修改
             transform.position = nodeLoopManager.NodesPosition[0];
         }
         
