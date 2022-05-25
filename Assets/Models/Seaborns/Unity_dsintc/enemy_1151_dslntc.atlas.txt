@@ -1,0 +1,307 @@
+
+enemy_1151_dslntc.png
+size: 209,905
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 2, 796
+  size: 107, 195
+  orig: 107, 195
+  offset: 0, 0
+  index: -1
+Close_Petal_1
+  rotate: false
+  xy: 84, 355
+  size: 80, 43
+  orig: 80, 43
+  offset: 0, 0
+  index: -1
+Close_Petal_2
+  rotate: false
+  xy: 2, 466
+  size: 81, 41
+  orig: 81, 41
+  offset: 0, 0
+  index: -1
+Close_Petal_3
+  rotate: false
+  xy: 83, 306
+  size: 79, 47
+  orig: 79, 47
+  offset: 0, 0
+  index: -1
+Close_Petal_4
+  rotate: false
+  xy: 2, 226
+  size: 76, 37
+  orig: 76, 37
+  offset: 0, 0
+  index: -1
+Close_Petal_5
+  rotate: false
+  xy: 164, 297
+  size: 43, 45
+  orig: 43, 45
+  offset: 0, 0
+  index: -1
+Close_Petal_6
+  rotate: false
+  xy: 2, 509
+  size: 83, 51
+  orig: 83, 51
+  offset: 0, 0
+  index: -1
+Close_Petal_7
+  rotate: false
+  xy: 2, 265
+  size: 78, 59
+  orig: 81, 59
+  offset: 3, 0
+  index: -1
+Close_Petal_8
+  rotate: true
+  xy: 157, 193
+  size: 57, 48
+  orig: 57, 48
+  offset: 0, 0
+  index: -1
+Close_Stamen
+  rotate: true
+  xy: 166, 344
+  size: 31, 38
+  orig: 31, 38
+  offset: 0, 0
+  index: -1
+L_Paw_1
+  rotate: false
+  xy: 102, 605
+  size: 94, 63
+  orig: 94, 63
+  offset: 0, 0
+  index: -1
+L_Paw_2
+  rotate: true
+  xy: 2, 747
+  size: 47, 104
+  orig: 47, 106
+  offset: 0, 1
+  index: -1
+Open_Petal_1
+  rotate: false
+  xy: 82, 253
+  size: 78, 51
+  orig: 78, 51
+  offset: 0, 0
+  index: -1
+Open_Petal_10
+  rotate: false
+  xy: 142, 28
+  size: 64, 51
+  orig: 64, 51
+  offset: 0, 0
+  index: -1
+Open_Petal_11
+  rotate: false
+  xy: 107, 670
+  size: 100, 51
+  orig: 100, 51
+  offset: 0, 0
+  index: -1
+Open_Petal_12
+  rotate: false
+  xy: 2, 426
+  size: 81, 38
+  orig: 81, 38
+  offset: 0, 0
+  index: -1
+Open_Petal_13
+  rotate: false
+  xy: 171, 480
+  size: 35, 70
+  orig: 37, 70
+  offset: 0, 0
+  index: -1
+Open_Petal_14
+  rotate: true
+  xy: 2, 93
+  size: 68, 70
+  orig: 68, 70
+  offset: 0, 0
+  index: -1
+Open_Petal_2
+  rotate: false
+  xy: 2, 666
+  size: 98, 35
+  orig: 98, 35
+  offset: 0, 0
+  index: -1
+Open_Petal_3
+  rotate: true
+  xy: 2, 326
+  size: 49, 79
+  orig: 49, 79
+  offset: 0, 0
+  index: -1
+Open_Petal_4
+  rotate: false
+  xy: 2, 562
+  size: 87, 66
+  orig: 87, 66
+  offset: 0, 0
+  index: -1
+Open_Petal_5
+  rotate: false
+  xy: 167, 377
+  size: 38, 44
+  orig: 38, 44
+  offset: 0, 0
+  index: -1
+Open_Petal_6
+  rotate: true
+  xy: 80, 196
+  size: 55, 75
+  orig: 56, 75
+  offset: 1, 0
+  index: -1
+Open_Petal_7
+  rotate: true
+  xy: 77, 157
+  size: 37, 72
+  orig: 37, 72
+  offset: 0, 0
+  index: -1
+Open_Petal_8
+  rotate: true
+  xy: 2, 10
+  size: 42, 43
+  orig: 42, 43
+  offset: 0, 0
+  index: -1
+Open_Petal_9
+  rotate: true
+  xy: 162, 252
+  size: 43, 44
+  orig: 43, 44
+  offset: 0, 0
+  index: -1
+Open_Stamen
+  rotate: false
+  xy: 168, 423
+  size: 39, 55
+  orig: 39, 55
+  offset: 0, 0
+  index: -1
+Petal_1
+  rotate: true
+  xy: 87, 508
+  size: 42, 82
+  orig: 42, 82
+  offset: 0, 0
+  index: -1
+Petal_10
+  rotate: true
+  xy: 91, 552
+  size: 51, 86
+  orig: 51, 86
+  offset: 0, 0
+  index: -1
+Petal_2
+  rotate: true
+  xy: 74, 102
+  size: 53, 68
+  orig: 53, 68
+  offset: 0, 0
+  index: -1
+Petal_3
+  rotate: true
+  xy: 2, 377
+  size: 47, 80
+  orig: 47, 80
+  offset: 0, 0
+  index: -1
+Petal_4
+  rotate: false
+  xy: 2, 163
+  size: 73, 61
+  orig: 73, 61
+  offset: 0, 0
+  index: -1
+Petal_5
+  rotate: false
+  xy: 2, 630
+  size: 92, 34
+  orig: 92, 34
+  offset: 0, 0
+  index: -1
+Petal_6
+  rotate: false
+  xy: 85, 400
+  size: 80, 64
+  orig: 80, 64
+  offset: 0, 0
+  index: -1
+Petal_7
+  rotate: false
+  xy: 2, 54
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+Petal_8
+  rotate: true
+  xy: 151, 131
+  size: 60, 55
+  orig: 60, 55
+  offset: 0, 0
+  index: -1
+Petal_9
+  rotate: true
+  xy: 85, 466
+  size: 40, 81
+  orig: 40, 81
+  offset: 0, 0
+  index: -1
+R_Paw_1
+  rotate: false
+  xy: 108, 723
+  size: 98, 71
+  orig: 98, 71
+  offset: 0, 0
+  index: -1
+R_Paw_2
+  rotate: true
+  xy: 2, 703
+  size: 42, 103
+  orig: 42, 103
+  offset: 0, 0
+  index: -1
+Stamen
+  rotate: true
+  xy: 47, 2
+  size: 32, 35
+  orig: 32, 35
+  offset: 0, 0
+  index: -1
+Tail_1
+  rotate: true
+  xy: 74, 36
+  size: 64, 66
+  orig: 64, 66
+  offset: 0, 0
+  index: -1
+Tail_2
+  rotate: false
+  xy: 144, 81
+  size: 53, 48
+  orig: 53, 48
+  offset: 0, 0
+  index: -1
+Tentacle
+  rotate: false
+  xy: 179, 589
+  size: 21, 14
+  orig: 23, 15
+  offset: 2, 1
+  index: -1

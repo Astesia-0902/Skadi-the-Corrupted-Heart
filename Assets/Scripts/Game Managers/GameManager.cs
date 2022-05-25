@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Defenders;
 using Tool_Scripts;
 using UnityEngine;
 
@@ -8,10 +9,32 @@ namespace Game_Managers
     {
         public bool deployFlag;
         private bool lockedOnFlag;
+        
         public List<GameObject> unitsToSelect;
         private GameObject currentSelectedUnit;
         private NodeLoopManager nodeToDeploy;
         private AttackerSummonData attackerToDeploy;
+
+        public List<Defender> defendersInGame;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            defendersInGame = new List<Defender>();
+        }
+
+        public void AddDefender(Defender defender)
+        {
+            defendersInGame.Add(defender);
+        }
+
+        public void RemoveDefender(Defender defender)
+        {
+            if (defendersInGame.Contains(defender))
+                defendersInGame.Remove(defender);
+        }
+
+        #region Place Attacker
 
         public void BeginDeploy(AttackerSummonData attackerSummonData)
         {
@@ -34,16 +57,14 @@ namespace Game_Managers
                     if (hit.collider.CompareTag("Spawn Point"))
                     {
                         Vector3 position = hit.collider.transform.position;
-                        position.y -= 1f;
+                        position.y -= 0.5f;
                         currentSelectedUnit.transform.position = position;
                         nodeToDeploy = hit.collider.GetComponent<NodeLoopManager>();
                         lockedOnFlag = true;
                         return;
                     }
 
-                    Vector3 positionTemp = hit.point;
-                    positionTemp.y -= 0.5f; 
-                    currentSelectedUnit.transform.position = positionTemp;
+                    currentSelectedUnit.transform.position = hit.point;
                 }
             }
 
@@ -65,5 +86,7 @@ namespace Game_Managers
             nodeToDeploy = null;
             Time.timeScale = 1f;
         }
+
+        #endregion
     }
 }

@@ -130,9 +130,8 @@ namespace Game_Managers
                 else
                 {
                     //如果队列中没有现成的资源，就生成一个新的
-                    //TODO:修改敌人出生的位置
                     GameObject newAttacker =
-                        Instantiate(attackerPrefebs[attackerID], node.NodesPosition[0], Quaternion.identity);
+                        Instantiate(attackerPrefebs[attackerID], node.nodesPosition[0], Quaternion.identity);
                     spawnedAttacker = newAttacker.GetComponent<Attacker>();
                     spawnedAttacker.Initialize(node);
                 }
@@ -149,17 +148,20 @@ namespace Game_Managers
             spawnedAttacker.id = attackerID;
         }
         #endregion
-        
+
         /// <summary>
         /// 由于塔防游戏后期敌人大量刷新和死亡会占用大量的性能，我们将被击杀的敌人保留下来，之后生成同类型敌人时重复使用
         /// </summary>
         /// <param name="attackerToBeRemoved"></param>
         public void RemoveAttacker(Attacker attackerToBeRemoved)
         {
-            attackerSpawnPool[attackerToBeRemoved.id].Enqueue(attackerToBeRemoved);
-            attackerToBeRemoved.gameObject.SetActive(false);
-            attackersInGame.Remove(attackerToBeRemoved);
-            attackerTransformsInGame.Remove(attackerToBeRemoved.transform);
+            if (attackerToBeRemoved != null)
+            {
+                attackerSpawnPool[attackerToBeRemoved.id].Enqueue(attackerToBeRemoved);
+                attackersInGame.Remove(attackerToBeRemoved);
+                attackerTransformsInGame.Remove(attackerToBeRemoved.transform);
+                attackerToBeRemoved.gameObject.SetActive(false);
+            }
         }
     }
 }

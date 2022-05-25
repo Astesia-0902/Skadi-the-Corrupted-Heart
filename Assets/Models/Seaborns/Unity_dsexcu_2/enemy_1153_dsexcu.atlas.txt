@@ -1,0 +1,139 @@
+
+enemy_1153_dsexcu.png
+size: 812,187
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+C_Body
+  rotate: true
+  xy: 451, 70
+  size: 115, 110
+  orig: 120, 110
+  offset: 0, 0
+  index: -1
+C_Body_2
+  rotate: true
+  xy: 563, 75
+  size: 110, 45
+  orig: 110, 45
+  offset: 0, 0
+  index: -1
+C_Chest
+  rotate: true
+  xy: 231, 34
+  size: 151, 135
+  orig: 151, 135
+  offset: 0, 0
+  index: -1
+C_Feather_1
+  rotate: false
+  xy: 708, 118
+  size: 102, 67
+  orig: 102, 67
+  offset: 0, 0
+  index: -1
+C_Feather_10
+  rotate: true
+  xy: 480, 2
+  size: 66, 46
+  orig: 66, 46
+  offset: 0, 0
+  index: -1
+C_Feather_11
+  rotate: true
+  xy: 577, 2
+  size: 71, 40
+  orig: 71, 40
+  offset: 0, 0
+  index: -1
+C_Feather_12
+  rotate: true
+  xy: 755, 23
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+C_Feather_2
+  rotate: false
+  xy: 610, 77
+  size: 96, 108
+  orig: 96, 108
+  offset: 0, 0
+  index: -1
+C_Feather_3
+  rotate: true
+  xy: 619, 12
+  size: 63, 81
+  orig: 63, 81
+  offset: 0, 0
+  index: -1
+C_Feather_4
+  rotate: true
+  xy: 276, 6
+  size: 26, 67
+  orig: 31, 67
+  offset: 5, 0
+  index: -1
+C_Feather_5
+  rotate: true
+  xy: 702, 15
+  size: 60, 51
+  orig: 60, 51
+  offset: 0, 0
+  index: -1
+C_Feather_6
+  rotate: false
+  xy: 416, 5
+  size: 62, 55
+  orig: 62, 55
+  offset: 0, 0
+  index: -1
+C_Feather_7
+  rotate: true
+  xy: 528, 3
+  size: 65, 47
+  orig: 65, 47
+  offset: 0, 0
+  index: -1
+C_Feather_8
+  rotate: true
+  xy: 368, 3
+  size: 57, 46
+  orig: 57, 46
+  offset: 0, 0
+  index: -1
+C_Feather_9
+  rotate: true
+  xy: 231, 2
+  size: 30, 43
+  orig: 30, 43
+  offset: 0, 0
+  index: -1
+C_Heart
+  rotate: false
+  xy: 708, 85
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+C_L_Foot
+  rotate: false
+  xy: 755, 71
+  size: 52, 45
+  orig: 52, 45
+  offset: 0, 0
+  index: -1
+C_Tail
+  rotate: true
+  xy: 368, 62
+  size: 123, 81
+  orig: 123, 81
+  offset: 0, 0
+  index: -1
+C_Weapon
+  rotate: false
+  xy: 2, 10
+  size: 227, 175
+  orig: 227, 175
+  offset: 0, 0
+  index: -1

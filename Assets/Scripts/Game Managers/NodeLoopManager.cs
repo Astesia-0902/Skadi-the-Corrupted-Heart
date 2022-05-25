@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Attackers;
@@ -17,7 +16,7 @@ namespace Game_Managers
 
         public bool loopFlag;
         public Transform nodesParent;
-        public Vector3[] NodesPosition;
+        public Vector3[] nodesPosition;
 
         public int spawnPointID;
 
@@ -30,11 +29,11 @@ namespace Game_Managers
         {
             attackersToRemove = new Queue<Attacker>();
             attackersIDToSummon = new Queue<int>();
-            
-            NodesPosition = new Vector3[nodesParent.childCount];
-            for (int i = 0; i < NodesPosition.Length; i++)
+
+            nodesPosition = new Vector3[nodesParent.childCount];
+            for (int i = 0; i < nodesPosition.Length; i++)
             {
-                NodesPosition[i] = nodesParent.GetChild(i).position;
+                nodesPosition[i] = nodesParent.GetChild(i).position;
             }
 
             loopFlag = true;
@@ -46,7 +45,7 @@ namespace Game_Managers
             while (loopFlag)
             {
                 MoveAttackers();
-                
+
                 //Remove Defenders
                 if (attackersToRemove.Count > 0)
                 {
@@ -69,17 +68,21 @@ namespace Game_Managers
                 new NativeArray<int>(EntitySummoner.Instance.attackersInGame.Count, Allocator.TempJob); //临时作业分配
             NativeArray<float> attackerSpeed =
                 new NativeArray<float>(EntitySummoner.Instance.attackersInGame.Count, Allocator.TempJob);
-            NativeArray<Vector3> nodesToUse = new NativeArray<Vector3>(NodesPosition, Allocator.TempJob);
+            NativeArray<Vector3> nodesToUse = new NativeArray<Vector3>(nodesPosition, Allocator.TempJob);
             //同样地，这个数据类型也是Jobs System下的，可以大量并行地处理Transform
             TransformAccessArray attackerAccess = //desiredJobCount:需要同时并行处理数据的数量
                 new TransformAccessArray(EntitySummoner.Instance.attackerTransformsInGame.ToArray(), 2);
 
             for (int i = 0; i < EntitySummoner.Instance.attackersInGame.Count; i++)
             {
+                //当前目标属于这条路线，且没有在做一些不能移动的动作，就加入job system中
                 if (EntitySummoner.Instance.attackersInGame[i].spawnPoint == spawnPointID)
                 {
-                    nodeIndex[i] = EntitySummoner.Instance.attackersInGame[i].nodeIndex;
-                    attackerSpeed[i] = EntitySummoner.Instance.attackersInGame[i].moveSpeed;
+                    if (EntitySummoner.Instance.attackersInGame[i].CanMove())
+                    {
+                        nodeIndex[i] = EntitySummoner.Instance.attackersInGame[i].nodeIndex;
+                        attackerSpeed[i] = EntitySummoner.Instance.attackersInGame[i].moveSpeed;
+                    }
                 }
             }
 
@@ -103,11 +106,11 @@ namespace Game_Managers
                 //确保数组下标和AttackersInGame对齐
                 if (nodeIndex[i] == 0)
                     continue;
-                
+
                 EntitySummoner.Instance.attackersInGame[i].nodeIndex = nodeIndex[i];
 
                 //进攻方的目标节点为最后一个时，视为到达终点。
-                if (EntitySummoner.Instance.attackersInGame[i].nodeIndex == NodesPosition.Length)
+                if (EntitySummoner.Instance.attackersInGame[i].nodeIndex == nodesPosition.Length)
                 {
                     //TODO：进攻方到达了目标点
                     EnqueueAttackerToRemove(EntitySummoner.Instance.attackersInGame[i]);
@@ -131,7 +134,7 @@ namespace Game_Managers
             attackersToRemove.Enqueue(attacker);
         }
     }
-    
+
     public struct MoveAttackersJob : IJobParallelForTransform
     {
         //允许多个线程同时读写一个容器
