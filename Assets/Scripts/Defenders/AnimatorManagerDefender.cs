@@ -7,26 +7,26 @@ namespace Defenders
     /// </summary>
     public class AnimatorManagerDefender : MonoBehaviour
     {
-        private Defender defender;
-        private Animator anim;
+        protected Defender Defender;
+        protected Animator Anim;
 
-        private void Awake()
+        protected virtual void Awake()
         {
-            anim = GetComponent<Animator>();
-            defender = GetComponentInParent<Defender>();
+            Anim = GetComponent<Animator>();
+            Defender = GetComponentInParent<Defender>();
         }
         
         public virtual void PlayTargetAnimation(string animationName)
         {
-            anim.Play(animationName);
+            Anim.Play(animationName);
         }
 
-        public void OnAttack()
+        public virtual void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
-            if (defender.currentTarget != null)
+            if (Defender.currentTarget != null)
             {
-                defender.currentTarget.TakeDamage(defender.attackDamage, 0);
+                Defender.currentTarget.TakeDamage(Defender.attackDamage, 0);
             }
         }
     }

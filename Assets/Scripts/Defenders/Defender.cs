@@ -16,6 +16,7 @@ namespace Defenders
         [Header("Defence Paras")] public float armor;
         public float magicResistance;
 
+        [Header("Status Flag")] public bool isDead;
         public bool isInteracting;
 
         protected Transform RangeParent;
@@ -29,6 +30,7 @@ namespace Defenders
 
         protected virtual void Awake()
         {
+            isDead = false;
             currentHealth = maxHealth;
             AnimatorManager = GetComponentInChildren<AnimatorManagerDefender>();
             attackersBlocked = new List<Attacker>();
@@ -39,6 +41,7 @@ namespace Defenders
         private void Start()
         {
             GameManager.Instance.AddDefender(this);
+            AnimatorManager.PlayTargetAnimation("Start");
         }
 
         protected virtual void Update()
@@ -64,6 +67,7 @@ namespace Defenders
 
         protected virtual void Die()
         {
+            isDead = true;
             AnimatorManager.PlayTargetAnimation("Die");
             Unblock();
         }
@@ -73,6 +77,9 @@ namespace Defenders
         /// </summary>
         protected virtual void Unblock()
         {
+            if (attackersBlocked.Count == 0)
+                return;
+            
             foreach (Attacker attacker in attackersBlocked)
             {
                 if (attacker != null)
@@ -84,10 +91,27 @@ namespace Defenders
 
         #endregion
 
+        #region Get Heal
+
+        public virtual void GetHeal(float heal)
+        {
+            if (isDead)
+                return;
+            
+            currentHealth += heal;
+            if (currentHealth > maxHealth)
+                currentHealth = maxHealth;
+        }
+
+        #endregion
+
         #region Attack Helper
 
-        private void AttackUpdate()
+        protected virtual void AttackUpdate()
         {
+            if(isDead)
+                return;
+
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
 
             if (AttackTimer > 0)
@@ -112,7 +136,7 @@ namespace Defenders
         /// 获取攻击范围内，以及被阻挡的所有的敌人
         /// </summary>
         /// <returns></returns>
-        private List<Attacker> GetAllTargetsInRange()
+        protected virtual List<Attacker> GetAllTargetsInRange()
         {
             List<Attacker> targetsInRange = new List<Attacker>();
             foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
@@ -180,7 +204,7 @@ namespace Defenders
         /// </summary>
         /// <param name="attackers"></param>
         /// <returns></returns>
-        private Attacker GetPriorityTarget(List<Attacker> attackers)
+        protected virtual Attacker GetPriorityTarget(List<Attacker> attackers)
         {
             if (attackers.Count == 0)
                 return null;
@@ -205,12 +229,15 @@ namespace Defenders
         /// </summary>
         /// <param name="targetTransform">目标的Transform</param>
         /// <returns>在就返回True，反之False</returns>
-        private bool CheckInRange(Transform targetTransform)
+        protected virtual bool CheckInRange(Transform targetTransform)
         {
             Vector3 targetCenter = targetTransform.position;
             //rangeParent物体下挂载了该单位的攻击范围中每个方块的中点
             for (int i = 0; i < RangeParent.childCount; i++)
             {
+                if (!RangeParent.GetChild(i).gameObject.activeSelf)
+                    continue;
+                
                 Vector3 rangeCenter = RangeParent.GetChild(i).position;
                 if (targetCenter.x < rangeCenter.x + 0.5f && targetCenter.x > rangeCenter.x - 0.5f &&
                     targetCenter.z < rangeCenter.z + 0.5f && targetCenter.z > rangeCenter.z - 0.5f)
@@ -253,27 +280,6 @@ namespace Defenders
         }
 
         #endregion
-
-        // protected virtual List<Attacker> CheckBlock()
-        // {
-        //     List<Attacker> attackersBlocked = new List<Attacker>();
-        //     foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
-        //     {
-        //         Vector3 attackerPosition = attacker.transform.position;
-        //         Vector3 myPosition = transform.position;
-        //         if (currentBlockNum > 0 && GetBlockStatus())
-        //         {
-        //             if (attackerPosition.x + 0.5f > myPosition.x && attackerPosition.x - 0.5f < myPosition.x &&
-        //                 attackerPosition.z + 0.5f > myPosition.z && attackerPosition.z - 0.5f < myPosition.z)
-        //             {
-        //                 attackersBlocked.Add(attacker);
-        //                 attacker.GetBlocked(this);
-        //             }
-        //         }
-        //     }
-        //
-        //     currentBlockNum = blockNumStandard - attackersBlocked.Count;
-        //     return attackersBlocked;
-        // }
+        
     }
 }
