@@ -10,16 +10,23 @@ namespace Defenders
     {
         [Header("Combat Status")] public float maxHealth;
         public float currentHealth;
-        public bool isRange;
         public int blockNumStandard;
         public float attackDamage;
+
         [Header("Defence Paras")] public float armor;
         public float magicResistance;
 
+        [Header("Neural Damage")] public float maxNeuralDamage = 100f;
+        public float neuralDamage;
+        public float neuralRecoveryTimer;
+        public float neuralRecoveryThreshold = 4f;
+
         [Header("Status Flag")] public bool isDead;
         public bool isInteracting;
+        public bool isRange;
+        public bool isStunned;
 
-        protected Transform RangeParent;
+        private Transform rangeParent;
         public Attacker currentTarget;
         protected AnimatorManagerDefender AnimatorManager;
 
@@ -35,7 +42,7 @@ namespace Defenders
             AnimatorManager = GetComponentInChildren<AnimatorManagerDefender>();
             attackersBlocked = new List<Attacker>();
             AttackTimer = attackTimerStandard;
-            RangeParent = transform.GetChild(1);
+            rangeParent = transform.GetChild(1);
         }
 
         private void Start()
@@ -46,22 +53,66 @@ namespace Defenders
 
         protected virtual void Update()
         {
+            NeuralDamageUpdate();
             UpdateAttackTimer();
             AttackUpdate();
         }
 
-
         #region Take Damage
 
-        public virtual void TakeDamage(float physicDamage, float magicDamage)
+        public virtual void TakeDamage(float physicDamage, float magicDamage, float realDamage)
         {
             currentHealth -= physicDamage - armor > 0.05f * physicDamage
                 ? physicDamage - armor
                 : 0.05f * physicDamage;
             currentHealth -= magicDamage * (1 - magicResistance);
+            currentHealth -= realDamage;
             if (currentHealth <= 0)
             {
                 Die();
+            }
+        }
+
+        public virtual void TakeNeuralDamage(float neuralDamageToTake)
+        {
+            neuralDamage -= neuralDamageToTake;
+            if (neuralDamage <= 0)
+            {
+                neuralDamage = 0;
+                NeuralDamageBurst();
+            }
+        }
+
+        protected virtual void NeuralDamageBurst()
+        {
+            isStunned = true;
+            AnimatorManager.SetAnimatorBool("isStunned", isStunned);
+            TakeDamage(0, 0, 0.4f * maxHealth);
+            AnimatorManager.PlayTargetAnimation("Stun");
+        }
+
+        public virtual void NeuralDamageUpdate()
+        {
+            neuralDamage += 5f;
+
+            if (neuralDamage >= 100f)
+            {
+                neuralDamage = 100f;
+            }
+
+            if (isStunned)
+            {
+                neuralRecoveryTimer += Time.deltaTime;
+                if (neuralRecoveryTimer >= neuralRecoveryThreshold)
+                {
+                    isStunned = false;
+                    AnimatorManager.SetAnimatorBool("isStunned", isStunned);
+                    neuralRecoveryTimer = 0f;
+                }
+            }
+            else
+            {
+                neuralRecoveryTimer = 0f;
             }
         }
 
@@ -79,7 +130,7 @@ namespace Defenders
         {
             if (attackersBlocked.Count == 0)
                 return;
-            
+
             foreach (Attacker attacker in attackersBlocked)
             {
                 if (attacker != null)
@@ -97,7 +148,7 @@ namespace Defenders
         {
             if (isDead)
                 return;
-            
+
             currentHealth += heal;
             if (currentHealth > maxHealth)
                 currentHealth = maxHealth;
@@ -109,7 +160,7 @@ namespace Defenders
 
         protected virtual void AttackUpdate()
         {
-            if(isDead)
+            if (!CanAttack())
                 return;
 
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
@@ -131,7 +182,6 @@ namespace Defenders
             }
         }
 
-
         /// <summary>
         /// 获取攻击范围内，以及被阻挡的所有的敌人
         /// </summary>
@@ -147,13 +197,14 @@ namespace Defenders
                 //搜索在攻击范围的敌人
                 if (CheckInRange(attacker.transform))
                     targetsInRange.Add(attacker);
+                
                 if (isRange)
                     continue;
 
                 //统计被阻挡的敌人
                 Vector3 attackerPosition = attacker.transform.position;
                 Vector3 myPosition = transform.position;
-                if (GetBlockNum() > 0 && GetBlockStatus())
+                if (GetBlockNum() > 0 && CanBlock())
                 {
                     //检查是否在所在的格子内
                     if (attackerPosition.x + 0.5f > myPosition.x && attackerPosition.x - 0.5f < myPosition.x &&
@@ -174,7 +225,7 @@ namespace Defenders
             {
                 return targetsInRange;
             }
-            
+
             //优先攻击被阻挡的敌人
             if (attackersBlocked.Count > 0)
             {
@@ -233,12 +284,12 @@ namespace Defenders
         {
             Vector3 targetCenter = targetTransform.position;
             //rangeParent物体下挂载了该单位的攻击范围中每个方块的中点
-            for (int i = 0; i < RangeParent.childCount; i++)
+            for (int i = 0; i < rangeParent.childCount; i++)
             {
-                if (!RangeParent.GetChild(i).gameObject.activeSelf)
+                if (!rangeParent.GetChild(i).gameObject.activeSelf)
                     continue;
-                
-                Vector3 rangeCenter = RangeParent.GetChild(i).position;
+
+                Vector3 rangeCenter = rangeParent.GetChild(i).position;
                 if (targetCenter.x < rangeCenter.x + 0.5f && targetCenter.x > rangeCenter.x - 0.5f &&
                     targetCenter.z < rangeCenter.z + 0.5f && targetCenter.z > rangeCenter.z - 0.5f)
                 {
@@ -274,12 +325,16 @@ namespace Defenders
         /// 当前干员是否可以阻挡敌人
         /// </summary>
         /// <returns></returns>
-        public virtual bool GetBlockStatus()
+        public virtual bool CanBlock()
         {
-            return true;
+            return !(isStunned || isDead);
+        }
+
+        public virtual bool CanAttack()
+        {
+            return !(isStunned || isDead);
         }
 
         #endregion
-        
     }
 }

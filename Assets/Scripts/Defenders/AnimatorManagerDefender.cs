@@ -21,12 +21,22 @@ namespace Defenders
             Anim.Play(animationName);
         }
 
+        public virtual void SetAnimatorBool(string variableName,bool value)
+        {
+            Anim.SetBool(variableName, value);
+        }
+
+        public virtual bool GetAnimatorBool(string variableName)
+        {
+            return Anim.GetBool(variableName);
+        }
+
         public virtual void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
             if (Defender.currentTarget != null)
             {
-                Defender.currentTarget.TakeDamage(Defender.attackDamage, 0);
+                Defender.currentTarget.TakeDamage(Defender.attackDamage, 0, 0);
             }
         }
     }

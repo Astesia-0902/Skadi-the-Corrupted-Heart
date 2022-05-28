@@ -7,18 +7,23 @@ namespace Attackers
     public class Attacker : MonoBehaviour
     {
         public int id;
+        
         [Header("Combat Status")] 
         public float maxHealth;
         public float currentHealth;
         public float attackDamage;
+        public float nerualDamage;
         public int blockPara;
+        
         [Header("Defence Paras")] 
         public float armor;
         public float magicResistance;
+        
         [Header("Movements Paras")] 
         public float moveSpeed;
         public int nodeIndex;
         public int spawnPoint;
+        
         [Header("Status Flags")] public bool isDead;
         public bool isRange;
         public bool isInteracting;
@@ -65,12 +70,13 @@ namespace Attackers
         /// </summary>
         /// <param name="physicDamage"></param>
         /// <param name="magicDamage"></param>
-        public virtual void TakeDamage(float physicDamage, float magicDamage)
+        public virtual void TakeDamage(float physicDamage, float magicDamage, float realDamage)
         {
             currentHealth -= physicDamage - armor > 0.05f * physicDamage
                 ? physicDamage - armor
                 : 0.05f * physicDamage;
             currentHealth -= magicDamage * (1 - magicResistance);
+            currentHealth -= realDamage;
             if (currentHealth <= 0)
             {
                 Die();
