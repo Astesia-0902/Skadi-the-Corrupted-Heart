@@ -1,3 +1,7 @@
-/Library
-明日方舟共享提取资源
-/Temp
+*
+!/Assets
+!/Packages
+!/ProjectSettings
+!/UserSettings
+!.gitignore
+!README.md
