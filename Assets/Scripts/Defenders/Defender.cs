@@ -16,6 +16,9 @@ namespace Defenders
         [Header("Defence Paras")] public float armor;
         public float magicResistance;
 
+        [Header("Skills")] public int skillPoint;
+        public int maxSkillPoint;
+
         [Header("Neural Damage")] public float maxNeuralDamage = 100f;
         public float neuralDamage;
         public float neuralRecoveryTimer;
@@ -56,6 +59,7 @@ namespace Defenders
             NeuralDamageUpdate();
             UpdateAttackTimer();
             AttackUpdate();
+            SkillPointUpdate();
         }
 
         #region Take Damage
@@ -315,6 +319,31 @@ namespace Defenders
             AttackTimer -= Time.deltaTime;
             if (AttackTimer < 0)
                 AttackTimer = 0;
+        }
+
+        #endregion
+
+        #region Skill
+
+        private float skillPointTimer;
+        public bool skillReady;
+        public void SkillPointUpdate()
+        {
+            skillPointTimer += Time.deltaTime;
+            if (skillPointTimer >= 1f)
+            {
+                skillPoint++;
+            }
+
+            if (skillPoint >= maxSkillPoint)
+            {
+                skillPoint = maxSkillPoint;
+                skillReady = true;
+            }
+            else
+            {
+                skillReady = false;
+            }
         }
 
         #endregion

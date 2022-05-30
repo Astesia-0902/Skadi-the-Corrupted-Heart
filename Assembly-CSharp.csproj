@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Defenders\_Specter the Unchained\SpecterAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\DefenderHealer.cs" />
      <Compile Include="Assets\Scripts\Tile\Tile.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Red\RedAm.cs" />
      <Compile Include="Assets\Scripts\Attackers\AnimatorManagerAttacker.cs" />
@@ -96,7 +97,7 @@
      <Compile Include="Assets\Scripts\Defenders\_Indigo\Indigo.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Blaze\BlazeAm.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />

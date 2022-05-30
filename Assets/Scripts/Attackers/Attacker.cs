@@ -1,3 +1,4 @@
+using System;
 using Defenders;
 using Game_Managers;
 using UnityEngine;
@@ -40,6 +41,8 @@ namespace Attackers
 
         public Defender defenderWhoBlockMe;
 
+        public Action<float, float> OnHealthChanged;
+
         protected virtual void Update()
         {
             isInteracting = animatorManager.isInteracting;
@@ -77,6 +80,8 @@ namespace Attackers
                 : 0.05f * physicDamage;
             currentHealth -= magicDamage * (1 - magicResistance);
             currentHealth -= realDamage;
+            OnHealthChanged.Invoke(currentHealth, maxHealth);
+            
             if (currentHealth <= 0)
             {
                 Die();

@@ -8,6 +8,7 @@ TagManager:
   - Placeable Low
   - Placeable High
   - Spawn Point
+  - UI
   layers:
   - Default
   - TransparentFX
