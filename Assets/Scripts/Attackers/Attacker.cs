@@ -1,6 +1,7 @@
 using System;
 using Defenders;
 using Game_Managers;
+using UI;
 using UnityEngine;
 
 namespace Attackers
@@ -15,6 +16,7 @@ namespace Attackers
         public float attackDamage;
         public float nerualDamage;
         public int blockPara;
+        public int weightLevel;
         
         [Header("Defence Paras")] 
         public float armor;
@@ -28,6 +30,7 @@ namespace Attackers
         [Header("Status Flags")] public bool isDead;
         public bool isRange;
         public bool isInteracting;
+        private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
         public bool isBlocked;
 
         public float attackTimerStandard;
@@ -38,6 +41,7 @@ namespace Attackers
         
         private Transform rangeParent;
         private AnimatorManagerAttacker animatorManager;
+        public HealthBar healthBar;
 
         public Defender defenderWhoBlockMe;
 
@@ -45,17 +49,20 @@ namespace Attackers
 
         protected virtual void Update()
         {
-            isInteracting = animatorManager.isInteracting;
+            isInteracting = animatorManager.anim.GetBool(IsInteracting);
             UpdateAttackTimer();
             AttackUpdate();
+            BlowUpCountDown();
         }
 
         public virtual void Initialize(NodeLoopManager node)
         {
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
+            healthBar = GetComponentInChildren<HealthBar>();
             isInteracting = false;
             isBlocked = false;
             isDead = false;
+            isBlownUp = false;
             defenderWhoBlockMe = null;
             spawnPoint = node.spawnPointID;
             rangeParent = transform.GetChild(1);
@@ -73,6 +80,7 @@ namespace Attackers
         /// </summary>
         /// <param name="physicDamage"></param>
         /// <param name="magicDamage"></param>
+        /// <param name="realDamage"></param>
         public virtual void TakeDamage(float physicDamage, float magicDamage, float realDamage)
         {
             currentHealth -= physicDamage - armor > 0.05f * physicDamage
@@ -94,8 +102,13 @@ namespace Attackers
         protected virtual void Die()
         {
             isDead = true;
-            defenderWhoBlockMe.RemoveBlockedEnemy(this);
-            defenderWhoBlockMe = null;
+            
+            if (defenderWhoBlockMe != null)
+            {
+                defenderWhoBlockMe.RemoveBlockedEnemy(this);
+                defenderWhoBlockMe = null;
+            }
+
             animatorManager.PlayTargetAnimation("Die", true);
         }
 
@@ -113,7 +126,7 @@ namespace Attackers
             if (AttackTimer > 0)
                 return;
 
-            if (currentAttackTarget != null)
+            if (currentAttackTarget != null && !isInteracting && !isBlownUp)
             {
                 animatorManager.PlayTargetAnimation("Attack", true);
             }
@@ -213,10 +226,51 @@ namespace Attackers
 
         #endregion
 
+        #region Status
+
+        public bool isBlownUp;
+        private float blowUpTimer;
+
+        public void BlowUpStart(float time)
+        {
+            if (weightLevel < 3)
+            {
+                blowUpTimer = time;
+            }
+            else
+            {
+                blowUpTimer = time / 2f;
+            }
+
+            animatorManager.PlayTargetAnimation("Stun", true);
+            Transform transform1 = transform;
+            Vector3 temp = transform1.position;
+            temp.y += 1f;
+            transform1.position = temp;
+            isBlownUp = true;
+        }
+        public void BlowUpCountDown()
+        {
+            if (isBlownUp)
+            {
+                blowUpTimer -= Time.deltaTime;
+                if (blowUpTimer <= 0)
+                {
+                    animatorManager.anim.SetBool(IsInteracting, false);
+                    isBlownUp = false;
+                    Transform transform1 = transform;
+                    Vector3 temp = transform1.position;
+                    temp.y -= 1f;
+                    transform1.position = temp;
+                }
+            }
+        }
+
         public virtual bool CanMove()
         {
-            return !isInteracting && !isBlocked;
+            return !isInteracting && !isBlocked && !isBlownUp;
         }
+        
 
         /// <summary>
         /// 返回当前进攻方距离终点的路程
@@ -236,6 +290,8 @@ namespace Attackers
 
             return res;
         }
+
+        #endregion
 
         // protected virtual List<Defender> GetAllTargetsInRange()
         // {

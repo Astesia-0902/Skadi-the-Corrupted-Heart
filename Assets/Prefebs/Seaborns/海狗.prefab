@@ -203,11 +203,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
-  maxHealth: 10
+  maxHealth: 9999999
   currentHealth: 0
   attackDamage: 10
   nerualDamage: 0
   blockPara: 1
+  weightLevel: 0
   armor: 6
   magicResistance: 0.05
   moveSpeed: 3
@@ -220,7 +221,9 @@ MonoBehaviour:
   attackTimerStandard: 1
   currentAttackTarget: {fileID: 0}
   nodeLoopManager: {fileID: 0}
+  healthBar: {fileID: 0}
   defenderWhoBlockMe: {fileID: 0}
+  isBlownUp: 0
 --- !u!54 &4098267257208574137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -246,6 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 165839664138105477}
+  - component: {fileID: 5568533254541014870}
   m_Layer: 0
   m_Name: UI Pivot
   m_TagString: Untagged
@@ -267,6 +271,20 @@ Transform:
   m_Father: {fileID: 1906339105483186046}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5568533254541014870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135850572729289905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99303d5cdec1a434b8c33d3a54aaa920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultStatus: 0
+  healthBarPrefeb: {fileID: 1204221119142584144, guid: 80fdb6ccbc80d5f489d4d777886f29db, type: 3}
 --- !u!1 &3729394881392533385
 GameObject:
   m_ObjectHideFlags: 0

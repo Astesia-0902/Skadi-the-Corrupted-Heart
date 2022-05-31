@@ -1,6 +1,6 @@
 namespace Defenders._Lumen
 {
-    public class LumenAm : AnimatorManagerDefender
+    public class LumenAm : DefenderHealerAnimatorManager
     {
         
     }

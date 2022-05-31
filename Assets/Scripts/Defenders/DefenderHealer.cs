@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Game_Managers;
 
@@ -20,11 +21,12 @@ namespace Defenders
             if (AttackTimer > 0)
                 return;
 
-            if (currentHealTarget != null && !isInteracting)
+            if (currentHealTarget != null && CanAttack())
             {
                 if (!currentHealTarget.isDead)
                 {
-                    AnimatorManager.PlayTargetAnimation("Attack");
+                    AttackTimer = attackTimerStandard;
+                    AnimatorManager.PlayTargetAnimation("Attack", true);
                 }
                 else
                 {
@@ -57,10 +59,16 @@ namespace Defenders
                 return null;
 
             float min = float.MaxValue;
-            int index = 0;
+            int index = -1;
             for (int i = 0; i < defenders.Count; i++)
             {
                 float current = defenders[i].currentHealth / defenders[i].maxHealth;
+
+                if (Math.Abs(current - 1f) < 0.00001f)
+                {
+                    continue;
+                }
+
                 if (current < min)
                 {
                     min = current;
@@ -68,7 +76,14 @@ namespace Defenders
                 }
             }
 
-            return defenders[index];
+            if (index == -1)
+            {
+                return null;
+            }
+            else
+            {
+                return defenders[index];
+            }
         }
 
         #endregion

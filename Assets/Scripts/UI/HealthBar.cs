@@ -1,5 +1,6 @@
 using System;
 using Attackers;
+using Defenders;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,17 +8,30 @@ namespace UI
 {
     public class HealthBar : MonoBehaviour
     {
+        [SerializeField] private bool defaultStatus;
         private Transform uiPivot;
         private Transform uiBar;
         private Image sliderBar;
         private Attacker attacker;
+        private Defender defender;
         public GameObject healthBarPrefeb;
 
         private void Awake()
         {
-            uiPivot = transform.GetChild(2);
-            attacker = GetComponent<Attacker>();
-            attacker.OnHealthChanged += UpdateHealthBar;
+            uiPivot = transform.parent.GetChild(2);
+            attacker = GetComponentInParent<Attacker>();
+            defender = GetComponentInParent<Defender>();
+
+            if (attacker != null)
+            {
+                Debug.Log("注册至:" + attacker);
+                attacker.OnHealthChanged += UpdateHealthBar;
+            }
+            else if (defender != null)
+            {
+                Debug.Log("注册至:" + defender);
+                defender.OnHealthChanged += UpdateHealthBar;
+            }
         }
 
         private void OnEnable()
@@ -26,11 +40,20 @@ namespace UI
             {
                 if (canvas.renderMode == RenderMode.WorldSpace && canvas.CompareTag("UI"))
                 {
-                    uiBar = Instantiate(healthBarPrefeb, uiPivot).transform;
+                    uiBar = Instantiate(healthBarPrefeb, canvas.transform).transform;
                     canvas.worldCamera = Camera.main;
                     sliderBar = uiBar.GetChild(0).GetComponent<Image>();
-                    uiBar.gameObject.SetActive(false);
+                    uiBar.gameObject.SetActive(defaultStatus);
                 }
+            }
+        }
+
+        private void Update()
+        {
+            if (uiBar != null)
+            {
+                uiBar.position = uiPivot.position;
+                uiBar.forward = -Camera.main.transform.forward;
             }
         }
 
@@ -41,12 +64,20 @@ namespace UI
             
             if (currentHealth <= 0f)
             {
-                uiBar.gameObject.SetActive(false);
+                DestroyBar();
                 return;
             }
 
             float value = currentHealth / maxHealth;
             sliderBar.fillAmount = value;
+        }
+
+        public void DestroyBar()
+        {
+            if (uiBar != null)
+            {
+                Destroy(uiBar.gameObject);
+            }
         }
     }
 }

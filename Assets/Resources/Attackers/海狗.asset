@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackerPrefeb: {fileID: 1446904178131515718, guid: 50ed6df0b6d9a044bae3ce978cd025b3, type: 3}
   attackerID: 2
+  cost: 8

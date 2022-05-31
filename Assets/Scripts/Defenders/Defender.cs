@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Attackers;
@@ -8,13 +9,17 @@ namespace Defenders
 {
     public class Defender : MonoBehaviour
     {
-        [Header("Combat Status")] public float maxHealth;
+        [Header("Health Status")] public float maxHealth;
         public float currentHealth;
-        public int blockNumStandard;
+        
+        [Header("Attack Status")]
         public float attackDamage;
+        public float attackTimerStandard;
+        protected float AttackTimer;
 
         [Header("Defence Paras")] public float armor;
         public float magicResistance;
+        public int blockNumStandard;
 
         [Header("Skills")] public int skillPoint;
         public int maxSkillPoint;
@@ -29,15 +34,16 @@ namespace Defenders
         public bool isRange;
         public bool isStunned;
 
+        [Header("Effects")]
+        public Transform hitPoint;
+
         private Transform rangeParent;
         public Attacker currentTarget;
         protected AnimatorManagerDefender AnimatorManager;
 
-        public float attackTimerStandard;
-        protected float AttackTimer;
-
         public List<Attacker> attackersBlocked;
 
+        public Action<float, float> OnHealthChanged;
         protected virtual void Awake()
         {
             isDead = false;
@@ -46,16 +52,18 @@ namespace Defenders
             attackersBlocked = new List<Attacker>();
             AttackTimer = attackTimerStandard;
             rangeParent = transform.GetChild(1);
+            hitPoint = transform.GetChild(3);
         }
 
         private void Start()
         {
             GameManager.Instance.AddDefender(this);
-            AnimatorManager.PlayTargetAnimation("Start");
+            AnimatorManager.PlayTargetAnimation("Start", true);
         }
 
         protected virtual void Update()
         {
+            isInteracting = AnimatorManager.anim.GetBool(IsInteracting);
             NeuralDamageUpdate();
             UpdateAttackTimer();
             AttackUpdate();
@@ -92,7 +100,7 @@ namespace Defenders
             isStunned = true;
             AnimatorManager.SetAnimatorBool("isStunned", isStunned);
             TakeDamage(0, 0, 0.4f * maxHealth);
-            AnimatorManager.PlayTargetAnimation("Stun");
+            AnimatorManager.PlayTargetAnimation("Stun", true);
         }
 
         public virtual void NeuralDamageUpdate()
@@ -123,7 +131,7 @@ namespace Defenders
         protected virtual void Die()
         {
             isDead = true;
-            AnimatorManager.PlayTargetAnimation("Die");
+            AnimatorManager.PlayTargetAnimation("Die", true);
             Unblock();
         }
 
@@ -156,6 +164,8 @@ namespace Defenders
             currentHealth += heal;
             if (currentHealth > maxHealth)
                 currentHealth = maxHealth;
+
+            OnHealthChanged.Invoke(currentHealth, maxHealth);
         }
 
         #endregion
@@ -164,19 +174,17 @@ namespace Defenders
 
         protected virtual void AttackUpdate()
         {
-            if (!CanAttack())
-                return;
-
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
 
             if (AttackTimer > 0)
                 return;
 
-            if (currentTarget != null && !isInteracting)
+            if (currentTarget != null && CanAttack())
             {
                 if (!currentTarget.isDead)
                 {
-                    AnimatorManager.PlayTargetAnimation("Attack");
+                    AttackTimer = attackTimerStandard;
+                    AnimatorManager.PlayTargetAnimation("Attack", true);
                 }
                 else
                 {
@@ -327,6 +335,8 @@ namespace Defenders
 
         private float skillPointTimer;
         public bool skillReady;
+        private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
+
         public void SkillPointUpdate()
         {
             skillPointTimer += Time.deltaTime;
@@ -361,7 +371,7 @@ namespace Defenders
 
         public virtual bool CanAttack()
         {
-            return !(isStunned || isDead);
+            return !(isStunned || isDead || isInteracting);
         }
 
         #endregion

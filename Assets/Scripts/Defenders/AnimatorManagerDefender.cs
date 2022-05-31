@@ -8,27 +8,29 @@ namespace Defenders
     public class AnimatorManagerDefender : MonoBehaviour
     {
         protected Defender Defender;
-        protected Animator Anim;
+        public Animator anim;
+        private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
 
         protected virtual void Awake()
         {
-            Anim = GetComponent<Animator>();
+            anim = GetComponent<Animator>();
             Defender = GetComponentInParent<Defender>();
         }
         
-        public virtual void PlayTargetAnimation(string animationName)
+        public virtual void PlayTargetAnimation(string animationName,bool isInteract)
         {
-            Anim.Play(animationName);
+            anim.Play(animationName);
+            anim.SetBool(IsInteracting,isInteract);
         }
 
         public virtual void SetAnimatorBool(string variableName,bool value)
         {
-            Anim.SetBool(variableName, value);
+            anim.SetBool(variableName, value);
         }
 
         public virtual bool GetAnimatorBool(string variableName)
         {
-            return Anim.GetBool(variableName);
+            return anim.GetBool(variableName);
         }
 
         public virtual void OnAttack()

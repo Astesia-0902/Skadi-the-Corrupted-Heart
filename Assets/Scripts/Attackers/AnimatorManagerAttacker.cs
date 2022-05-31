@@ -7,7 +7,7 @@ namespace Attackers
     /// </summary>
     public class AnimatorManagerAttacker : MonoBehaviour
     {
-        private Animator anim;
+        public Animator anim;
         private Attacker attacker;
         public bool isInteracting;
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");

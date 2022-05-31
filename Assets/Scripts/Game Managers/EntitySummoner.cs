@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Attackers;
@@ -12,20 +13,27 @@ namespace Game_Managers
         public List<Transform> attackerTransformsInGame; //这个“多余”的List是给Jobs System用的
         private Dictionary<int, GameObject> attackerPrefebs;
         private Dictionary<int, Queue<Attacker>> attackerSpawnPool;
-        private Queue<AttackerSummonData> attackerList;
-        private Queue<NodeLoopManager> nodeList;
+
+        private List<AttackerSummonData> attackerList;
+        private List<NodeLoopManager> nodeList;
+
+        private Queue<AttackerSummonData> attackerListSingle;
+        private Queue<NodeLoopManager> nodeListSingle;
 
         private static bool _isInitialized;
 
+        public List<NodeLoopManager> nodeLoopManagers;
 
         protected override void Awake()
         {
             base.Awake();
-            
+
             if (!_isInitialized)
             {
-                attackerList = new Queue<AttackerSummonData>();
-                nodeList = new Queue<NodeLoopManager>();
+                attackerListSingle = new Queue<AttackerSummonData>();
+                nodeListSingle = new Queue<NodeLoopManager>();
+                attackerList = new List<AttackerSummonData>();
+                nodeList = new List<NodeLoopManager>();
                 attackersInGame = new List<Attacker>();
                 attackerPrefebs = new Dictionary<int, GameObject>();
                 attackerSpawnPool = new Dictionary<int, Queue<Attacker>>();
@@ -38,9 +46,22 @@ namespace Game_Managers
             }
         }
 
+        private float summonTimer;
+
+        private void Update()
+        {
+            summonTimer += Time.deltaTime;
+            if (summonTimer >= 10f)
+            {
+                SummonAttackerAllInOnce();
+                summonTimer = 0f;
+            }
+        }
+
         //与生成敌人相关的方法
+
         #region Summon Seaborn
-        
+
         /// <summary>
         /// 将海嗣拖入出兵点后，将其加入出击列表
         /// </summary>
@@ -48,35 +69,73 @@ namespace Game_Managers
         /// <param name="nodeLoopManager"></param>
         public void AddAttacker(AttackerSummonData attackerSummonData, NodeLoopManager nodeLoopManager)
         {
-            attackerList.Enqueue(attackerSummonData);
-            nodeList.Enqueue(nodeLoopManager);
+            if (nodeLoopManager.spawnPointID == 1 || nodeLoopManager.spawnPointID == 5)
+            {
+                if (CostManager.Instance.DrainCost(attackerSummonData.cost))
+                {
+                    CostManager.Instance.StoreCost(attackerSummonData.cost);
+                    attackerListSingle.Enqueue(attackerSummonData);
+                    nodeListSingle.Enqueue(nodeLoopManager);
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            if (CostManager.Instance.DrainCost(attackerSummonData.cost))
+            {
+                if (nodeLoopManager.spawnPointID == 3 || nodeLoopManager.spawnPointID == 4)
+                {
+                    attackerList.Add(attackerSummonData);
+                    nodeList.Add(nodeLoopManagers[0]);
+                    attackerList.Add(attackerSummonData);
+                    nodeList.Add(nodeLoopManagers[1]);
+                    return;
+                }
+                
+                attackerList.Add(attackerSummonData);
+                nodeList.Add(nodeLoopManager);
+            }
             //TODO:更新UI
         }
 
-        /// <summary>
-        /// 你是一个一个一个海嗣
-        /// </summary>
-        public void SummonAttackerOneByOne()
-        {
-            if (attackerList.Count > 0 && nodeList.Count > 0)
-            {
-                SummonAttacker(attackerList.Dequeue(), nodeList.Dequeue());
-            }
-        }
+        // /// <summary>
+        // /// 你是一个一个一个海嗣
+        // /// </summary>
+        // public void SummonAttackerOneByOne()
+        // {
+        //     if (attackerList.Count > 0 && nodeList.Count > 0)
+        //     {
+        //         SummonAttacker(attackerList.Dequeue(), nodeList.Dequeue());
+        //     }
+        // }
 
         /// <summary>
         /// 一次性弹射所有待命的海嗣
         /// </summary>
         public void SummonAttackerAllInOnce()
         {
-            StartCoroutine(SummonAllAttackerIE());
+            StartCoroutine(SummonAllAttackerMultiIE());
+            StartCoroutine(SummonAllAttackerSingleIE());
         }
 
-        private IEnumerator SummonAllAttackerIE()
+        private IEnumerator SummonAllAttackerMultiIE()
         {
-            while (attackerList.Count > 0 && nodeList.Count > 0)
+            for (int i = 0; i < attackerList.Count; i++)
             {
-                SummonAttacker(attackerList.Dequeue(), nodeList.Dequeue());
+                SummonAttacker(attackerList[i], nodeList[i]);
+                yield return new WaitForSeconds(0.3f);
+            }
+        }
+
+        private IEnumerator SummonAllAttackerSingleIE()
+        {
+            while (attackerListSingle.Count > 0 && nodeListSingle.Count > 0)
+            {
+                CostManager.Instance.RegainCost();
+                SummonAttacker(attackerListSingle.Dequeue(), nodeListSingle.Dequeue());
                 yield return new WaitForSeconds(0.3f);
             }
         }
@@ -147,6 +206,7 @@ namespace Game_Managers
             attackerTransformsInGame.Add(spawnedAttacker.transform);
             spawnedAttacker.id = attackerID;
         }
+
         #endregion
 
         /// <summary>
@@ -158,6 +218,7 @@ namespace Game_Managers
             if (attackerToBeRemoved != null)
             {
                 attackerSpawnPool[attackerToBeRemoved.id].Enqueue(attackerToBeRemoved);
+                attackerToBeRemoved.healthBar.DestroyBar();
                 attackersInGame.Remove(attackerToBeRemoved);
                 attackerTransformsInGame.Remove(attackerToBeRemoved.transform);
                 attackerToBeRemoved.gameObject.SetActive(false);

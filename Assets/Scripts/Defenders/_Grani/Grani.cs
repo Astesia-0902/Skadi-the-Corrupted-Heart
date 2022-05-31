@@ -18,11 +18,11 @@ namespace Defenders._Grani
                 {
                     if (currentTarget.transform.position.z < transform.position.z)
                     {
-                        AnimatorManager.PlayTargetAnimation("Attack_Down");
+                        AnimatorManager.PlayTargetAnimation("Attack_Down", true);
                     }
                     else
                     {
-                        AnimatorManager.PlayTargetAnimation("Attack");
+                        AnimatorManager.PlayTargetAnimation("Attack", true);
                     }
                 }
                 else

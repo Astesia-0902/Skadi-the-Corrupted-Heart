@@ -7,4 +7,5 @@ public class AttackerSummonData : ScriptableObject
 {
     public GameObject attackerPrefeb;
     public int attackerID;
+    public int cost;
 }
