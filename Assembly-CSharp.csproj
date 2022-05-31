@@ -49,6 +49,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
      <Compile Include="Assets\Scripts\Tile\Tile.cs" />
+     <Compile Include="Assets\NewBehaviourScript1.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
      <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
      <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
@@ -57,6 +58,7 @@
      <Compile Include="Assets\Scripts\UI\DeployButton.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\ButtonTemp.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Animation\Unity_glider\char_449_glider.atlas.txt" />
