@@ -74,7 +74,7 @@
      <Compile Include="Assets\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Blaze\Blaze.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Lumen\Lumen.cs" />
-     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\UI\UiForUnits.cs" />
      <Compile Include="Assets\Scripts\Attackers\Sea Hound\SeaHound.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Indigo\IndigoAm.cs" />
@@ -100,6 +100,7 @@
      <Compile Include="Assets\Scripts\Defenders\_Indigo\Indigo.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Blaze\BlazeAm.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />

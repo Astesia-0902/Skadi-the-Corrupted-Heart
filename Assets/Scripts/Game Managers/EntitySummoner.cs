@@ -218,7 +218,7 @@ namespace Game_Managers
             if (attackerToBeRemoved != null)
             {
                 attackerSpawnPool[attackerToBeRemoved.id].Enqueue(attackerToBeRemoved);
-                attackerToBeRemoved.healthBar.DestroyBar();
+                attackerToBeRemoved.uiForUnits.DestroyBar();
                 attackersInGame.Remove(attackerToBeRemoved);
                 attackerTransformsInGame.Remove(attackerToBeRemoved.transform);
                 attackerToBeRemoved.gameObject.SetActive(false);

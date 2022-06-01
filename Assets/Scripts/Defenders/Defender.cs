@@ -11,31 +11,17 @@ namespace Defenders
     {
         [Header("Health Status")] public float maxHealth;
         public float currentHealth;
-        
-        [Header("Attack Status")]
-        public float attackDamage;
-        public float attackTimerStandard;
-        protected float AttackTimer;
 
         [Header("Defence Paras")] public float armor;
         public float magicResistance;
-        public int blockNumStandard;
-
-        [Header("Skills")] public int skillPoint;
-        public int maxSkillPoint;
-
-        [Header("Neural Damage")] public float maxNeuralDamage = 100f;
-        public float neuralDamage;
-        public float neuralRecoveryTimer;
-        public float neuralRecoveryThreshold = 4f;
+        public int blockNumStandard; //阻挡数
 
         [Header("Status Flag")] public bool isDead;
         public bool isInteracting;
         public bool isRange;
         public bool isStunned;
 
-        [Header("Effects")]
-        public Transform hitPoint;
+        [Header("Effects")] public Transform hitPoint;
 
         private Transform rangeParent;
         public Attacker currentTarget;
@@ -43,11 +29,15 @@ namespace Defenders
 
         public List<Attacker> attackersBlocked;
 
+        //更新生命值/神经损伤的UI事件
         public Action<float, float> OnHealthChanged;
+        public Action<float> OnSanityChanged;
+
         protected virtual void Awake()
         {
             isDead = false;
             currentHealth = maxHealth;
+            sanity = 1000f;
             AnimatorManager = GetComponentInChildren<AnimatorManagerDefender>();
             attackersBlocked = new List<Attacker>();
             AttackTimer = attackTimerStandard;
@@ -72,6 +62,13 @@ namespace Defenders
 
         #region Take Damage
 
+        [Header("Neural Damage")] public float maxNeuralDamage = 100f;
+        public float sanity;
+        public float sanityRecoveryTimer;
+        public float sanityRecoveryThreshold = 10f;
+        public float resistance;
+        public bool afterBurst;
+
         public virtual void TakeDamage(float physicDamage, float magicDamage, float realDamage)
         {
             currentHealth -= physicDamage - armor > 0.05f * physicDamage
@@ -79,60 +76,106 @@ namespace Defenders
                 : 0.05f * physicDamage;
             currentHealth -= magicDamage * (1 - magicResistance);
             currentHealth -= realDamage;
+
+            OnHealthChanged.Invoke(currentHealth, maxHealth);
+
             if (currentHealth <= 0)
             {
                 Die();
             }
         }
 
+        protected virtual void Die()
+        {
+            isDead = true;
+            GameManager.Instance.RemoveDefender(this);
+            AnimatorManager.PlayTargetAnimation("Die", true);
+            Unblock();
+        }
+
+        /// <summary>
+        /// 受到神经损伤
+        /// </summary>
+        /// <param name="neuralDamageToTake"></param>
         public virtual void TakeNeuralDamage(float neuralDamageToTake)
         {
-            neuralDamage -= neuralDamageToTake;
-            if (neuralDamage <= 0)
+            sanity -= neuralDamageToTake;
+            OnSanityChanged.Invoke(sanity);
+
+            if (sanity <= 0)
             {
-                neuralDamage = 0;
+                sanity = 0;
                 NeuralDamageBurst();
             }
         }
 
+        /// <summary>
+        /// 受到神经损伤的治疗
+        /// </summary>
+        /// <param name="healAmount"></param>
+        public virtual void TakeNeuralHeal(float healAmount)
+        {
+            sanity += healAmount;
+            OnSanityChanged.Invoke(sanity);
+
+            if (sanity >= 1000f)
+            {
+                sanity = 1000f;
+            }
+        }
+
+        /// <summary>
+        /// 神经损伤爆发
+        /// </summary>
         protected virtual void NeuralDamageBurst()
         {
             isStunned = true;
+            afterBurst = true;
+            Unblock();
             AnimatorManager.SetAnimatorBool("isStunned", isStunned);
-            TakeDamage(0, 0, 0.4f * maxHealth);
+            TakeDamage(0, 0, 1000f);
             AnimatorManager.PlayTargetAnimation("Stun", true);
         }
 
+        /// <summary>
+        /// 持续恢复神经损伤
+        /// </summary>
         public virtual void NeuralDamageUpdate()
         {
-            neuralDamage += 5f;
-
-            if (neuralDamage >= 100f)
+            //是否是爆发后的恢复期
+            if (afterBurst)
             {
-                neuralDamage = 100f;
+                sanity += Time.deltaTime * 100f;
+            }
+            else
+            {
+                sanity += Time.deltaTime * 50f;
+            }
+
+            OnSanityChanged.Invoke(sanity);
+
+            if (sanity >= 1000f)
+            {
+                sanity = 1000f;
+                if (afterBurst)
+                    afterBurst = !afterBurst;
             }
 
             if (isStunned)
             {
-                neuralRecoveryTimer += Time.deltaTime;
-                if (neuralRecoveryTimer >= neuralRecoveryThreshold)
+                sanityRecoveryTimer += Time.deltaTime;
+                if (sanityRecoveryTimer >= sanityRecoveryThreshold * (1f - resistance))
                 {
+                    //TODO:眩晕的特效
                     isStunned = false;
                     AnimatorManager.SetAnimatorBool("isStunned", isStunned);
-                    neuralRecoveryTimer = 0f;
+                    sanityRecoveryTimer = 0f;
                 }
             }
             else
             {
-                neuralRecoveryTimer = 0f;
+                sanityRecoveryTimer = 0f;
             }
-        }
-
-        protected virtual void Die()
-        {
-            isDead = true;
-            AnimatorManager.PlayTargetAnimation("Die", true);
-            Unblock();
         }
 
         /// <summary>
@@ -170,7 +213,11 @@ namespace Defenders
 
         #endregion
 
-        #region Attack Helper
+        #region Attack
+
+        [Header("Attack Status")] public float attackDamage;
+        public float attackTimerStandard;
+        protected float AttackTimer;
 
         protected virtual void AttackUpdate()
         {
@@ -209,7 +256,7 @@ namespace Defenders
                 //搜索在攻击范围的敌人
                 if (CheckInRange(attacker.transform))
                     targetsInRange.Add(attacker);
-                
+
                 if (isRange)
                     continue;
 
@@ -322,6 +369,9 @@ namespace Defenders
                 attackersBlocked.Remove(attacker);
         }
 
+        /// <summary>
+        /// 控制攻击频率
+        /// </summary>
         private void UpdateAttackTimer()
         {
             AttackTimer -= Time.deltaTime;
@@ -331,18 +381,30 @@ namespace Defenders
 
         #endregion
 
+        /// <summary>
+        /// 与技能相关的方法
+        /// </summary>
+
         #region Skill
+
+        [Header("Skills")] public int skillPoint;
+
+        public int maxSkillPoint;
 
         private float skillPointTimer;
         public bool skillReady;
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
 
+        /// <summary>
+        /// 回复技能点
+        /// </summary>
         public void SkillPointUpdate()
         {
             skillPointTimer += Time.deltaTime;
             if (skillPointTimer >= 1f)
             {
                 skillPoint++;
+                skillPointTimer = 0f;
             }
 
             if (skillPoint >= maxSkillPoint)
@@ -369,11 +431,59 @@ namespace Defenders
             return !(isStunned || isDead);
         }
 
+        /// <summary>
+        /// 当前干员是否可以攻击
+        /// </summary>
+        /// <returns></returns>
         public virtual bool CanAttack()
         {
             return !(isStunned || isDead || isInteracting);
         }
 
         #endregion
+    }
+
+    /// <summary>
+    /// 比较器
+    /// </summary>
+    public class DefenderHealthComp : IComparer<Defender>
+    {
+        public int Compare(Defender x, Defender y)
+        {
+            if (x == null && y == null)
+            {
+                return 0;
+            }
+
+            if (x == null)
+            {
+                return -1;
+            }
+
+            if (y == null)
+            {
+                return 1;
+            }
+
+            //被眩晕的排前面
+            if (x.isStunned && !y.isStunned)
+            {
+                return -1;
+            }
+            else if (!x.isStunned && y.isStunned)
+            {
+                return 1;
+            }
+
+            //x大->返回1->x往后排->升序排列
+            if (x.currentHealth / x.maxHealth > y.currentHealth / y.maxHealth)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+        }
     }
 }

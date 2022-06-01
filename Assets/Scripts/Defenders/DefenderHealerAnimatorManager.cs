@@ -5,10 +5,10 @@ namespace Defenders
     public class DefenderHealerAnimatorManager : AnimatorManagerDefender
     {
         protected DefenderHealer DefenderHealer;
-        private HealTracer healTracer;
-        [SerializeField] private GameObject healTracerPrefeb;
-        [SerializeField] private GameObject healHitPrefeb;
-        [SerializeField] private Transform healTracerPivot;
+        protected HealTracer healTracer;
+        [SerializeField] protected GameObject healTracerPrefeb;
+        [SerializeField] protected GameObject healHitPrefeb;
+        [SerializeField] protected Transform healTracerPivot;
 
         protected override void Awake()
         {
@@ -22,6 +22,11 @@ namespace Defenders
             healTracer.healTarget = DefenderHealer.currentHealTarget;
             healTracer.healAmount = DefenderHealer.attackDamage;
             healTracer.healHitPrefeb = healHitPrefeb;
+        }
+
+        public virtual void OnDie()
+        {
+            Destroy(Defender.gameObject);
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Attackers
         
         private Transform rangeParent;
         private AnimatorManagerAttacker animatorManager;
-        public HealthBar healthBar;
+        public UiForUnits uiForUnits;
 
         public Defender defenderWhoBlockMe;
 
@@ -58,7 +58,7 @@ namespace Attackers
         public virtual void Initialize(NodeLoopManager node)
         {
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
-            healthBar = GetComponentInChildren<HealthBar>();
+            uiForUnits = GetComponentInChildren<UiForUnits>();
             isInteracting = false;
             isBlocked = false;
             isDead = false;
