@@ -47,17 +47,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
      <Compile Include="Assets\Scripts\Tile\Tile.cs" />
-     <Compile Include="Assets\NewBehaviourScript1.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
      <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\UI\DeployButton.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\ButtonTemp.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
+     <Compile Include="Assets\NewBehaviourScript1.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
@@ -70,6 +70,7 @@
      <None Include="Assets\Animation\Unity_irene\char_4009_irene.atlas.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr.skel.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr.skel.txt" />
+     <None Include="Assets\model\effect\rain.shader" />
      <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr.skel.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl_2.atlas.txt" />
      <None Include="Assets\Animation\Unity_red\char_144_red.atlas.txt" />
@@ -714,6 +715,12 @@
  <Reference Include="Unity.Burst.Editor">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Searcher.Editor">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
@@ -722,6 +729,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs.Editor">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
@@ -732,6 +742,9 @@
  <Reference Include="Unity.Mathematics">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Burst">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
  </Reference>
@@ -741,11 +754,17 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Collections">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

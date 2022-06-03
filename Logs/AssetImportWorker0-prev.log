@@ -15,11 +15,11 @@ E:/git_progarm/Skadi-the-Corrupted-Heart
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60141
+57774
 Successfully changed project path to: E:/git_progarm/Skadi-the-Corrupted-Heart
 E:/git_progarm/Skadi-the-Corrupted-Heart
 Using Asset Import Pipeline V2.
-AS: AutoStreaming module initializing.Refreshing native plugins compatible for Editor in 31.85 ms, found 2 plugins.
+AS: AutoStreaming module initializing.Refreshing native plugins compatible for Editor in 36.03 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.24f1c2 (f3616f7ef48a)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.24f1c2/Editor/Data/Resources/UnitySubsystems
@@ -35,72 +35,72 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.24f1c2/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.24f1c2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.24f1c2/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.24f1c2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000508 seconds.
+Registered in 0.000459 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 34.13 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.92 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.701 seconds
+- Completed reload, in  0.360 seconds
 Domain Reload Profiling:
-	ReloadAssembly (701ms)
-		BeginReloadAssembly (85ms)
+	ReloadAssembly (360ms)
+		BeginReloadAssembly (27ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (465ms)
-			LoadAssemblies (84ms)
+		EndReloadAssembly (288ms)
+			LoadAssemblies (27ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (256ms)
+			SetupTypeCache (92ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (18ms)
-			SetupLoadedEditorAssemblies (123ms)
+			RebuildScriptCaches (17ms)
+			SetupLoadedEditorAssemblies (119ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (34ms)
+				RefreshPlugins (41ms)
 				BeforeProcessingInitializeOnLoad (6ms)
-				ProcessInitializeOnLoadAttributes (56ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
+				ProcessInitializeOnLoadAttributes (51ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004200 seconds.
+Registered in 0.003328 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 34.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.835 seconds
+- Completed reload, in  0.996 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1841ms)
-		BeginReloadAssembly (85ms)
+	ReloadAssembly (996ms)
+		BeginReloadAssembly (110ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (2ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (1718ms)
-			LoadAssemblies (61ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (851ms)
+			LoadAssemblies (57ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (332ms)
+			SetupTypeCache (199ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (1230ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (499ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (41ms)
-				ProcessInitializeOnLoadAttributes (1176ms)
+				RefreshPlugins (34ms)
+				BeforeProcessingInitializeOnLoad (42ms)
+				ProcessInitializeOnLoadAttributes (412ms)
 				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
@@ -109,15 +109,15 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2230 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.1 MB.
-System memory in use after: 130.9 MB.
+Unloading 3030 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.3 MB.
+System memory in use after: 154.2 MB.
 
-Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2677.
-Total: 4.422500 ms (FindLiveObjects: 0.354600 ms CreateObjectMapping: 0.074300 ms MarkObjects: 2.839200 ms  DeleteObjects: 1.151900 ms)
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 3476.
+Total: 3.633300 ms (FindLiveObjects: 0.211400 ms CreateObjectMapping: 0.076300 ms MarkObjects: 2.723100 ms  DeleteObjects: 0.621600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,440 +132,128 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/model/texture/空白地面1.jpg
-  artifactKey: Guid(eac4925af7afd6343bb0dd096d8ecd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/空白地面1.jpg using Guid(eac4925af7afd6343bb0dd096d8ecd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '955e1b90bc95885b143d9fdcfd7d6619') in 0.065574 seconds 
-  Import took 0.068480 seconds .
+  path: Assets/ExampleAssets/Shader
+  artifactKey: Guid(19b127853a1341d45891b471877793e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Shader using Guid(19b127853a1341d45891b471877793e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2e6d011dc7ec09d18fcddadb835859') in 0.009428 seconds 
+  Import took 0.013753 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/model/texture/地面裂痕_Base_Color2 拷贝.jpg
-  artifactKey: Guid(356d9d5827fc4554b88b633c90f994a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/地面裂痕_Base_Color2 拷贝.jpg using Guid(356d9d5827fc4554b88b633c90f994a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '742f650cd8e502abe49ca4a688b08a16') in 0.020747 seconds 
-  Import took 0.023212 seconds .
+  Time since last request: 0.651467 seconds.
+  path: Assets/ExampleAssets/Shader/04
+  artifactKey: Guid(748bfd15c73b980438484765c59face5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Shader/04 using Guid(748bfd15c73b980438484765c59face5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06463803d3fbbbaf5b8fa209b8e00d67') in 0.005801 seconds 
+  Import took 0.009805 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000117 seconds.
-  path: Assets/model/texture/地面_Normal_DirectX.jpg
-  artifactKey: Guid(64e2a2cbdf051394d95f90faa11c1e2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/地面_Normal_DirectX.jpg using Guid(64e2a2cbdf051394d95f90faa11c1e2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '644492b36c8784796fc5839c54d6c3a1') in 0.020267 seconds 
-  Import took 0.025436 seconds .
+  Time since last request: 0.026861 seconds.
+  path: Assets/ExampleAssets/Shader/04/_04Material.mat
+  artifactKey: Guid(115d36cb16cbf584eaddb895124733b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Shader/04/_04Material.mat using Guid(115d36cb16cbf584eaddb895124733b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f05f07eb8e9e8335c440274c986183') in 0.076715 seconds 
+  Import took 0.080558 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000430 seconds.
-  path: Assets/model/texture/空白地面0.jpg
-  artifactKey: Guid(45cb858a555f70c4183ff29673c6c125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/空白地面0.jpg using Guid(45cb858a555f70c4183ff29673c6c125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49467c9df710ca013c83ee23cafe48e4') in 0.015939 seconds 
-  Import took 0.020091 seconds .
+  Time since last request: 0.000174 seconds.
+  path: Assets/ExampleAssets/Shader/04/Plane.prefab
+  artifactKey: Guid(213c97781c26ba640bf9b23f5c31ed65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Shader/04/Plane.prefab using Guid(213c97781c26ba640bf9b23f5c31ed65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '949082f1d749dee9accdf51a768f77fe') in 0.019879 seconds 
+  Import took 0.023830 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/model/texture/地面_Base_Color4.jpg
-  artifactKey: Guid(886aeedf64f5d544fa1a361d2bdbf9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/地面_Base_Color4.jpg using Guid(886aeedf64f5d544fa1a361d2bdbf9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2464aafd6b842e1ac6b0ec06c1de8ebe') in 0.013470 seconds 
-  Import took 0.017332 seconds .
+  Time since last request: 2.888849 seconds.
+  path: Assets/ExampleAssets/Shader/04/_04shader.shadergraph
+  artifactKey: Guid(ed1e6e63c2ae7d54083d37ed4e3c0149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Shader/04/_04shader.shadergraph using Guid(ed1e6e63c2ae7d54083d37ed4e3c0149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96e2d3d953605ba04555063e543f1316') in 0.007232 seconds 
+  Import took 0.010939 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/model/texture/空白地面2.jpg
-  artifactKey: Guid(d91240708a5b8ca49bb67e2e7fbea6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/空白地面2.jpg using Guid(d91240708a5b8ca49bb67e2e7fbea6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf44dd93fb8255db2b183db6372dd6e') in 0.012143 seconds 
-  Import took 0.015911 seconds .
+  Time since last request: 242.192394 seconds.
+  path: Assets/Editor/SpineSettings.asset
+  artifactKey: Guid(d482a10f497bdad46a80dc28ff32a6f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SpineSettings.asset using Guid(d482a10f497bdad46a80dc28ff32a6f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d93c5d4178aa38e077fdbfed4e4e3e') in 0.011818 seconds 
+  Import took 0.018007 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/model/texture/空白地面3.jpg
-  artifactKey: Guid(9081d7afbde46bf4d90a6812096603e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/空白地面3.jpg using Guid(9081d7afbde46bf4d90a6812096603e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbd9f2152b5457eb7f3a1faf25824476') in 0.013121 seconds 
-  Import took 0.016003 seconds .
+  Time since last request: 16.697488 seconds.
+  path: Assets/model/effect/rain.shader
+  artifactKey: Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/rain.shader using Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfd7bda85edf691bfb947b64feeb907') in 0.006798 seconds 
+  Import took 0.010461 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/model/texture/方块3个.psd
-  artifactKey: Guid(d04353631fac1c9448f7d277f6d07cff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/方块3个.psd using Guid(d04353631fac1c9448f7d277f6d07cff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb7faf0ed719e8f76c6ddb48f75f986') in 0.015639 seconds 
-  Import took 0.019342 seconds .
+  Time since last request: 44.726339 seconds.
+  path: Assets/model/effect/rain.shader
+  artifactKey: Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/rain.shader using Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d3541cb542f5ad142f69108ad4855b') in 0.004038 seconds 
+  Import took 0.009607 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/model/texture/地面裂痕_Base_Color1 拷贝.jpg
-  artifactKey: Guid(0da8a724b1a225d40a589f2cac667724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/地面裂痕_Base_Color1 拷贝.jpg using Guid(0da8a724b1a225d40a589f2cac667724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4b8ba27078eddbe2e3a1aa119cdd9bd') in 0.011970 seconds 
-  Import took 0.015322 seconds .
+  Time since last request: 28.274667 seconds.
+  path: Assets/model/effect/Unlit_rain.mat
+  artifactKey: Guid(b15dd209e5e450a4fa6a8a12b1a5051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/Unlit_rain.mat using Guid(b15dd209e5e450a4fa6a8a12b1a5051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad169a0e3d6b7e618d38b9a5172975f') in 0.023287 seconds 
+  Import took 0.027452 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000336 seconds.
-  path: Assets/model/texture/贴图.psd
-  artifactKey: Guid(0c381b5b58bb83f43821ef5fcfde3368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图.psd using Guid(0c381b5b58bb83f43821ef5fcfde3368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4985a85c9313b837e8780de2cf817cc5') in 0.022057 seconds 
-  Import took 0.025496 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.463907 seconds.
-  path: Assets/model/texture/高台_Base_Color (2).jpg
-  artifactKey: Guid(0c380367ade1f02418a5379220aafe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/高台_Base_Color (2).jpg using Guid(0c380367ade1f02418a5379220aafe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983147e18f46e184dad5d736891b609d') in 0.017720 seconds 
-  Import took 0.021816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/model/texture/高台_Base_Color.jpg
-  artifactKey: Guid(779eff18facd0a248b85fd06d183d95b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/高台_Base_Color.jpg using Guid(779eff18facd0a248b85fd06d183d95b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a29cb6cbd9cb2678ec26bcd7a8f0b238') in 0.010341 seconds 
-  Import took 0.014089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.037663 seconds.
-  path: Assets/model/texture/高台_Normal_DirectX.jpg
-  artifactKey: Guid(99c27b3e4184db644a2c0406000cc82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/高台_Normal_DirectX.jpg using Guid(99c27b3e4184db644a2c0406000cc82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfe68b3960809dbf06b1c58ed0aa8bdf') in 0.010691 seconds 
-  Import took 0.013499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.254166 seconds.
-  path: Assets/model/texture/地面_Base_Color3.jpg
-  artifactKey: Guid(430762fda0f61a64e9b88856947d7e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/地面_Base_Color3.jpg using Guid(430762fda0f61a64e9b88856947d7e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c99ff9193360afd2d4f6560c27884a7') in 0.015315 seconds 
-  Import took 0.017879 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.232281 seconds.
-  path: Assets/model/texture/贴图素材
-  artifactKey: Guid(a1ef092b32114cb45864318be64720ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材 using Guid(a1ef092b32114cb45864318be64720ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6989f8ecb641e0c8b56b196950173df8') in 0.005174 seconds 
-  Import took 0.015614 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.169572 seconds.
-  path: Assets/model/texture/贴图素材/石头1.jpg
-  artifactKey: Guid(484ab31b969b039468a1aa302bc18958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头1.jpg using Guid(484ab31b969b039468a1aa302bc18958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3e3b356f87b81935c59149602f964e') in 0.007839 seconds 
-  Import took 0.010947 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/model/texture/贴图素材/石头3 拷贝2.jpg
-  artifactKey: Guid(4cd3f661ee614f8489afea3cb31037a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头3 拷贝2.jpg using Guid(4cd3f661ee614f8489afea3cb31037a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7f6ba4d63e5c4a56c50898c078308cb') in 0.011609 seconds 
-  Import took 0.016129 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000498 seconds.
-  path: Assets/model/texture/贴图素材/石头2.jpg
-  artifactKey: Guid(d26f03d3253b0a34da7c0408bbc73ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头2.jpg using Guid(d26f03d3253b0a34da7c0408bbc73ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2348e2c9c12aebe0ce777110975f3510') in 0.013621 seconds 
-  Import took 0.018870 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000471 seconds.
-  path: Assets/model/texture/贴图素材/静止贴图.jpg
-  artifactKey: Guid(d6d0eee687ce3c540bffee9625047cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/静止贴图.jpg using Guid(d6d0eee687ce3c540bffee9625047cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72a39e56b4bedce5085f251d95d25a34') in 0.016097 seconds 
-  Import took 0.021314 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000475 seconds.
-  path: Assets/model/texture/贴图素材/石头3.jpg
-  artifactKey: Guid(0f41385b8dd47e548955b70e9a45200e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头3.jpg using Guid(0f41385b8dd47e548955b70e9a45200e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7768b42a7a15729d820c2fb767e89475') in 0.016511 seconds 
-  Import took 0.023290 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.928142 seconds.
-  path: Assets/model/texture/贴图素材/Materials
-  artifactKey: Guid(ec93399611b7c0a47a5f4b04d8743dca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/Materials using Guid(ec93399611b7c0a47a5f4b04d8743dca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93652369139d5502e8c1a95c400dcfd3') in 0.005558 seconds 
-  Import took 0.014011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.052348 seconds.
-  path: Assets/model/texture/贴图素材/Materials/石头1.mat
-  artifactKey: Guid(c6d558e3a708cda47847f2a0aa188976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/Materials/石头1.mat using Guid(c6d558e3a708cda47847f2a0aa188976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07120b3bf21edd1de4f2783454ee5915') in 0.055441 seconds 
-  Import took 0.058636 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.536281 seconds.
-  path: Assets/model/texture/贴图素材/石头3 拷贝2.jpg
-  artifactKey: Guid(4cd3f661ee614f8489afea3cb31037a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头3 拷贝2.jpg using Guid(4cd3f661ee614f8489afea3cb31037a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1474453c395fbf3c9cd4cf674677820a') in 0.008247 seconds 
-  Import took 0.012606 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004180 seconds.
-  path: Assets/model/texture/贴图素材/石头1.jpg
-  artifactKey: Guid(484ab31b969b039468a1aa302bc18958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头1.jpg using Guid(484ab31b969b039468a1aa302bc18958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee64b8efddf37162f6cfbaf605c4cad5') in 0.009992 seconds 
-  Import took 0.015542 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/model/texture/贴图素材/石头2.jpg
-  artifactKey: Guid(d26f03d3253b0a34da7c0408bbc73ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头2.jpg using Guid(d26f03d3253b0a34da7c0408bbc73ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81aeb1b92df7cebedb208031095bbeed') in 0.013485 seconds 
-  Import took 0.017895 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/model/texture/贴图素材/静止贴图.jpg
-  artifactKey: Guid(d6d0eee687ce3c540bffee9625047cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/静止贴图.jpg using Guid(d6d0eee687ce3c540bffee9625047cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc98aa368dbb9aaeae84912878d34a2d') in 0.012360 seconds 
-  Import took 0.016795 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/model/texture/贴图素材/石头3.jpg
-  artifactKey: Guid(0f41385b8dd47e548955b70e9a45200e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/石头3.jpg using Guid(0f41385b8dd47e548955b70e9a45200e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b68fd16e79729616334e951ba607e6b1') in 0.017348 seconds 
-  Import took 0.020786 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.082963 seconds.
-  path: Assets/model/texture
-  artifactKey: Guid(67457dd4f78d6bb48a4676f54df52776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture using Guid(67457dd4f78d6bb48a4676f54df52776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b4a58d8034e7ca032839837c17dae0') in 0.005263 seconds 
-  Import took 0.015932 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 44.016728 seconds.
-  path: Assets/model/texture/Materials
-  artifactKey: Guid(a4410378b40403449b86ed73bd023550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials using Guid(a4410378b40403449b86ed73bd023550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a735d6efa2074d812c898858b400dde') in 0.002802 seconds 
-  Import took 0.011274 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.041903 seconds.
-  path: Assets/model/texture/Materials/地面_Base_Color3.mat
-  artifactKey: Guid(2f758627ff0d27c4f9ee6eebd5798cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/地面_Base_Color3.mat using Guid(2f758627ff0d27c4f9ee6eebd5798cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f32bc7826d37b07000695a70b1066c59') in 0.013326 seconds 
-  Import took 0.016267 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/model/texture/Materials/贴图.mat
-  artifactKey: Guid(5c5277e78b4d7d946a371de62b09be61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/贴图.mat using Guid(5c5277e78b4d7d946a371de62b09be61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff92be473e9cb4b6c21b95c481d0cc9b') in 0.016265 seconds 
-  Import took 0.020455 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/model/texture/Materials/地面裂痕_Base_Color2 拷贝.mat
-  artifactKey: Guid(f19cab02f3e81a54bb54e67098dd425c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/地面裂痕_Base_Color2 拷贝.mat using Guid(f19cab02f3e81a54bb54e67098dd425c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616215f958955c27b10540d8d6322ac0') in 0.018156 seconds 
-  Import took 0.021431 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/model/texture/Materials/高台_Base_Color (2).mat
-  artifactKey: Guid(02fe3799a387fad40803fd3b54096b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/高台_Base_Color (2).mat using Guid(02fe3799a387fad40803fd3b54096b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af95fb070feeb08c1bc29361c3c7249d') in 0.019741 seconds 
-  Import took 0.024706 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/model/texture/Materials/空白地面3.mat
-  artifactKey: Guid(801663690296dc24599ed89a59a32cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/空白地面3.mat using Guid(801663690296dc24599ed89a59a32cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51caf205a7325b865d420369f3e71541') in 0.016845 seconds 
-  Import took 0.020771 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/model/texture/Materials/地面裂痕_Base_Color1 拷贝.mat
-  artifactKey: Guid(b5aaf6a32794b8941bedaaeeeaf9a47d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/地面裂痕_Base_Color1 拷贝.mat using Guid(b5aaf6a32794b8941bedaaeeeaf9a47d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebdf7f8f9ff73dcbec0a4e55d43a9475') in 0.015927 seconds 
-  Import took 0.019825 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/model/texture/Materials/方块3个.mat
-  artifactKey: Guid(bc16ef10c3557fc4486424bbc81cf654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/方块3个.mat using Guid(bc16ef10c3557fc4486424bbc81cf654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d31e8cdf7aafec5b676829e3720bc30') in 0.017762 seconds 
-  Import took 0.024090 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/model/texture/Materials/高台_Base_Color.mat
-  artifactKey: Guid(d0e2e743aa244bd41a5eef653944873b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/高台_Base_Color.mat using Guid(d0e2e743aa244bd41a5eef653944873b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75e523bce25d73f0396268234e2ac3c2') in 0.016799 seconds 
-  Import took 0.021190 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 86.953801 seconds.
-  path: Assets/model/texture/贴图素材/Materials/石头2.mat
-  artifactKey: Guid(34566646e38ae0744ae47df848c0da48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/Materials/石头2.mat using Guid(34566646e38ae0744ae47df848c0da48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e44051fedf93f731c8c01d6010f5cf45') in 0.010458 seconds 
-  Import took 0.018888 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/model/texture/贴图素材/Materials/静止贴图.mat
-  artifactKey: Guid(ce9d2a224b0ca7e43ac3347cf7106a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/Materials/静止贴图.mat using Guid(ce9d2a224b0ca7e43ac3347cf7106a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98993b27d333924f74cd9ddea07f3d4b') in 0.013367 seconds 
-  Import took 0.017224 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.316780 seconds.
-  path: Assets/model/texture/贴图素材/Materials/石头3 拷贝2.mat
-  artifactKey: Guid(ec30bf00e33359c488364bc8781f785c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/Materials/石头3 拷贝2.mat using Guid(ec30bf00e33359c488364bc8781f785c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10fbd98fc05a545279333b5fb712033a') in 0.012384 seconds 
-  Import took 0.015642 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/model/texture/贴图素材/Materials/石头3.mat
-  artifactKey: Guid(8813b9656d7329741b48df33e0011a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/贴图素材/Materials/石头3.mat using Guid(8813b9656d7329741b48df33e0011a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8837c3193feab9b87950a7c42e13a94') in 0.010488 seconds 
-  Import took 0.014301 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.097265 seconds.
-  path: Assets/model/texture/Materials/空白地面1.mat
-  artifactKey: Guid(2d064f44e3d0b0e4b8af6bec1bc9b81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/空白地面1.mat using Guid(2d064f44e3d0b0e4b8af6bec1bc9b81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90baebe967ff023f347158e82e27c23e') in 0.013023 seconds 
-  Import took 0.015663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/model/texture/Materials/空白地面2.mat
-  artifactKey: Guid(3f7a6bb63ad6b1245b221b8821d97e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/空白地面2.mat using Guid(3f7a6bb63ad6b1245b221b8821d97e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1af8b703da6bb5e6b3c029df75a4e9') in 0.013398 seconds 
-  Import took 0.022028 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 483.814319 seconds.
-  path: Assets/model/全部2.max
-  artifactKey: Guid(0d72937abbe19ea4089350c414c82ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/全部2.max using Guid(0d72937abbe19ea4089350c414c82ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3481eabc4d5ce1c1198326e5b22570bc') in 2.378187 seconds 
-  Import took 2.384669 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.275459 seconds.
-  path: Assets/model/全部2.max
-  artifactKey: Guid(0d72937abbe19ea4089350c414c82ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/全部2.max using Guid(0d72937abbe19ea4089350c414c82ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b00865ed705a23b5a4f62ac1d267bc2c') in 2.364407 seconds 
-  Import took 2.369393 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.133146 seconds.
-  path: Assets/model/全部2.max
-  artifactKey: Guid(0d72937abbe19ea4089350c414c82ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/全部2.max using Guid(0d72937abbe19ea4089350c414c82ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b992c5f12e24b4e3ff824ee553e54ae8') in 2.578398 seconds 
-  Import took 2.583348 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 177.999759 seconds.
-  path: Assets/model/texture/Materials/地面_Base_Color4.mat
-  artifactKey: Guid(98e00af5d77eb75429d175858a9847cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/地面_Base_Color4.mat using Guid(98e00af5d77eb75429d175858a9847cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad4ea796813a115db8e95cb1c68ad9d8') in 0.018120 seconds 
-  Import took 0.020885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/model/texture/Materials/空白地面0.mat
-  artifactKey: Guid(673cdd25d1f239749abbcd49a7b38b36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/空白地面0.mat using Guid(673cdd25d1f239749abbcd49a7b38b36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5677086fbdad4a5d7a4af1650fdb7839') in 0.011536 seconds 
-  Import took 0.014131 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/model/texture/Materials/地面_Normal_DirectX.mat
-  artifactKey: Guid(f9858a9f0931e674ead7be8a8f2cac3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/model/texture/Materials/地面_Normal_DirectX.mat using Guid(f9858a9f0931e674ead7be8a8f2cac3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '937461356b4fd06f5a73b83977bff9f0') in 0.016322 seconds 
-  Import took 0.019683 seconds .
+  Time since last request: 102.908824 seconds.
+  path: Assets/model/effect/rain.shader
+  artifactKey: Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/rain.shader using Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f3177dac18ec1f521862148326a98c3') in 0.002764 seconds 
+  Import took 0.007903 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002967 seconds.
+Registered in 0.003269 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.709 seconds
+- Completed reload, in  0.685 seconds
 Domain Reload Profiling:
-	ReloadAssembly (709ms)
-		BeginReloadAssembly (90ms)
+	ReloadAssembly (685ms)
+		BeginReloadAssembly (84ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (2ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (583ms)
-			LoadAssemblies (61ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (567ms)
+			LoadAssemblies (57ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (197ms)
+			SetupTypeCache (196ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (242ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (232ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (35ms)
-				ProcessInitializeOnLoadAttributes (192ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
+				BeforeProcessingInitializeOnLoad (38ms)
+				ProcessInitializeOnLoadAttributes (181ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2199 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.1 MB.
-System memory in use after: 134.0 MB.
+Unloading 2993 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.5 MB.
+System memory in use after: 154.4 MB.
 
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2725.
-Total: 2.775600 ms (FindLiveObjects: 0.146500 ms CreateObjectMapping: 0.043100 ms MarkObjects: 2.002300 ms  DeleteObjects: 0.582200 ms)
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3522.
+Total: 3.015100 ms (FindLiveObjects: 0.162600 ms CreateObjectMapping: 0.057800 ms MarkObjects: 2.241200 ms  DeleteObjects: 0.552700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -578,4 +266,93 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 128.862235 seconds.
+  path: Assets/model/effect/rain.shader
+  artifactKey: Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/rain.shader using Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f26548053e6b77c8d84b8cf483c26bf0') in 0.018288 seconds 
+  Import took 0.028317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.627343 seconds.
+  path: Assets/model/effect/Unlit_rain.mat
+  artifactKey: Guid(b15dd209e5e450a4fa6a8a12b1a5051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/Unlit_rain.mat using Guid(b15dd209e5e450a4fa6a8a12b1a5051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65964024187a38f12ac8b03070ff06b') in 0.040911 seconds 
+  Import took 0.044570 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005418 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.809 seconds
+Domain Reload Profiling:
+	ReloadAssembly (809ms)
+		BeginReloadAssembly (102ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (673ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (229ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (298ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (48ms)
+				ProcessInitializeOnLoadAttributes (233ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2992 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 154.4 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3526.
+Total: 4.052500 ms (FindLiveObjects: 0.214800 ms CreateObjectMapping: 0.074300 ms MarkObjects: 2.940900 ms  DeleteObjects: 0.820900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1461.132489 seconds.
+  path: Assets/model/effect/rain.shader
+  artifactKey: Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/rain.shader using Guid(e1ff9fbb9e3e40341b51390a630777dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e87d237bb44a972c218e8f813e123db8') in 0.021923 seconds 
+  Import took 0.027003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.232445 seconds.
+  path: Assets/model/effect/Unlit_rain.mat
+  artifactKey: Guid(b15dd209e5e450a4fa6a8a12b1a5051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/model/effect/Unlit_rain.mat using Guid(b15dd209e5e450a4fa6a8a12b1a5051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2933dc1aa2efa5d1a00fd300ccdf49c') in 0.042745 seconds 
+  Import took 0.046191 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
