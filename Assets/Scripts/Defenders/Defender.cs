@@ -23,7 +23,7 @@ namespace Defenders
 
         [Header("Effects")] public Transform hitPoint;
 
-        private Transform rangeParent;
+        protected Transform rangeParent;
         public Attacker currentTarget;
         protected AnimatorManagerDefender AnimatorManager;
 
@@ -245,7 +245,7 @@ namespace Defenders
         /// 获取攻击范围内，以及被阻挡的所有的敌人
         /// </summary>
         /// <returns></returns>
-        protected virtual List<Attacker> GetAllTargetsInRange()
+        public virtual List<Attacker> GetAllTargetsInRange()
         {
             List<Attacker> targetsInRange = new List<Attacker>();
             foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
@@ -398,7 +398,7 @@ namespace Defenders
         /// <summary>
         /// 回复技能点
         /// </summary>
-        public void SkillPointUpdate()
+        public virtual void SkillPointUpdate()
         {
             skillPointTimer += Time.deltaTime;
             if (skillPointTimer >= 1f)

@@ -1,17 +1,19 @@
+using Attackers;
+
 namespace Defenders._Blaze
 {
     public class BlazeAm : AnimatorManagerDefender
     {
-        // Start is called before the first frame update
-        void Start()
+        public override void OnAttack()
         {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            foreach (Attacker attacker in Defender.GetAllTargetsInRange())
+            {
+                if (attacker != null && attacker.isActiveAndEnabled)
+                {
+                    attacker.TakeDamage(Defender.attackDamage, 0f, 0f);
+                }
+            }
+            //TODO:攻击特效和敌人的受击特效
         }
     }
 }

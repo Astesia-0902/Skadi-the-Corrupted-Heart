@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Defenders\_Honeyberry\Honeyberry.cs" />
      <Compile Include="Assets\Scripts\Defenders\AnimatorManagerDefender.cs" />
      <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Hoshiguma\HoshigumaAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Hoshiguma\Hoshiguma.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Specter the Unchained\SpecterAm.cs" />
@@ -100,7 +101,6 @@
      <Compile Include="Assets\Scripts\Defenders\_Indigo\Indigo.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Blaze\BlazeAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />

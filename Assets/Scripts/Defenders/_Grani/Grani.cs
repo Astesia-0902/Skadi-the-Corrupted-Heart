@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Defenders._Grani
 {
     public class Grani : Defender
@@ -12,18 +14,15 @@ namespace Defenders._Grani
             if (AttackTimer > 0)
                 return;
 
-            if (currentTarget != null && !isInteracting)
+            if (currentTarget != null && CanAttack())
             {
                 if (!currentTarget.isDead)
                 {
-                    if (currentTarget.transform.position.z < transform.position.z)
-                    {
-                        AnimatorManager.PlayTargetAnimation("Attack_Down", true);
-                    }
-                    else
-                    {
-                        AnimatorManager.PlayTargetAnimation("Attack", true);
-                    }
+                    AttackTimer = attackTimerStandard;
+                    AnimatorManager.PlayTargetAnimation(
+                        Mathf.Abs(currentTarget.transform.position.z - transform.position.z) > 0.2f
+                            ? "Attack_Down"
+                            : "Attack", true);
                 }
                 else
                 {
