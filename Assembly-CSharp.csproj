@@ -47,16 +47,27 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansDecalTools.cs" />
      <Compile Include="Assets\Scripts\Tile\Tile.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansPostProcess.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansImporter.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansImporterWindow.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
      <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\UI\DeployButton.cs" />
      <Compile Include="Assets\Scripts\ButtonTemp.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansUtilities.cs" />
      <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
+     <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
      <Compile Include="Assets\NewBehaviourScript1.cs" />
+     <Compile Include="Assets\model\timeControl.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansTerrainTools.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansImageUtils.cs" />
      <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansMeshUtils.cs" />
      <Compile Include="Assets\Scripts\Game Managers\GameManager.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansBridgeLink.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
@@ -334,6 +345,9 @@
  <Reference Include="Unity.Collections.LowLevel.ILSupport">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/PackageCache/com.unity.collections@1.2.3/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
  </Reference>
+ <Reference Include="Mono.Cecil">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
@@ -349,8 +363,8 @@
  <Reference Include="Unity.Burst.Cecil.Rocks">
  <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
  </Reference>
- <Reference Include="Mono.Cecil">
- <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>E:/git_progarm/Skadi-the-Corrupted-Heart/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Unity/2020.3.24f1c2/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
