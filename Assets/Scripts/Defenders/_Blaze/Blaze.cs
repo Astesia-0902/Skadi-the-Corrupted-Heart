@@ -53,9 +53,9 @@ namespace Defenders._Blaze
 
         private void ChainSawExtension()
         {
-            for (int i = 0; i < rangeParent.childCount; i++)
+            for (int i = 0; i < RangeParent.childCount; i++)
             {
-                rangeParent.GetChild(i).gameObject.SetActive(true);
+                RangeParent.GetChild(i).gameObject.SetActive(true);
             }
 
             AnimatorManager.PlayTargetAnimation("Skill_1_Begin", true);

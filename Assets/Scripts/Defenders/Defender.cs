@@ -23,7 +23,7 @@ namespace Defenders
 
         [Header("Effects")] public Transform hitPoint;
 
-        protected Transform rangeParent;
+        protected Transform RangeParent;
         public Attacker currentTarget;
         protected AnimatorManagerDefender AnimatorManager;
 
@@ -39,10 +39,15 @@ namespace Defenders
             currentHealth = maxHealth;
             sanity = 1000f;
             AnimatorManager = GetComponentInChildren<AnimatorManagerDefender>();
+            
             attackersBlocked = new List<Attacker>();
             AttackTimer = attackTimerStandard;
-            rangeParent = transform.GetChild(1);
+            RangeParent = transform.GetChild(1);
             hitPoint = transform.GetChild(3);
+
+            magicDamageToDeal = magicDamage;
+            physicalDamageToDeal = attackDamage;
+            realDamageToDeal = 0;
         }
 
         private void Start()
@@ -62,20 +67,20 @@ namespace Defenders
 
         #region Take Damage
 
-        [Header("Neural Damage")] public float maxNeuralDamage = 100f;
+        [Header("Neural Damage")]
         public float sanity;
         public float sanityRecoveryTimer;
         public float sanityRecoveryThreshold = 10f;
         public float resistance;
         public bool afterBurst;
 
-        public virtual void TakeDamage(float physicDamage, float magicDamage, float realDamage)
+        public virtual void TakeDamage(float physicDamage1, float magicDamage1, float realDamage1)
         {
-            currentHealth -= physicDamage - armor > 0.05f * physicDamage
-                ? physicDamage - armor
-                : 0.05f * physicDamage;
-            currentHealth -= magicDamage * (1 - magicResistance);
-            currentHealth -= realDamage;
+            currentHealth -= physicDamage1 - armor > 0.05f * physicDamage1
+                ? physicDamage1 - armor
+                : 0.05f * physicDamage1;
+            currentHealth -= magicDamage1 * (1 - magicResistance);
+            currentHealth -= realDamage1;
 
             OnHealthChanged.Invoke(currentHealth, maxHealth);
 
@@ -216,8 +221,14 @@ namespace Defenders
         #region Attack
 
         [Header("Attack Status")] public float attackDamage;
+        public float magicDamage;
         public float attackTimerStandard;
         protected float AttackTimer;
+        
+        [Header("Damage To Deal")]
+        public float physicalDamageToDeal;
+        public float magicDamageToDeal;
+        public float realDamageToDeal;
 
         protected virtual void AttackUpdate()
         {
@@ -343,12 +354,12 @@ namespace Defenders
         {
             Vector3 targetCenter = targetTransform.position;
             //rangeParent物体下挂载了该单位的攻击范围中每个方块的中点
-            for (int i = 0; i < rangeParent.childCount; i++)
+            for (int i = 0; i < RangeParent.childCount; i++)
             {
-                if (!rangeParent.GetChild(i).gameObject.activeSelf)
+                if (!RangeParent.GetChild(i).gameObject.activeSelf)
                     continue;
 
-                Vector3 rangeCenter = rangeParent.GetChild(i).position;
+                Vector3 rangeCenter = RangeParent.GetChild(i).position;
                 if (targetCenter.x < rangeCenter.x + 0.5f && targetCenter.x > rangeCenter.x - 0.5f &&
                     targetCenter.z < rangeCenter.z + 0.5f && targetCenter.z > rangeCenter.z - 0.5f)
                 {
@@ -391,6 +402,8 @@ namespace Defenders
 
         public int maxSkillPoint;
 
+        public bool isAttackRecovering;
+
         private float skillPointTimer;
         public bool skillReady;
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
@@ -400,6 +413,9 @@ namespace Defenders
         /// </summary>
         public virtual void SkillPointUpdate()
         {
+            if (isAttackRecovering)
+                return;
+            
             skillPointTimer += Time.deltaTime;
             if (skillPointTimer >= 1f)
             {
@@ -407,6 +423,24 @@ namespace Defenders
                 skillPointTimer = 0f;
             }
 
+            if (skillPoint >= maxSkillPoint)
+            {
+                skillPoint = maxSkillPoint;
+                skillReady = true;
+            }
+            else
+            {
+                skillReady = false;
+            }
+        }
+
+        public virtual void SkillPointOnAttack()
+        {
+            if (!isAttackRecovering)
+                return;
+            
+            skillPoint++;
+            
             if (skillPoint >= maxSkillPoint)
             {
                 skillPoint = maxSkillPoint;

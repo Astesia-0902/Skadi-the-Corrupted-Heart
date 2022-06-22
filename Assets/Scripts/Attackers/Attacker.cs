@@ -33,6 +33,8 @@ namespace Attackers
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
         public bool isBlocked;
 
+        public Transform hitPoint;
+
         public float attackTimerStandard;
         protected float AttackTimer;
 
@@ -57,6 +59,7 @@ namespace Attackers
 
         public virtual void Initialize(NodeLoopManager node)
         {
+            hitPoint = transform.GetChild(3);
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
             uiForUnits = GetComponentInChildren<UiForUnits>();
             isInteracting = false;
