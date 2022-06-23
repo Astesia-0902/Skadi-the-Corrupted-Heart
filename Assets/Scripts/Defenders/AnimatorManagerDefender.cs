@@ -42,14 +42,14 @@ namespace Defenders
         public virtual void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
-            if (Defender.currentTarget != null)
+            if (Defender.targetToDeal != null)
             {
                 if (Defender.isRange)
                 {
                     rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
                     if (rangeAttackTracer != null)
                     {
-                        rangeAttackTracer.target = Defender.currentTarget;
+                        rangeAttackTracer.target = Defender.targetToDeal;
                         rangeAttackTracer.magicDamage = Defender.magicDamage;
                         rangeAttackTracer.physicDamage = Defender.attackDamage;
                         rangeAttackTracer.realDamage = Defender.realDamageToDeal;
@@ -58,7 +58,12 @@ namespace Defenders
                 }
                 else
                 {
-                    Defender.currentTarget.TakeDamage(Defender.attackDamage, Defender.magicDamage,
+                    if (hitFXPrefeb != null)
+                    {
+                        Instantiate(hitFXPrefeb, Defender.targetToDeal.hitPoint);
+                    }
+
+                    Defender.targetToDeal.TakeDamage(Defender.attackDamage, Defender.magicDamage,
                         Defender.realDamageToDeal);
                 }
             }

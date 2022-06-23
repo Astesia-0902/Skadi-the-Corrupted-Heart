@@ -18,15 +18,15 @@ namespace Defenders
             
             currentHealTarget = GetPriorityHealTarget(GetAllHealTargetInRange());
 
-            if (AttackTimer > 0)
+            if (attackTimer > 0)
                 return;
 
             if (currentHealTarget != null && CanAttack())
             {
                 if (!currentHealTarget.isDead)
                 {
-                    AttackTimer = attackTimerStandard;
-                    AnimatorManager.PlayTargetAnimation("Attack", true);
+                    attackTimer = attackTimerStandard;
+                    animatorManager.PlayTargetAnimation("Attack", true);
                 }
                 else
                 {

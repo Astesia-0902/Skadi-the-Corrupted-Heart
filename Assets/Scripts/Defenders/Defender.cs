@@ -23,26 +23,26 @@ namespace Defenders
 
         [Header("Effects")] public Transform hitPoint;
 
-        protected Transform RangeParent;
+        protected Transform rangeParent;
         public Attacker currentTarget;
-        protected AnimatorManagerDefender AnimatorManager;
+        protected AnimatorManagerDefender animatorManager;
 
         public List<Attacker> attackersBlocked;
 
         //更新生命值/神经损伤的UI事件
-        public Action<float, float> OnHealthChanged;
-        public Action<float> OnSanityChanged;
+        public Action<float, float> onHealthChanged;
+        public Action<float> onSanityChanged;
 
         protected virtual void Awake()
         {
             isDead = false;
             currentHealth = maxHealth;
             sanity = 1000f;
-            AnimatorManager = GetComponentInChildren<AnimatorManagerDefender>();
+            animatorManager = GetComponentInChildren<AnimatorManagerDefender>();
             
             attackersBlocked = new List<Attacker>();
-            AttackTimer = attackTimerStandard;
-            RangeParent = transform.GetChild(1);
+            attackTimer = attackTimerStandard;
+            rangeParent = transform.GetChild(1);
             hitPoint = transform.GetChild(3);
 
             magicDamageToDeal = magicDamage;
@@ -53,12 +53,12 @@ namespace Defenders
         private void Start()
         {
             GameManager.Instance.AddDefender(this);
-            AnimatorManager.PlayTargetAnimation("Start", true);
+            animatorManager.PlayTargetAnimation("Start", true);
         }
 
         protected virtual void Update()
         {
-            isInteracting = AnimatorManager.anim.GetBool(IsInteracting);
+            isInteracting = animatorManager.anim.GetBool(IsInteracting);
             NeuralDamageUpdate();
             UpdateAttackTimer();
             AttackUpdate();
@@ -82,7 +82,7 @@ namespace Defenders
             currentHealth -= magicDamage1 * (1 - magicResistance);
             currentHealth -= realDamage1;
 
-            OnHealthChanged.Invoke(currentHealth, maxHealth);
+            onHealthChanged.Invoke(currentHealth, maxHealth);
 
             if (currentHealth <= 0)
             {
@@ -94,7 +94,7 @@ namespace Defenders
         {
             isDead = true;
             GameManager.Instance.RemoveDefender(this);
-            AnimatorManager.PlayTargetAnimation("Die", true);
+            animatorManager.PlayTargetAnimation("Die", true);
             Unblock();
         }
 
@@ -105,7 +105,7 @@ namespace Defenders
         public virtual void TakeNeuralDamage(float neuralDamageToTake)
         {
             sanity -= neuralDamageToTake;
-            OnSanityChanged.Invoke(sanity);
+            onSanityChanged.Invoke(sanity);
 
             if (sanity <= 0)
             {
@@ -121,7 +121,7 @@ namespace Defenders
         public virtual void TakeNeuralHeal(float healAmount)
         {
             sanity += healAmount;
-            OnSanityChanged.Invoke(sanity);
+            onSanityChanged.Invoke(sanity);
 
             if (sanity >= 1000f)
             {
@@ -137,9 +137,9 @@ namespace Defenders
             isStunned = true;
             afterBurst = true;
             Unblock();
-            AnimatorManager.SetAnimatorBool("isStunned", isStunned);
+            animatorManager.SetAnimatorBool("isStunned", isStunned);
             TakeDamage(0, 0, 1000f);
-            AnimatorManager.PlayTargetAnimation("Stun", true);
+            animatorManager.PlayTargetAnimation("Stun", true);
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace Defenders
                 sanity += Time.deltaTime * 50f;
             }
 
-            OnSanityChanged.Invoke(sanity);
+            onSanityChanged.Invoke(sanity);
 
             if (sanity >= 1000f)
             {
@@ -173,7 +173,7 @@ namespace Defenders
                 {
                     //TODO:眩晕的特效
                     isStunned = false;
-                    AnimatorManager.SetAnimatorBool("isStunned", isStunned);
+                    animatorManager.SetAnimatorBool("isStunned", isStunned);
                     sanityRecoveryTimer = 0f;
                 }
             }
@@ -213,7 +213,7 @@ namespace Defenders
             if (currentHealth > maxHealth)
                 currentHealth = maxHealth;
 
-            OnHealthChanged.Invoke(currentHealth, maxHealth);
+            onHealthChanged.Invoke(currentHealth, maxHealth);
         }
 
         #endregion
@@ -223,26 +223,31 @@ namespace Defenders
         [Header("Attack Status")] public float attackDamage;
         public float magicDamage;
         public float attackTimerStandard;
-        protected float AttackTimer;
+        protected float attackTimer;
         
         [Header("Damage To Deal")]
         public float physicalDamageToDeal;
         public float magicDamageToDeal;
         public float realDamageToDeal;
 
+        public Attacker targetToDeal;
+
         protected virtual void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
 
-            if (AttackTimer > 0)
+            if (currentTarget != null)
+                targetToDeal = currentTarget;
+
+            if (attackTimer > 0)
                 return;
 
-            if (currentTarget != null && CanAttack())
+            if (targetToDeal != null && CanAttack())
             {
-                if (!currentTarget.isDead)
+                if (!targetToDeal.isDead && CheckInRange(targetToDeal.transform))
                 {
-                    AttackTimer = attackTimerStandard;
-                    AnimatorManager.PlayTargetAnimation("Attack", true);
+                    attackTimer = attackTimerStandard;
+                    animatorManager.PlayTargetAnimation("Attack", true);
                 }
                 else
                 {
@@ -354,12 +359,12 @@ namespace Defenders
         {
             Vector3 targetCenter = targetTransform.position;
             //rangeParent物体下挂载了该单位的攻击范围中每个方块的中点
-            for (int i = 0; i < RangeParent.childCount; i++)
+            for (int i = 0; i < rangeParent.childCount; i++)
             {
-                if (!RangeParent.GetChild(i).gameObject.activeSelf)
+                if (!rangeParent.GetChild(i).gameObject.activeSelf)
                     continue;
 
-                Vector3 rangeCenter = RangeParent.GetChild(i).position;
+                Vector3 rangeCenter = rangeParent.GetChild(i).position;
                 if (targetCenter.x < rangeCenter.x + 0.5f && targetCenter.x > rangeCenter.x - 0.5f &&
                     targetCenter.z < rangeCenter.z + 0.5f && targetCenter.z > rangeCenter.z - 0.5f)
                 {
@@ -385,9 +390,9 @@ namespace Defenders
         /// </summary>
         private void UpdateAttackTimer()
         {
-            AttackTimer -= Time.deltaTime;
-            if (AttackTimer < 0)
-                AttackTimer = 0;
+            attackTimer -= Time.deltaTime;
+            if (attackTimer < 0)
+                attackTimer = 0;
         }
 
         #endregion

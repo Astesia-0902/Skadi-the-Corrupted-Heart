@@ -52,56 +52,67 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Defenders\_Mon3tr\Mon3trAm.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansDecalTools.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Honeyberry\Honeyberry.cs" />
-     <Compile Include="Assets\Scripts\Defenders\AnimatorManagerDefender.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Hoshiguma\HoshigumaAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Hoshiguma\Hoshiguma.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Specter the Unchained\SpecterAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\DefenderHealer.cs" />
      <Compile Include="Assets\Scripts\Tile\Tile.cs" />
      <Compile Include="Assets\Scripts\Game Managers\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Red\RedAm.cs" />
      <Compile Include="Assets\Scripts\Attackers\AnimatorManagerAttacker.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_BlueP\BlueP.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\CostManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_BlueP\BluePAm.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansPostProcess.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansImporter.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Red\Red.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Irene\Irene.cs" />
-     <Compile Include="Assets\Scripts\Animation Behavior\ResetFlags.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Blaze\Blaze.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Lumen\Lumen.cs" />
      <Compile Include="Assets\Scripts\UI\UiForUnits.cs" />
-     <Compile Include="Assets\Scripts\Attackers\Sea Hound\SeaHound.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansImporterWindow.cs" />
      <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Indigo\IndigoAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Honeyberry\HoneyberryAnimator.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Elysium\Elysium.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
      <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
      <Compile Include="Assets\Scripts\Attackers\Sea Hound\SeaHoundAnimatorManager.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Irene\IreneAnimatorManager.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Kalts\KaltsAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Specter the Unchained\Specter.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Grani\GraniAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Kalts\Kalts.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Grani\Grani.cs" />
-     <Compile Include="Assets\Scripts\Defenders\Extension\HealTracer.cs" />
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Scripts\Defenders\DefenderHealerAnimatorManager.cs" />
      <Compile Include="Assets\Scripts\UI\DeployButton.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\ButtonTemp.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Indigo\Indigo.cs" />
-     <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansUtilities.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Blaze\BlazeAm.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Mon3tr\Mon3trAm.cs" />
+     <Compile Include="Assets\Scripts\Defenders\AnimatorManagerDefender.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
      <Compile Include="Assets\Scripts\Defenders\Extension\RangeAttackTracer.cs" />
+     <Compile Include="Assets\Scripts\Defenders\DefenderHealer.cs" />
+     <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Red\RedAm.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_BlueP\BlueP.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\CostManager.cs" />
+     <Compile Include="Assets\model\timeControl.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansTerrainTools.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_BlueP\BluePAm.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansImageUtils.cs" />
+     <Compile Include="Assets\Scripts\Animation Behavior\ResetFlags.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Blaze\Blaze.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Lumen\Lumen.cs" />
+     <Compile Include="Assets\Scripts\Attackers\Sea Hound\SeaHound.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Honeyberry\HoneyberryAnimator.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Elysium\Elysium.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansMeshUtils.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Grani\GraniAm.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Grani\Grani.cs" />
+     <Compile Include="Assets\Quixel\Scripts\BridgeImporter\MegascansBridgeLink.cs" />
+     <Compile Include="Assets\Scripts\Defenders\Extension\HealTracer.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
+     <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
+     <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
@@ -114,6 +125,7 @@
      <None Include="Assets\Models\Defenders\Unity_irene\char_4009_irene.atlas.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr.skel.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr.skel.txt" />
+     <None Include="Assets\model\effect\rain.shader" />
      <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr.skel.txt" />
      <None Include="Assets\Models\Seaborns\Unity_dsintc\enemy_1151_dslntc.atlas.txt" />
      <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl_2.atlas.txt" />
@@ -391,6 +403,9 @@
  <Reference Include="Unity.Collections.LowLevel.ILSupport">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.collections@1.2.3/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
  </Reference>
+ <Reference Include="Mono.Cecil">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
@@ -406,8 +421,8 @@
  <Reference Include="Unity.Burst.Cecil.Rocks">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
  </Reference>
- <Reference Include="Mono.Cecil">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -772,6 +787,12 @@
  <Reference Include="Unity.Burst.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Searcher.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
@@ -780,6 +801,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
@@ -790,6 +814,9 @@
  <Reference Include="Unity.Mathematics">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Burst">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
  </Reference>
@@ -799,11 +826,17 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Collections">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

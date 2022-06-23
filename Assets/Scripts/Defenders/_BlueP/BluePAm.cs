@@ -14,7 +14,7 @@ namespace Defenders._BlueP
         public override void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
-            if (Defender.currentTarget != null)
+            if (Defender.targetToDeal != null)
             {
                 if (Defender.isRange)
                 {
@@ -26,7 +26,7 @@ namespace Defenders._BlueP
                         rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
                         if (rangeAttackTracer != null)
                         {
-                            rangeAttackTracer.target = Defender.currentTarget;
+                            rangeAttackTracer.target = Defender.targetToDeal;
                             rangeAttackTracer.magicDamage = Defender.magicDamage;
                             rangeAttackTracer.physicDamage = Defender.attackDamage * 1.5f;
                             rangeAttackTracer.realDamage = Defender.realDamageToDeal;
@@ -39,19 +39,21 @@ namespace Defenders._BlueP
                                 .GetComponent<RangeAttackTracer>();
                             if (secondaryTracer != null)
                             {
-                                secondaryTracer.target = Defender.currentTarget;
+                                secondaryTracer.target = blueP.secondaryTargetToDeal;
                                 secondaryTracer.magicDamage = Defender.magicDamage;
                                 secondaryTracer.physicDamage = Defender.attackDamage * 1.5f;
                                 secondaryTracer.realDamage = Defender.realDamageToDeal;
                                 secondaryTracer.hitFXPrefeb = hitFXPrefeb;
                             }
                         }
+
+                        return;
                     }
                     
                     rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
                     if (rangeAttackTracer != null)
                     {
-                        rangeAttackTracer.target = Defender.currentTarget;
+                        rangeAttackTracer.target = Defender.targetToDeal;
                         rangeAttackTracer.magicDamage = Defender.magicDamage;
                         rangeAttackTracer.physicDamage = Defender.attackDamage;
                         rangeAttackTracer.realDamage = Defender.realDamageToDeal;

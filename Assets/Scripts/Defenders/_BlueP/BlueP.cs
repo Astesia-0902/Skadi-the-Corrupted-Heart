@@ -6,21 +6,28 @@ namespace Defenders._BlueP
     public class BlueP : Defender
     {
         public Attacker secondaryTarget;
-        
+        public Attacker secondaryTargetToDeal;
+
         protected override void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
             secondaryTarget = GetSecondaryTarget();
 
-            if (AttackTimer > 0)
+            if (currentTarget != null)
+                targetToDeal = currentTarget;
+            if (secondaryTarget != null)
+                secondaryTargetToDeal = secondaryTarget;
+
+            if (attackTimer > 0)
                 return;
 
-            if (currentTarget != null && CanAttack())
+            if (targetToDeal != null && CanAttack())
             {
-                if (!currentTarget.isDead)
+                if (!targetToDeal.isDead && CheckInRange(targetToDeal.transform))
                 {
-                    AttackTimer = attackTimerStandard;
-                    AnimatorManager.PlayTargetAnimation("Attack", true);
+                    attackTimer = attackTimerStandard;
+                    SkillPointOnAttack();
+                    animatorManager.PlayTargetAnimation("Attack", true);
                 }
                 else
                 {
@@ -33,7 +40,7 @@ namespace Defenders._BlueP
         private Attacker GetSecondaryTarget()
         {
             List<Attacker> attackers = GetAllTargetsInRange();
-            
+
             foreach (Attacker attacker in attackers)
             {
                 if (attacker != currentTarget)

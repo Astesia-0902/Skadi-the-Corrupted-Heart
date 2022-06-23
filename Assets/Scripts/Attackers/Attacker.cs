@@ -21,8 +21,9 @@ namespace Attackers
         [Header("Defence Paras")] 
         public float armor;
         public float magicResistance;
-        
+
         [Header("Movements Paras")] 
+        public float standardMoveSpeed;
         public float moveSpeed;
         public int nodeIndex;
         public int spawnPoint;
@@ -74,6 +75,7 @@ namespace Attackers
             nodeIndex = 0;
             nodeLoopManager = node;
             transform.position = node.nodesPosition[0];
+            standardMoveSpeed = moveSpeed;
         }
 
         #region Take Damage

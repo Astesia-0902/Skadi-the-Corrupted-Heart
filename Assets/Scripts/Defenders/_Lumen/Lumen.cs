@@ -20,14 +20,14 @@ namespace Defenders._Lumen
             
             currentHealTarget = GetPriorityHealTarget(GetAllHealTargetInRange());
 
-            if (AttackTimer > 0)
+            if (attackTimer > 0)
                 return;
 
             if (currentHealTarget != null && CanAttack())
             {
                 if (!currentHealTarget.isDead)
                 {
-                    AttackTimer = attackTimerStandard;
+                    attackTimer = attackTimerStandard;
                     
                     if (skillReady)
                     {
@@ -37,11 +37,11 @@ namespace Defenders._Lumen
                             return;
                         }
                         skillPoint = 0;
-                        AnimatorManager.PlayTargetAnimation("Skill_2",true);
+                        animatorManager.PlayTargetAnimation("Skill_2",true);
                     }
                     else
                     {
-                        AnimatorManager.PlayTargetAnimation("Attack", true);
+                        animatorManager.PlayTargetAnimation("Attack", true);
                     }
                 }
                 else

@@ -11,15 +11,15 @@ namespace Defenders._Grani
 
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
 
-            if (AttackTimer > 0)
+            if (attackTimer > 0)
                 return;
 
             if (currentTarget != null && CanAttack())
             {
                 if (!currentTarget.isDead)
                 {
-                    AttackTimer = attackTimerStandard;
-                    AnimatorManager.PlayTargetAnimation(
+                    attackTimer = attackTimerStandard;
+                    animatorManager.PlayTargetAnimation(
                         Mathf.Abs(currentTarget.transform.position.z - transform.position.z) > 0.2f
                             ? "Attack_Down"
                             : "Attack", true);

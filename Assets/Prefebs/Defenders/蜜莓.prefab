@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2563667956161202887
 Transform:
   m_ObjectHideFlags: 0
@@ -47,16 +47,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   currentHealth: 0
-  isRange: 0
-  blockNumStandard: 0
-  attackDamage: 0
   armor: 0
   magicResistance: 0
+  blockNumStandard: 0
   isDead: 0
   isInteracting: 0
+  isRange: 0
+  isStunned: 0
+  hitPoint: {fileID: 0}
   currentTarget: {fileID: 0}
-  attackTimerStandard: 0
   attackersBlocked: []
+  sanity: 0
+  sanityRecoveryTimer: 0
+  sanityRecoveryThreshold: 10
+  resistance: 0
+  afterBurst: 0
+  attackDamage: 0
+  magicDamage: 0
+  attackTimerStandard: 0
+  physicalDamageToDeal: 0
+  magicDamageToDeal: 0
+  realDamageToDeal: 0
+  skillPoint: 0
+  maxSkillPoint: 0
+  isAttackRecovering: 0
+  skillReady: 0
   currentHealTarget: {fileID: 0}
 --- !u!1 &1327287660218290671
 GameObject:
@@ -362,6 +377,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a21b1954e2a3b040a72eb04a036acbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tracerFXPrefeb: {fileID: 0}
+  hitFXPrefeb: {fileID: 0}
+  tracerPivot: {fileID: 0}
+  rangeAttackTracer: {fileID: 0}
+  anim: {fileID: 0}
+  healTracerPrefeb: {fileID: 0}
+  healHitPrefeb: {fileID: 0}
+  healTracerPivot: {fileID: 0}
 --- !u!1 &3890197473198829645
 GameObject:
   m_ObjectHideFlags: 0

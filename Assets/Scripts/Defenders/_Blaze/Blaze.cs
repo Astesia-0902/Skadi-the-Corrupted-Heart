@@ -26,21 +26,21 @@ namespace Defenders._Blaze
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
 
-            if (AttackTimer > 0)
+            if (attackTimer > 0)
                 return;
 
             if (currentTarget != null && CanAttack())
             {
                 if (!currentTarget.isDead)
                 {
-                    AttackTimer = attackTimerStandard;
+                    attackTimer = attackTimerStandard;
                     if (Mathf.Abs(currentTarget.transform.position.z - transform.position.z) > 0.2f)
                     {
-                        AnimatorManager.PlayTargetAnimation(chainSawExtensionOn ? "Skill_1_Down" : "Attack_Down", true);
+                        animatorManager.PlayTargetAnimation(chainSawExtensionOn ? "Skill_1_Down" : "Attack_Down", true);
                     }
                     else
                     {
-                        AnimatorManager.PlayTargetAnimation(chainSawExtensionOn ? "Skill_1" : "Attack", true);
+                        animatorManager.PlayTargetAnimation(chainSawExtensionOn ? "Skill_1" : "Attack", true);
                     }
                 }
                 else
@@ -53,12 +53,12 @@ namespace Defenders._Blaze
 
         private void ChainSawExtension()
         {
-            for (int i = 0; i < RangeParent.childCount; i++)
+            for (int i = 0; i < rangeParent.childCount; i++)
             {
-                RangeParent.GetChild(i).gameObject.SetActive(true);
+                rangeParent.GetChild(i).gameObject.SetActive(true);
             }
 
-            AnimatorManager.PlayTargetAnimation("Skill_1_Begin", true);
+            animatorManager.PlayTargetAnimation("Skill_1_Begin", true);
             attackDamage *= 2f;
             skillPoint = 0;
             chainSawExtensionOn = true;

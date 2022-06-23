@@ -57,7 +57,7 @@ namespace Game_Managers
                     if (hit.collider.CompareTag("Spawn Point"))
                     {
                         Vector3 position = hit.collider.transform.position;
-                        position.y -= 0.5f;
+                        //position.y -= 0.3f;
                         currentSelectedUnit.transform.position = position;
                         nodeToDeploy = hit.collider.GetComponent<NodeLoopManager>();
                         lockedOnFlag = true;
