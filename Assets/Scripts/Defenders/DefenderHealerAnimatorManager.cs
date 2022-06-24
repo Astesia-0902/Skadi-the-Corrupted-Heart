@@ -1,3 +1,4 @@
+using Defenders.Extension;
 using UnityEngine;
 
 namespace Defenders
@@ -19,14 +20,14 @@ namespace Defenders
         public override void OnAttack()
         {
             HealTracer = Instantiate(healTracerPrefeb, healTracerPivot).GetComponent<HealTracer>();
-            HealTracer.healTarget = DefenderHealer.currentHealTarget;
+            HealTracer.healTarget = DefenderHealer.targetToHeal;
             HealTracer.healAmount = DefenderHealer.attackDamage;
             HealTracer.healHitPrefeb = healHitPrefeb;
         }
 
         public virtual void OnDie()
         {
-            Destroy(Defender.gameObject);
+            Destroy(defender.gameObject);
         }
     }
 }

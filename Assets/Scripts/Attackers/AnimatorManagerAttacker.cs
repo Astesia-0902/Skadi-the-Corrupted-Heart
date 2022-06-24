@@ -30,12 +30,15 @@ namespace Attackers
             anim.Play(animationName);
             anim.SetBool(AnimatorManagerAttacker.IsInteracting,isInteract);
         }
-        
+
         public virtual void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
-            attacker.currentAttackTarget.TakeDamage(attacker.attackDamage, 0, 0);
-            attacker.currentAttackTarget.TakeNeuralDamage(attacker.nerualDamage);
+            if (attacker.currentAttackTarget != null)
+            {
+                attacker.currentAttackTarget.TakeDamage(attacker.attackDamage, 0, 0);
+                attacker.currentAttackTarget.TakeNeuralDamage(attacker.nerualDamage);
+            }
         }
 
         public virtual void RemoveThis()

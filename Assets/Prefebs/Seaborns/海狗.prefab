@@ -207,12 +207,13 @@ MonoBehaviour:
   id: 2
   maxHealth: 1000
   currentHealth: 0
-  attackDamage: 10
+  attackDamage: 300
   nerualDamage: 0
   blockPara: 1
   weightLevel: 0
   armor: 6
   magicResistance: 0.05
+  standardMoveSpeed: 0
   moveSpeed: 3
   nodeIndex: 0
   spawnPoint: 0
@@ -220,6 +221,7 @@ MonoBehaviour:
   isRange: 0
   isInteracting: 0
   isBlocked: 0
+  hitPoint: {fileID: 0}
   attackTimerStandard: 1
   currentAttackTarget: {fileID: 0}
   nodeLoopManager: {fileID: 0}

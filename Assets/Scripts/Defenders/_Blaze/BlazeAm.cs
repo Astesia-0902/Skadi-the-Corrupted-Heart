@@ -6,11 +6,11 @@ namespace Defenders._Blaze
     {
         public override void OnAttack()
         {
-            foreach (Attacker attacker in Defender.GetAllTargetsInRange())
+            foreach (Attacker attacker in defender.GetAllTargetsInRange())
             {
                 if (attacker != null && attacker.isActiveAndEnabled)
                 {
-                    attacker.TakeDamage(Defender.attackDamage, 0f, 0f);
+                    attacker.TakeDamage(defender.attackDamage, 0f, 0f);
                 }
             }
             //TODO:攻击特效和敌人的受击特效

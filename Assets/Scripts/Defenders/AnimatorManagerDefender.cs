@@ -13,17 +13,25 @@ namespace Defenders
 
         public RangeAttackTracer rangeAttackTracer;
         
-        protected Defender Defender;
+        protected Defender defender;
         public Animator anim;
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
+        private static readonly int Multiplier = Animator.StringToHash("Multiplier");
 
         protected virtual void Awake()
         {
             anim = GetComponent<Animator>();
-            Defender = GetComponentInParent<Defender>();
+            defender = GetComponentInParent<Defender>();
         }
         
-        public virtual void PlayTargetAnimation(string animationName,bool isInteract)
+        public virtual void PlayTargetAnimation(string animationName,bool isInteract,float multiplier)
+        {
+            anim.SetFloat(Multiplier, multiplier);
+            anim.Play(animationName);
+            anim.SetBool(IsInteracting,isInteract);
+        }
+
+        public virtual void PlayTargetAnimation(string animationName, bool isInteract)
         {
             anim.Play(animationName);
             anim.SetBool(IsInteracting,isInteract);
@@ -42,17 +50,17 @@ namespace Defenders
         public virtual void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
-            if (Defender.targetToDeal != null)
+            if (defender.targetToDeal != null)
             {
-                if (Defender.isRange)
+                if (defender.isRange)
                 {
                     rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
                     if (rangeAttackTracer != null)
                     {
-                        rangeAttackTracer.target = Defender.targetToDeal;
-                        rangeAttackTracer.magicDamage = Defender.magicDamage;
-                        rangeAttackTracer.physicDamage = Defender.attackDamage;
-                        rangeAttackTracer.realDamage = Defender.realDamageToDeal;
+                        rangeAttackTracer.target = defender.targetToDeal;
+                        rangeAttackTracer.magicDamage = defender.magicDamage;
+                        rangeAttackTracer.physicDamage = defender.attackDamage;
+                        rangeAttackTracer.realDamage = defender.realDamageToDeal;
                         rangeAttackTracer.hitFXPrefeb = hitFXPrefeb;
                     }
                 }
@@ -60,11 +68,11 @@ namespace Defenders
                 {
                     if (hitFXPrefeb != null)
                     {
-                        Instantiate(hitFXPrefeb, Defender.targetToDeal.hitPoint);
+                        Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
                     }
 
-                    Defender.targetToDeal.TakeDamage(Defender.attackDamage, Defender.magicDamage,
-                        Defender.realDamageToDeal);
+                    defender.targetToDeal.TakeDamage(defender.attackDamage, defender.magicDamage,
+                        defender.realDamageToDeal);
                 }
             }
         }

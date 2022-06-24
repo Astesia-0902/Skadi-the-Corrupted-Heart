@@ -14,22 +14,22 @@ namespace Defenders._BlueP
         public override void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
-            if (Defender.targetToDeal != null)
+            if (defender.targetToDeal != null)
             {
-                if (Defender.isRange)
+                if (defender.isRange)
                 {
-                    if (Defender.skillReady)
+                    if (defender.skillReady)
                     {
-                        Defender.skillReady = false;
-                        Defender.skillPoint = 0;
+                        defender.skillReady = false;
+                        defender.skillPoint = 0;
                         
                         rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
                         if (rangeAttackTracer != null)
                         {
-                            rangeAttackTracer.target = Defender.targetToDeal;
-                            rangeAttackTracer.magicDamage = Defender.magicDamage;
-                            rangeAttackTracer.physicDamage = Defender.attackDamage * 1.5f;
-                            rangeAttackTracer.realDamage = Defender.realDamageToDeal;
+                            rangeAttackTracer.target = defender.targetToDeal;
+                            rangeAttackTracer.magicDamage = defender.magicDamage;
+                            rangeAttackTracer.physicDamage = defender.attackDamage * 1.5f;
+                            rangeAttackTracer.realDamage = defender.realDamageToDeal;
                             rangeAttackTracer.hitFXPrefeb = hitFXPrefeb;
                         }
 
@@ -40,9 +40,9 @@ namespace Defenders._BlueP
                             if (secondaryTracer != null)
                             {
                                 secondaryTracer.target = blueP.secondaryTargetToDeal;
-                                secondaryTracer.magicDamage = Defender.magicDamage;
-                                secondaryTracer.physicDamage = Defender.attackDamage * 1.5f;
-                                secondaryTracer.realDamage = Defender.realDamageToDeal;
+                                secondaryTracer.magicDamage = defender.magicDamage;
+                                secondaryTracer.physicDamage = defender.attackDamage * 1.5f;
+                                secondaryTracer.realDamage = defender.realDamageToDeal;
                                 secondaryTracer.hitFXPrefeb = hitFXPrefeb;
                             }
                         }
@@ -53,10 +53,10 @@ namespace Defenders._BlueP
                     rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
                     if (rangeAttackTracer != null)
                     {
-                        rangeAttackTracer.target = Defender.targetToDeal;
-                        rangeAttackTracer.magicDamage = Defender.magicDamage;
-                        rangeAttackTracer.physicDamage = Defender.attackDamage;
-                        rangeAttackTracer.realDamage = Defender.realDamageToDeal;
+                        rangeAttackTracer.target = defender.targetToDeal;
+                        rangeAttackTracer.magicDamage = defender.magicDamage;
+                        rangeAttackTracer.physicDamage = defender.attackDamage;
+                        rangeAttackTracer.realDamage = defender.realDamageToDeal;
                         rangeAttackTracer.hitFXPrefeb = hitFXPrefeb;
                     }
                 }

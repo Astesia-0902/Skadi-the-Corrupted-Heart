@@ -25,6 +25,37 @@ namespace Defenders._Specter_the_Unchained
             isHenshin = animatorManager.anim.GetBool(IsHenshin);
         }
 
+        protected override void AttackUpdate()
+        {
+            currentTarget = GetPriorityTarget(GetAllTargetsInRange());
+
+            if (currentTarget != null)
+                targetToDeal = currentTarget;
+
+            if (attackTimer > 0)
+                return;
+
+            if (targetToDeal != null && CanAttack())
+            {
+                if (!targetToDeal.isDead && CheckInRange(targetToDeal.transform))
+                {
+                    attackTimer = attackTimerStandard;
+
+                    float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
+
+                    animatorManager.PlayTargetAnimation(
+                        Mathf.Abs(targetToDeal.transform.position.z - transform.position.z) > 0.2f
+                            ? "Attack_Down"
+                            : "Attack", true, attackAnimationSpeed);
+                }
+                else
+                {
+                    //目标死亡时切换目标
+                    currentTarget = null;
+                }
+            }
+        }
+
         public override void TakeDamage(float physicDamage1, float magicDamage1, float realDamage1)
         {
             if (isHenshin)
@@ -44,8 +75,6 @@ namespace Defenders._Specter_the_Unchained
                 }
             }
 
-            onHealthChanged.Invoke(currentHealth, maxHealth);
-
             if (currentHealth <= 0)
             {
                 if (isStand)
@@ -62,6 +91,8 @@ namespace Defenders._Specter_the_Unchained
                     animatorManager.anim.SetBool(IsHenshin, true);
                 }
             }
+            
+            onHealthChanged.Invoke(currentHealth, maxHealth);
         }
 
         private float standTimer;
@@ -77,22 +108,26 @@ namespace Defenders._Specter_the_Unchained
                 blockNumStandard = 2;
                 animatorManager.anim.SetBool(IsHenshin, true);
                 animatorManager.PlayTargetAnimation("Die_B", true);
+                standTimer = 0f;
+
+                foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
+                {
+                    attacker.moveSpeed = attacker.standardMoveSpeed;
+                }
             }
         }
 
         private void StandSkill()
         {
-            if (!isStand)
+            if (!isStand || isHenshin)
                 return;
-
-            List<Attacker> attackers = new List<Attacker>();
 
             foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
             {
                 if (CheckInSkillRange(attacker.transform))
                 {
                     attacker.TakeDamage(0, skillDps * Time.deltaTime, 0);
-                    attacker.moveSpeed = attacker.standardMoveSpeed * 0.6f;
+                    attacker.moveSpeed = attacker.standardMoveSpeed * 0.3f;
                 }
                 else
                 {
@@ -124,8 +159,10 @@ namespace Defenders._Specter_the_Unchained
                 return;
 
             skillOn = true;
-            attackDamage *= 1.2f;
-            attackTimerStandard /= 2f;
+            skillPoint = 0;
+            skillReady = false;
+            attackDamage *= 1.5f;
+            attackTimerStandard /= 3f;
 
         }
 
@@ -142,8 +179,8 @@ namespace Defenders._Specter_the_Unchained
             if (skillTimer >= 20f)
             {
                 skillOn = false;
-                attackDamage /= 1.2f;
-                attackTimerStandard *= 2f;
+                attackDamage /= 1.5f;
+                attackTimerStandard *= 3f;
             }
 
         }
@@ -178,6 +215,16 @@ namespace Defenders._Specter_the_Unchained
             animatorManager.SetAnimatorBool("isStunned", isStunned);
             TakeDamage(0, 0, 1000f);
             animatorManager.PlayTargetAnimation(isStand ? "Stun_B" : "Stun", true);
+        }
+
+        public override bool CanAttack()
+        {
+            return !(isStunned || isDead || isInteracting || isStand || isHenshin);
+        }
+
+        public override bool CanBlock()
+        {
+            return !(isStunned || isDead || isStand || isHenshin);
         }
     }
 }

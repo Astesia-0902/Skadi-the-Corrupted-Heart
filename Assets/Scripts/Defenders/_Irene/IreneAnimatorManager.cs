@@ -17,8 +17,8 @@ namespace Defenders._Irene
         protected override void Awake()
         {
             base.Awake();
-            blowUpDamage = Defender.attackDamage * blowUpCoeffi;
-            handCannonDamage = Defender.attackDamage * handCannonCoeffi;
+            blowUpDamage = defender.attackDamage * blowUpCoeffi;
+            handCannonDamage = defender.attackDamage * handCannonCoeffi;
         }
 
         public void PlaySkill()
@@ -28,7 +28,7 @@ namespace Defenders._Irene
 
         public void BlowUp()
         {
-            skillTarget = Defender.currentTarget;
+            skillTarget = defender.currentTarget;
             
             if (!skillTarget.isDead)
             {

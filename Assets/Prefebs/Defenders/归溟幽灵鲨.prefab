@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracerFXPrefeb: {fileID: 0}
-  hitFXPrefeb: {fileID: 0}
+  hitFXPrefeb: {fileID: 6555208936675239666, guid: 8dc52b9c941b3d34a8924bae3d73e98a, type: 3}
   tracerPivot: {fileID: 0}
   rangeAttackTracer: {fileID: 0}
   anim: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8167024912020959524}
   m_Layer: 0
-  m_Name: Range Parent
+  m_Name: Skill Range Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
   maxHealth: 2000
   currentHealth: 0
   armor: 200
-  magicResistance: 10
+  magicResistance: 0.1
   blockNumStandard: 2
   isDead: 0
   isInteracting: 0
@@ -516,8 +516,9 @@ MonoBehaviour:
   maxSkillPoint: 30
   isAttackRecovering: 0
   skillReady: 0
-  skillDPS: 150
-  skillRange: {fileID: 0}
+  skillDps: 200
+  skillRange: {fileID: 8167024912020959524}
+  isHenshin: 0
 --- !u!1 &7772398803514383231
 GameObject:
   m_ObjectHideFlags: 0

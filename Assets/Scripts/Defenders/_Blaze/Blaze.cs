@@ -25,16 +25,19 @@ namespace Defenders._Blaze
         protected override void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
+            
+            if (currentTarget != null)
+                targetToDeal = currentTarget;
 
             if (attackTimer > 0)
                 return;
 
-            if (currentTarget != null && CanAttack())
+            if (targetToDeal != null && CanAttack())
             {
-                if (!currentTarget.isDead)
+                if (!targetToDeal.isDead && CheckInRange(targetToDeal.transform))
                 {
                     attackTimer = attackTimerStandard;
-                    if (Mathf.Abs(currentTarget.transform.position.z - transform.position.z) > 0.2f)
+                    if (Mathf.Abs(targetToDeal.transform.position.z - transform.position.z) > 0.2f)
                     {
                         animatorManager.PlayTargetAnimation(chainSawExtensionOn ? "Skill_1_Down" : "Attack_Down", true);
                     }

@@ -62,7 +62,7 @@ namespace Defenders._Lumen
             if (defenders.Count == 0)
                 return;
             
-            defenders.Sort(new DefenderHealthComp());
+            defenders.Sort(new DefenderHealthStunComp());
 
             for (int i = 0; i < 2; i++)
             {

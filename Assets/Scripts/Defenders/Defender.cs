@@ -121,12 +121,11 @@ namespace Defenders
         public virtual void TakeNeuralHeal(float healAmount)
         {
             sanity += healAmount;
-            onSanityChanged.Invoke(sanity);
-
             if (sanity >= 1000f)
             {
                 sanity = 1000f;
             }
+            onSanityChanged.Invoke(sanity);
         }
 
         /// <summary>
@@ -198,6 +197,8 @@ namespace Defenders
                     attacker.Unblocked();
                 }
             }
+            
+            attackersBlocked.Clear();
         }
 
         #endregion
@@ -247,7 +248,8 @@ namespace Defenders
                 if (!targetToDeal.isDead && CheckInRange(targetToDeal.transform))
                 {
                     attackTimer = attackTimerStandard;
-                    animatorManager.PlayTargetAnimation("Attack", true);
+                    float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
+                    animatorManager.PlayTargetAnimation("Attack", true, attackAnimationSpeed);
                 }
                 else
                 {
@@ -483,7 +485,52 @@ namespace Defenders
     }
 
     /// <summary>
-    /// 比较器
+    /// 生命值升序比较器(考虑眩晕)
+    /// </summary>
+    public class DefenderHealthStunComp : IComparer<Defender>
+    {
+        public int Compare(Defender x, Defender y)
+        {
+            if (x == null && y == null)
+            {
+                return 0;
+            }
+
+            if (x == null)
+            {
+                return -1;
+            }
+
+            if (y == null)
+            {
+                return 1;
+            }
+
+            //被眩晕的排前面
+            if (x.isStunned && !y.isStunned)
+            {
+                return -1;
+            }
+            else if (!x.isStunned && y.isStunned)
+            {
+                return 1;
+            }
+
+            //x大->返回1->x往后排->升序排列
+            if (x.currentHealth / x.maxHealth > y.currentHealth / y.maxHealth)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+            
+        }
+    }   
+    
+    /// <summary>
+    /// 生命值升序排序
     /// </summary>
     public class DefenderHealthComp : IComparer<Defender>
     {
@@ -516,6 +563,40 @@ namespace Defenders
 
             //x大->返回1->x往后排->升序排列
             if (x.currentHealth / x.maxHealth > y.currentHealth / y.maxHealth)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+    }    
+    
+    /// <summary>
+    /// 按照神经损伤升序排序
+    /// </summary>
+    public class DefenderNeuralComp : IComparer<Defender>
+    {
+        public int Compare(Defender x, Defender y)
+        {
+            if (x == null && y == null)
+            {
+                return 0;
+            }
+
+            if (x == null)
+            {
+                return -1;
+            }
+
+            if (y == null)
+            {
+                return 1;
+            }
+
+            //x大->返回1->x往后排->升序排列
+            if (x.sanity / 1000 > y.sanity / 1000)
             {
                 return 1;
             }

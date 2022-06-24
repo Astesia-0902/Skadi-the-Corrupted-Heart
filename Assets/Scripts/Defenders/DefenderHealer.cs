@@ -7,7 +7,7 @@ namespace Defenders
     public class DefenderHealer : Defender
     {
         public Defender currentHealTarget;
-
+        public Defender targetToHeal;
 
         #region Attack Helper
 
@@ -17,11 +17,15 @@ namespace Defenders
                 return;
             
             currentHealTarget = GetPriorityHealTarget(GetAllHealTargetInRange());
+            if (currentHealTarget != null)
+            {
+                targetToHeal = currentHealTarget;
+            }
 
             if (attackTimer > 0)
                 return;
 
-            if (currentHealTarget != null && CanAttack())
+            if (targetToHeal != null && CanAttack())
             {
                 if (!currentHealTarget.isDead)
                 {
@@ -53,37 +57,21 @@ namespace Defenders
             return targetsInRange;
         }
 
-        protected Defender GetPriorityHealTarget(List<Defender> defenders)
+        protected virtual Defender GetPriorityHealTarget(List<Defender> defenders)
         {
             if (defenders.Count == 0)
                 return null;
 
-            float min = float.MaxValue;
-            int index = -1;
-            for (int i = 0; i < defenders.Count; i++)
-            {
-                float current = defenders[i].currentHealth / defenders[i].maxHealth;
+            defenders.Sort(new DefenderHealthComp());
 
-                if (Math.Abs(current - 1f) < 0.00001f)
-                {
+            foreach (Defender defender in defenders)
+            {
+                if( Math.Abs(defender.currentHealth - defender.maxHealth) < 0.01f )
                     continue;
-                }
-
-                if (current < min)
-                {
-                    min = current;
-                    index = i;
-                }
+                return defender;
             }
 
-            if (index == -1)
-            {
-                return null;
-            }
-            else
-            {
-                return defenders[index];
-            }
+            return null;
         }
 
         #endregion
