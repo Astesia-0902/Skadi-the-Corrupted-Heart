@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Defenders._Lumen
 {
-    public class LumenAm : DefenderHealerAnimatorManager
+    public class LumenAm : AnimatorManagerDefenderHealer
     {
         [SerializeField] private GameObject skillTracerPrefeb;
         [SerializeField] private GameObject skillHitPrefeb;

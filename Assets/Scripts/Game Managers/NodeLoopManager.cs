@@ -8,9 +8,12 @@ using UnityEngine.Jobs;
 
 namespace Game_Managers
 {
+    /// <summary>
+    /// 挂载于每个出兵点的物体上
+    /// </summary>
     public class NodeLoopManager : MonoBehaviour
     {
-        //TODO：目前实现多个进攻路线的思路是将Game Loop Manager中控制进攻方移动的部分分离出来，多挂载几个物体，每个物体赋予各自的NodeParent
+        //前实现多个进攻路线的思路是将Game Loop Manager中控制进攻方移动的部分分离出来，多挂载几个物体，每个物体赋予各自的NodeParent
         private Queue<Attacker> attackersToRemove;
         private Queue<int> attackersIDToSummon;
 
@@ -89,10 +92,10 @@ namespace Game_Managers
             //初始化Job
             MoveAttackersJob moveJob = new MoveAttackersJob
             {
-                NodesPositions = nodesToUse,
-                AttackerSpeeds = attackerSpeed,
-                NodesIndex = nodeIndex,
-                DeltaTime = Time.deltaTime
+                nodesPositions = nodesToUse,
+                attackerSpeeds = attackerSpeed,
+                nodesIndex = nodeIndex,
+                deltaTime = Time.deltaTime
             };
 
             //JobHandle 用于标识已调度作业的句柄。可用作后续作业的依赖项，也可确保在主线程中执行完成。
@@ -103,7 +106,7 @@ namespace Game_Managers
             //在一轮调度完成以后，检查进攻单位的路径点是否是终点
             for (int i = 0; i < EntitySummoner.Instance.attackersInGame.Count; i++)
             {
-                //确保数组下标和AttackersInGame对齐
+                //确保数组下标和AttackersInGame的下标对齐
                 if (nodeIndex[i] == 0)
                     continue;
 
@@ -135,28 +138,37 @@ namespace Game_Managers
         }
     }
 
+    /// <summary>
+    /// Job System的功能类
+    /// </summary>
     public struct MoveAttackersJob : IJobParallelForTransform
     {
         //允许多个线程同时读写一个容器
-        [NativeDisableParallelForRestriction] public NativeArray<Vector3> NodesPositions;
+        [NativeDisableParallelForRestriction] public NativeArray<Vector3> nodesPositions;
 
-        [NativeDisableParallelForRestriction] public NativeArray<float> AttackerSpeeds;
+        [NativeDisableParallelForRestriction] public NativeArray<float> attackerSpeeds;
 
-        [NativeDisableParallelForRestriction] public NativeArray<int> NodesIndex;
+        [NativeDisableParallelForRestriction] public NativeArray<int> nodesIndex;
 
-        public float DeltaTime;
+        public float deltaTime;
 
+        /// <summary>
+        /// 具体对每一个Transform需要执行的操作
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="transform"></param>
         public void Execute(int index, TransformAccess transform)
         {
-            if (NodesIndex[index] < NodesPositions.Length)
+            if (nodesIndex[index] < nodesPositions.Length)
             {
-                Vector3 positionMoveTo = NodesPositions[NodesIndex[index]];
+                Vector3 positionMoveTo = nodesPositions[nodesIndex[index]];
                 transform.position =
-                    Vector3.MoveTowards(transform.position, positionMoveTo, AttackerSpeeds[index] * DeltaTime);
+                    Vector3.MoveTowards(transform.position, positionMoveTo, attackerSpeeds[index] * deltaTime);
 
+                //到达一个节点，节点数++
                 if (transform.position == positionMoveTo)
                 {
-                    NodesIndex[index]++;
+                    nodesIndex[index]++;
                 }
             }
         }

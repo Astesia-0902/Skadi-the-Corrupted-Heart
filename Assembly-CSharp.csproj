@@ -76,7 +76,7 @@
      <Compile Include="Assets\Scripts\Defenders\_Specter the Unchained\Specter.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Kalts\Kalts.cs" />
      <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
-     <Compile Include="Assets\Scripts\Defenders\DefenderHealerAnimatorManager.cs" />
+     <Compile Include="Assets\Scripts\Defenders\AnimatorManagerDefenderHealer.cs" />
      <Compile Include="Assets\Scripts\UI\DeployButton.cs" />
      <Compile Include="Assets\Scripts\ButtonTemp.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Indigo\Indigo.cs" />
@@ -100,6 +100,7 @@
      <Compile Include="Assets\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Blaze\Blaze.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Lumen\Lumen.cs" />
+     <Compile Include="Assets\Scripts\Defenders\_Honeyberry\HoneyberrySkillTracer.cs" />
      <Compile Include="Assets\Scripts\Attackers\Sea Hound\SeaHound.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Honeyberry\HoneyberryAnimator.cs" />
      <Compile Include="Assets\Scripts\Defenders\_Elysium\Elysium.cs" />
@@ -113,7 +114,6 @@
      <Compile Include="Assets\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Honeyberry\HoneyberrySkillTracer.cs" />
      <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
      <None Include="Assets\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />

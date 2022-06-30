@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace Game_Managers
 {
+    /// <summary>
+    /// 管理单位列表，以及单位的部署
+    /// </summary>
     public class GameManager : Singleton<GameManager>
     {
         public bool deployFlag;
@@ -40,6 +43,7 @@ namespace Game_Managers
         {
             deployFlag = true;
             attackerToDeploy = attackerSummonData;
+            //激活拖动时跟随鼠标的单位模型
             currentSelectedUnit = unitsToSelect[attackerSummonData.attackerID - 1];
             currentSelectedUnit.SetActive(true);
             currentSelectedUnit.transform.position = Input.mousePosition;
@@ -54,13 +58,13 @@ namespace Game_Managers
 
                 if (Physics.Raycast(ray, out RaycastHit hit))
                 {
+                    //吸附在可部署的格子上
                     if (hit.collider.CompareTag("Spawn Point"))
                     {
                         Vector3 position = hit.collider.transform.position;
-                        //position.y -= 0.3f;
                         currentSelectedUnit.transform.position = position;
                         nodeToDeploy = hit.collider.GetComponent<NodeLoopManager>();
-                        lockedOnFlag = true;
+                        lockedOnFlag = true;    //标记当前部署的工作已经准备好了
                         return;
                     }
 
@@ -73,6 +77,7 @@ namespace Game_Managers
 
         public void EndDrag()
         {
+            //如果已经可以部署
             if (lockedOnFlag)
             {
                 Debug.Log(attackerToDeploy, nodeToDeploy);

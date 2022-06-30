@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace Defenders
 {
+    /// <summary>
+    /// 防守方行为的基类，根据不同干员的特性，需要在之类中重写特定的方法，具体请查阅明日方舟Wiki
+    /// </summary>
     public class Defender : MonoBehaviour
     {
         [Header("Health Status")] public float maxHealth;
@@ -67,7 +70,7 @@ namespace Defenders
 
         #region Take Damage
 
-        [Header("Neural Damage")]
+        [Header("Sanity Damage")]
         public float sanity;
         public float sanityRecoveryTimer;
         public float sanityRecoveryThreshold = 10f;
@@ -82,6 +85,7 @@ namespace Defenders
             currentHealth -= magicDamage1 * (1 - magicResistance);
             currentHealth -= realDamage1;
 
+            //更新血条UI
             onHealthChanged.Invoke(currentHealth, maxHealth);
 
             if (currentHealth <= 0)
@@ -233,6 +237,9 @@ namespace Defenders
 
         public Attacker targetToDeal;
 
+        /// <summary>
+        /// 持续检测攻击状态
+        /// </summary>
         protected virtual void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
@@ -441,6 +448,9 @@ namespace Defenders
             }
         }
 
+        /// <summary>
+        /// 攻击回复技力
+        /// </summary>
         public virtual void SkillPointOnAttack()
         {
             if (!isAttackRecovering)
@@ -530,7 +540,7 @@ namespace Defenders
     }   
     
     /// <summary>
-    /// 生命值升序排序
+    /// 生命值升序排序（不考虑眩晕）
     /// </summary>
     public class DefenderHealthComp : IComparer<Defender>
     {

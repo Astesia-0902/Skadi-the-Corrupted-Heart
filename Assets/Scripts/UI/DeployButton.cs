@@ -1,27 +1,29 @@
 using Game_Managers;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
-public class DeployButton : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
+namespace UI
 {
-    public AttackerSummonData attackerSummonData;
-
-    public void OnPointerDown(PointerEventData eventData)
+    /// <summary>
+    /// 部署按钮的UI
+    /// </summary>
+    public class DeployButton : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
     {
-        //Debug.Log("Mouse Down");
-        GameManager.Instance.BeginDeploy(attackerSummonData);
-    }
+        public AttackerSummonData attackerSummonData;//当前按钮对应的海嗣种类
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            GameManager.Instance.BeginDeploy(attackerSummonData);
+        }
     
-    public void OnDrag(PointerEventData eventData)
-    {
-        //Debug.Log("Mouse Drag");
-        GameManager.Instance.DragDeploy();
-    }
+        public void OnDrag(PointerEventData eventData)
+        {
+            GameManager.Instance.DragDeploy();
+        }
 
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        //Debug.Log("Mouse Up");
-        GameManager.Instance.EndDrag();
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            GameManager.Instance.EndDrag();
+        }
     }
 }

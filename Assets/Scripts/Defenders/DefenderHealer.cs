@@ -4,6 +4,9 @@ using Game_Managers;
 
 namespace Defenders
 {
+    /// <summary>
+    /// 医疗干员的基类
+    /// </summary>
     public class DefenderHealer : Defender
     {
         public Defender currentHealTarget;
@@ -62,6 +65,7 @@ namespace Defenders
             if (defenders.Count == 0)
                 return null;
 
+            //根据血量百分比升序排列
             defenders.Sort(new DefenderHealthComp());
 
             foreach (Defender defender in defenders)

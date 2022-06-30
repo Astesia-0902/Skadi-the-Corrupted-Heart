@@ -69,6 +69,7 @@ namespace Game_Managers
         /// <param name="nodeLoopManager"></param>
         public void AddAttacker(AttackerSummonData attackerSummonData, NodeLoopManager nodeLoopManager)
         {
+            //一号和五号出兵点是单次出兵点（二号也是，但是还没挂脚本）
             if (nodeLoopManager.spawnPointID == 1 || nodeLoopManager.spawnPointID == 5)
             {
                 if (CostManager.Instance.DrainCost(attackerSummonData.cost))
@@ -86,6 +87,7 @@ namespace Game_Managers
 
             if (CostManager.Instance.DrainCost(attackerSummonData.cost))
             {
+                //三号和四号是多次出兵点（将怪物在这两个点部署一次后，每波都会出）
                 if (nodeLoopManager.spawnPointID == 3 || nodeLoopManager.spawnPointID == 4)
                 {
                     attackerList.Add(attackerSummonData);
@@ -100,17 +102,6 @@ namespace Game_Managers
             }
             //TODO:更新UI
         }
-
-        // /// <summary>
-        // /// 你是一个一个一个海嗣
-        // /// </summary>
-        // public void SummonAttackerOneByOne()
-        // {
-        //     if (attackerList.Count > 0 && nodeList.Count > 0)
-        //     {
-        //         SummonAttacker(attackerList.Dequeue(), nodeList.Dequeue());
-        //     }
-        // }
 
         /// <summary>
         /// 一次性弹射所有待命的海嗣
@@ -130,6 +121,10 @@ namespace Game_Managers
             }
         }
 
+        /// <summary>
+        /// 从单次出怪点召唤进攻方
+        /// </summary>
+        /// <returns></returns>
         private IEnumerator SummonAllAttackerSingleIE()
         {
             while (attackerListSingle.Count > 0 && nodeListSingle.Count > 0)
