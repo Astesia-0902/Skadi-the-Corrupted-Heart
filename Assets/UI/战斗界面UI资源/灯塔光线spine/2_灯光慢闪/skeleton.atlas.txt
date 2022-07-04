@@ -1,0 +1,702 @@
+
+skeleton.png
+size: 2013,2013
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00000
+  rotate: true
+  xy: 1511, 1601
+  size: 410, 500
+  orig: 1500, 500
+  offset: 785, 0
+  index: -1
+2_灯光慢闪_00001
+  rotate: true
+  xy: 507, 1634
+  size: 377, 500
+  orig: 1500, 500
+  offset: 821, 0
+  index: -1
+2_灯光慢闪_00002
+  rotate: false
+  xy: 1008, 1099
+  size: 543, 500
+  orig: 1500, 500
+  offset: 809, 0
+  index: -1
+2_灯光慢闪_00003
+  rotate: false
+  xy: 504, 597
+  size: 705, 500
+  orig: 1500, 500
+  offset: 795, 0
+  index: -1
+2_灯光慢闪_00004
+  rotate: false
+  xy: 504, 1132
+  size: 502, 500
+  orig: 1500, 500
+  offset: 772, 0
+  index: -1
+2_灯光慢闪_00005
+  rotate: false
+  xy: 1211, 597
+  size: 579, 500
+  orig: 1500, 500
+  offset: 731, 0
+  index: -1
+2_灯光慢闪_00006
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00007
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00008
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00028
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00029
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00032
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00069
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00071
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+2_灯光慢闪_00009
+  rotate: false
+  xy: 504, 95
+  size: 778, 500
+  orig: 1500, 500
+  offset: 582, 0
+  index: -1
+2_灯光慢闪_00010
+  rotate: false
+  xy: 1284, 95
+  size: 619, 500
+  orig: 1500, 500
+  offset: 664, 0
+  index: -1
+2_灯光慢闪_00014
+  rotate: true
+  xy: 5, 1959
+  size: 52, 500
+  orig: 1500, 500
+  offset: 1050, 0
+  index: -1
+2_灯光慢闪_00080
+  rotate: true
+  xy: 2, 348
+  size: 611, 500
+  orig: 1500, 500
+  offset: 690, 0
+  index: -1
+2_灯光慢闪_00087
+  rotate: true
+  xy: 2, 961
+  size: 555, 500
+  orig: 1500, 500
+  offset: 619, 0
+  index: -1
+2_灯光慢闪_00088
+  rotate: true
+  xy: 2, 1518
+  size: 439, 500
+  orig: 1500, 500
+  offset: 736, 0
+  index: -1
+2_灯光慢闪_00089
+  rotate: true
+  xy: 1009, 1624
+  size: 387, 500
+  orig: 1500, 500
+  offset: 799, 0
+  index: -1
+
+skeleton2.png
+size: 2047,2047
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00030
+  rotate: false
+  xy: 1088, 416
+  size: 957, 500
+  orig: 1500, 500
+  offset: 450, 0
+  index: -1
+2_灯光慢闪_00043
+  rotate: false
+  xy: 2, 416
+  size: 1084, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+2_灯光慢闪_00044
+  rotate: false
+  xy: 2, 1043
+  size: 1084, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+2_灯光慢闪_00081
+  rotate: false
+  xy: 2, 1545
+  size: 1227, 500
+  orig: 1500, 500
+  offset: 58, 0
+  index: -1
+2_灯光慢闪_00082
+  rotate: true
+  xy: 1231, 918
+  size: 1127, 500
+  orig: 1500, 500
+  offset: 136, 0
+  index: -1
+
+skeleton3.png
+size: 2047,2047
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00040
+  rotate: true
+  xy: 504, 465
+  size: 1078, 500
+  orig: 1500, 500
+  offset: 404, 0
+  index: -1
+2_灯光慢闪_00041
+  rotate: true
+  xy: 2, 463
+  size: 1080, 500
+  orig: 1500, 500
+  offset: 403, 0
+  index: -1
+2_灯光慢闪_00042
+  rotate: false
+  xy: 2, 1545
+  size: 1083, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+2_灯光慢闪_00045
+  rotate: true
+  xy: 1087, 962
+  size: 1083, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+2_灯光慢闪_00055
+  rotate: false
+  xy: 1006, 460
+  size: 1039, 500
+  orig: 1500, 500
+  offset: 419, 0
+  index: -1
+
+skeleton4.png
+size: 2046,2046
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00038
+  rotate: true
+  xy: 2, 470
+  size: 1072, 500
+  orig: 1500, 500
+  offset: 407, 0
+  index: -1
+2_灯光慢闪_00039
+  rotate: false
+  xy: 2, 1544
+  size: 1076, 500
+  orig: 1500, 500
+  offset: 405, 0
+  index: -1
+2_灯光慢闪_00046
+  rotate: true
+  xy: 1080, 971
+  size: 1073, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+2_灯光慢闪_00047
+  rotate: true
+  xy: 504, 471
+  size: 1071, 500
+  orig: 1500, 500
+  offset: 401, 0
+  index: -1
+2_灯光慢闪_00048
+  rotate: false
+  xy: 1006, 469
+  size: 1038, 500
+  orig: 1500, 500
+  offset: 410, 0
+  index: -1
+
+skeleton5.png
+size: 2043,2043
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00036
+  rotate: true
+  xy: 2, 476
+  size: 1063, 500
+  orig: 1500, 500
+  offset: 412, 0
+  index: -1
+2_灯光慢闪_00037
+  rotate: false
+  xy: 2, 1541
+  size: 1068, 500
+  orig: 1500, 500
+  offset: 409, 0
+  index: -1
+2_灯光慢闪_00049
+  rotate: false
+  xy: 1006, 475
+  size: 1035, 500
+  orig: 1500, 500
+  offset: 412, 0
+  index: -1
+2_灯光慢闪_00050
+  rotate: true
+  xy: 1072, 977
+  size: 1064, 500
+  orig: 1500, 500
+  offset: 405, 0
+  index: -1
+2_灯光慢闪_00051
+  rotate: true
+  xy: 504, 479
+  size: 1060, 500
+  orig: 1500, 500
+  offset: 407, 0
+  index: -1
+
+skeleton6.png
+size: 2039,2039
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00034
+  rotate: true
+  xy: 2, 483
+  size: 1052, 500
+  orig: 1500, 500
+  offset: 418, 0
+  index: -1
+2_灯光慢闪_00035
+  rotate: false
+  xy: 2, 1537
+  size: 1059, 500
+  orig: 1500, 500
+  offset: 414, 0
+  index: -1
+2_灯光慢闪_00052
+  rotate: true
+  xy: 1063, 982
+  size: 1055, 500
+  orig: 1500, 500
+  offset: 410, 0
+  index: -1
+2_灯光慢闪_00053
+  rotate: true
+  xy: 504, 485
+  size: 1050, 500
+  orig: 1500, 500
+  offset: 413, 0
+  index: -1
+2_灯光慢闪_00056
+  rotate: false
+  xy: 1006, 480
+  size: 1031, 500
+  orig: 1500, 500
+  offset: 423, 0
+  index: -1
+
+skeleton7.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00011
+  rotate: false
+  xy: 2, 1508
+  size: 647, 500
+  orig: 1500, 500
+  offset: 644, 0
+  index: -1
+2_灯光慢闪_00012
+  rotate: false
+  xy: 651, 1508
+  size: 673, 500
+  orig: 1500, 500
+  offset: 626, 0
+  index: -1
+2_灯光慢闪_00013
+  rotate: false
+  xy: 1326, 1508
+  size: 673, 500
+  orig: 1500, 500
+  offset: 618, 0
+  index: -1
+2_灯光慢闪_00015
+  rotate: false
+  xy: 2, 1006
+  size: 764, 500
+  orig: 1500, 500
+  offset: 576, 0
+  index: -1
+2_灯光慢闪_00016
+  rotate: false
+  xy: 768, 1006
+  size: 789, 500
+  orig: 1500, 500
+  offset: 562, 0
+  index: -1
+2_灯光慢闪_00017
+  rotate: false
+  xy: 2, 504
+  size: 815, 500
+  orig: 1500, 500
+  offset: 548, 0
+  index: -1
+2_灯光慢闪_00018
+  rotate: false
+  xy: 819, 504
+  size: 837, 500
+  orig: 1500, 500
+  offset: 536, 0
+  index: -1
+2_灯光慢闪_00019
+  rotate: false
+  xy: 2, 2
+  size: 859, 500
+  orig: 1500, 500
+  offset: 524, 0
+  index: -1
+2_灯光慢闪_00020
+  rotate: false
+  xy: 863, 2
+  size: 879, 500
+  orig: 1500, 500
+  offset: 513, 0
+  index: -1
+
+skeleton8.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00021
+  rotate: false
+  xy: 2, 1508
+  size: 898, 500
+  orig: 1500, 500
+  offset: 503, 0
+  index: -1
+2_灯光慢闪_00022
+  rotate: false
+  xy: 902, 1508
+  size: 916, 500
+  orig: 1500, 500
+  offset: 493, 0
+  index: -1
+2_灯光慢闪_00023
+  rotate: false
+  xy: 2, 1006
+  size: 932, 500
+  orig: 1500, 500
+  offset: 484, 0
+  index: -1
+2_灯光慢闪_00024
+  rotate: false
+  xy: 936, 1006
+  size: 947, 500
+  orig: 1500, 500
+  offset: 476, 0
+  index: -1
+2_灯光慢闪_00025
+  rotate: false
+  xy: 2, 504
+  size: 964, 500
+  orig: 1500, 500
+  offset: 466, 0
+  index: -1
+2_灯光慢闪_00026
+  rotate: false
+  xy: 968, 504
+  size: 977, 500
+  orig: 1500, 500
+  offset: 459, 0
+  index: -1
+2_灯光慢闪_00027
+  rotate: false
+  xy: 2, 2
+  size: 990, 500
+  orig: 1500, 500
+  offset: 452, 0
+  index: -1
+2_灯光慢闪_00031
+  rotate: false
+  xy: 994, 2
+  size: 1006, 500
+  orig: 1500, 500
+  offset: 436, 0
+  index: -1
+
+skeleton9.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00033
+  rotate: false
+  xy: 2, 1508
+  size: 1046, 500
+  orig: 1500, 500
+  offset: 421, 0
+  index: -1
+2_灯光慢闪_00054
+  rotate: false
+  xy: 1050, 1508
+  size: 942, 500
+  orig: 1500, 500
+  offset: 440, 0
+  index: -1
+2_灯光慢闪_00057
+  rotate: false
+  xy: 2, 1006
+  size: 893, 500
+  orig: 1500, 500
+  offset: 459, 0
+  index: -1
+2_灯光慢闪_00058
+  rotate: false
+  xy: 897, 1006
+  size: 1007, 500
+  orig: 1500, 500
+  offset: 432, 0
+  index: -1
+2_灯光慢闪_00059
+  rotate: false
+  xy: 2, 504
+  size: 998, 500
+  orig: 1500, 500
+  offset: 437, 0
+  index: -1
+2_灯光慢闪_00060
+  rotate: false
+  xy: 1002, 504
+  size: 987, 500
+  orig: 1500, 500
+  offset: 443, 0
+  index: -1
+2_灯光慢闪_00061
+  rotate: false
+  xy: 2, 2
+  size: 977, 500
+  orig: 1500, 500
+  offset: 449, 0
+  index: -1
+2_灯光慢闪_00062
+  rotate: false
+  xy: 981, 2
+  size: 965, 500
+  orig: 1500, 500
+  offset: 455, 0
+  index: -1
+
+skeleton10.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00063
+  rotate: false
+  xy: 2, 1508
+  size: 953, 500
+  orig: 1500, 500
+  offset: 462, 0
+  index: -1
+2_灯光慢闪_00064
+  rotate: false
+  xy: 957, 1508
+  size: 933, 500
+  orig: 1500, 500
+  offset: 469, 0
+  index: -1
+2_灯光慢闪_00065
+  rotate: false
+  xy: 2, 1006
+  size: 919, 500
+  orig: 1500, 500
+  offset: 477, 0
+  index: -1
+2_灯光慢闪_00066
+  rotate: false
+  xy: 923, 1006
+  size: 903, 500
+  orig: 1500, 500
+  offset: 486, 0
+  index: -1
+2_灯光慢闪_00067
+  rotate: false
+  xy: 2, 504
+  size: 863, 500
+  orig: 1500, 500
+  offset: 498, 0
+  index: -1
+2_灯光慢闪_00068
+  rotate: false
+  xy: 867, 504
+  size: 788, 500
+  orig: 1500, 500
+  offset: 520, 0
+  index: -1
+2_灯光慢闪_00070
+  rotate: false
+  xy: 2, 2
+  size: 827, 500
+  orig: 1500, 500
+  offset: 525, 0
+  index: -1
+2_灯光慢闪_00072
+  rotate: false
+  xy: 831, 2
+  size: 785, 500
+  orig: 1500, 500
+  offset: 549, 0
+  index: -1
+
+skeleton11.png
+size: 2029,2029
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00073
+  rotate: false
+  xy: 2, 1527
+  size: 727, 500
+  orig: 1500, 500
+  offset: 567, 0
+  index: -1
+2_灯光慢闪_00074
+  rotate: false
+  xy: 731, 1527
+  size: 736, 500
+  orig: 1500, 500
+  offset: 576, 0
+  index: -1
+2_灯光慢闪_00075
+  rotate: true
+  xy: 1469, 1388
+  size: 639, 500
+  orig: 1500, 500
+  offset: 603, 0
+  index: -1
+2_灯光慢闪_00076
+  rotate: false
+  xy: 2, 1025
+  size: 643, 500
+  orig: 1500, 500
+  offset: 610, 0
+  index: -1
+2_灯光慢闪_00077
+  rotate: false
+  xy: 647, 1025
+  size: 744, 500
+  orig: 1500, 500
+  offset: 615, 0
+  index: -1
+2_灯光慢闪_00078
+  rotate: false
+  xy: 2, 523
+  size: 727, 500
+  orig: 1500, 500
+  offset: 616, 0
+  index: -1
+2_灯光慢闪_00079
+  rotate: true
+  xy: 1393, 711
+  size: 675, 500
+  orig: 1500, 500
+  offset: 649, 0
+  index: -1
+2_灯光慢闪_00085
+  rotate: false
+  xy: 1233, 209
+  size: 794, 500
+  orig: 1500, 500
+  offset: 407, 0
+  index: -1
+2_灯光慢闪_00086
+  rotate: true
+  xy: 731, 347
+  size: 676, 500
+  orig: 1500, 500
+  offset: 510, 0
+  index: -1
+
+skeleton12.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_灯光慢闪_00083
+  rotate: false
+  xy: 2, 522
+  size: 1020, 500
+  orig: 1500, 500
+  offset: 220, 0
+  index: -1
+2_灯光慢闪_00084
+  rotate: false
+  xy: 2, 20
+  size: 912, 500
+  orig: 1500, 500
+  offset: 310, 0
+  index: -1

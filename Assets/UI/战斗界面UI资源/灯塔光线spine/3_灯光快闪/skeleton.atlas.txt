@@ -1,0 +1,1140 @@
+
+skeleton.png
+size: 2042,2042
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00001
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00006
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00007
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00009
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00010
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00012
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00017
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00019
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00022
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00029
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00031
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00035
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00038
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00043
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00047
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00048
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00051
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00054
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00055
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00057
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00069
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00071
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00072
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00073
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00075
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00076
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00077
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00079
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00080
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00088
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00092
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00097
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00098
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00099
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00101
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00103
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00106
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00107
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00113
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00130
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00133
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00139
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00142
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00143
+  rotate: false
+  xy: 2012, 2039
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+3_灯光快闪_00021
+  rotate: false
+  xy: 1790, 1540
+  size: 220, 500
+  orig: 1500, 500
+  offset: 907, 0
+  index: -1
+3_灯光快闪_00100
+  rotate: false
+  xy: 1172, 311
+  size: 868, 500
+  orig: 1500, 500
+  offset: 471, 0
+  index: -1
+3_灯光快闪_00134
+  rotate: false
+  xy: 2, 1540
+  size: 1284, 500
+  orig: 1500, 500
+  offset: 14, 0
+  index: -1
+3_灯光快闪_00135
+  rotate: true
+  xy: 1288, 813
+  size: 1227, 500
+  orig: 1500, 500
+  offset: 58, 0
+  index: -1
+3_灯光快闪_00136
+  rotate: false
+  xy: 2, 311
+  size: 1168, 500
+  orig: 1500, 500
+  offset: 104, 0
+  index: -1
+3_灯光快闪_00137
+  rotate: false
+  xy: 2, 1038
+  size: 1100, 500
+  orig: 1500, 500
+  offset: 154, 0
+  index: -1
+
+skeleton2.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00000
+  rotate: true
+  xy: 1508, 1615
+  size: 393, 500
+  orig: 1500, 500
+  offset: 793, 0
+  index: -1
+3_灯光快闪_00002
+  rotate: true
+  xy: 504, 1631
+  size: 377, 500
+  orig: 1500, 500
+  offset: 842, 0
+  index: -1
+3_灯光快闪_00003
+  rotate: true
+  xy: 2, 720
+  size: 504, 500
+  orig: 1500, 500
+  offset: 815, 0
+  index: -1
+3_灯光快闪_00004
+  rotate: false
+  xy: 504, 658
+  size: 611, 500
+  orig: 1500, 500
+  offset: 805, 0
+  index: -1
+3_灯光快闪_00005
+  rotate: false
+  xy: 1117, 628
+  size: 705, 500
+  orig: 1500, 500
+  offset: 795, 0
+  index: -1
+3_灯光快闪_00008
+  rotate: false
+  xy: 504, 156
+  size: 566, 500
+  orig: 1500, 500
+  offset: 739, 0
+  index: -1
+3_灯光快闪_00011
+  rotate: true
+  xy: 1006, 1160
+  size: 463, 500
+  orig: 1500, 500
+  offset: 762, 0
+  index: -1
+3_灯光快闪_00013
+  rotate: false
+  xy: 1072, 126
+  size: 746, 500
+  orig: 1500, 500
+  offset: 621, 0
+  index: -1
+3_灯光快闪_00132
+  rotate: true
+  xy: 504, 1174
+  size: 455, 500
+  orig: 1500, 500
+  offset: 689, 0
+  index: -1
+3_灯光快闪_00145
+  rotate: true
+  xy: 2, 163
+  size: 555, 500
+  orig: 1500, 500
+  offset: 619, 0
+  index: -1
+3_灯光快闪_00146
+  rotate: true
+  xy: 1508, 1130
+  size: 483, 500
+  orig: 1500, 500
+  offset: 689, 0
+  index: -1
+3_灯光快闪_00147
+  rotate: true
+  xy: 2, 1226
+  size: 416, 500
+  orig: 1500, 500
+  offset: 761, 0
+  index: -1
+3_灯光快闪_00148
+  rotate: true
+  xy: 1006, 1625
+  size: 383, 500
+  orig: 1500, 500
+  offset: 800, 0
+  index: -1
+3_灯光快闪_00149
+  rotate: true
+  xy: 2, 1644
+  size: 364, 500
+  orig: 1500, 500
+  offset: 806, 0
+  index: -1
+
+skeleton3.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00063
+  rotate: false
+  xy: 1006, 461
+  size: 1040, 500
+  orig: 1500, 500
+  offset: 412, 0
+  index: -1
+3_灯光快闪_00067
+  rotate: true
+  xy: 2, 466
+  size: 1078, 500
+  orig: 1500, 500
+  offset: 404, 0
+  index: -1
+3_灯光快闪_00070
+  rotate: true
+  xy: 1088, 963
+  size: 1083, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+3_灯光快闪_00074
+  rotate: false
+  xy: 2, 1546
+  size: 1084, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+3_灯光快闪_00078
+  rotate: true
+  xy: 504, 473
+  size: 1071, 500
+  orig: 1500, 500
+  offset: 401, 0
+  index: -1
+
+skeleton4.png
+size: 2046,2046
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00059
+  rotate: false
+  xy: 1006, 476
+  size: 1038, 500
+  orig: 1500, 500
+  offset: 417, 0
+  index: -1
+3_灯光快闪_00060
+  rotate: true
+  xy: 504, 479
+  size: 1063, 500
+  orig: 1500, 500
+  offset: 412, 0
+  index: -1
+3_灯光快闪_00081
+  rotate: false
+  xy: 2, 1544
+  size: 1068, 500
+  orig: 1500, 500
+  offset: 403, 0
+  index: -1
+3_灯光快闪_00082
+  rotate: true
+  xy: 1072, 978
+  size: 1066, 500
+  orig: 1500, 500
+  offset: 404, 0
+  index: -1
+3_灯光快闪_00083
+  rotate: true
+  xy: 2, 478
+  size: 1064, 500
+  orig: 1500, 500
+  offset: 405, 0
+  index: -1
+
+skeleton5.png
+size: 2041,2041
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00058
+  rotate: true
+  xy: 504, 491
+  size: 1046, 500
+  orig: 1500, 500
+  offset: 417, 0
+  index: -1
+3_灯光快闪_00085
+  rotate: false
+  xy: 2, 1539
+  size: 1060, 500
+  orig: 1500, 500
+  offset: 407, 0
+  index: -1
+3_灯光快闪_00087
+  rotate: true
+  xy: 1064, 984
+  size: 1055, 500
+  orig: 1500, 500
+  offset: 410, 0
+  index: -1
+3_灯光快闪_00089
+  rotate: true
+  xy: 2, 489
+  size: 1048, 500
+  orig: 1500, 500
+  offset: 414, 0
+  index: -1
+3_灯光快闪_00093
+  rotate: false
+  xy: 1006, 482
+  size: 1033, 500
+  orig: 1500, 500
+  offset: 422, 0
+  index: -1
+
+skeleton6.png
+size: 2033,2033
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00064
+  rotate: false
+  xy: 1006, 483
+  size: 1025, 500
+  orig: 1500, 500
+  offset: 415, 0
+  index: -1
+3_灯光快闪_00066
+  rotate: false
+  xy: 2, 1531
+  size: 1046, 500
+  orig: 1500, 500
+  offset: 409, 0
+  index: -1
+3_灯光快闪_00084
+  rotate: true
+  xy: 504, 487
+  size: 1042, 500
+  orig: 1500, 500
+  offset: 410, 0
+  index: -1
+3_灯光快闪_00086
+  rotate: true
+  xy: 1050, 985
+  size: 1046, 500
+  orig: 1500, 500
+  offset: 411, 0
+  index: -1
+3_灯光快闪_00090
+  rotate: true
+  xy: 2, 485
+  size: 1044, 500
+  orig: 1500, 500
+  offset: 416, 0
+  index: -1
+
+skeleton7.png
+size: 2024,2024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00014
+  rotate: false
+  xy: 2, 1522
+  size: 784, 500
+  orig: 1500, 500
+  offset: 601, 0
+  index: -1
+3_灯光快闪_00015
+  rotate: false
+  xy: 788, 1522
+  size: 778, 500
+  orig: 1500, 500
+  offset: 582, 0
+  index: -1
+3_灯光快闪_00016
+  rotate: false
+  xy: 2, 1020
+  size: 596, 500
+  orig: 1500, 500
+  offset: 676, 0
+  index: -1
+3_灯光快闪_00018
+  rotate: false
+  xy: 600, 1020
+  size: 640, 500
+  orig: 1500, 500
+  offset: 648, 0
+  index: -1
+3_灯光快闪_00020
+  rotate: false
+  xy: 1242, 1020
+  size: 673, 500
+  orig: 1500, 500
+  offset: 626, 0
+  index: -1
+3_灯光快闪_00023
+  rotate: false
+  xy: 2, 518
+  size: 720, 500
+  orig: 1500, 500
+  offset: 597, 0
+  index: -1
+3_灯光快闪_00024
+  rotate: false
+  xy: 724, 518
+  size: 671, 500
+  orig: 1500, 500
+  offset: 612, 0
+  index: -1
+3_灯光快闪_00025
+  rotate: false
+  xy: 2, 16
+  size: 722, 500
+  orig: 1500, 500
+  offset: 589, 0
+  index: -1
+3_灯光快闪_00026
+  rotate: false
+  xy: 726, 16
+  size: 780, 500
+  orig: 1500, 500
+  offset: 567, 0
+  index: -1
+3_灯光快闪_00041
+  rotate: false
+  xy: 1397, 518
+  size: 625, 500
+  orig: 1500, 500
+  offset: 626, 0
+  index: -1
+
+skeleton8.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00027
+  rotate: false
+  xy: 2, 1508
+  size: 695, 500
+  orig: 1500, 500
+  offset: 594, 0
+  index: -1
+3_灯光快闪_00028
+  rotate: false
+  xy: 699, 1508
+  size: 799, 500
+  orig: 1500, 500
+  offset: 554, 0
+  index: -1
+3_灯光快闪_00030
+  rotate: false
+  xy: 2, 1006
+  size: 837, 500
+  orig: 1500, 500
+  offset: 536, 0
+  index: -1
+3_灯光快闪_00032
+  rotate: false
+  xy: 841, 878
+  size: 863, 500
+  orig: 1500, 500
+  offset: 522, 0
+  index: -1
+3_灯光快闪_00033
+  rotate: false
+  xy: 791, 376
+  size: 875, 500
+  orig: 1500, 500
+  offset: 515, 0
+  index: -1
+3_灯光快闪_00037
+  rotate: false
+  xy: 2, 504
+  size: 787, 500
+  orig: 1500, 500
+  offset: 537, 0
+  index: -1
+3_灯光快闪_00053
+  rotate: false
+  xy: 2, 2
+  size: 782, 500
+  orig: 1500, 500
+  offset: 527, 0
+  index: -1
+3_灯光快闪_00144
+  rotate: true
+  xy: 1500, 1380
+  size: 628, 500
+  orig: 1500, 500
+  offset: 553, 0
+  index: -1
+
+skeleton9.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00034
+  rotate: false
+  xy: 2, 1508
+  size: 849, 500
+  orig: 1500, 500
+  offset: 519, 0
+  index: -1
+3_灯光快闪_00036
+  rotate: false
+  xy: 853, 1508
+  size: 909, 500
+  orig: 1500, 500
+  offset: 497, 0
+  index: -1
+3_灯光快闪_00039
+  rotate: false
+  xy: 2, 1006
+  size: 938, 500
+  orig: 1500, 500
+  offset: 481, 0
+  index: -1
+3_灯光快闪_00040
+  rotate: false
+  xy: 942, 1006
+  size: 936, 500
+  orig: 1500, 500
+  offset: 478, 0
+  index: -1
+3_灯光快闪_00042
+  rotate: false
+  xy: 2, 504
+  size: 966, 500
+  orig: 1500, 500
+  offset: 465, 0
+  index: -1
+3_灯光快闪_00044
+  rotate: false
+  xy: 970, 504
+  size: 982, 500
+  orig: 1500, 500
+  offset: 456, 0
+  index: -1
+3_灯光快闪_00045
+  rotate: false
+  xy: 2, 2
+  size: 990, 500
+  orig: 1500, 500
+  offset: 452, 0
+  index: -1
+3_灯光快闪_00046
+  rotate: false
+  xy: 994, 2
+  size: 997, 500
+  orig: 1500, 500
+  offset: 448, 0
+  index: -1
+
+skeleton10.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00049
+  rotate: false
+  xy: 2, 1508
+  size: 930, 500
+  orig: 1500, 500
+  offset: 461, 0
+  index: -1
+3_灯光快闪_00050
+  rotate: false
+  xy: 934, 1508
+  size: 897, 500
+  orig: 1500, 500
+  offset: 473, 0
+  index: -1
+3_灯光快闪_00052
+  rotate: false
+  xy: 2, 1006
+  size: 1008, 500
+  orig: 1500, 500
+  offset: 435, 0
+  index: -1
+3_灯光快闪_00056
+  rotate: false
+  xy: 1012, 1006
+  size: 963, 500
+  orig: 1500, 500
+  offset: 441, 0
+  index: -1
+3_灯光快闪_00061
+  rotate: false
+  xy: 2, 504
+  size: 952, 500
+  orig: 1500, 500
+  offset: 442, 0
+  index: -1
+3_灯光快闪_00062
+  rotate: false
+  xy: 956, 504
+  size: 1003, 500
+  orig: 1500, 500
+  offset: 423, 0
+  index: -1
+3_灯光快闪_00065
+  rotate: false
+  xy: 2, 2
+  size: 1018, 500
+  orig: 1500, 500
+  offset: 416, 0
+  index: -1
+3_灯光快闪_00068
+  rotate: false
+  xy: 1022, 2
+  size: 944, 500
+  orig: 1500, 500
+  offset: 440, 0
+  index: -1
+
+skeleton11.png
+size: 2023,2023
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00091
+  rotate: true
+  xy: 1046, 980
+  size: 1041, 500
+  orig: 1500, 500
+  offset: 418, 0
+  index: -1
+3_灯光快闪_00094
+  rotate: true
+  xy: 504, 518
+  size: 1001, 500
+  orig: 1500, 500
+  offset: 429, 0
+  index: -1
+3_灯光快闪_00095
+  rotate: true
+  xy: 2, 504
+  size: 1015, 500
+  orig: 1500, 500
+  offset: 427, 0
+  index: -1
+3_灯光快闪_00096
+  rotate: false
+  xy: 1006, 478
+  size: 978, 500
+  orig: 1500, 500
+  offset: 436, 0
+  index: -1
+3_灯光快闪_00102
+  rotate: false
+  xy: 2, 2
+  size: 975, 500
+  orig: 1500, 500
+  offset: 450, 0
+  index: -1
+3_灯光快闪_00138
+  rotate: false
+  xy: 2, 1521
+  size: 1042, 500
+  orig: 1500, 500
+  offset: 203, 0
+  index: -1
+
+skeleton12.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00104
+  rotate: false
+  xy: 2, 1006
+  size: 925, 500
+  orig: 1500, 500
+  offset: 463, 0
+  index: -1
+3_灯光快闪_00105
+  rotate: false
+  xy: 2, 1508
+  size: 953, 500
+  orig: 1500, 500
+  offset: 462, 0
+  index: -1
+3_灯光快闪_00108
+  rotate: false
+  xy: 957, 1508
+  size: 921, 500
+  orig: 1500, 500
+  offset: 476, 0
+  index: -1
+3_灯光快闪_00109
+  rotate: false
+  xy: 2, 504
+  size: 912, 500
+  orig: 1500, 500
+  offset: 481, 0
+  index: -1
+3_灯光快闪_00110
+  rotate: false
+  xy: 916, 504
+  size: 890, 500
+  orig: 1500, 500
+  offset: 488, 0
+  index: -1
+3_灯光快闪_00111
+  rotate: false
+  xy: 2, 2
+  size: 894, 500
+  orig: 1500, 500
+  offset: 491, 0
+  index: -1
+3_灯光快闪_00112
+  rotate: false
+  xy: 898, 2
+  size: 884, 500
+  orig: 1500, 500
+  offset: 497, 0
+  index: -1
+3_灯光快闪_00140
+  rotate: false
+  xy: 929, 1006
+  size: 912, 500
+  orig: 1500, 500
+  offset: 310, 0
+  index: -1
+
+skeleton13.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00114
+  rotate: false
+  xy: 2, 1508
+  size: 700, 500
+  orig: 1500, 500
+  offset: 549, 0
+  index: -1
+3_灯光快闪_00115
+  rotate: false
+  xy: 704, 1508
+  size: 846, 500
+  orig: 1500, 500
+  offset: 515, 0
+  index: -1
+3_灯光快闪_00116
+  rotate: false
+  xy: 2, 1006
+  size: 835, 500
+  orig: 1500, 500
+  offset: 521, 0
+  index: -1
+3_灯光快闪_00117
+  rotate: false
+  xy: 839, 1006
+  size: 812, 500
+  orig: 1500, 500
+  offset: 529, 0
+  index: -1
+3_灯光快闪_00118
+  rotate: false
+  xy: 2, 504
+  size: 810, 500
+  orig: 1500, 500
+  offset: 535, 0
+  index: -1
+3_灯光快闪_00119
+  rotate: false
+  xy: 814, 504
+  size: 798, 500
+  orig: 1500, 500
+  offset: 542, 0
+  index: -1
+3_灯光快闪_00120
+  rotate: false
+  xy: 2, 2
+  size: 785, 500
+  orig: 1500, 500
+  offset: 549, 0
+  index: -1
+3_灯光快闪_00121
+  rotate: false
+  xy: 789, 2
+  size: 722, 500
+  orig: 1500, 500
+  offset: 564, 0
+  index: -1
+
+skeleton14.png
+size: 2045,2045
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00122
+  rotate: false
+  xy: 504, 229
+  size: 752, 500
+  orig: 1500, 500
+  offset: 565, 0
+  index: -1
+3_灯光快闪_00123
+  rotate: true
+  xy: 2, 2
+  size: 741, 500
+  orig: 1500, 500
+  offset: 573, 0
+  index: -1
+3_灯光快闪_00124
+  rotate: true
+  xy: 849, 1233
+  size: 810, 500
+  orig: 1500, 500
+  offset: 582, 0
+  index: -1
+3_灯光快闪_00125
+  rotate: true
+  xy: 2, 745
+  size: 796, 500
+  orig: 1500, 500
+  offset: 590, 0
+  index: -1
+3_灯光快闪_00126
+  rotate: false
+  xy: 504, 731
+  size: 780, 500
+  orig: 1500, 500
+  offset: 599, 0
+  index: -1
+3_灯光快闪_00127
+  rotate: true
+  xy: 1286, 464
+  size: 767, 500
+  orig: 1500, 500
+  offset: 604, 0
+  index: -1
+3_灯光快闪_00128
+  rotate: true
+  xy: 1351, 1290
+  size: 753, 500
+  orig: 1500, 500
+  offset: 610, 0
+  index: -1
+3_灯光快闪_00141
+  rotate: false
+  xy: 2, 1543
+  size: 845, 500
+  orig: 1500, 500
+  offset: 367, 0
+  index: -1
+
+skeleton15.png
+size: 1006,1006
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_灯光快闪_00129
+  rotate: false
+  xy: 2, 504
+  size: 722, 500
+  orig: 1500, 500
+  offset: 630, 0
+  index: -1
+3_灯光快闪_00131
+  rotate: false
+  xy: 2, 2
+  size: 690, 500
+  orig: 1500, 500
+  offset: 641, 0
+  index: -1

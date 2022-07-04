@@ -1,0 +1,1098 @@
+
+skeleton.png
+size: 2013,2013
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00000
+  rotate: true
+  xy: 1508, 1465
+  size: 373, 500
+  orig: 1500, 500
+  offset: 804, 0
+  index: -1
+4_灯光熄灭_00001
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00002
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00015
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00019
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00024
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00025
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00031
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00041
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00045
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00050
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00061
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00066
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00072
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00073
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00089
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00090
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00091
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00092
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00094
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00095
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00096
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00097
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00098
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00099
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00100
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00101
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00102
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00103
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00104
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00105
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00106
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00107
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00108
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00109
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00110
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00111
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00112
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00113
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00114
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00115
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00116
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00117
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00118
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00119
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00120
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00121
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00122
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00125
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00126
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00127
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00128
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00129
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00132
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00133
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00134
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00135
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00136
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00137
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00138
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00139
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00140
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00141
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00142
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00143
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00145
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00146
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00147
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00148
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00149
+  rotate: false
+  xy: 2, 2010
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+4_灯光熄灭_00064
+  rotate: true
+  xy: 504, 1166
+  size: 408, 500
+  orig: 1500, 500
+  offset: 762, 0
+  index: -1
+4_灯光熄灭_00070
+  rotate: true
+  xy: 504, 318
+  size: 427, 500
+  orig: 1500, 500
+  offset: 743, 0
+  index: -1
+4_灯光熄灭_00071
+  rotate: true
+  xy: 1006, 295
+  size: 428, 500
+  orig: 1500, 500
+  offset: 741, 0
+  index: -1
+4_灯光熄灭_00075
+  rotate: true
+  xy: 2, 38
+  size: 431, 500
+  orig: 1500, 500
+  offset: 735, 0
+  index: -1
+4_灯光熄灭_00076
+  rotate: true
+  xy: 1006, 1557
+  size: 330, 500
+  orig: 1500, 500
+  offset: 805, 0
+  index: -1
+4_灯光熄灭_00077
+  rotate: true
+  xy: 1508, 199
+  size: 429, 500
+  orig: 1500, 500
+  offset: 733, 0
+  index: -1
+4_灯光熄灭_00080
+  rotate: true
+  xy: 2, 471
+  size: 422, 500
+  orig: 1500, 500
+  offset: 734, 0
+  index: -1
+4_灯光熄灭_00081
+  rotate: true
+  xy: 504, 1576
+  size: 324, 500
+  orig: 1500, 500
+  offset: 802, 0
+  index: -1
+4_灯光熄灭_00082
+  rotate: true
+  xy: 1006, 725
+  size: 420, 500
+  orig: 1500, 500
+  offset: 732, 0
+  index: -1
+4_灯光熄灭_00083
+  rotate: true
+  xy: 1508, 630
+  size: 420, 500
+  orig: 1500, 500
+  offset: 731, 0
+  index: -1
+4_灯光熄灭_00084
+  rotate: true
+  xy: 504, 747
+  size: 417, 500
+  orig: 1500, 500
+  offset: 731, 0
+  index: -1
+4_灯光熄灭_00085
+  rotate: true
+  xy: 2, 895
+  size: 414, 500
+  orig: 1500, 500
+  offset: 732, 0
+  index: -1
+4_灯光熄灭_00086
+  rotate: true
+  xy: 1508, 1052
+  size: 411, 500
+  orig: 1500, 500
+  offset: 732, 0
+  index: -1
+4_灯光熄灭_00087
+  rotate: true
+  xy: 1006, 1147
+  size: 408, 500
+  orig: 1500, 500
+  offset: 733, 0
+  index: -1
+4_灯光熄灭_00088
+  rotate: true
+  xy: 2, 1311
+  size: 406, 500
+  orig: 1500, 500
+  offset: 732, 0
+  index: -1
+4_灯光熄灭_00123
+  rotate: true
+  xy: 1009, 1889
+  size: 122, 500
+  orig: 1500, 500
+  offset: 834, 0
+  index: -1
+4_灯光熄灭_00124
+  rotate: true
+  xy: 2, 1719
+  size: 199, 500
+  orig: 1500, 500
+  offset: 762, 0
+  index: -1
+4_灯光熄灭_00130
+  rotate: true
+  xy: 507, 1902
+  size: 109, 500
+  orig: 1500, 500
+  offset: 853, 0
+  index: -1
+4_灯光熄灭_00131
+  rotate: true
+  xy: 1511, 1840
+  size: 171, 500
+  orig: 1500, 500
+  offset: 796, 0
+  index: -1
+4_灯光熄灭_00144
+  rotate: true
+  xy: 5, 1920
+  size: 91, 500
+  orig: 1500, 500
+  offset: 941, 0
+  index: -1
+
+skeleton2.png
+size: 2031,2031
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00003
+  rotate: true
+  xy: 504, 1563
+  size: 466, 500
+  orig: 1500, 500
+  offset: 852, 0
+  index: -1
+4_灯光熄灭_00004
+  rotate: false
+  xy: 504, 1049
+  size: 611, 500
+  orig: 1500, 500
+  offset: 805, 0
+  index: -1
+4_灯光熄灭_00005
+  rotate: false
+  xy: 1117, 1047
+  size: 705, 500
+  orig: 1500, 500
+  offset: 795, 0
+  index: -1
+4_灯光熄灭_00006
+  rotate: true
+  xy: 1508, 1549
+  size: 480, 500
+  orig: 1500, 500
+  offset: 777, 0
+  index: -1
+4_灯光熄灭_00007
+  rotate: true
+  xy: 2, 585
+  size: 517, 500
+  orig: 1500, 500
+  offset: 764, 0
+  index: -1
+4_灯光熄灭_00008
+  rotate: false
+  xy: 504, 547
+  size: 566, 500
+  orig: 1500, 500
+  offset: 739, 0
+  index: -1
+4_灯光熄灭_00009
+  rotate: false
+  xy: 1072, 545
+  size: 609, 500
+  orig: 1500, 500
+  offset: 715, 0
+  index: -1
+4_灯光熄灭_00010
+  rotate: true
+  xy: 1006, 1551
+  size: 478, 500
+  orig: 1500, 500
+  offset: 780, 0
+  index: -1
+4_灯光熄灭_00011
+  rotate: false
+  xy: 2, 45
+  size: 681, 500
+  orig: 1500, 500
+  offset: 666, 0
+  index: -1
+4_灯光熄灭_00012
+  rotate: false
+  xy: 685, 43
+  size: 715, 500
+  orig: 1500, 500
+  offset: 643, 0
+  index: -1
+4_灯光熄灭_00017
+  rotate: false
+  xy: 1402, 43
+  size: 627, 500
+  orig: 1500, 500
+  offset: 660, 0
+  index: -1
+4_灯光熄灭_00028
+  rotate: true
+  xy: 2, 1104
+  size: 491, 500
+  orig: 1500, 500
+  offset: 715, 0
+  index: -1
+4_灯光熄灭_00074
+  rotate: true
+  xy: 2, 1597
+  size: 432, 500
+  orig: 1500, 500
+  offset: 735, 0
+  index: -1
+
+skeleton3.png
+size: 2046,2046
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00055
+  rotate: true
+  xy: 504, 496
+  size: 1046, 500
+  orig: 1500, 500
+  offset: 421, 0
+  index: -1
+4_灯光熄灭_00056
+  rotate: false
+  xy: 1006, 481
+  size: 1038, 500
+  orig: 1500, 500
+  offset: 421, 0
+  index: -1
+4_灯光熄灭_00057
+  rotate: true
+  xy: 2, 488
+  size: 1054, 500
+  orig: 1500, 500
+  offset: 417, 0
+  index: -1
+4_灯光熄灭_00059
+  rotate: true
+  xy: 1067, 983
+  size: 1061, 500
+  orig: 1500, 500
+  offset: 413, 0
+  index: -1
+4_灯光熄灭_00060
+  rotate: false
+  xy: 2, 1544
+  size: 1063, 500
+  orig: 1500, 500
+  offset: 412, 0
+  index: -1
+
+skeleton4.png
+size: 2034,2034
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00013
+  rotate: false
+  xy: 2, 1532
+  size: 742, 500
+  orig: 1500, 500
+  offset: 622, 0
+  index: -1
+4_灯光熄灭_00014
+  rotate: false
+  xy: 746, 1532
+  size: 784, 500
+  orig: 1500, 500
+  offset: 601, 0
+  index: -1
+4_灯光熄灭_00016
+  rotate: false
+  xy: 2, 1030
+  size: 810, 500
+  orig: 1500, 500
+  offset: 564, 0
+  index: -1
+4_灯光熄灭_00018
+  rotate: true
+  xy: 1532, 1392
+  size: 640, 500
+  orig: 1500, 500
+  offset: 648, 0
+  index: -1
+4_灯光熄灭_00020
+  rotate: false
+  xy: 814, 1030
+  size: 673, 500
+  orig: 1500, 500
+  offset: 626, 0
+  index: -1
+4_灯光熄灭_00021
+  rotate: true
+  xy: 1489, 734
+  size: 656, 500
+  orig: 1500, 500
+  offset: 626, 0
+  index: -1
+4_灯光熄灭_00022
+  rotate: false
+  xy: 2, 528
+  size: 711, 500
+  orig: 1500, 500
+  offset: 605, 0
+  index: -1
+4_灯光熄灭_00023
+  rotate: false
+  xy: 715, 528
+  size: 684, 500
+  orig: 1500, 500
+  offset: 609, 0
+  index: -1
+4_灯光熄灭_00026
+  rotate: false
+  xy: 2, 26
+  size: 780, 500
+  orig: 1500, 500
+  offset: 567, 0
+  index: -1
+4_灯光熄灭_00027
+  rotate: false
+  xy: 784, 26
+  size: 795, 500
+  orig: 1500, 500
+  offset: 559, 0
+  index: -1
+
+skeleton5.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00029
+  rotate: false
+  xy: 2, 1508
+  size: 824, 500
+  orig: 1500, 500
+  offset: 543, 0
+  index: -1
+4_灯光熄灭_00030
+  rotate: false
+  xy: 828, 1508
+  size: 837, 500
+  orig: 1500, 500
+  offset: 536, 0
+  index: -1
+4_灯光熄灭_00032
+  rotate: false
+  xy: 2, 1006
+  size: 863, 500
+  orig: 1500, 500
+  offset: 522, 0
+  index: -1
+4_灯光熄灭_00033
+  rotate: false
+  xy: 867, 1006
+  size: 793, 500
+  orig: 1500, 500
+  offset: 540, 0
+  index: -1
+4_灯光熄灭_00034
+  rotate: false
+  xy: 2, 504
+  size: 858, 500
+  orig: 1500, 500
+  offset: 516, 0
+  index: -1
+4_灯光熄灭_00035
+  rotate: false
+  xy: 862, 504
+  size: 860, 500
+  orig: 1500, 500
+  offset: 513, 0
+  index: -1
+4_灯光熄灭_00036
+  rotate: false
+  xy: 2, 2
+  size: 761, 500
+  orig: 1500, 500
+  offset: 551, 0
+  index: -1
+4_灯光熄灭_00037
+  rotate: false
+  xy: 765, 2
+  size: 919, 500
+  orig: 1500, 500
+  offset: 491, 0
+  index: -1
+
+skeleton6.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00038
+  rotate: false
+  xy: 2, 1508
+  size: 929, 500
+  orig: 1500, 500
+  offset: 486, 0
+  index: -1
+4_灯光熄灭_00039
+  rotate: false
+  xy: 933, 1508
+  size: 938, 500
+  orig: 1500, 500
+  offset: 481, 0
+  index: -1
+4_灯光熄灭_00040
+  rotate: false
+  xy: 2, 1006
+  size: 928, 500
+  orig: 1500, 500
+  offset: 479, 0
+  index: -1
+4_灯光熄灭_00042
+  rotate: false
+  xy: 932, 1006
+  size: 966, 500
+  orig: 1500, 500
+  offset: 465, 0
+  index: -1
+4_灯光熄灭_00043
+  rotate: false
+  xy: 2, 504
+  size: 975, 500
+  orig: 1500, 500
+  offset: 460, 0
+  index: -1
+4_灯光熄灭_00044
+  rotate: false
+  xy: 979, 504
+  size: 982, 500
+  orig: 1500, 500
+  offset: 456, 0
+  index: -1
+4_灯光熄灭_00046
+  rotate: false
+  xy: 2, 2
+  size: 973, 500
+  orig: 1500, 500
+  offset: 454, 0
+  index: -1
+4_灯光熄灭_00047
+  rotate: false
+  xy: 977, 2
+  size: 1003, 500
+  orig: 1500, 500
+  offset: 445, 0
+  index: -1
+
+skeleton7.png
+size: 2042,2042
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00049
+  rotate: false
+  xy: 1024, 34
+  size: 1016, 500
+  orig: 1500, 500
+  offset: 438, 0
+  index: -1
+4_灯光熄灭_00051
+  rotate: false
+  xy: 2, 536
+  size: 1027, 500
+  orig: 1500, 500
+  offset: 432, 0
+  index: -1
+4_灯光熄灭_00052
+  rotate: false
+  xy: 2, 34
+  size: 1020, 500
+  orig: 1500, 500
+  offset: 431, 0
+  index: -1
+4_灯光熄灭_00053
+  rotate: false
+  xy: 2, 1038
+  size: 1037, 500
+  orig: 1500, 500
+  offset: 426, 0
+  index: -1
+4_灯光熄灭_00054
+  rotate: false
+  xy: 2, 1540
+  size: 1041, 500
+  orig: 1500, 500
+  offset: 424, 0
+  index: -1
+4_灯光熄灭_00063
+  rotate: false
+  xy: 1031, 536
+  size: 976, 500
+  orig: 1500, 500
+  offset: 432, 0
+  index: -1
+4_灯光熄灭_00067
+  rotate: false
+  xy: 1045, 1540
+  size: 985, 500
+  orig: 1500, 500
+  offset: 426, 0
+  index: -1
+4_灯光熄灭_00068
+  rotate: false
+  xy: 1041, 1038
+  size: 985, 500
+  orig: 1500, 500
+  offset: 426, 0
+  index: -1
+
+skeleton8.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4_灯光熄灭_00048
+  rotate: false
+  xy: 2, 1508
+  size: 867, 500
+  orig: 1500, 500
+  offset: 489, 0
+  index: -1
+4_灯光熄灭_00058
+  rotate: false
+  xy: 871, 1508
+  size: 1016, 500
+  orig: 1500, 500
+  offset: 423, 0
+  index: -1
+4_灯光熄灭_00062
+  rotate: false
+  xy: 2, 1006
+  size: 1019, 500
+  orig: 1500, 500
+  offset: 419, 0
+  index: -1
+4_灯光熄灭_00065
+  rotate: false
+  xy: 1023, 1006
+  size: 729, 500
+  orig: 1500, 500
+  offset: 549, 0
+  index: -1
+4_灯光熄灭_00069
+  rotate: false
+  xy: 2, 504
+  size: 914, 500
+  orig: 1500, 500
+  offset: 452, 0
+  index: -1
+4_灯光熄灭_00078
+  rotate: false
+  xy: 918, 504
+  size: 833, 500
+  orig: 1500, 500
+  offset: 485, 0
+  index: -1
+4_灯光熄灭_00079
+  rotate: false
+  xy: 2, 2
+  size: 904, 500
+  orig: 1500, 500
+  offset: 453, 0
+  index: -1
+4_灯光熄灭_00093
+  rotate: false
+  xy: 908, 2
+  size: 746, 500
+  orig: 1500, 500
+  offset: 521, 0
+  index: -1

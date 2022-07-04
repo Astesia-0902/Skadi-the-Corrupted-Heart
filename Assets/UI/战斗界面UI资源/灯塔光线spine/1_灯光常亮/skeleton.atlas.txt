@@ -1,0 +1,605 @@
+
+skeleton.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00000
+  rotate: true
+  xy: 1006, 1598
+  size: 410, 500
+  orig: 1500, 500
+  offset: 785, 0
+  index: -1
+1_灯光常亮_00001
+  rotate: true
+  xy: 504, 1609
+  size: 399, 500
+  orig: 1500, 500
+  offset: 816, 0
+  index: -1
+1_灯光常亮_00002
+  rotate: false
+  xy: 504, 1096
+  size: 599, 500
+  orig: 1500, 500
+  offset: 807, 0
+  index: -1
+1_灯光常亮_00003
+  rotate: true
+  xy: 1508, 1536
+  size: 472, 500
+  orig: 1500, 500
+  offset: 780, 0
+  index: -1
+1_灯光常亮_00004
+  rotate: false
+  xy: 1105, 1034
+  size: 556, 500
+  orig: 1500, 500
+  offset: 744, 0
+  index: -1
+1_灯光常亮_00005
+  rotate: false
+  xy: 2, 594
+  size: 630, 500
+  orig: 1500, 500
+  offset: 696, 0
+  index: -1
+1_灯光常亮_00006
+  rotate: false
+  xy: 634, 532
+  size: 702, 500
+  orig: 1500, 500
+  offset: 650, 0
+  index: -1
+1_灯光常亮_00007
+  rotate: false
+  xy: 619, 30
+  size: 773, 500
+  orig: 1500, 500
+  offset: 608, 0
+  index: -1
+1_灯光常亮_00009
+  rotate: false
+  xy: 1338, 532
+  size: 635, 500
+  orig: 1500, 500
+  offset: 653, 0
+  index: -1
+1_灯光常亮_00074
+  rotate: false
+  xy: 2, 92
+  size: 615, 500
+  orig: 1500, 500
+  offset: 563, 0
+  index: -1
+1_灯光常亮_00075
+  rotate: true
+  xy: 2, 1147
+  size: 476, 500
+  orig: 1500, 500
+  offset: 696, 0
+  index: -1
+1_灯光常亮_00076
+  rotate: true
+  xy: 2, 1625
+  size: 383, 500
+  orig: 1500, 500
+  offset: 800, 0
+  index: -1
+
+skeleton2.png
+size: 2046,2046
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00021
+  rotate: false
+  xy: 1088, 396
+  size: 956, 500
+  orig: 1500, 500
+  offset: 471, 0
+  index: -1
+1_灯光常亮_00037
+  rotate: false
+  xy: 2, 396
+  size: 1084, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+1_灯光常亮_00038
+  rotate: false
+  xy: 2, 1042
+  size: 1084, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+1_灯光常亮_00069
+  rotate: false
+  xy: 2, 1544
+  size: 1261, 500
+  orig: 1500, 500
+  offset: 32, 0
+  index: -1
+1_灯光常亮_00070
+  rotate: true
+  xy: 1265, 898
+  size: 1146, 500
+  orig: 1500, 500
+  offset: 121, 0
+  index: -1
+
+skeleton3.png
+size: 2047,2047
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00033
+  rotate: true
+  xy: 504, 469
+  size: 1074, 500
+  orig: 1500, 500
+  offset: 406, 0
+  index: -1
+1_灯光常亮_00034
+  rotate: true
+  xy: 2, 466
+  size: 1077, 500
+  orig: 1500, 500
+  offset: 404, 0
+  index: -1
+1_灯光常亮_00035
+  rotate: true
+  xy: 1087, 965
+  size: 1080, 500
+  orig: 1500, 500
+  offset: 403, 0
+  index: -1
+1_灯光常亮_00036
+  rotate: false
+  xy: 2, 1545
+  size: 1083, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+1_灯光常亮_00047
+  rotate: false
+  xy: 1006, 463
+  size: 1039, 500
+  orig: 1500, 500
+  offset: 419, 0
+  index: -1
+
+skeleton4.png
+size: 2043,2043
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00027
+  rotate: false
+  xy: 1006, 468
+  size: 1035, 500
+  orig: 1500, 500
+  offset: 427, 0
+  index: -1
+1_灯光常亮_00032
+  rotate: true
+  xy: 2, 469
+  size: 1070, 500
+  orig: 1500, 500
+  offset: 408, 0
+  index: -1
+1_灯光常亮_00039
+  rotate: false
+  xy: 2, 1541
+  size: 1073, 500
+  orig: 1500, 500
+  offset: 400, 0
+  index: -1
+1_灯光常亮_00040
+  rotate: true
+  xy: 1077, 970
+  size: 1071, 500
+  orig: 1500, 500
+  offset: 401, 0
+  index: -1
+1_灯光常亮_00041
+  rotate: true
+  xy: 504, 470
+  size: 1069, 500
+  orig: 1500, 500
+  offset: 402, 0
+  index: -1
+
+skeleton5.png
+size: 2033,2033
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00026
+  rotate: false
+  xy: 1006, 464
+  size: 1025, 500
+  orig: 1500, 500
+  offset: 433, 0
+  index: -1
+1_灯光常亮_00030
+  rotate: true
+  xy: 504, 470
+  size: 1059, 500
+  orig: 1500, 500
+  offset: 414, 0
+  index: -1
+1_灯光常亮_00031
+  rotate: true
+  xy: 1070, 966
+  size: 1065, 500
+  orig: 1500, 500
+  offset: 411, 0
+  index: -1
+1_灯光常亮_00042
+  rotate: false
+  xy: 2, 1531
+  size: 1066, 500
+  orig: 1500, 500
+  offset: 404, 0
+  index: -1
+1_灯光常亮_00043
+  rotate: true
+  xy: 2, 467
+  size: 1062, 500
+  orig: 1500, 500
+  offset: 406, 0
+  index: -1
+
+skeleton6.png
+size: 2030,2030
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00029
+  rotate: true
+  xy: 1062, 976
+  size: 1052, 500
+  orig: 1500, 500
+  offset: 418, 0
+  index: -1
+1_灯光常亮_00044
+  rotate: false
+  xy: 2, 1528
+  size: 1058, 500
+  orig: 1500, 500
+  offset: 408, 0
+  index: -1
+1_灯光常亮_00045
+  rotate: true
+  xy: 2, 474
+  size: 1052, 500
+  orig: 1500, 500
+  offset: 412, 0
+  index: -1
+1_灯光常亮_00046
+  rotate: true
+  xy: 504, 480
+  size: 1046, 500
+  orig: 1500, 500
+  offset: 415, 0
+  index: -1
+1_灯光常亮_00048
+  rotate: false
+  xy: 1006, 474
+  size: 1022, 500
+  orig: 1500, 500
+  offset: 424, 0
+  index: -1
+
+skeleton7.png
+size: 2030,2030
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00024
+  rotate: true
+  xy: 1006, 2
+  size: 1002, 500
+  orig: 1500, 500
+  offset: 445, 0
+  index: -1
+1_灯光常亮_00025
+  rotate: false
+  xy: 2, 1026
+  size: 1014, 500
+  orig: 1500, 500
+  offset: 439, 0
+  index: -1
+1_灯光常亮_00028
+  rotate: false
+  xy: 2, 1528
+  size: 1044, 500
+  orig: 1500, 500
+  offset: 422, 0
+  index: -1
+1_灯光常亮_00049
+  rotate: true
+  xy: 2, 11
+  size: 1013, 500
+  orig: 1500, 500
+  offset: 429, 0
+  index: -1
+1_灯光常亮_00050
+  rotate: true
+  xy: 504, 21
+  size: 1003, 500
+  orig: 1500, 500
+  offset: 434, 0
+  index: -1
+1_灯光常亮_00051
+  rotate: true
+  xy: 1508, 12
+  size: 992, 500
+  orig: 1500, 500
+  offset: 440, 0
+  index: -1
+1_灯光常亮_00071
+  rotate: true
+  xy: 1048, 1006
+  size: 1022, 500
+  orig: 1500, 500
+  offset: 219, 0
+  index: -1
+
+skeleton8.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00019
+  rotate: false
+  xy: 942, 2
+  size: 919, 500
+  orig: 1500, 500
+  offset: 491, 0
+  index: -1
+1_灯光常亮_00020
+  rotate: false
+  xy: 2, 2
+  size: 938, 500
+  orig: 1500, 500
+  offset: 481, 0
+  index: -1
+1_灯光常亮_00022
+  rotate: false
+  xy: 992, 1508
+  size: 973, 500
+  orig: 1500, 500
+  offset: 461, 0
+  index: -1
+1_灯光常亮_00023
+  rotate: false
+  xy: 2, 1508
+  size: 988, 500
+  orig: 1500, 500
+  offset: 453, 0
+  index: -1
+1_灯光常亮_00052
+  rotate: false
+  xy: 2, 1006
+  size: 980, 500
+  orig: 1500, 500
+  offset: 447, 0
+  index: -1
+1_灯光常亮_00053
+  rotate: false
+  xy: 2, 504
+  size: 966, 500
+  orig: 1500, 500
+  offset: 455, 0
+  index: -1
+1_灯光常亮_00054
+  rotate: false
+  xy: 984, 1006
+  size: 951, 500
+  orig: 1500, 500
+  offset: 463, 0
+  index: -1
+1_灯光常亮_00055
+  rotate: false
+  xy: 970, 504
+  size: 928, 500
+  orig: 1500, 500
+  offset: 472, 0
+  index: -1
+
+skeleton9.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00016
+  rotate: false
+  xy: 896, 504
+  size: 852, 500
+  orig: 1500, 500
+  offset: 528, 0
+  index: -1
+1_灯光常亮_00017
+  rotate: false
+  xy: 903, 1006
+  size: 876, 500
+  orig: 1500, 500
+  offset: 515, 0
+  index: -1
+1_灯光常亮_00018
+  rotate: false
+  xy: 2, 1006
+  size: 899, 500
+  orig: 1500, 500
+  offset: 502, 0
+  index: -1
+1_灯光常亮_00056
+  rotate: false
+  xy: 2, 1508
+  size: 912, 500
+  orig: 1500, 500
+  offset: 481, 0
+  index: -1
+1_灯光常亮_00057
+  rotate: false
+  xy: 916, 1508
+  size: 894, 500
+  orig: 1500, 500
+  offset: 491, 0
+  index: -1
+1_灯光常亮_00058
+  rotate: false
+  xy: 2, 2
+  size: 874, 500
+  orig: 1500, 500
+  offset: 502, 0
+  index: -1
+1_灯光常亮_00059
+  rotate: false
+  xy: 878, 2
+  size: 847, 500
+  orig: 1500, 500
+  offset: 514, 0
+  index: -1
+1_灯光常亮_00072
+  rotate: false
+  xy: 2, 504
+  size: 892, 500
+  orig: 1500, 500
+  offset: 325, 0
+  index: -1
+
+skeleton10.png
+size: 2010,2010
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00008
+  rotate: false
+  xy: 2, 2
+  size: 797, 500
+  orig: 1500, 500
+  offset: 571, 0
+  index: -1
+1_灯光常亮_00014
+  rotate: false
+  xy: 828, 1006
+  size: 799, 500
+  orig: 1500, 500
+  offset: 557, 0
+  index: -1
+1_灯光常亮_00015
+  rotate: false
+  xy: 2, 1508
+  size: 826, 500
+  orig: 1500, 500
+  offset: 542, 0
+  index: -1
+1_灯光常亮_00060
+  rotate: false
+  xy: 2, 1006
+  size: 824, 500
+  orig: 1500, 500
+  offset: 527, 0
+  index: -1
+1_灯光常亮_00061
+  rotate: false
+  xy: 830, 1508
+  size: 801, 500
+  orig: 1500, 500
+  offset: 540, 0
+  index: -1
+1_灯光常亮_00062
+  rotate: false
+  xy: 801, 2
+  size: 770, 500
+  orig: 1500, 500
+  offset: 555, 0
+  index: -1
+1_灯光常亮_00064
+  rotate: false
+  xy: 2, 504
+  size: 801, 500
+  orig: 1500, 500
+  offset: 587, 0
+  index: -1
+1_灯光常亮_00065
+  rotate: false
+  xy: 805, 504
+  size: 774, 500
+  orig: 1500, 500
+  offset: 600, 0
+  index: -1
+
+skeleton11.png
+size: 1988,1988
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_灯光常亮_00010
+  rotate: false
+  xy: 1192, 8
+  size: 663, 500
+  orig: 1500, 500
+  offset: 631, 0
+  index: -1
+1_灯光常亮_00011
+  rotate: true
+  xy: 1275, 1286
+  size: 700, 500
+  orig: 1500, 500
+  offset: 611, 0
+  index: -1
+1_灯光常亮_00012
+  rotate: true
+  xy: 2, 2
+  size: 736, 500
+  orig: 1500, 500
+  offset: 591, 0
+  index: -1
+1_灯光常亮_00013
+  rotate: false
+  xy: 2, 1486
+  size: 769, 500
+  orig: 1500, 500
+  offset: 573, 0
+  index: -1
+1_灯光常亮_00063
+  rotate: true
+  xy: 2, 740
+  size: 744, 500
+  orig: 1500, 500
+  offset: 571, 0
+  index: -1
+1_灯光常亮_00066
+  rotate: false
+  xy: 504, 727
+  size: 743, 500
+  orig: 1500, 500
+  offset: 615, 0
+  index: -1
+1_灯光常亮_00067
+  rotate: true
+  xy: 1249, 510
+  size: 717, 500
+  orig: 1500, 500
+  offset: 621, 0
+  index: -1
+1_灯光常亮_00068
+  rotate: false
+  xy: 504, 225
+  size: 686, 500
+  orig: 1500, 500
+  offset: 630, 0
+  index: -1
+1_灯光常亮_00073
+  rotate: true
+  xy: 773, 1229
+  size: 757, 500
+  orig: 1500, 500
+  offset: 440, 0
+  index: -1
