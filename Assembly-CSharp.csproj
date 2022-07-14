@@ -114,6 +114,8 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlagExit.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\FlagOnStateUpdate.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />
@@ -121,6 +123,7 @@
      <None Include="Assets\Res\Models\Defenders\unity_skadi23\char_1012_skadi2_boc_4.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbskr_2\enemy_1235_dsbskr_2.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_irene\char_4009_irene.atlas.txt" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\4_灯光熄灭\skeleton.atlas.txt" />
      <None Include="Assets\Res\model\effect\rain.shader" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsintc\enemy_1151_dslntc.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_red\char_144_red.atlas.txt" />
@@ -130,16 +133,20 @@
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbow\enemy_1149_dsbow.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\unity_elysm\char_401_elysm.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\unity_ghost\char_1023_ghost2.atlas.txt" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\2_灯光慢闪\skeleton.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsexcu_2\enemy_1153_dsexcu.atlas.txt" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\1_灯光常亮\skeleton.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsexcu 1\enemy_1153_dsexcu.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbskr\enemy_1235_dsbskr.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsintc -2\enemy_1151_dslntc.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsubrl2\enemy_1234_dsubrl.atlas.txt" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\3_灯光快闪\skeleton.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_ingigo\char_469_indigo.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_huang\char_017_huang.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\unity_bluep\char_129_bluep.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_hsguma\char_136_hsguma.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsubrl\enemy_1234_dsubrl.atlas.txt" />
+     <None Include="Assets\effect\Lickba\Shader\VFX_Normal.shader" />
      <None Include="Assets\Res\Models\Defenders\unity_skadi2\char_1012_skadi2.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dshond\enemy_1147_dshond.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_lumen\char_4042_lumen.atlas.txt" />

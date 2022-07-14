@@ -25,6 +25,7 @@ namespace Defenders
             defender = GetComponentInParent<Defender>();
         }
         
+        
         public virtual void PlayTargetAnimation(string animationName,bool isInteract,float multiplier)
         {
             anim.SetFloat(Multiplier, multiplier);

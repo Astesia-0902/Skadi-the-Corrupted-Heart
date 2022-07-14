@@ -1,6 +1,7 @@
+using Defenders;
 using UnityEngine;
 
-namespace Defenders._Blaze
+namespace Res.Scripts.Defenders._Blaze
 {
     public class Blaze : Defender
     {
