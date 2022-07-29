@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Attackers;
 using Game_Managers;
+using UI;
 using UnityEngine;
 
 namespace Defenders
@@ -32,6 +33,7 @@ namespace Defenders
 
         public List<Attacker> attackersBlocked;
 
+        private UiForUnits uiForUnits;
         //更新生命值/神经损伤的UI事件
         public Action<float, float> onHealthChanged;
         public Action<float> onSanityChanged;
@@ -42,6 +44,7 @@ namespace Defenders
             currentHealth = maxHealth;
             sanity = 1000f;
             animatorManager = GetComponentInChildren<AnimatorManagerDefender>();
+            uiForUnits = GetComponentInChildren<UiForUnits>();
             
             attackersBlocked = new List<Attacker>();
             attackTimer = attackTimerStandard;
@@ -492,6 +495,14 @@ namespace Defenders
         }
 
         #endregion
+
+        private void OnDestroy()
+        {
+            if (uiForUnits.healthBarTransform != null)
+            {
+                Destroy(uiForUnits.healthBarTransform.gameObject);
+            }
+        }
     }
 
     /// <summary>

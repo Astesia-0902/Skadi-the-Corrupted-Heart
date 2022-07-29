@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Game_Managers;
+using Res.Scripts.Attackers;
 using UnityEngine;
 using UnityEngine.UI;
 

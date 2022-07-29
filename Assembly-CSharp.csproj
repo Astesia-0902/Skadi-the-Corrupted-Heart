@@ -70,6 +70,7 @@
      <Compile Include="Assets\Res\Scripts\Attackers\AttackerSummonData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\IndigoAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\Defender.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlagExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHoundAnimatorManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Irene\IreneAnimatorManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Kalts\KaltsAm.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefenderHealer.cs" />
      <Compile Include="Assets\Res\Scripts\UI\DeployButton.cs" />
      <Compile Include="Assets\Res\Scripts\ButtonTemp.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\DefenderWithdrawData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\Indigo.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansUtilities.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\BlazeAm.cs" />
@@ -88,6 +90,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\Extension\RangeAttackTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderHealer.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\FlagOnStateUpdate.cs" />
      <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Red\RedAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BlueP.cs" />
@@ -97,6 +100,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BluePAm.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImageUtils.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlags.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\DefenderSummonData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\Blaze.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\Lumen.cs" />
@@ -105,6 +109,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\HoneyberryAnimator.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\Elysium.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\NodeLoopManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\TimelineManager.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansMeshUtils.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Grani\GraniAm.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\GameManager.cs" />
@@ -114,8 +119,6 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlagExit.cs" />
-     <Compile Include="Assets\Res\Scripts\Animation Behavior\FlagOnStateUpdate.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

@@ -13,7 +13,7 @@ namespace UI
         [SerializeField] private bool defaultStatus;
         
         private Transform healthBarPivot;
-        private Transform healthBarTransform;
+        public Transform healthBarTransform;
         private Image healthSliderBar;
         public GameObject healthBarPrefeb;
 
@@ -70,6 +70,11 @@ namespace UI
         
         private void Update()
         {
+            if (attacker == null && defender == null)
+            {
+                
+            }
+            
             //UI需要持续跟随单位
             if (healthBarTransform != null)
             {
