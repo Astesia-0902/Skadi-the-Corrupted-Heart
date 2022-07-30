@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Game_Managers;
+using Res.Scripts.Defenders;
 
 namespace Defenders._Lumen
 {

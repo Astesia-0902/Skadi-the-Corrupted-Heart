@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Attackers;
+using Defenders;
 using Game_Managers;
 using UI;
 using UnityEngine;
 
-namespace Defenders
+namespace Res.Scripts.Defenders
 {
     /// <summary>
     /// 防守方行为的基类，根据不同干员的特性，需要在之类中重写特定的方法，具体请查阅明日方舟Wiki

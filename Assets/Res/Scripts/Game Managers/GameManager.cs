@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Defenders;
 using Res.Scripts.Attackers;
+using Res.Scripts.Defenders;
+using Res.Scripts.Game_Managers;
 using Tool_Scripts;
 using UnityEngine;
 

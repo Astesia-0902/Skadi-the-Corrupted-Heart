@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using Attackers;
+using Game_Managers;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
 using UnityEngine.Jobs;
 
-namespace Game_Managers
+namespace Res.Scripts.Game_Managers
 {
     /// <summary>
     /// 挂载于每个出兵点的物体上

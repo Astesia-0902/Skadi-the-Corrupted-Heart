@@ -1,4 +1,5 @@
 using Defenders.Extension;
+using Res.Scripts.Defenders;
 using UnityEngine;
 
 namespace Defenders

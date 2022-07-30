@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Attackers;
 using Game_Managers;
+using Res.Scripts.Defenders;
 using UnityEngine;
 
 namespace Defenders._Specter_the_Unchained

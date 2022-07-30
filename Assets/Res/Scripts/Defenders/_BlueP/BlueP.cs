@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Attackers;
+using Res.Scripts.Defenders;
 
 namespace Defenders._BlueP
 {

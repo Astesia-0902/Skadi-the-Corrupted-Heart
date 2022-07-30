@@ -1,6 +1,8 @@
 using System;
 using Defenders;
 using Game_Managers;
+using Res.Scripts.Defenders;
+using Res.Scripts.Game_Managers;
 using UI;
 using UnityEngine;
 
