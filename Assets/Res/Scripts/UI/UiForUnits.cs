@@ -113,6 +113,11 @@ namespace UI
             {
                 Destroy(healthBarTransform.gameObject);
             }
+
+            if (sanityBarTransform != null)
+            {
+                Destroy(sanityBarTransform.gameObject);
+            }
         }
 
         #endregion

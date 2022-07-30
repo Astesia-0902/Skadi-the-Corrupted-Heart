@@ -65,11 +65,15 @@ namespace Res.Scripts.Defenders
 
         protected virtual void Update()
         {
+            if (isDead)
+                return;
+            
             isInteracting = animatorManager.anim.GetBool(IsInteracting);
             NeuralDamageUpdate();
             UpdateAttackTimer();
             AttackUpdate();
             SkillPointUpdate();
+            StunUpdate();
         }
 
         #region Take Damage
@@ -80,6 +84,8 @@ namespace Res.Scripts.Defenders
         public float sanityRecoveryThreshold = 10f;
         public float resistance;
         public bool afterBurst;
+
+        public float stunTimer;
 
         public virtual void TakeDamage(float physicDamage1, float magicDamage1, float realDamage1)
         {
@@ -144,9 +150,8 @@ namespace Res.Scripts.Defenders
             isStunned = true;
             afterBurst = true;
             Unblock();
-            animatorManager.SetAnimatorBool("isStunned", isStunned);
             TakeDamage(0, 0, 1000f);
-            animatorManager.PlayTargetAnimation("Stun", true);
+            GetStunned(10f);
         }
 
         /// <summary>
@@ -154,6 +159,9 @@ namespace Res.Scripts.Defenders
         /// </summary>
         public virtual void NeuralDamageUpdate()
         {
+            if (isDead)
+                return;
+            
             //是否是爆发后的恢复期
             if (afterBurst)
             {
@@ -172,21 +180,27 @@ namespace Res.Scripts.Defenders
                 if (afterBurst)
                     afterBurst = !afterBurst;
             }
+        }
 
-            if (isStunned)
+        public void GetStunned(float stunTime)
+        {
+            isStunned = true;
+            animatorManager.SetAnimatorBool("isStunned", isStunned);
+            animatorManager.PlayTargetAnimation("Stun", true);
+            stunTimer = stunTime * (1f - resistance);
+        }
+
+        public void StunUpdate()
+        {
+            stunTimer -= Time.deltaTime;
+            if (stunTimer <= 0)
             {
-                sanityRecoveryTimer += Time.deltaTime;
-                if (sanityRecoveryTimer >= sanityRecoveryThreshold * (1f - resistance))
+                stunTimer = 0;
+                if (isStunned)
                 {
-                    //TODO:眩晕的特效
                     isStunned = false;
                     animatorManager.SetAnimatorBool("isStunned", isStunned);
-                    sanityRecoveryTimer = 0f;
                 }
-            }
-            else
-            {
-                sanityRecoveryTimer = 0f;
             }
         }
 
@@ -499,10 +513,9 @@ namespace Res.Scripts.Defenders
 
         private void OnDestroy()
         {
-            if (uiForUnits.healthBarTransform != null)
-            {
-                Destroy(uiForUnits.healthBarTransform.gameObject);
-            }
+            uiForUnits.DestroyBar();
+
+            //animatorManager.PlayTargetAnimation("Die", true);
         }
     }
 

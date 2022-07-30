@@ -37,7 +37,9 @@ namespace Game_Managers
         public void RemoveDefender(Defender defender)
         {
             if (defendersInGame.Contains(defender))
+            {
                 defendersInGame.Remove(defender);
+            }
         }
 
         #region Place Attacker

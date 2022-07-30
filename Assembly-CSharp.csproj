@@ -119,6 +119,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\DestroyOnDeath.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />
