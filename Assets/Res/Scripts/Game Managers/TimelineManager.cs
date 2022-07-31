@@ -12,6 +12,7 @@ namespace Res.Scripts.Game_Managers
     {
         private float timerAccumulator;
         private int timer;
+        private int lighthouseTimer;
         private bool startFlag;
 
         private Queue<DefenderSummonData> defenderSummonQueue;
@@ -53,6 +54,11 @@ namespace Res.Scripts.Game_Managers
                 if (timerAccumulator >= 1f)
                 {
                     timer++;
+                    lighthouseTimer++;
+                    if (lighthouseTimer >= 60)
+                    {
+                        ActivateLighthouse();
+                    }
                     timerAccumulator = 0f;
                 }
                 
@@ -83,6 +89,12 @@ namespace Res.Scripts.Game_Managers
                 GameObject defenderToWithdraw = GameObject.Find(defenderWithdrawQueue.Dequeue().defenderToWithdraw);
                 Destroy(defenderToWithdraw);
             }
+        }
+
+        private void ActivateLighthouse()
+        {
+            lighthouseTimer = 0;
+            Debug.Log("µÆËþÆô¶¯£¡");
         }
     }
 }

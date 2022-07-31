@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 using Tool_Scripts;
 using UnityEngine;
 
-namespace Game_Managers
+namespace Res.Scripts.Game_Managers
 {
     /// <summary>
     /// 管理进攻方的部署费用，功能详见策划文档
@@ -14,6 +15,8 @@ namespace Game_Managers
 
         private float costRecoveryTimer;
         private Queue<int> costToAddQueue;
+
+        public Action onCostChange;
 
         protected override void Awake()
         {
@@ -29,6 +32,11 @@ namespace Game_Managers
             if (costRecoveryTimer >= 1f && costFlag)
             {
                 currentCost++;
+                if (currentCost >= 99)
+                {
+                    currentCost = 99;
+                }
+                onCostChange.Invoke();
                 costRecoveryTimer = 0f;
             }
         }
@@ -47,6 +55,7 @@ namespace Game_Managers
             else
             {
                 currentCost -= amount;
+                onCostChange.Invoke();
                 return true;
             }
             
@@ -64,7 +73,10 @@ namespace Game_Managers
         public void RegainCost()
         {
             if (costToAddQueue.Count > 0)
+            {
                 currentCost += costToAddQueue.Dequeue();
+                onCostChange.Invoke();
+            }
         }
     }
 }

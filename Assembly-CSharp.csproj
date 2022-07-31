@@ -72,6 +72,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\Defender.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlagExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHoundAnimatorManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\DestroyOnDeath.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Irene\IreneAnimatorManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Kalts\KaltsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Specter the Unchained\Specter.cs" />
@@ -119,7 +120,9 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Res\Scripts\Animation Behavior\DestroyOnDeath.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\GameSpeedButton.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\CostUI.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\OnExit.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

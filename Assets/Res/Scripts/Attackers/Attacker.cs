@@ -58,6 +58,7 @@ namespace Attackers
             UpdateAttackTimer();
             AttackUpdate();
             BlowUpCountDown();
+            StunTimerUpdate();
         }
 
         public virtual void Initialize(NodeLoopManager node)
@@ -236,7 +237,9 @@ namespace Attackers
         #region Status
 
         public bool isBlownUp;
+        private bool isStunned;
         private float blowUpTimer;
+        private float stunTimer;
 
         public void BlowUpStart(float time)
         {
@@ -269,6 +272,26 @@ namespace Attackers
                     Vector3 temp = transform1.position;
                     temp.y -= 1f;
                     transform1.position = temp;
+                }
+            }
+        }
+
+        public void GetStunned(float stunTime)
+        {
+            isStunned = true;
+            animatorManager.PlayTargetAnimation("Stun", true);
+            stunTimer = stunTime;
+        }
+
+        public void StunTimerUpdate()
+        {
+            if (isStunned)
+            {
+                stunTimer -= Time.deltaTime;
+                if (stunTimer <= 0f)
+                {
+                    isStunned = false;
+                    animatorManager.anim.SetBool(IsInteracting, false);
                 }
             }
         }

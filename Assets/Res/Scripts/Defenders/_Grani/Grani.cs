@@ -6,6 +6,8 @@ namespace Res.Scripts.Defenders._Grani
     public class Grani : Defender
     {
         public bool isAttacking;
+        private bool endAttack;
+        private float endAttackTimer;
 
         public bool isSkillOn;
         public float skillTimer;
@@ -23,6 +25,11 @@ namespace Res.Scripts.Defenders._Grani
         {
             base.Update();
             SkillUpdate();
+
+            if (endAttack)
+            {
+                endAttackTimer += Time.deltaTime;
+            }
         }
 
         private void SkillUpdate()
@@ -44,15 +51,16 @@ namespace Res.Scripts.Defenders._Grani
                     //如果技能结束时正在攻击，切换成普攻动画
                     if (isAttacking)
                     {
-                        animatorManager.PlayTargetAnimation(Mathf.Abs(targetToDeal.transform.position.z - transform.position.z) > 0.2f
-                            ? "Attack_Down"
-                            : "Attack", true);
+                        animatorManager.PlayTargetAnimation(
+                            Mathf.Abs(targetToDeal.transform.position.z - transform.position.z) > 0.2f
+                                ? "Attack_Down"
+                                : "Attack", true);
                     }
                 }
             }
 
             //判断技能是否可以开启
-            if (!skillReady)
+            if (!skillReady || isStunned)
                 return;
 
             skillPoint = 0;
@@ -112,14 +120,23 @@ namespace Res.Scripts.Defenders._Grani
                     }
                 }
             }
-            
+
             //如果发现目标丢失，立刻停止攻击
             if (targetToDeal == null || targetToDeal.isDead || !CheckInRange(targetToDeal.transform))
             {
+                if (isStunned)
+                    return;
                 //如果正在攻击，收起武器回到idle状态
                 if (isAttacking)
                 {
+                    endAttack = true;
+                }
+
+                if (endAttackTimer >= 0.5f)
+                {
+                    endAttackTimer = 0f;
                     animatorManager.PlayTargetAnimation("Skill_End", true);
+                    endAttack = false;
                 }
             }
         }
