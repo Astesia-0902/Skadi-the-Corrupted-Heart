@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Attackers;
 using Game_Managers;
+using Res.Scripts.Attackers;
 using Res.Scripts.Defenders;
 using UnityEngine;
 
@@ -200,7 +201,6 @@ namespace Defenders._Specter_the_Unchained
         protected override void Die()
         {
             isDead = true;
-            GameManager.Instance.RemoveDefender(this);
             animatorManager.PlayTargetAnimation("Die_B_2", true);
             Unblock();
         }

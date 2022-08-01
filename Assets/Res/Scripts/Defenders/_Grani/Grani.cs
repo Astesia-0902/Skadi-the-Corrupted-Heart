@@ -14,6 +14,7 @@ namespace Res.Scripts.Defenders._Grani
 
         public float attackAnimationSpeed;
         private static readonly int SkillTrigger = Animator.StringToHash("Skill Trigger");
+        private static readonly int EndAttack = Animator.StringToHash("endAttack");
 
         protected override void Awake()
         {
@@ -99,6 +100,15 @@ namespace Res.Scripts.Defenders._Grani
 
                         //每次攻击开始时播放起手式
                         animatorManager.PlayTargetAnimation("Skill_Begin", true);
+                        
+                        if (transform.position.x - targetToDeal.transform.position.x < 0)
+                        {
+                            targetRotation = Quaternion.Euler(-90, 180, 0);
+                        }
+                        else
+                        {
+                            targetRotation = Quaternion.identity;
+                        }
 
                         //根据当前状态，决定进入哪个攻击动画的循环
                         if (isSkillOn)
@@ -129,14 +139,7 @@ namespace Res.Scripts.Defenders._Grani
                 //如果正在攻击，收起武器回到idle状态
                 if (isAttacking)
                 {
-                    endAttack = true;
-                }
-
-                if (endAttackTimer >= 0.5f)
-                {
-                    endAttackTimer = 0f;
-                    animatorManager.PlayTargetAnimation("Skill_End", true);
-                    endAttack = false;
+                    animatorManager.anim.SetBool(EndAttack, true);
                 }
             }
         }

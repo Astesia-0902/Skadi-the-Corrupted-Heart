@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Attackers
+namespace Res.Scripts.Attackers
 {
     /// <summary>
     /// 动画控制器以及Animation Event
@@ -8,7 +8,7 @@ namespace Attackers
     public class AnimatorManagerAttacker : MonoBehaviour
     {
         public Animator anim;
-        private Attacker attacker;
+        protected Attacker attacker;
         public bool isInteracting;
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
         private static readonly int CanMove = Animator.StringToHash("CanMove");
@@ -36,8 +36,8 @@ namespace Attackers
             //TODO:攻击特效和敌人的受击特效
             if (attacker.currentAttackTarget != null)
             {
-                attacker.currentAttackTarget.TakeDamage(attacker.attackDamage, 0, 0);
-                attacker.currentAttackTarget.TakeNeuralDamage(attacker.nerualDamage);
+                attacker.currentAttackTarget.TakeDamage(attacker.attackDamage, attacker.magicDamage, attacker.realDamage);
+                attacker.currentAttackTarget.TakeNeuralDamage(attacker.sanityDamage);
             }
         }
 

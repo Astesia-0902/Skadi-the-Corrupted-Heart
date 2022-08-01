@@ -1,5 +1,6 @@
 using Attackers;
 using Defenders;
+using Res.Scripts.Attackers;
 using Res.Scripts.Defenders;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,7 +37,7 @@ namespace UI
 
             if (attacker != null)
             {
-                attacker.OnHealthChanged += UpdateHealthBar;
+                attacker.onHealthChanged += UpdateHealthBar;
             }
             else if (defender != null)
             {

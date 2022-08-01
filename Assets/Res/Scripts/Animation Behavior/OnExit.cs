@@ -22,8 +22,11 @@ namespace Res.Scripts.Animation_Behavior
         // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
         override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            if(animator.GetBool(EndAttack))
+            if (animator.GetBool(EndAttack))
+            {
                 animator.Play(animName);
+                animator.SetBool(EndAttack, false);
+            }
         }
 
         // OnStateMove is called right after Animator.OnAnimatorMove()

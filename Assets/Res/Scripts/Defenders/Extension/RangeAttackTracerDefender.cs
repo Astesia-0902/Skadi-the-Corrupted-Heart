@@ -1,12 +1,12 @@
-using Attackers;
+using Res.Scripts.Attackers;
 using UnityEngine;
 
-namespace Defenders.Extension
+namespace Res.Scripts.Defenders.Extension
 {
     /// <summary>
     /// 远程攻击干员发射物的基类
     /// </summary>
-    public class RangeAttackTracer : MonoBehaviour
+    public class RangeAttackTracerDefender : MonoBehaviour
     {
         public Attacker target;
         public float physicDamage;

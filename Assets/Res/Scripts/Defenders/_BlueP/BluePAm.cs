@@ -1,11 +1,13 @@
 using Defenders.Extension;
+using Res.Scripts.Defenders._BlueP;
+using Res.Scripts.Defenders.Extension;
 
 namespace Defenders._BlueP
 {
     public class BluePAm : AnimatorManagerDefender
     {
         public BlueP blueP;
-        public RangeAttackTracer secondaryTracer;
+        public RangeAttackTracerDefender secondaryTracerDefender;
 
         protected override void Awake()
         {
@@ -25,41 +27,41 @@ namespace Defenders._BlueP
                         defender.skillReady = false;
                         defender.skillPoint = 0;
                         
-                        rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
-                        if (rangeAttackTracer != null)
+                        rangeAttackTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracerDefender>();
+                        if (rangeAttackTracerDefender != null)
                         {
-                            rangeAttackTracer.target = defender.targetToDeal;
-                            rangeAttackTracer.magicDamage = defender.magicDamage;
-                            rangeAttackTracer.physicDamage = defender.attackDamage * 1.5f;
-                            rangeAttackTracer.realDamage = defender.realDamageToDeal;
-                            rangeAttackTracer.hitFXPrefeb = hitFXPrefeb;
+                            rangeAttackTracerDefender.target = defender.targetToDeal;
+                            rangeAttackTracerDefender.magicDamage = defender.magicDamage;
+                            rangeAttackTracerDefender.physicDamage = defender.attackDamage * 1.5f;
+                            rangeAttackTracerDefender.realDamage = defender.realDamageToDeal;
+                            rangeAttackTracerDefender.hitFXPrefeb = hitFXPrefeb;
                         }
 
                         if (blueP.secondaryTarget != null)
                         {
-                            secondaryTracer = Instantiate(tracerFXPrefeb, tracerPivot)
-                                .GetComponent<RangeAttackTracer>();
-                            if (secondaryTracer != null)
+                            secondaryTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot)
+                                .GetComponent<RangeAttackTracerDefender>();
+                            if (secondaryTracerDefender != null)
                             {
-                                secondaryTracer.target = blueP.secondaryTargetToDeal;
-                                secondaryTracer.magicDamage = defender.magicDamage;
-                                secondaryTracer.physicDamage = defender.attackDamage * 1.5f;
-                                secondaryTracer.realDamage = defender.realDamageToDeal;
-                                secondaryTracer.hitFXPrefeb = hitFXPrefeb;
+                                secondaryTracerDefender.target = blueP.secondaryTargetToDeal;
+                                secondaryTracerDefender.magicDamage = defender.magicDamage;
+                                secondaryTracerDefender.physicDamage = defender.attackDamage * 1.5f;
+                                secondaryTracerDefender.realDamage = defender.realDamageToDeal;
+                                secondaryTracerDefender.hitFXPrefeb = hitFXPrefeb;
                             }
                         }
 
                         return;
                     }
                     
-                    rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
-                    if (rangeAttackTracer != null)
+                    rangeAttackTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracerDefender>();
+                    if (rangeAttackTracerDefender != null)
                     {
-                        rangeAttackTracer.target = defender.targetToDeal;
-                        rangeAttackTracer.magicDamage = defender.magicDamage;
-                        rangeAttackTracer.physicDamage = defender.attackDamage;
-                        rangeAttackTracer.realDamage = defender.realDamageToDeal;
-                        rangeAttackTracer.hitFXPrefeb = hitFXPrefeb;
+                        rangeAttackTracerDefender.target = defender.targetToDeal;
+                        rangeAttackTracerDefender.magicDamage = defender.magicDamage;
+                        rangeAttackTracerDefender.physicDamage = defender.attackDamage;
+                        rangeAttackTracerDefender.realDamage = defender.realDamageToDeal;
+                        rangeAttackTracerDefender.hitFXPrefeb = hitFXPrefeb;
                     }
                 }
             }

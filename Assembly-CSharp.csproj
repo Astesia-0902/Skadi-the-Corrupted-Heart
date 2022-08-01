@@ -60,6 +60,7 @@
      <Compile Include="Assets\Res\Scripts\Tile\Tile.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\AudioManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\OnExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\AnimatorManagerAttacker.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansPostProcess.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImporter.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImporterWindow.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\AttackerSummonData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\IndigoAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\AttackerRangeAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\Defender.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlagExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHoundAnimatorManager.cs" />
@@ -77,6 +79,8 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Kalts\KaltsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Specter the Unchained\Specter.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Kalts\Kalts.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\CostUI.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\GameSpeedButton.cs" />
      <Compile Include="Assets\Res\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefenderHealer.cs" />
      <Compile Include="Assets\Res\Scripts\UI\DeployButton.cs" />
@@ -89,11 +93,14 @@
      <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefender.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\GameLoopManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
-     <Compile Include="Assets\Res\Scripts\Defenders\Extension\RangeAttackTracer.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\Extension\RangeAttackTracerDefender.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderHealer.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\FlagOnStateUpdate.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\AttackerRange.cs" />
      <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Extension\RangeAttackTracerAttacker.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Red\RedAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Spitter\SpitterAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BlueP.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\CostManager.cs" />
      <Compile Include="Assets\Res\model\timeControl.cs" />
@@ -107,6 +114,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\Lumen.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\HoneyberrySkillTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHound.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Spitter\Spitter.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\HoneyberryAnimator.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\Elysium.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\NodeLoopManager.cs" />
@@ -120,9 +128,6 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Res\Scripts\UI\GameSpeedButton.cs" />
-     <Compile Include="Assets\Res\Scripts\UI\CostUI.cs" />
-     <Compile Include="Assets\Res\Scripts\Animation Behavior\OnExit.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

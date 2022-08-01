@@ -1,4 +1,5 @@
 using Attackers;
+using Res.Scripts.Attackers;
 
 namespace Defenders._Blaze
 {

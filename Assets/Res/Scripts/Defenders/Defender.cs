@@ -4,6 +4,7 @@ using System.Linq;
 using Attackers;
 using Defenders;
 using Game_Managers;
+using Res.Scripts.Attackers;
 using UI;
 using UnityEngine;
 
@@ -35,9 +36,12 @@ namespace Res.Scripts.Defenders
         public List<Attacker> attackersBlocked;
 
         private UiForUnits uiForUnits;
+
         //更新生命值/神经损伤的UI事件
         public Action<float, float> onHealthChanged;
         public Action<float> onSanityChanged;
+        
+        protected Quaternion targetRotation = Quaternion.identity;
 
         protected virtual void Awake()
         {
@@ -46,7 +50,7 @@ namespace Res.Scripts.Defenders
             sanity = 1000f;
             animatorManager = GetComponentInChildren<AnimatorManagerDefender>();
             uiForUnits = GetComponentInChildren<UiForUnits>();
-            
+
             attackersBlocked = new List<Attacker>();
             attackTimer = attackTimerStandard;
             rangeParent = transform.GetChild(1);
@@ -67,19 +71,25 @@ namespace Res.Scripts.Defenders
         {
             if (isDead)
                 return;
-            
+
             isInteracting = animatorManager.anim.GetBool(IsInteracting);
             NeuralDamageUpdate();
             UpdateAttackTimer();
             AttackUpdate();
             SkillPointUpdate();
             StunUpdate();
+            Rotate();
+        }
+
+        protected void OnDisable()
+        {
+            if (GameManager.Instance != null)
+                GameManager.Instance.RemoveDefender(this);
         }
 
         #region Take Damage
 
-        [Header("Sanity Damage")]
-        public float sanity;
+        [Header("Sanity Damage")] public float sanity;
         public float sanityRecoveryTimer;
         public float sanityRecoveryThreshold = 10f;
         public float resistance;
@@ -107,7 +117,6 @@ namespace Res.Scripts.Defenders
         protected virtual void Die()
         {
             isDead = true;
-            GameManager.Instance.RemoveDefender(this);
             animatorManager.PlayTargetAnimation("Die", true);
             Unblock();
         }
@@ -116,8 +125,11 @@ namespace Res.Scripts.Defenders
         /// 受到神经损伤
         /// </summary>
         /// <param name="neuralDamageToTake"></param>
-        public virtual void TakeNeuralDamage(float neuralDamageToTake)
+        public virtual void TakeNeuralDamage(int neuralDamageToTake)
         {
+            if (isDead || afterBurst)
+                return;
+            
             sanity -= neuralDamageToTake;
             onSanityChanged.Invoke(sanity);
 
@@ -139,6 +151,7 @@ namespace Res.Scripts.Defenders
             {
                 sanity = 1000f;
             }
+
             onSanityChanged.Invoke(sanity);
         }
 
@@ -161,7 +174,7 @@ namespace Res.Scripts.Defenders
         {
             if (isDead)
                 return;
-            
+
             //是否是爆发后的恢复期
             if (afterBurst)
             {
@@ -219,7 +232,7 @@ namespace Res.Scripts.Defenders
                     attacker.Unblocked();
                 }
             }
-            
+
             attackersBlocked.Clear();
         }
 
@@ -247,9 +260,8 @@ namespace Res.Scripts.Defenders
         public float magicDamage;
         public float attackTimerStandard;
         protected float attackTimer;
-        
-        [Header("Damage To Deal")]
-        public float physicalDamageToDeal;
+
+        [Header("Damage To Deal")] public float physicalDamageToDeal;
         public float magicDamageToDeal;
         public float realDamageToDeal;
 
@@ -275,6 +287,15 @@ namespace Res.Scripts.Defenders
                     attackTimer = attackTimerStandard;
                     float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
                     animatorManager.PlayTargetAnimation("Attack", true, attackAnimationSpeed);
+                    
+                    if (transform.position.x - targetToDeal.transform.position.x < 0)
+                    {
+                        targetRotation = Quaternion.Euler(-90, 180, 0);
+                    }
+                    else
+                    {
+                        targetRotation = Quaternion.identity;
+                    }
                 }
                 else
                 {
@@ -421,6 +442,21 @@ namespace Res.Scripts.Defenders
             if (attackTimer < 0)
                 attackTimer = 0;
         }
+        
+        /// <summary>
+        /// 控制单位攻击时面朝目标
+        /// </summary>
+        private void Rotate()
+        {
+            if (!isInteracting)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 20f * Time.deltaTime);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 20f * Time.deltaTime);
+            }
+        }
 
         #endregion
 
@@ -447,7 +483,7 @@ namespace Res.Scripts.Defenders
         {
             if (isAttackRecovering)
                 return;
-            
+
             skillPointTimer += Time.deltaTime;
             if (skillPointTimer >= 1f)
             {
@@ -473,9 +509,9 @@ namespace Res.Scripts.Defenders
         {
             if (!isAttackRecovering)
                 return;
-            
+
             skillPoint++;
-            
+
             if (skillPoint >= maxSkillPoint)
             {
                 skillPoint = maxSkillPoint;
@@ -560,10 +596,9 @@ namespace Res.Scripts.Defenders
             {
                 return -1;
             }
-            
         }
-    }   
-    
+    }
+
     /// <summary>
     /// 生命值升序排序（不考虑眩晕）
     /// </summary>
@@ -606,8 +641,8 @@ namespace Res.Scripts.Defenders
                 return -1;
             }
         }
-    }    
-    
+    }
+
     /// <summary>
     /// 按照神经损伤升序排序
     /// </summary>

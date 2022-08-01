@@ -1,5 +1,6 @@
 using Defenders.Extension;
 using Res.Scripts.Defenders;
+using Res.Scripts.Defenders.Extension;
 using UnityEngine;
 
 namespace Defenders
@@ -12,8 +13,9 @@ namespace Defenders
         [Header("Tracer Effect")] public GameObject tracerFXPrefeb;
         public GameObject hitFXPrefeb;
         public Transform tracerPivot;
+        
 
-        public RangeAttackTracer rangeAttackTracer;
+        public RangeAttackTracerDefender rangeAttackTracerDefender;
         
         protected Defender defender;
         public Animator anim;
@@ -57,14 +59,14 @@ namespace Defenders
             {
                 if (defender.isRange)
                 {
-                    rangeAttackTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracer>();
-                    if (rangeAttackTracer != null)
+                    rangeAttackTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracerDefender>();
+                    if (rangeAttackTracerDefender != null)
                     {
-                        rangeAttackTracer.target = defender.targetToDeal;
-                        rangeAttackTracer.magicDamage = defender.magicDamage;
-                        rangeAttackTracer.physicDamage = defender.attackDamage;
-                        rangeAttackTracer.realDamage = defender.realDamageToDeal;
-                        rangeAttackTracer.hitFXPrefeb = hitFXPrefeb;
+                        rangeAttackTracerDefender.target = defender.targetToDeal;
+                        rangeAttackTracerDefender.magicDamage = defender.magicDamage;
+                        rangeAttackTracerDefender.physicDamage = defender.attackDamage;
+                        rangeAttackTracerDefender.realDamage = defender.realDamageToDeal;
+                        rangeAttackTracerDefender.hitFXPrefeb = hitFXPrefeb;
                     }
                 }
                 else

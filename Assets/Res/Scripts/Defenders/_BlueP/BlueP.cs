@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Attackers;
-using Res.Scripts.Defenders;
+using Res.Scripts.Attackers;
+using UnityEngine;
 
-namespace Defenders._BlueP
+namespace Res.Scripts.Defenders._BlueP
 {
     public class BlueP : Defender
     {
@@ -29,6 +29,8 @@ namespace Defenders._BlueP
                     attackTimer = attackTimerStandard;
                     SkillPointOnAttack();
                     animatorManager.PlayTargetAnimation("Attack", true);
+                    
+                    targetRotation = transform.position.x - targetToDeal.transform.position.x < 0 ? Quaternion.Euler(-90, 180, 0) : Quaternion.identity;
                 }
                 else
                 {

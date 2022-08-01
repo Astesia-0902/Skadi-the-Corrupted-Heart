@@ -1,3 +1,4 @@
+using Res.Scripts.Attackers;
 using UnityEngine.PlayerLoop;
 
 namespace Attackers

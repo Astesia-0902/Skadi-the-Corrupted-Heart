@@ -1,12 +1,11 @@
 using System;
-using Defenders;
-using Game_Managers;
 using Res.Scripts.Defenders;
 using Res.Scripts.Game_Managers;
+using Spine.Unity;
 using UI;
 using UnityEngine;
 
-namespace Attackers
+namespace Res.Scripts.Attackers
 {
     public class Attacker : MonoBehaviour
     {
@@ -16,10 +15,12 @@ namespace Attackers
         public float maxHealth;
         public float currentHealth;
         public float attackDamage;
-        public float nerualDamage;
+        public float magicDamage;
+        public float realDamage;
+        public int sanityDamage;
         public int blockPara;
         public int weightLevel;
-        
+
         [Header("Defence Paras")] 
         public float armor;
         public float magicResistance;
@@ -39,19 +40,30 @@ namespace Attackers
         public Transform hitPoint;
 
         public float attackTimerStandard;
-        protected float AttackTimer;
+        protected float attackTimer;
 
         public Defender currentAttackTarget;
         public NodeLoopManager nodeLoopManager;
         
-        private Transform rangeParent;
         private AnimatorManagerAttacker animatorManager;
         public UiForUnits uiForUnits;
 
         public Defender defenderWhoBlockMe;
 
-        public Action<float, float> OnHealthChanged;
+        public Action<float, float> onHealthChanged;
 
+        public SkeletonMecanim skeletonMecanim;
+        
+        public Quaternion targetRotation;
+
+        private void Awake()
+        {
+            hitPoint = transform.GetChild(3);
+            animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
+            uiForUnits = GetComponentInChildren<UiForUnits>();
+            skeletonMecanim = GetComponentInChildren<SkeletonMecanim>();
+        }
+        
         protected virtual void Update()
         {
             isInteracting = animatorManager.anim.GetBool(IsInteracting);
@@ -59,20 +71,17 @@ namespace Attackers
             AttackUpdate();
             BlowUpCountDown();
             StunTimerUpdate();
+            Rotate();
         }
 
         public virtual void Initialize(NodeLoopManager node)
         {
-            hitPoint = transform.GetChild(3);
-            animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
-            uiForUnits = GetComponentInChildren<UiForUnits>();
             isInteracting = false;
             isBlocked = false;
             isDead = false;
             isBlownUp = false;
             defenderWhoBlockMe = null;
             spawnPoint = node.spawnPointID;
-            rangeParent = transform.GetChild(1);
             gameObject.SetActive(true);
             currentHealth = maxHealth;
             nodeIndex = 0;
@@ -87,16 +96,16 @@ namespace Attackers
         /// 角色受到伤害
         /// </summary>
         /// <param name="physicDamage"></param>
-        /// <param name="magicDamage"></param>
-        /// <param name="realDamage"></param>
-        public virtual void TakeDamage(float physicDamage, float magicDamage, float realDamage)
+        /// <param name="magicDamage1"></param>
+        /// <param name="realDamage1"></param>
+        public virtual void TakeDamage(float physicDamage, float magicDamage1, float realDamage1)
         {
             currentHealth -= physicDamage - armor > 0.05f * physicDamage
                 ? physicDamage - armor
                 : 0.05f * physicDamage;
-            currentHealth -= magicDamage * (1 - magicResistance);
-            currentHealth -= realDamage;
-            OnHealthChanged.Invoke(currentHealth, maxHealth);
+            currentHealth -= magicDamage1 * (1 - magicResistance);
+            currentHealth -= realDamage1;
+            onHealthChanged.Invoke(currentHealth, maxHealth);
             
             if (currentHealth <= 0)
             {
@@ -124,19 +133,29 @@ namespace Attackers
 
         #region Attack Helper
 
-        private void AttackUpdate()
+        protected virtual void AttackUpdate()
         {
-            if(isDead)
+            if(isDead || isInteracting || isBlownUp)
                 return;
             
             currentAttackTarget = GetPriorityTarget();
             
-            if (AttackTimer > 0)
+            if (attackTimer > 0)
                 return;
 
-            if (currentAttackTarget != null && !isInteracting && !isBlownUp)
+            if (currentAttackTarget != null && !currentAttackTarget.isDead)
             {
+                attackTimer = attackTimerStandard;
                 animatorManager.PlayTargetAnimation("Attack", true);
+                
+                if (transform.position.x - currentAttackTarget.transform.position.x < 0)
+                {
+                    targetRotation = Quaternion.Euler(-90, 180, 0);
+                }
+                else
+                {
+                    targetRotation = Quaternion.identity;
+                }
             }
         }
 
@@ -150,38 +169,7 @@ namespace Attackers
             if (defenderWhoBlockMe != null)
                 return defenderWhoBlockMe;
 
-            if (isRange)
-            {
-                for (int i = GameManager.Instance.defendersInGame.Count - 1; i >= 0; i--)
-                {
-                    if (CheckInRange(GameManager.Instance.defendersInGame[i].transform))
-                        return GameManager.Instance.defendersInGame[i];
-                }
-            }
-
             return null;
-        }
-
-        /// <summary>
-        /// 检查目标是否在攻击范围内
-        /// </summary>
-        /// <param name="targetTransform">目标的Transform</param>
-        /// <returns>在就返回True，反之False</returns>
-        private bool CheckInRange(Transform targetTransform)
-        {
-            Vector3 targetCenter = targetTransform.position;
-            //rangeParent物体下挂载了该单位的攻击范围中每个方块的中点
-            for (int i = 0; i < rangeParent.childCount; i++)
-            {
-                Vector3 rangeCenter = rangeParent.GetChild(i).position;
-                if (targetCenter.x < rangeCenter.x + 0.5f && targetCenter.x > rangeCenter.x - 0.5f &&
-                    targetCenter.z < rangeCenter.z + 0.5f && targetCenter.z > rangeCenter.z - 0.5f)
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         /// <summary>
@@ -227,9 +215,21 @@ namespace Attackers
 
         private void UpdateAttackTimer()
         {
-            AttackTimer -= Time.deltaTime;
-            if (AttackTimer < 0)
-                AttackTimer = 0;
+            attackTimer -= Time.deltaTime;
+            if (attackTimer < 0)
+                attackTimer = 0;
+        }
+
+        private void Rotate()
+        {
+            if (!isInteracting)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 20f * Time.deltaTime);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 20f * Time.deltaTime);
+            }
         }
 
         #endregion
