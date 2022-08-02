@@ -9,7 +9,6 @@ namespace Res.Scripts.Attackers
     {
         public Animator anim;
         protected Attacker attacker;
-        public bool isInteracting;
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
         private static readonly int CanMove = Animator.StringToHash("CanMove");
 
@@ -21,7 +20,6 @@ namespace Res.Scripts.Attackers
 
         protected virtual void Update()
         {
-            isInteracting = anim.GetBool(IsInteracting);
             anim.SetBool(CanMove,attacker.CanMove());
         }
 

@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 795856733895849371}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 7827386823317116804}
   m_RootOrder: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   tracerFXPrefeb: {fileID: 0}
   hitFXPrefeb: {fileID: 6555208936675239666, guid: 8dc52b9c941b3d34a8924bae3d73e98a, type: 3}
   tracerPivot: {fileID: 0}
-  rangeAttackTracer: {fileID: 0}
+  rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &807814897135110642
 GameObject:
@@ -505,6 +505,7 @@ MonoBehaviour:
   sanityRecoveryThreshold: 10
   resistance: 0
   afterBurst: 0
+  stunTimer: 0
   attackDamage: 200
   magicDamage: 0
   attackTimerStandard: 1.2

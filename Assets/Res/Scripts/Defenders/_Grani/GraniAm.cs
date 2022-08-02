@@ -33,6 +33,7 @@ namespace Res.Scripts.Defenders._Grani
                     if (attacker != null && attacker.isActiveAndEnabled)
                     {
                         attacker.TakeDamage(defender.attackDamage, 0f, 0f);
+                        Instantiate(hitFXPrefeb, attacker.hitPoint);
                     }
                 }
             }
@@ -40,6 +41,7 @@ namespace Res.Scripts.Defenders._Grani
             {
                 defender.targetToDeal.TakeDamage(defender.attackDamage, defender.magicDamage,
                     defender.realDamageToDeal);
+                Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
             }
         }
     }

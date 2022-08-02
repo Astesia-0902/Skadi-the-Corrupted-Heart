@@ -34,7 +34,7 @@ namespace Res.Scripts.Attackers
         [Header("Status Flags")] public bool isDead;
         public bool isRange;
         public bool isInteracting;
-        private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
+        protected static readonly int IsInteracting = Animator.StringToHash("isInteracting");
         public bool isBlocked;
 
         public Transform hitPoint;
@@ -45,23 +45,20 @@ namespace Res.Scripts.Attackers
         public Defender currentAttackTarget;
         public NodeLoopManager nodeLoopManager;
         
-        private AnimatorManagerAttacker animatorManager;
+        protected AnimatorManagerAttacker animatorManager;
         public UiForUnits uiForUnits;
 
         public Defender defenderWhoBlockMe;
 
         public Action<float, float> onHealthChanged;
 
-        public SkeletonMecanim skeletonMecanim;
-        
         public Quaternion targetRotation;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             hitPoint = transform.GetChild(3);
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
             uiForUnits = GetComponentInChildren<UiForUnits>();
-            skeletonMecanim = GetComponentInChildren<SkeletonMecanim>();
         }
         
         protected virtual void Update()
@@ -237,9 +234,9 @@ namespace Res.Scripts.Attackers
         #region Status
 
         public bool isBlownUp;
-        private bool isStunned;
+        protected bool isStunned;
         private float blowUpTimer;
-        private float stunTimer;
+        protected float stunTimer;
 
         public void BlowUpStart(float time)
         {
@@ -276,7 +273,7 @@ namespace Res.Scripts.Attackers
             }
         }
 
-        public void GetStunned(float stunTime)
+        public virtual void GetStunned(float stunTime)
         {
             isStunned = true;
             animatorManager.PlayTargetAnimation("Stun", true);

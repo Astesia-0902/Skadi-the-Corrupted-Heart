@@ -101,7 +101,7 @@ namespace Res.Scripts.Defenders._Grani
                         //每次攻击开始时播放起手式
                         animatorManager.PlayTargetAnimation("Skill_Begin", true);
                         
-                        if (transform.position.x - targetToDeal.transform.position.x < 0)
+                        if (transform.position.x - targetToDeal.transform.position.x > 0)
                         {
                             targetRotation = Quaternion.Euler(-90, 180, 0);
                         }

@@ -288,7 +288,7 @@ namespace Res.Scripts.Defenders
                     float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
                     animatorManager.PlayTargetAnimation("Attack", true, attackAnimationSpeed);
                     
-                    if (transform.position.x - targetToDeal.transform.position.x < 0)
+                    if (transform.position.x - targetToDeal.transform.position.x > 0)
                     {
                         targetRotation = Quaternion.Euler(-90, 180, 0);
                     }
@@ -617,16 +617,6 @@ namespace Res.Scripts.Defenders
             }
 
             if (y == null)
-            {
-                return 1;
-            }
-
-            //被眩晕的排前面
-            if (x.isStunned && !y.isStunned)
-            {
-                return -1;
-            }
-            else if (!x.isStunned && y.isStunned)
             {
                 return 1;
             }

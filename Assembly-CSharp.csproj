@@ -128,11 +128,15 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Lancer\Lancer.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Lancer\LancerAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Skadi\SkadiAm.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_kalts\char_003_kalts.atlas.txt" />
-     <None Include="Assets\Res\Models\Defenders\unity_skadi23\char_1012_skadi2_boc_4.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\unity_skadi23\char_1012_skadi2_boc_4.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbskr_2\enemy_1235_dsbskr_2.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_irene\char_4009_irene.atlas.txt" />
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\4_灯光熄灭\skeleton.atlas.txt" />
@@ -159,7 +163,7 @@
      <None Include="Assets\Res\Models\Defenders\Unity_hsguma\char_136_hsguma.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsubrl\enemy_1234_dsubrl.atlas.txt" />
      <None Include="Assets\effect\Lickba\Shader\VFX_Normal.shader" />
-     <None Include="Assets\Res\Models\Defenders\unity_skadi2\char_1012_skadi2.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\unity_skadi2\char_1012_skadi2.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dshond\enemy_1147_dshond.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_lumen\char_4042_lumen.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dssbr\enemy_1148_dssbr.atlas.txt" />

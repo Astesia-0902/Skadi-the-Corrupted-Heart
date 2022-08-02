@@ -123,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 6619873449329137736}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 3009534493997260100}
   m_RootOrder: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   tracerFXPrefeb: {fileID: 0}
   hitFXPrefeb: {fileID: 0}
   tracerPivot: {fileID: 0}
-  rangeAttackTracer: {fileID: 0}
+  rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &6771118648668951354
 GameObject:
@@ -316,12 +316,14 @@ MonoBehaviour:
   sanityRecoveryThreshold: 10
   resistance: 0
   afterBurst: 0
+  stunTimer: 0
   attackDamage: 100
   magicDamage: 0
   attackTimerStandard: 1.2
   physicalDamageToDeal: 0
   magicDamageToDeal: 0
   realDamageToDeal: 0
+  targetToDeal: {fileID: 0}
   skillPoint: 0
   maxSkillPoint: 30
   isAttackRecovering: 0

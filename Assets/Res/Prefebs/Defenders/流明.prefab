@@ -155,17 +155,20 @@ MonoBehaviour:
   sanityRecoveryThreshold: 10
   resistance: 0
   afterBurst: 0
+  stunTimer: 0
   attackDamage: 200
   magicDamage: 0
   attackTimerStandard: 2.5
   physicalDamageToDeal: 0
   magicDamageToDeal: 0
   realDamageToDeal: 0
+  targetToDeal: {fileID: 0}
   skillPoint: 0
   maxSkillPoint: 0
   isAttackRecovering: 0
   skillReady: 0
   currentHealTarget: {fileID: 0}
+  targetToHeal: {fileID: 0}
   skillTargets: []
 --- !u!1 &1946691248830444759
 GameObject:
@@ -695,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 8356206283468893692}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 5765821978015326589}
   m_RootOrder: 0
@@ -822,7 +825,7 @@ MonoBehaviour:
   tracerFXPrefeb: {fileID: 0}
   hitFXPrefeb: {fileID: 0}
   tracerPivot: {fileID: 0}
-  rangeAttackTracer: {fileID: 0}
+  rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
   healTracerPrefeb: {fileID: 5927142214074823330, guid: cf3d96ee885a88941b7e4d5a8ad7ce1e, type: 3}
   healHitPrefeb: {fileID: 5502494464135064768, guid: eb2daba1aa1414346ad2a1980c90b8e6, type: 3}

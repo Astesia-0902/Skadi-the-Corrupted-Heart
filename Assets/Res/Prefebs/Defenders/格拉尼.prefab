@@ -64,6 +64,7 @@ MonoBehaviour:
   sanityRecoveryThreshold: 10
   resistance: 0
   afterBurst: 0
+  stunTimer: 0
   attackDamage: 200
   magicDamage: 0
   attackTimerStandard: 1
@@ -75,8 +76,10 @@ MonoBehaviour:
   maxSkillPoint: 74
   isAttackRecovering: 0
   skillReady: 0
+  isAttacking: 0
   isSkillOn: 0
   skillTimer: 0
+  attackAnimationSpeed: 0
 --- !u!1 &1367888418022012683
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1367888418022012683}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 6885369085871570857}
   m_RootOrder: 0
@@ -234,7 +237,7 @@ MonoBehaviour:
   tracerFXPrefeb: {fileID: 0}
   hitFXPrefeb: {fileID: 0}
   tracerPivot: {fileID: 0}
-  rangeAttackTracer: {fileID: 0}
+  rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &4444932440459747193
 GameObject:
