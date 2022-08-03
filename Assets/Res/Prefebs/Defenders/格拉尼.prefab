@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracerFXPrefeb: {fileID: 0}
-  hitFXPrefeb: {fileID: 0}
+  hitFXPrefeb: {fileID: 6555208936675239666, guid: 8dc52b9c941b3d34a8924bae3d73e98a, type: 3}
   tracerPivot: {fileID: 0}
   rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}

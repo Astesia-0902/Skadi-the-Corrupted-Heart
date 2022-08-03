@@ -1,4 +1,5 @@
 using Defenders;
+using Game_Managers;
 using UnityEngine;
 
 namespace Res.Scripts.Defenders._Grani
@@ -82,6 +83,8 @@ namespace Res.Scripts.Defenders._Grani
         protected override void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
+            if (CheckInRange(GameManager.Instance.skadi.transform))
+                currentTarget = GameManager.Instance.skadi;
 
             if (currentTarget != null)
                 targetToDeal = currentTarget;

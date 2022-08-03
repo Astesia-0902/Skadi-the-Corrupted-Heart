@@ -62,7 +62,9 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenAm.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\OnExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\AnimatorManagerAttacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Lancer\LancerAm.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansPostProcess.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Skadi\SkadiAm.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImporter.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Red\Red.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Irene\Irene.cs" />
@@ -127,11 +129,11 @@
      <Compile Include="Assets\Res\Scripts\Defenders\Extension\HealTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Lancer\Lancer.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Lancer\LancerAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Skadi\SkadiAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\Reaper.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\ReaperAm.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

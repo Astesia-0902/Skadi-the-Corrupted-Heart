@@ -273,6 +273,8 @@ namespace Res.Scripts.Defenders
         protected virtual void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
+            if (CheckInRange(GameManager.Instance.skadi.transform))
+                currentTarget = GameManager.Instance.skadi;
 
             if (currentTarget != null)
                 targetToDeal = currentTarget;

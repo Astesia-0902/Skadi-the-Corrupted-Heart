@@ -18,7 +18,7 @@ namespace Res.Scripts.Attackers.Skadi
 
         private void Start()
         {
-            EntitySummoner.Instance.attackersInGame.Add(this);
+            
         }
 
         protected override void Update()

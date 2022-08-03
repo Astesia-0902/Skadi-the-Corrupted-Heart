@@ -84,7 +84,7 @@ namespace Res.Scripts.Attackers
             nodeIndex = 0;
             nodeLoopManager = node;
             transform.position = node.nodesPosition[0];
-            standardMoveSpeed = moveSpeed;
+            moveSpeed = standardMoveSpeed;
         }
 
         #region Take Damage

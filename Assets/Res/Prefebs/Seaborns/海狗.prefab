@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  isInteracting: 0
 --- !u!1 &1446904178131515718
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,16 +203,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e2c35d05a616a47986d79fab9385d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 1
   maxHealth: 1000
   currentHealth: 0
   attackDamage: 300
-  nerualDamage: 0
+  magicDamage: 0
+  realDamage: 0
+  sanityDamage: 0
   blockPara: 1
   weightLevel: 0
   armor: 6
   magicResistance: 0.05
-  standardMoveSpeed: 0
+  standardMoveSpeed: 3
   moveSpeed: 3
   nodeIndex: 0
   spawnPoint: 0
@@ -227,6 +228,7 @@ MonoBehaviour:
   nodeLoopManager: {fileID: 0}
   uiForUnits: {fileID: 0}
   defenderWhoBlockMe: {fileID: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   isBlownUp: 0
 --- !u!54 &4098267257208574137
 Rigidbody:
@@ -320,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultStatus: 0
+  healthBarTransform: {fileID: 0}
   healthBarPrefeb: {fileID: 1204221119142584144, guid: 80fdb6ccbc80d5f489d4d777886f29db, type: 3}
   sanityBarPrefeb: {fileID: 5635101115005066081, guid: 4f9a387ac2978ec4ca66b3bf031c8f7a, type: 3}
 --- !u!1 &5442135765498711459

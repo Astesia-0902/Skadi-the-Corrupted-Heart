@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Res.Scripts.Attackers
 {
@@ -6,6 +7,7 @@ namespace Res.Scripts.Attackers
     public class AttackerSummonData : ScriptableObject
     {
         public GameObject attackerPrefeb;
+        public Sprite uiImage;
         public int attackerID;
         public int cost;
     }

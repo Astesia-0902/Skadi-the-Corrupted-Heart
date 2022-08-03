@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Game_Managers;
 using Res.Scripts.Attackers;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace Res.Scripts.Defenders._BlueP
         protected override void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
+            if (CheckInRange(GameManager.Instance.skadi.transform))
+                currentTarget = GameManager.Instance.skadi;
             secondaryTarget = GetSecondaryTarget();
 
             if (currentTarget != null)
@@ -30,7 +33,7 @@ namespace Res.Scripts.Defenders._BlueP
                     SkillPointOnAttack();
                     animatorManager.PlayTargetAnimation("Attack", true);
                     
-                    targetRotation = transform.position.x - targetToDeal.transform.position.x < 0 ? Quaternion.Euler(-90, 180, 0) : Quaternion.identity;
+                    targetRotation = transform.position.x - targetToDeal.transform.position.x > 0 ? Quaternion.Euler(-90, 180, 0) : Quaternion.identity;
                 }
                 else
                 {

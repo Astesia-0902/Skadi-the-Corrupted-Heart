@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
-using Defenders;
-using Game_Managers;
+using Res.Scripts.Attackers;
 using Res.Scripts.Defenders;
-using Res.Scripts.Defenders._Grani;
+using Res.Scripts.UI;
 using UnityEngine;
 
 namespace Res.Scripts.Game_Managers
@@ -76,7 +74,7 @@ namespace Res.Scripts.Game_Managers
             startFlag = false;
         }
 
-        public void TimelineChecker()
+        private void TimelineChecker()
         {
             if (defenderSummonQueue.Count != 0 && timer == defenderSummonQueue.Peek().deployTime)
             {
@@ -95,6 +93,18 @@ namespace Res.Scripts.Game_Managers
         {
             lighthouseTimer = 0;
             Debug.Log("µÆËþÆô¶¯£¡");
+        }
+
+        private void LoadNewAttackersData(string wave)
+        {
+            AttackerSummonData[] attackerSummonDatas = Resources.LoadAll<AttackerSummonData>("Attacker Summon Data/"+wave);
+            DeployButton[] deployButtons = FindObjectsOfType<DeployButton>();
+            
+            for (int i = 0; i < attackerSummonDatas.Length; i++)
+            {
+                deployButtons[i].LoadNewAttackerData(attackerSummonDatas[i]);
+            }
+            
         }
     }
 }

@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Defenders;
 using Res.Scripts.Attackers;
+using Res.Scripts.Attackers.Skadi;
 using Res.Scripts.Defenders;
 using Res.Scripts.Game_Managers;
 using Tool_Scripts;
@@ -23,10 +25,18 @@ namespace Game_Managers
 
         public List<Defender> defendersInGame;
 
+        public Skadi skadi;
+
         protected override void Awake()
         {
             base.Awake();
+            
             defendersInGame = new List<Defender>();
+        }
+
+        private void Start()
+        {
+            skadi = FindObjectOfType<Skadi>();
         }
 
         public void AddDefender(Defender defender)
@@ -49,7 +59,7 @@ namespace Game_Managers
             deployFlag = true;
             attackerToDeploy = attackerSummonData;
             //激活拖动时跟随鼠标的单位模型
-            currentSelectedUnit = unitsToSelect[attackerSummonData.attackerID - 1];
+            currentSelectedUnit = unitsToSelect[attackerSummonData.attackerID];
             currentSelectedUnit.SetActive(true);
             currentSelectedUnit.transform.position = Input.mousePosition;
             Time.timeScale = 0.1f;

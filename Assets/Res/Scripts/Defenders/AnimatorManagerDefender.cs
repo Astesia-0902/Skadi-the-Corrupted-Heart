@@ -1,4 +1,5 @@
 using Defenders.Extension;
+using Game_Managers;
 using Res.Scripts.Defenders;
 using Res.Scripts.Defenders.Extension;
 using UnityEngine;
@@ -80,6 +81,11 @@ namespace Defenders
                         defender.realDamageToDeal);
                 }
             }
+        }
+
+        public virtual void OnDeath()
+        {
+            Destroy(defender.gameObject);
         }
     }
 }

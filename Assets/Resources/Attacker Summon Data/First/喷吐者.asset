@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40deb6bf86c9d2b408a631b3786d2d85, type: 3}
-  m_Name: "\u5E95\u6D77\u6ED1\u52A8\u8005"
+  m_Name: "\u55B7\u5410\u8005"
   m_EditorClassIdentifier: 
-  attackerPrefeb: {fileID: 2097935811826328080, guid: d41e8ee4ad74b8843be33078b068d6e9, type: 3}
+  attackerPrefeb: {fileID: 250944297090858896, guid: 7e5a3f9c668890745bad64b3d7137028, type: 3}
+  uiImage: {fileID: 0}
   attackerID: 3
-  cost: 10
+  cost: 15
