@@ -108,10 +108,12 @@
      <Compile Include="Assets\Res\model\timeControl.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansTerrainTools.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BluePAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\Reaper.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImageUtils.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlags.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderSummonData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\ReaperAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\Blaze.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\Lumen.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\HoneyberrySkillTracer.cs" />
@@ -132,8 +134,6 @@
      <Compile Include="Assets\Res\Scripts\Attackers\Lancer\Lancer.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\Reaper.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\ReaperAm.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

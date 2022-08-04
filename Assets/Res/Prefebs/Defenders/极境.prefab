@@ -295,6 +295,7 @@ MonoBehaviour:
   maxSkillPoint: 0
   isAttackRecovering: 0
   skillReady: 0
+  skillEffect: {fileID: 0}
 --- !u!1 &7946723988455688352
 GameObject:
   m_ObjectHideFlags: 0
