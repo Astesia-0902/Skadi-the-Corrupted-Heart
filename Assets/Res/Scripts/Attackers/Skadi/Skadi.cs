@@ -12,7 +12,7 @@ namespace Res.Scripts.Attackers.Skadi
         protected override void Awake()
         {
             currentHealth = maxHealth;
-            hitPoint = transform.GetChild(3);
+            hitPoint = transform.GetChild(2);
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
         }
 

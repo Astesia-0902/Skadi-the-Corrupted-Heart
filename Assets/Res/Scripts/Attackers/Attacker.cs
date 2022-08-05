@@ -10,9 +10,8 @@ namespace Res.Scripts.Attackers
     public class Attacker : MonoBehaviour
     {
         public int id;
-        
-        [Header("Combat Status")] 
-        public float maxHealth;
+
+        [Header("Combat Status")] public float maxHealth;
         public float currentHealth;
         public float attackDamage;
         public float magicDamage;
@@ -21,16 +20,14 @@ namespace Res.Scripts.Attackers
         public int blockPara;
         public int weightLevel;
 
-        [Header("Defence Paras")] 
-        public float armor;
+        [Header("Defence Paras")] public float armor;
         public float magicResistance;
 
-        [Header("Movements Paras")] 
-        public float standardMoveSpeed;
+        [Header("Movements Paras")] public float standardMoveSpeed;
         public float moveSpeed;
         public int nodeIndex;
         public int spawnPoint;
-        
+
         [Header("Status Flags")] public bool isDead;
         public bool isRange;
         public bool isInteracting;
@@ -44,7 +41,7 @@ namespace Res.Scripts.Attackers
 
         public Defender currentAttackTarget;
         public NodeLoopManager nodeLoopManager;
-        
+
         protected AnimatorManagerAttacker animatorManager;
         public UiForUnits uiForUnits;
 
@@ -52,15 +49,16 @@ namespace Res.Scripts.Attackers
 
         public Action<float, float> onHealthChanged;
 
-        public Quaternion targetRotation;
+        public Quaternion targetRotation = Quaternion.Euler(45, 0, 0);
+        protected Quaternion defaultRotation = Quaternion.Euler(45, 0, 0);
 
         protected virtual void Awake()
         {
-            hitPoint = transform.GetChild(3);
+            hitPoint = transform.GetChild(2);
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
             uiForUnits = GetComponentInChildren<UiForUnits>();
         }
-        
+
         protected virtual void Update()
         {
             isInteracting = animatorManager.anim.GetBool(IsInteracting);
@@ -103,7 +101,7 @@ namespace Res.Scripts.Attackers
             currentHealth -= magicDamage1 * (1 - magicResistance);
             currentHealth -= realDamage1;
             onHealthChanged.Invoke(currentHealth, maxHealth);
-            
+
             if (currentHealth <= 0)
             {
                 Die();
@@ -116,7 +114,7 @@ namespace Res.Scripts.Attackers
         protected virtual void Die()
         {
             isDead = true;
-            
+
             if (defenderWhoBlockMe != null)
             {
                 defenderWhoBlockMe.RemoveBlockedEnemy(this);
@@ -132,11 +130,11 @@ namespace Res.Scripts.Attackers
 
         protected virtual void AttackUpdate()
         {
-            if(isDead || isInteracting || isBlownUp)
+            if (isDead || isInteracting || isBlownUp)
                 return;
-            
+
             currentAttackTarget = GetPriorityTarget();
-            
+
             if (attackTimer > 0)
                 return;
 
@@ -144,15 +142,19 @@ namespace Res.Scripts.Attackers
             {
                 attackTimer = attackTimerStandard;
                 animatorManager.PlayTargetAnimation("Attack", true);
-                
-                if (transform.position.x - currentAttackTarget.transform.position.x < 0)
-                {
-                    targetRotation = Quaternion.Euler(-90, 180, 0);
-                }
-                else
-                {
-                    targetRotation = Quaternion.identity;
-                }
+                RefreshRotation();
+            }
+        }
+
+        private void RefreshRotation()
+        {
+            if (transform.position.x - currentAttackTarget.transform.position.x < 0)
+            {
+                targetRotation = Quaternion.Euler(-45, 180, 0);
+            }
+            else
+            {
+                targetRotation = defaultRotation;
             }
         }
 
@@ -178,7 +180,7 @@ namespace Res.Scripts.Attackers
             //更新被阻挡的信息
             isBlocked = true;
             defenderWhoBlockMe = defender;
-            
+
             Vector3 defenderPosition = defender.transform.position;
             Vector3 myPosition = transform.position;
             Vector3 targetPosition = new Vector3(0, 0, 0);
@@ -221,11 +223,13 @@ namespace Res.Scripts.Attackers
         {
             if (!isInteracting)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 20f * Time.deltaTime);
+                animatorManager.transform.rotation = Quaternion.Slerp(animatorManager.transform.rotation,
+                    defaultRotation, 20f * Time.deltaTime);
             }
             else
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 20f * Time.deltaTime);
+                animatorManager.transform.rotation = Quaternion.Slerp(animatorManager.transform.rotation,
+                    targetRotation, 20f * Time.deltaTime);
             }
         }
 
@@ -256,6 +260,7 @@ namespace Res.Scripts.Attackers
             transform1.position = temp;
             isBlownUp = true;
         }
+
         public void BlowUpCountDown()
         {
             if (isBlownUp)
@@ -276,7 +281,7 @@ namespace Res.Scripts.Attackers
         public virtual void GetStunned(float stunTime)
         {
             isStunned = true;
-            animatorManager.PlayTargetAnimation("Stun", true);
+            animatorManager.anim.speed = 0;
             stunTimer = stunTime;
         }
 
@@ -288,7 +293,7 @@ namespace Res.Scripts.Attackers
                 if (stunTimer <= 0f)
                 {
                     isStunned = false;
-                    animatorManager.anim.SetBool(IsInteracting, false);
+                    animatorManager.anim.speed = 1;
                 }
             }
         }
@@ -297,7 +302,7 @@ namespace Res.Scripts.Attackers
         {
             return !isInteracting && !isBlocked && !isBlownUp;
         }
-        
+
 
         /// <summary>
         /// 返回当前进攻方距离终点的路程

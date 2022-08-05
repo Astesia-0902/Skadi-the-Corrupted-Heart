@@ -45,6 +45,7 @@ namespace Defenders._Honeyberry
                         if (targetToHeal != null)
                         {
                             animatorManager.PlayTargetAnimation("Skill", true);
+                            RefreshRotation();
                             skillPoint = 0;
                             skillReady = false;
                             attackTimer = attackTimerStandard;
@@ -53,6 +54,7 @@ namespace Defenders._Honeyberry
                     else
                     {
                         attackTimer = attackTimerStandard;
+                        RefreshRotation();
                         animatorManager.PlayTargetAnimation("Attack", true);
                     }
                 }

@@ -32,8 +32,7 @@ namespace Res.Scripts.Defenders._BlueP
                     attackTimer = attackTimerStandard;
                     SkillPointOnAttack();
                     animatorManager.PlayTargetAnimation("Attack", true);
-                    
-                    targetRotation = transform.position.x - targetToDeal.transform.position.x > 0 ? Quaternion.Euler(-90, 180, 0) : Quaternion.identity;
+                    RefreshRotation();
                 }
                 else
                 {

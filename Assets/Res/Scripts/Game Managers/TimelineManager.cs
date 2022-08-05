@@ -41,7 +41,7 @@ namespace Res.Scripts.Game_Managers
                 defenderWithdrawQueue.Enqueue(defenderWithdrawData);
             }
 
-            //startFlag = true;
+            startFlag = true;
         }
 
         private void Update()

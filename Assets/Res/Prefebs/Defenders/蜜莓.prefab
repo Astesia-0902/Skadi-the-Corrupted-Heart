@@ -32,7 +32,6 @@ Transform:
   - {fileID: 3307289024437487622}
   - {fileID: 8902475690355907893}
   - {fileID: 8473729793366205048}
-  - {fileID: 8938246717420795397}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,6 +64,7 @@ MonoBehaviour:
   sanityRecoveryThreshold: 10
   resistance: 0
   afterBurst: 0
+  stunTimer: 0
   attackDamage: 0
   magicDamage: 0
   attackTimerStandard: 0
@@ -77,7 +77,9 @@ MonoBehaviour:
   isAttackRecovering: 0
   skillReady: 0
   currentHealTarget: {fileID: 0}
+  targetToHeal: {fileID: 0}
   secondaryTarget: {fileID: 0}
+  secondaryTargetToHeal: {fileID: 0}
 --- !u!1 &1327287660218290671
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,8 +260,9 @@ Transform:
   m_GameObject: {fileID: 3683714292788375298}
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.40000004, z: 0.40000004}
-  m_Children: []
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_Children:
+  - {fileID: 8938246717420795397}
   m_Father: {fileID: 2563667956161202887}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
@@ -385,7 +388,7 @@ MonoBehaviour:
   tracerFXPrefeb: {fileID: 0}
   hitFXPrefeb: {fileID: 0}
   tracerPivot: {fileID: 0}
-  rangeAttackTracer: {fileID: 0}
+  rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
   healTracerPrefeb: {fileID: 5927142214074823330, guid: cf3d96ee885a88941b7e4d5a8ad7ce1e, type: 3}
   healHitPrefeb: {fileID: 5502494464135064768, guid: eb2daba1aa1414346ad2a1980c90b8e6, type: 3}
@@ -564,12 +567,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6739136669023062786}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.197, y: 1, z: 0.637}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: -0.4925, y: 2.8938344, z: -0.6416992}
+  m_LocalScale: {x: 2.5, y: 2.4999998, z: 2.4999998}
   m_Children: []
-  m_Father: {fileID: 2563667956161202887}
-  m_RootOrder: 4
+  m_Father: {fileID: 8021737225308196062}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7172501169080437289
 GameObject:

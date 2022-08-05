@@ -41,7 +41,8 @@ namespace Res.Scripts.Defenders
         public Action<float, float> onHealthChanged;
         public Action<float> onSanityChanged;
         
-        protected Quaternion targetRotation = Quaternion.identity;
+        public Quaternion defaultRotation = Quaternion.Euler(45, 0, 0);
+        public Quaternion targetRotation = Quaternion.Euler(45, 0, 0);
 
         protected virtual void Awake()
         {
@@ -289,21 +290,25 @@ namespace Res.Scripts.Defenders
                     attackTimer = attackTimerStandard;
                     float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
                     animatorManager.PlayTargetAnimation("Attack", true, attackAnimationSpeed);
-                    
-                    if (transform.position.x - targetToDeal.transform.position.x > 0)
-                    {
-                        targetRotation = Quaternion.Euler(-90, 180, 0);
-                    }
-                    else
-                    {
-                        targetRotation = Quaternion.identity;
-                    }
+                    RefreshRotation();
                 }
                 else
                 {
                     //目标死亡时切换目标
                     currentTarget = null;
                 }
+            }
+        }
+
+        protected virtual void RefreshRotation()
+        {
+            if (transform.position.x - targetToDeal.transform.position.x > 0)
+            {
+                targetRotation = Quaternion.Euler(-45, 180, 0);
+            }
+            else
+            {
+                targetRotation = defaultRotation;
             }
         }
 
@@ -452,11 +457,11 @@ namespace Res.Scripts.Defenders
         {
             if (!isInteracting)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 20f * Time.deltaTime);
+                animatorManager.transform.rotation = Quaternion.Slerp(animatorManager.transform.rotation, defaultRotation, 20f * Time.deltaTime);
             }
             else
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 20f * Time.deltaTime);
+                animatorManager.transform.rotation = Quaternion.Slerp(animatorManager.transform.rotation, targetRotation, 20f * Time.deltaTime);
             }
         }
 

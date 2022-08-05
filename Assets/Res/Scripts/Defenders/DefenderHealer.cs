@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Game_Managers;
 using Res.Scripts.Defenders;
+using UnityEngine;
 
 namespace Defenders
 {
@@ -41,6 +42,18 @@ namespace Defenders
                     //目标死亡时切换目标
                     currentHealTarget = null;
                 }
+            }
+        }
+
+        protected override void RefreshRotation()
+        {
+            if (transform.position.x - targetToHeal.transform.position.x > 0)
+            {
+                targetRotation = Quaternion.Euler(45, 180, 0);
+            }
+            else
+            {
+                targetRotation = defaultRotation;
             }
         }
 
