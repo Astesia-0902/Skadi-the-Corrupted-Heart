@@ -82,7 +82,7 @@ namespace Res.Scripts.Defenders
             Rotate();
         }
 
-        protected void OnDisable()
+        protected virtual void OnDisable()
         {
             if (GameManager.Instance != null)
                 GameManager.Instance.RemoveDefender(this);

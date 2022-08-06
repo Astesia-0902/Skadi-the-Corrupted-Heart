@@ -1,21 +1,12 @@
-using Res.Scripts.Attackers;
+using Res.Scripts.Defenders.Extension;
 using UnityEngine;
 
-namespace Res.Scripts.Defenders.Extension
+namespace Res.Scripts.Defenders._Thorns
 {
-    /// <summary>
-    /// 防守方远程攻击的投射物
-    /// </summary>
-    public class RangeAttackTracerDefender : MonoBehaviour
+    public class ThornsTracer : RangeAttackTracerDefender
     {
-        public Attacker target;
-        public float physicDamage;
-        public float magicDamage;
-        public float realDamage;
-
-        public GameObject hitFXPrefeb;
-    
-        protected virtual void Update()
+        public GameObject nerualDamagePrefeb;
+        protected override void Update()
         {
             if (target == null)
             {
@@ -29,10 +20,11 @@ namespace Res.Scripts.Defenders.Extension
                 Destroy(this.gameObject);
             }
         }
-    
-        protected virtual void OnDestroy()
+
+        protected override void OnDestroy()
         {
-            Instantiate(hitFXPrefeb, target.hitPoint);
+            base.OnDestroy();
+            Instantiate(nerualDamagePrefeb, target.hitPoint);
         }
     }
 }

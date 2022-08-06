@@ -11,6 +11,10 @@ namespace Defenders._Blaze
             {
                 if (attacker != null && attacker.isActiveAndEnabled)
                 {
+                    if (hitFXPrefeb != null)
+                    {
+                        Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
+                    }
                     attacker.TakeDamage(defender.attackDamage, 0f, 0f);
                 }
             }

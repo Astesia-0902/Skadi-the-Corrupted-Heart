@@ -18,6 +18,11 @@ namespace Res.Scripts.Defenders._Mon3tr
             kalts.FindMons3TR();
         }
 
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+        }
+
         protected override void Update()
         {
             base.Update();
@@ -84,5 +89,6 @@ namespace Res.Scripts.Defenders._Mon3tr
             realDamageToDeal = 0;
             isSkillOn = false;
         }
+        
     }
 }

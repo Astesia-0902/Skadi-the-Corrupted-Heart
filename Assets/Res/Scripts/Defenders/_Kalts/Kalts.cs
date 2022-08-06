@@ -8,6 +8,15 @@ namespace Res.Scripts.Defenders._Kalts
     {
         private Mon3TR mon3TR;
 
+        protected override void OnDisable()
+        {
+            if (mon3TR != null)
+            {
+                Destroy(mon3TR.gameObject);
+            }
+            base.OnDisable();
+        }
+
         public void FindMons3TR()
         {
             mon3TR = FindObjectOfType<Mon3TR>();
@@ -21,6 +30,23 @@ namespace Res.Scripts.Defenders._Kalts
             }
             
             return base.GetPriorityHealTarget(defenders);
+        }
+
+        public override void SkillPointUpdate()
+        {
+            if (mon3TR == null)
+            {
+                skillReady = false;
+                skillPoint = 0;
+                return;
+            }
+            
+            base.SkillPointUpdate();
+        }
+
+        public void CastSkill()
+        {
+            mon3TR.CastSkill();
         }
     }
 }

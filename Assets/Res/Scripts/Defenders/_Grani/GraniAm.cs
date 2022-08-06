@@ -19,7 +19,6 @@ namespace Res.Scripts.Defenders._Grani
 
         private void Update()
         {
-            //由于格拉尼使用的是循环动画，方法内不会每帧都设定动画速度，所以攻击速度的参数要实时更新
             anim.SetFloat(Multiplier, grani.attackAnimationSpeed);
             grani.isAttacking = anim.GetBool(IsAttacking);
         }
@@ -32,6 +31,10 @@ namespace Res.Scripts.Defenders._Grani
                 {
                     if (attacker != null && attacker.isActiveAndEnabled)
                     {
+                        if (hitFXPrefeb != null)
+                        {
+                            Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
+                        }
                         attacker.TakeDamage(defender.attackDamage, 0f, 0f);
                         Instantiate(hitFXPrefeb, attacker.hitPoint);
                     }
@@ -41,7 +44,10 @@ namespace Res.Scripts.Defenders._Grani
             {
                 defender.targetToDeal.TakeDamage(defender.attackDamage, defender.magicDamage,
                     defender.realDamageToDeal);
-                Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
+                if (hitFXPrefeb != null)
+                {
+                    Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
+                }
             }
         }
     }
