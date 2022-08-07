@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223d2cd2113d13a4185437e333df0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracerFXPrefeb: {fileID: 0}
-  hitFXPrefeb: {fileID: 0}
+  tracerFXPrefeb: {fileID: 5196714609715901704, guid: d2a413a481fb4174396940b92078ed93, type: 3}
+  hitFXPrefeb: {fileID: 6555208936675239666, guid: 8dc52b9c941b3d34a8924bae3d73e98a, type: 3}
   tracerPivot: {fileID: 0}
   rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
@@ -206,11 +206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93f6f9a93f638e439d743d9bc61308d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 2000
   currentHealth: 0
-  armor: 0
-  magicResistance: 0
-  blockNumStandard: 0
+  armor: 100
+  magicResistance: 5
+  blockNumStandard: 2
   isDead: 0
   isInteracting: 0
   isRange: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   resistance: 0
   afterBurst: 0
   stunTimer: 0
-  attackDamage: 0
+  attackDamage: 100
   magicDamage: 0
   attackTimerStandard: 1.3
   physicalDamageToDeal: 0
@@ -234,8 +234,8 @@ MonoBehaviour:
   realDamageToDeal: 0
   targetToDeal: {fileID: 0}
   skillPoint: 0
-  maxSkillPoint: 0
-  isAttackRecovering: 0
+  maxSkillPoint: 30
+  isAttackRecovering: 1
   skillReady: 0
 --- !u!1 &1190534153729312298
 GameObject:

@@ -60,6 +60,7 @@
      <Compile Include="Assets\Res\Scripts\Tile\Tile.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\AudioManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\OnExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\AnimatorManagerAttacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Lancer\LancerAm.cs" />
@@ -91,6 +92,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\Indigo.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansUtilities.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\BlazeAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsNeuralDamageEffect.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3trAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefender.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\GameLoopManager.cs" />
@@ -116,6 +118,7 @@
      <Compile Include="Assets\Res\Scripts\Attackers\Reaper\ReaperAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\Blaze.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\Lumen.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\Thorns.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\HoneyberrySkillTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHound.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Spitter\Spitter.cs" />
@@ -132,12 +135,9 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3TR.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Lancer\Lancer.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
-     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\Thorns.cs" />
-     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
-     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsTracer.cs" />
-     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsNeuralDamageEffect.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

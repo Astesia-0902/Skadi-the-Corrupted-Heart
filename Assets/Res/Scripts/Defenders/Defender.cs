@@ -62,7 +62,7 @@ namespace Res.Scripts.Defenders
             realDamageToDeal = 0;
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             GameManager.Instance.AddDefender(this);
             animatorManager.PlayTargetAnimation("Start", true);
@@ -274,8 +274,6 @@ namespace Res.Scripts.Defenders
         protected virtual void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
-            if (CheckInRange(GameManager.Instance.skadi.transform))
-                currentTarget = GameManager.Instance.skadi;
 
             if (currentTarget != null)
                 targetToDeal = currentTarget;
@@ -387,6 +385,9 @@ namespace Res.Scripts.Defenders
         /// <returns></returns>
         protected virtual Attacker GetPriorityTarget(List<Attacker> attackers)
         {
+            if (GameManager.Instance.skadi != null && CheckInRange(GameManager.Instance.skadi.transform))
+                return GameManager.Instance.skadi;
+            
             if (attackers.Count == 0)
                 return null;
 

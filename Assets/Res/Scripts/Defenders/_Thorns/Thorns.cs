@@ -1,4 +1,5 @@
-using Game_Managers;
+using System.Collections.Generic;
+using Res.Scripts.Attackers;
 using UnityEngine;
 
 namespace Res.Scripts.Defenders._Thorns
@@ -12,10 +13,21 @@ namespace Res.Scripts.Defenders._Thorns
         private float idleTimer;
         private int idleTimerHelper;
 
+        private float attackStandard;
+        private float attackTimeBuffer;
+
+        protected override void Start()
+        {
+            base.Start();
+            attackStandard = attackDamage;
+            attackTimeBuffer = attackTimerStandard;
+        }
+
         protected override void Update()
         {
             base.Update();
             SkillUpdate();
+            IdleTimerUpdate();
         }
 
         private void IdleTimerUpdate()
@@ -41,13 +53,19 @@ namespace Res.Scripts.Defenders._Thorns
 
         public void CastSkill()
         {
+            if (!skillReady || skillCount >= 2)
+                return;
+
+            skillReady = false;
+            skillPoint = 0;
+
             for (int i = 8; i < rangeParent.childCount; i++)
             {
                 rangeParent.GetChild(i).gameObject.SetActive(true);
             }
 
-            attackDamage = skillCount >= 2 ? attackDamage * 2.2f : attackDamage * 1.6f;
-            attackTimerStandard = attackTimerStandard * skillCount >= 2 ? 0.66f : 0.8f;
+            attackDamage = skillCount >= 1 ? attackDamage * 2.2f : attackDamage * 1.6f;
+            attackTimerStandard = attackTimerStandard * skillCount >= 1 ? 0.66f : 0.8f;
             isSkillOn = true;
             skillCount++;
         }
@@ -58,7 +76,7 @@ namespace Res.Scripts.Defenders._Thorns
             {
                 return;
             }
-            
+
             if (!isSkillOn)
                 return;
 
@@ -74,29 +92,28 @@ namespace Res.Scripts.Defenders._Thorns
         {
             if (skillCount >= 2)
                 return;
-            
+
             for (int i = 8; i < rangeParent.childCount; i++)
             {
                 rangeParent.GetChild(i).gameObject.SetActive(false);
             }
 
             isSkillOn = false;
-            attackDamage /= 1.6f;
-            attackTimerStandard /= 0.66f;
+            attackDamage = attackStandard;
+            attackTimerStandard = attackTimeBuffer;
         }
 
         public override void SkillPointOnAttack()
         {
             if (isSkillOn)
                 return;
+
             base.SkillPointOnAttack();
         }
 
         protected override void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
-            if (CheckInRange(GameManager.Instance.skadi.transform))
-                currentTarget = GameManager.Instance.skadi;
 
             if (currentTarget != null)
                 targetToDeal = currentTarget;
@@ -109,9 +126,10 @@ namespace Res.Scripts.Defenders._Thorns
                 if (!targetToDeal.isDead && CheckInRange(targetToDeal.transform))
                 {
                     ResetIdleTimer();
+                    SkillPointOnAttack();
                     attackTimer = attackTimerStandard;
                     float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
-                    
+
                     if (!isSkillOn)
                     {
                         animatorManager.PlayTargetAnimation(
@@ -133,6 +151,16 @@ namespace Res.Scripts.Defenders._Thorns
                     currentTarget = null;
                 }
             }
+        }
+
+        protected override Attacker GetPriorityTarget(List<Attacker> attackers)
+        {
+            if (attackersBlocked.Count > 0)
+            {
+                return attackersBlocked[0];
+            }
+
+            return base.GetPriorityTarget(attackers);
         }
     }
 }
