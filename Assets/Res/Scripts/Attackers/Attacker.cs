@@ -67,6 +67,7 @@ namespace Res.Scripts.Attackers
             BlowUpCountDown();
             StunTimerUpdate();
             Rotate();
+            ImprisonUpdate();
         }
 
         public virtual void Initialize(NodeLoopManager node)
@@ -239,8 +240,29 @@ namespace Res.Scripts.Attackers
 
         public bool isBlownUp;
         protected bool isStunned;
+        public bool imprisoned;
+        private float imprisonedTimer;
         private float blowUpTimer;
         protected float stunTimer;
+
+        public void GetImprisoned(float time)
+        {
+            imprisoned = true;
+            imprisonedTimer = time;
+        }
+
+        protected virtual void ImprisonUpdate()
+        {
+            if (!imprisoned)
+                return;
+
+            imprisonedTimer -= Time.deltaTime;
+            
+            if (imprisonedTimer <= 0f)
+            {
+                imprisoned = false;
+            }
+        }
 
         public void BlowUpStart(float time)
         {
@@ -300,7 +322,7 @@ namespace Res.Scripts.Attackers
 
         public virtual bool CanMove()
         {
-            return !isInteracting && !isBlocked && !isBlownUp;
+            return !isInteracting && !isBlocked && !isBlownUp && !imprisoned;
         }
 
 

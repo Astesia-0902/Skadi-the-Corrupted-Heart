@@ -87,6 +87,7 @@
      <Compile Include="Assets\Res\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefenderHealer.cs" />
      <Compile Include="Assets\Res\Scripts\UI\DeployButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Amiya\Amiya.cs" />
      <Compile Include="Assets\Res\Scripts\ButtonTemp.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderWithdrawData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\Indigo.cs" />
@@ -138,6 +139,8 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Amiya\AmiyaAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\IndigoTracer.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

@@ -64,6 +64,11 @@ namespace Res.Scripts.Defenders._Thorns
                 rangeParent.GetChild(i).gameObject.SetActive(true);
             }
 
+            if (skillEffectPrefeb1 != null && skillEffectPrefeb2 != null)
+            {
+                skillEffectPointer = Instantiate(skillCount >= 1 ? skillEffectPrefeb2 : skillEffectPrefeb1, transform);
+            }
+
             attackDamage = skillCount >= 1 ? attackDamage * 2.2f : attackDamage * 1.6f;
             attackTimerStandard = attackTimerStandard * skillCount >= 1 ? 0.66f : 0.8f;
             isSkillOn = true;
@@ -101,6 +106,8 @@ namespace Res.Scripts.Defenders._Thorns
             isSkillOn = false;
             attackDamage = attackStandard;
             attackTimerStandard = attackTimeBuffer;
+
+            DestroySkillEffect();
         }
 
         public override void SkillPointOnAttack()

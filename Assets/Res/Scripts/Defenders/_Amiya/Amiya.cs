@@ -1,14 +1,11 @@
 using UnityEngine;
 
-namespace Res.Scripts.Defenders._Indigo
+namespace Res.Scripts.Defenders._Amiya
 {
-    public class Indigo : Defender
+    public class Amiya : Defender
     {
         private bool isSkillOn;
         private float skillTimer;
-        public int imprisonCount;
-        public int chargeCount;
-
 
         protected override void Update()
         {
@@ -21,41 +18,38 @@ namespace Res.Scripts.Defenders._Indigo
             if (!skillReady)
                 return;
 
-            attackTimerStandard *= 0.6f;
-
-            for (int i = 4; i < rangeParent.childCount; i++)
+            if (skillEffectPrefeb1 != null)
             {
-                rangeParent.GetChild(i).gameObject.SetActive(false);
+                skillEffectPointer = Instantiate(skillEffectPrefeb1, transform);
             }
-
-            rangeParent.GetChild(rangeParent.childCount - 1).gameObject.SetActive(true);
-
-            magicDamage *= 0.5f;
-            attackTimerStandard *= 0.2f;
+            
+            skillPoint = 0;
+            skillReady = false;
+            isSkillOn = true;
+            magicDamage *= 1.8f;
         }
 
         private void SkillUpdate()
         {
             if (!isSkillOn)
                 return;
-            
+
             skillTimer += Time.deltaTime;
-            
-            if (skillTimer >= 4f)
+            if (skillTimer >= 30f)
             {
                 isSkillOn = false;
                 skillTimer = 0;
-                magicDamage *= 2f;
-                attackTimerStandard *= 5f;
-                
-                for (int i = 4; i < rangeParent.childCount; i++)
-                {
-                    rangeParent.GetChild(i).gameObject.SetActive(true);
-                }
-
-                rangeParent.GetChild(rangeParent.childCount - 1).gameObject.SetActive(false);
+                magicDamage /= 1.8f;
+                DestroySkillEffect();
             }
+        }
 
+        public override void SkillPointUpdate()
+        {
+            if (isSkillOn)
+                return;
+
+            base.SkillPointUpdate();
         }
 
         protected override void AttackUpdate()
@@ -74,7 +68,7 @@ namespace Res.Scripts.Defenders._Indigo
                 {
                     attackTimer = attackTimerStandard;
                     float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
-                    animatorManager.PlayTargetAnimation("Attack", true, attackAnimationSpeed);
+                    animatorManager.PlayTargetAnimation(isSkillOn ? "Skill_1" : "Attack", true, attackAnimationSpeed);
                     RefreshRotation();
                 }
                 else
@@ -82,11 +76,6 @@ namespace Res.Scripts.Defenders._Indigo
                     //目标死亡时切换目标
                     currentTarget = null;
                 }
-            }
-            else if(targetToDeal == null && CanAttack() && chargeCount < 3)
-            {
-                attackTimer = attackTimerStandard;
-                animatorManager.PlayTargetAnimation("Attack_Charge", true);
             }
         }
     }

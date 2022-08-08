@@ -1,9 +1,51 @@
-using UnityEngine;
+using System;
+using Defenders;
+using Res.Scripts.Defenders.Extension;
 
-namespace Defenders._Indigo
+namespace Res.Scripts.Defenders._Indigo
 {
-    public class IndigoAm : MonoBehaviour
+    public class IndigoAm : AnimatorManagerDefender
     {
-    
+        private Indigo indigo;
+        private IndigoTracer indigoTracer;
+
+        private void OnEnable()
+        {
+            indigo = GetComponentInParent<Indigo>();
+        }
+
+        public override void OnAttack()
+        {
+            if (defender.targetToDeal == null || defender.targetToDeal.isDead)
+            {
+                return;
+            }
+
+            indigo.imprisonCount++;
+            indigoTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<IndigoTracer>();
+            if (indigoTracer != null)
+            {
+                if (indigo.imprisonCount >= 5)
+                {
+                    indigo.imprisonCount = 0;
+                    indigoTracer.isImprisoning = true;
+                }
+                indigoTracer.target = defender.targetToDeal;
+                indigoTracer.magicDamage = defender.magicDamage * (indigo.chargeCount + 1);
+                indigo.chargeCount = 0;
+                indigoTracer.physicDamage = defender.attackDamage;
+                indigoTracer.realDamage = defender.realDamageToDeal;
+                indigoTracer.hitFXPrefeb = hitFXPrefeb;
+            }
+        }
+
+        public void OnCharge()
+        {
+            indigo.chargeCount++;
+            if (indigo.chargeCount >= 3)
+            {
+                indigo.chargeCount = 3;
+            }
+        }
     }
 }

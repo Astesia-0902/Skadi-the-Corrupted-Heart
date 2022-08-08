@@ -56,7 +56,7 @@ namespace Defenders
         public virtual void OnAttack()
         {
             //TODO:攻击特效和敌人的受击特效
-            if (defender.targetToDeal != null)
+            if (defender.targetToDeal != null || defender.targetToDeal.isDead)
             {
                 if (defender.isRange)
                 {

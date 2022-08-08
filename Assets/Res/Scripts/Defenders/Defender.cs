@@ -43,6 +43,10 @@ namespace Res.Scripts.Defenders
         
         public Quaternion defaultRotation = Quaternion.Euler(45, 0, 0);
         public Quaternion targetRotation = Quaternion.Euler(45, 0, 0);
+        
+        public GameObject skillEffectPrefeb1;
+        public GameObject skillEffectPrefeb2;
+        protected GameObject skillEffectPointer;
 
         protected virtual void Awake()
         {
@@ -528,6 +532,15 @@ namespace Res.Scripts.Defenders
             else
             {
                 skillReady = false;
+            }
+        }
+        
+        protected virtual void DestroySkillEffect()
+        {
+            if (skillEffectPointer != null)
+            {
+                Destroy(skillEffectPointer);
+                skillEffectPointer = null;
             }
         }
 
