@@ -1,6 +1,6 @@
 namespace Res.Scripts.Attackers.Lancer
 {
-    public class LancerAm : AttackerRangeAm
+    public class LancerAm : AnimatorManagerAttackerRange
     {
         public override void OnAttack()
         {

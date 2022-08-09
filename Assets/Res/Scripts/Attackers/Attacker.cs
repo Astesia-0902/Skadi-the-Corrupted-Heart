@@ -131,7 +131,7 @@ namespace Res.Scripts.Attackers
 
         protected virtual void AttackUpdate()
         {
-            if (isDead || isInteracting || isBlownUp)
+            if (!CanAttack())
                 return;
 
             currentAttackTarget = GetPriorityTarget();
@@ -147,7 +147,7 @@ namespace Res.Scripts.Attackers
             }
         }
 
-        private void RefreshRotation()
+        protected void RefreshRotation()
         {
             if (transform.position.x - currentAttackTarget.transform.position.x < 0)
             {
@@ -257,7 +257,7 @@ namespace Res.Scripts.Attackers
                 return;
 
             imprisonedTimer -= Time.deltaTime;
-            
+
             if (imprisonedTimer <= 0f)
             {
                 imprisoned = false;
@@ -322,8 +322,14 @@ namespace Res.Scripts.Attackers
 
         public virtual bool CanMove()
         {
-            return !isInteracting && !isBlocked && !isBlownUp && !imprisoned;
+            return !isInteracting && !isBlocked && !isBlownUp && !imprisoned && !isStunned;
         }
+        
+        public virtual bool CanAttack()
+        {
+            return !isInteracting && !isBlocked && !isBlownUp && !isStunned;
+        }
+
 
 
         /// <summary>

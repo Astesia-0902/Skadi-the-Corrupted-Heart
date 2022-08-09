@@ -1,5 +1,6 @@
 using Game_Managers;
 using Res.Scripts.Attackers;
+using Res.Scripts.Game_Managers;
 
 namespace Res.Scripts.Defenders._Red
 {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Res.Scripts.Attackers
 {
-    public class AttackerRangeAm : AnimatorManagerAttacker
+    public class AnimatorManagerAttackerRange : AnimatorManagerAttacker
     {
         [Header("Tracer Effect")] public GameObject tracerFXPrefeb;
         public GameObject hitFXPrefeb;

@@ -1,13 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Attackers;
 using Res.Scripts.Attackers;
-using Res.Scripts.Game_Managers;
 using Tool_Scripts;
 using UnityEngine;
 
-namespace Game_Managers
+namespace Res.Scripts.Game_Managers
 {
     public class EntitySummoner : Singleton<EntitySummoner>
     {
@@ -16,7 +13,7 @@ namespace Game_Managers
         private Dictionary<int, GameObject> attackerPrefebs;
         private Dictionary<int, Queue<Attacker>> attackerSpawnPool;
 
-        private List<AttackerSummonData> attackerList;
+        public List<AttackerSummonData> attackerList;
         private List<NodeLoopManager> nodeList;
 
         private Queue<AttackerSummonData> attackerListSingle;

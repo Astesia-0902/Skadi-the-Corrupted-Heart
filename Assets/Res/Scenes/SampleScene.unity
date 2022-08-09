@@ -10188,74 +10188,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 143373238, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 143373238, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 143373242, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 486795381, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 486795381, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 486795385, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 807465459, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 807465459, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 807465463, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084035187, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: initialFlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084035190, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084035191, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084035191, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384030417742651028, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384030417742651028, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3752278632293248128, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: unitsToSelect.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3752278632293248128, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: unitsToSelect.Array.data[5]
-      value: 
-      objectReference: {fileID: 1961392745}
     - target: {fileID: 3752278632293248129, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -10304,17 +10236,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 6282820624763086080, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
---- !u!1 &1961392745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7325573530272126971, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
-  m_PrefabInstance: {fileID: 1961392744}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1979148056
 GameObject:
   m_ObjectHideFlags: 0

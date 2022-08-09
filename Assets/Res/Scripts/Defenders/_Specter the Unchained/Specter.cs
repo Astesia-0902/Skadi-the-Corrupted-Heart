@@ -3,6 +3,7 @@ using Attackers;
 using Game_Managers;
 using Res.Scripts.Attackers;
 using Res.Scripts.Defenders;
+using Res.Scripts.Game_Managers;
 using UnityEngine;
 
 namespace Defenders._Specter_the_Unchained
