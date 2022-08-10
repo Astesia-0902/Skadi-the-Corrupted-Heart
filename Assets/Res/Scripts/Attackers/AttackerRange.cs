@@ -8,7 +8,7 @@ namespace Res.Scripts.Attackers
 {
     public class AttackerRange : Attacker
     {
-        [Header("Ô¶³Ì¹¥»÷Ïà¹Ø")]
+        [Header("?????????")]
         public float range;
 
         public override void Initialize(NodeLoopManager node)
@@ -18,6 +18,11 @@ namespace Res.Scripts.Attackers
 
         protected override Defender GetPriorityTarget()
         {
+            if (defenderWhoBlockMe != null)
+            {
+                return defenderWhoBlockMe;
+            }
+            
             int count = GameManager.Instance.defendersInGame.Count;
             
             for (int i = count - 1; i >= 0; i--)

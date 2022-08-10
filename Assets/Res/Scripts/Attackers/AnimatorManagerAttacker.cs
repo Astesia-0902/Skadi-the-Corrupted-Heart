@@ -9,6 +9,7 @@ namespace Res.Scripts.Attackers
     {
         public Animator anim;
         protected Attacker attacker;
+        public GameObject hitFXPrefeb;
         private static readonly int IsInteracting = Animator.StringToHash("isInteracting");
         private static readonly int CanMove = Animator.StringToHash("CanMove");
 
@@ -36,6 +37,10 @@ namespace Res.Scripts.Attackers
             {
                 attacker.currentAttackTarget.TakeDamage(attacker.attackDamage, attacker.magicDamage, attacker.realDamage);
                 attacker.currentAttackTarget.TakeNeuralDamage(attacker.sanityDamage);
+                if (hitFXPrefeb != null)
+                {
+                    Instantiate(hitFXPrefeb, attacker.currentAttackTarget.hitPoint);
+                }
             }
         }
 

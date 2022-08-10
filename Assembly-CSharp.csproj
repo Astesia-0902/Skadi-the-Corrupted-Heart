@@ -144,6 +144,10 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChime.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChimeAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\Ghost.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\GhostAm.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

@@ -9,6 +9,7 @@ namespace Res.Scripts.Game_Managers
     public class EntitySummoner : Singleton<EntitySummoner>
     {
         public List<Attacker> attackersInGame;
+        public List<Attacker> attackerStationaryInGame;
         public List<Transform> attackerTransformsInGame; //这个“多余”的List是给Jobs System用的
         private Dictionary<int, GameObject> attackerPrefebs;
         private Dictionary<int, Queue<Attacker>> attackerSpawnPool;
@@ -34,6 +35,7 @@ namespace Res.Scripts.Game_Managers
                 attackerList = new List<AttackerSummonData>();
                 nodeList = new List<NodeLoopManager>();
                 attackersInGame = new List<Attacker>();
+                attackerStationaryInGame = new List<Attacker>();
                 attackerPrefebs = new Dictionary<int, GameObject>();
                 attackerSpawnPool = new Dictionary<int, Queue<Attacker>>();
                 attackerTransformsInGame = new List<Transform>();
