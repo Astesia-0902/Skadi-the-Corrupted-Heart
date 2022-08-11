@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  hitFXPrefeb: {fileID: 0}
 --- !u!1 &3114314121383707174
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +319,8 @@ MonoBehaviour:
   defenderWhoBlockMe: {fileID: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
   isBlownUp: 0
+  isStunned: 0
+  imprisoned: 0
   skillOn: 0
 --- !u!1 &5766605189649513879
 GameObject:

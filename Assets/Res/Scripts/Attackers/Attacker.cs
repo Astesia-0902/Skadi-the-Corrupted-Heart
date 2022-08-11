@@ -76,6 +76,8 @@ namespace Res.Scripts.Attackers
             isBlocked = false;
             isDead = false;
             isBlownUp = false;
+            isStunned = false;
+            imprisoned = false;
             defenderWhoBlockMe = null;
             spawnPoint = node.spawnPointID;
             gameObject.SetActive(true);
@@ -84,6 +86,7 @@ namespace Res.Scripts.Attackers
             nodeLoopManager = node;
             transform.position = node.nodesPosition[0];
             moveSpeed = standardMoveSpeed;
+            currentAttackTarget = null;
         }
 
         #region Take Damage
@@ -122,6 +125,7 @@ namespace Res.Scripts.Attackers
                 defenderWhoBlockMe = null;
             }
 
+            animatorManager.anim.speed = 1f;
             animatorManager.PlayTargetAnimation("Die", true);
         }
 
@@ -239,7 +243,7 @@ namespace Res.Scripts.Attackers
         #region Status
 
         public bool isBlownUp;
-        protected bool isStunned;
+        public bool isStunned;
         public bool imprisoned;
         private float imprisonedTimer;
         private float blowUpTimer;
@@ -307,7 +311,7 @@ namespace Res.Scripts.Attackers
             stunTimer = stunTime;
         }
 
-        public void StunTimerUpdate()
+        protected virtual void StunTimerUpdate()
         {
             if (isStunned)
             {
@@ -327,7 +331,7 @@ namespace Res.Scripts.Attackers
         
         public virtual bool CanAttack()
         {
-            return !isInteracting && !isBlocked && !isBlownUp && !isStunned;
+            return !isInteracting && !isBlownUp && !isStunned;
         }
 
 

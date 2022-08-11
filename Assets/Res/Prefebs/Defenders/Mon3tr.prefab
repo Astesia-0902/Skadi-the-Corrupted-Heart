@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracerFXPrefeb: {fileID: 0}
-  hitFXPrefeb: {fileID: 0}
+  hitFXPrefeb: {fileID: 6555208936675239666, guid: 8dc52b9c941b3d34a8924bae3d73e98a, type: 3}
   tracerPivot: {fileID: 0}
   rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
@@ -298,11 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4b433e228b0c548866dc5c43a1ca7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 2000
   currentHealth: 0
-  armor: 0
-  magicResistance: 0
-  blockNumStandard: 0
+  armor: 10
+  magicResistance: 10
+  blockNumStandard: 3
   isDead: 0
   isInteracting: 0
   isRange: 0
@@ -312,6 +312,8 @@ MonoBehaviour:
   attackersBlocked: []
   defaultRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
+  skillEffectPrefeb1: {fileID: 0}
+  skillEffectPrefeb2: {fileID: 0}
   sanity: 0
   sanityRecoveryTimer: 0
   sanityRecoveryThreshold: 10
@@ -320,7 +322,7 @@ MonoBehaviour:
   stunTimer: 0
   attackDamage: 100
   magicDamage: 0
-  attackTimerStandard: 0
+  attackTimerStandard: 1.5
   physicalDamageToDeal: 0
   magicDamageToDeal: 0
   realDamageToDeal: 0
@@ -349,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389206546093115612, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3389206546093115612, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
       propertyPath: m_LocalPosition.z

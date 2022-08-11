@@ -8,7 +8,7 @@ namespace Res.Scripts.Attackers
 {
     public class AttackerRange : Attacker
     {
-        [Header("?????????")]
+        [Header("Ô¶³Ì¹¥»÷")]
         public float range;
 
         public override void Initialize(NodeLoopManager node)

@@ -8,6 +8,7 @@ namespace Res.Scripts.Attackers.Skadi
     {
         public bool skillOn;
         private static readonly int SkillOn = Animator.StringToHash("skillOn");
+        private static readonly int Interacting = Animator.StringToHash("isInteracting");
 
         protected override void Awake()
         {
@@ -33,7 +34,21 @@ namespace Res.Scripts.Attackers.Skadi
             animatorManager.PlayTargetAnimation("Stun_Begin", true);
             stunTimer = stunTime;
         }
-        
+
+        protected override void StunTimerUpdate()
+        {
+            if (isStunned)
+            {
+                stunTimer -= Time.deltaTime;
+                if (stunTimer <= 0f)
+                {
+                    isStunned = false;
+                    animatorManager.anim.SetBool(Interacting, false);
+                    animatorManager.anim.speed = 1;
+                }
+            }
+        }
+
         public void SkillStart()
         {
             skillOn = true;

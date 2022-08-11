@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819909788577444224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4285127406066512040}
@@ -139,6 +139,36 @@ Transform:
   m_Father: {fileID: 534431215915813388}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4495902630005935720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4741934580733668232}
+  m_Layer: 0
+  m_Name: Tracer Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4741934580733668232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495902630005935720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6152410208165234479}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7885833401379259096
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,27 +215,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8190f85ea754e404b84dcafda866b018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  maxHealth: 0
+  id: 8
+  maxHealth: 2000
   currentHealth: 0
-  attackDamage: 0
-  magicDamage: 0
+  attackDamage: 200
+  magicDamage: 200
   realDamage: 0
   sanityDamage: 0
-  blockPara: 0
-  weightLevel: 0
-  armor: 0
+  blockPara: 1
+  weightLevel: 3
+  armor: 100
   magicResistance: 0
-  standardMoveSpeed: 0
+  standardMoveSpeed: 0.7
   moveSpeed: 0
   nodeIndex: 0
   spawnPoint: 0
   isDead: 0
-  isRange: 0
+  isRange: 1
   isInteracting: 0
   isBlocked: 0
   hitPoint: {fileID: 0}
-  attackTimerStandard: 0
+  attackTimerStandard: 2
   currentAttackTarget: {fileID: 0}
   nodeLoopManager: {fileID: 0}
   uiForUnits: {fileID: 0}
@@ -213,7 +243,7 @@ MonoBehaviour:
   targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   isBlownUp: 0
   imprisoned: 0
-  range: 0
+  range: 2
 --- !u!1 &8223612109498808058
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +275,8 @@ Transform:
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4741934580733668232}
   m_Father: {fileID: 3115482020489201265}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
@@ -368,3 +399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c0ab09db7db1b4bb70ff989d726be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  hitFXPrefeb: {fileID: 6555208936675239666, guid: cf800808ef42c2149bb81be239a89fa1, type: 3}
+  tracerFXPrefeb: {fileID: 5196714609715901704, guid: 97300f24acebcd540b4db8c514934f5f, type: 3}
+  tracerPivot: {fileID: 4741934580733668232}
+  rangeAttackTracerAttacker: {fileID: 0}

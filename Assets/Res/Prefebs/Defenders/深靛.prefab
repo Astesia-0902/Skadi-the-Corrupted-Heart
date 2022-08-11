@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147574581462280431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8839032254752411549}
+  m_Layer: 0
+  m_Name: Tracer Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8839032254752411549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147574581462280431}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.544, y: 0.636, z: 0.692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6423026916147632423}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606518630495701097
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +302,7 @@ Transform:
   - {fileID: 5474747706865977999}
   - {fileID: 4041494111859668177}
   - {fileID: 1463327711315512098}
+  - {fileID: 8839032254752411549}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -287,14 +318,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f5283311222b844b3f703e89dd3443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 2000
   currentHealth: 0
-  armor: 0
+  armor: 10
   magicResistance: 0
   blockNumStandard: 0
   isDead: 0
   isInteracting: 0
-  isRange: 0
+  isRange: 1
   isStunned: 0
   hitPoint: {fileID: 0}
   currentTarget: {fileID: 0}
@@ -310,8 +341,8 @@ MonoBehaviour:
   afterBurst: 0
   stunTimer: 0
   attackDamage: 0
-  magicDamage: 0
-  attackTimerStandard: 0
+  magicDamage: 200
+  attackTimerStandard: 1.5
   physicalDamageToDeal: 0
   magicDamageToDeal: 0
   realDamageToDeal: 0
@@ -320,6 +351,8 @@ MonoBehaviour:
   maxSkillPoint: 0
   isAttackRecovering: 0
   skillReady: 0
+  imprisonCount: 0
+  chargeCount: 0
 --- !u!1 &5602970793157709308
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +509,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1095d541d608e544db729a3ee40e79d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tracerFXPrefeb: {fileID: 5196714609715901704, guid: f5593e623461b504488c9833d6713940, type: 3}
+  hitFXPrefeb: {fileID: 6555208936675239666, guid: 8dc52b9c941b3d34a8924bae3d73e98a, type: 3}
+  tracerPivot: {fileID: 8839032254752411549}
+  rangeAttackTracerDefender: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &6904288343847744077
 GameObject:
   m_ObjectHideFlags: 0

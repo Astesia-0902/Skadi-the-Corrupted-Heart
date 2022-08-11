@@ -32,7 +32,7 @@ namespace Defenders
 
             if (targetToHeal != null && CanAttack())
             {
-                if (!currentHealTarget.isDead)
+                if (!targetToHeal.isDead)
                 {
                     attackTimer = attackTimerStandard;
                     animatorManager.PlayTargetAnimation("Attack", true);

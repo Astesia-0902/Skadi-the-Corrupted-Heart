@@ -52,7 +52,6 @@ namespace Res.Scripts.Defenders._Mon3tr
                 }
                 else
                 {
-                    //目标死亡时切换目标
                     currentTarget = null;
                 }
             }

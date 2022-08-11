@@ -7,7 +7,6 @@ namespace Res.Scripts.Attackers
     public class AnimatorManagerAttackerRange : AnimatorManagerAttacker
     {
         [Header("Tracer Effect")] public GameObject tracerFXPrefeb;
-        public GameObject hitFXPrefeb;
         public Transform tracerPivot;
 
         public RangeAttackTracerAttacker rangeAttackTracerAttacker;

@@ -20,8 +20,7 @@ namespace Res.Scripts.Defenders._Indigo
             {
                 return;
             }
-
-            indigo.imprisonCount++;
+            
             indigoTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<IndigoTracer>();
             if (indigoTracer != null)
             {
@@ -32,6 +31,8 @@ namespace Res.Scripts.Defenders._Indigo
                 }
                 indigoTracer.target = defender.targetToDeal;
                 indigoTracer.magicDamage = defender.magicDamage * (indigo.chargeCount + 1);
+                indigo.imprisonCount++;
+                indigo.imprisonCount += indigo.chargeCount;
                 indigo.chargeCount = 0;
                 indigoTracer.physicDamage = defender.attackDamage;
                 indigoTracer.realDamage = defender.realDamageToDeal;

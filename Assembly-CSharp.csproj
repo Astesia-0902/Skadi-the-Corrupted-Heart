@@ -60,6 +60,7 @@
      <Compile Include="Assets\Res\Scripts\Tile\Tile.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\AudioManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\Ghost.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\OnExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\AnimatorManagerAttacker.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\IndigoAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\AnimatorManagerAttackerRange.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\Defender.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\GhostAm.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlagExit.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHoundAnimatorManager.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\DestroyOnDeath.cs" />
@@ -88,6 +90,7 @@
      <Compile Include="Assets\Res\Scripts\Tool Scripts\Singleton.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefenderHealer.cs" />
      <Compile Include="Assets\Res\Scripts\UI\DeployButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChimeAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Amiya\Amiya.cs" />
      <Compile Include="Assets\Res\Scripts\ButtonTemp.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderWithdrawData.cs" />
@@ -106,6 +109,7 @@
      <Compile Include="Assets\Res\Scripts\Attackers\AttackerRange.cs" />
      <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Extension\RangeAttackTracerAttacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChime.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Red\RedAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Spitter\SpitterAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BlueP.cs" />
@@ -144,10 +148,6 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChime.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChimeAm.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\Ghost.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\GhostAm.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

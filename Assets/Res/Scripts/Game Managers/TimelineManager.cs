@@ -103,7 +103,7 @@ namespace Res.Scripts.Game_Managers
         /// <summary>
         /// ¼¤»îµÆËþ
         /// </summary>
-        private void ActivateLighthouse()
+        public void ActivateLighthouse()
         {
             lighthouseTimer = 0;
             lighthouseFlag = true;
@@ -113,7 +113,7 @@ namespace Res.Scripts.Game_Managers
                 attacker.GetStunned(3600f);
             }
 
-            GameManager.Instance.skadi.GetStunned(20f);
+            GameManager.Instance.skadi.GetStunned(10f);
         }
 
         private float damageTimer;

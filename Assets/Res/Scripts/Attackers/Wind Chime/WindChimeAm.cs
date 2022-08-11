@@ -1,18 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class WindChimeAm : MonoBehaviour
+namespace Res.Scripts.Attackers.Wind_Chime
 {
-    // Start is called before the first frame update
-    void Start()
+    public class WindChimeAm : AnimatorManagerAttacker
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    
     }
 }

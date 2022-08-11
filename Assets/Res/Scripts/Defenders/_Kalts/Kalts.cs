@@ -14,6 +14,7 @@ namespace Res.Scripts.Defenders._Kalts
             {
                 Destroy(mon3TR.gameObject);
             }
+
             base.OnDisable();
         }
 
@@ -24,11 +25,11 @@ namespace Res.Scripts.Defenders._Kalts
 
         protected override Defender GetPriorityHealTarget(List<Defender> defenders)
         {
-            if (mon3TR != null)
+            if (mon3TR != null && mon3TR.currentHealth < mon3TR.maxHealth)
             {
                 return mon3TR;
             }
-            
+
             return base.GetPriorityHealTarget(defenders);
         }
 
@@ -40,7 +41,7 @@ namespace Res.Scripts.Defenders._Kalts
                 skillPoint = 0;
                 return;
             }
-            
+
             base.SkillPointUpdate();
         }
 

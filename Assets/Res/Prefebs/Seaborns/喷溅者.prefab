@@ -371,8 +371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  tracerFXPrefeb: {fileID: 0}
-  hitFXPrefeb: {fileID: 0}
+  hitFXPrefeb: {fileID: 6555208936675239666, guid: cf800808ef42c2149bb81be239a89fa1, type: 3}
+  tracerFXPrefeb: {fileID: 5196714609715901704, guid: 97300f24acebcd540b4db8c514934f5f, type: 3}
   tracerPivot: {fileID: 3150108063435743120}
   rangeAttackTracerAttacker: {fileID: 0}
 --- !u!1 &8601435828842643028
