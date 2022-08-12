@@ -163,7 +163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4495902630005935720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.722, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6152410208165234479}
@@ -242,6 +242,7 @@ MonoBehaviour:
   defenderWhoBlockMe: {fileID: 0}
   targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   isBlownUp: 0
+  isStunned: 0
   imprisoned: 0
   range: 2
 --- !u!1 &8223612109498808058

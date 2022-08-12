@@ -10236,7 +10236,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 143373242, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
+    - target: {fileID: 606143469, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079167535, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976745181, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000737805438032975, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
@@ -10288,11 +10300,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 4653813319144762267, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
+    - target: {fileID: 5846200198144263762, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8819502340658334145, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
+    - target: {fileID: 8409920492060416432, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574797399495467553, guid: 5a50a5d069716694b9ae011e5bdfe6db, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
