@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1786a48cb6d7bda4bb613b1119ff63db, type: 3}
-  m_Name: HoneyBerry
+  m_Name: "\u714C"
   m_EditorClassIdentifier: 
-  defenderPrefeb: {fileID: 521758226940028566, guid: a7665cfac61dd5641b587328c863f013, type: 3}
-  position: {x: -1, y: 0.8, z: -2}
-  deployTime: 5
+  defenderPrefeb: {fileID: 6771118648668951354, guid: da13df218c1064243a20a04940af974e, type: 3}
+  position: {x: -3.05, y: 0.5031543, z: -1.8}
+  deployTime: 28

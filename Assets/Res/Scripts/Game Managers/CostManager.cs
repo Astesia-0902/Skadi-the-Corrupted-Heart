@@ -27,6 +27,18 @@ namespace Res.Scripts.Game_Managers
 
         private void Update()
         {
+            if (!TimelineManager.Instance.startFlag)
+                return;
+            
+            CostUpdate();
+            CostDisableUpdate();
+        }
+
+        private void CostUpdate()
+        {
+            if (!costFlag)
+                return;
+            
             costRecoveryTimer += Time.deltaTime;
 
             if (costRecoveryTimer >= 1f && costFlag)
@@ -36,6 +48,7 @@ namespace Res.Scripts.Game_Managers
                 {
                     currentCost = 99;
                 }
+
                 onCostChange.Invoke();
                 costRecoveryTimer = 0f;
             }
@@ -76,6 +89,28 @@ namespace Res.Scripts.Game_Managers
             {
                 currentCost += costToAddQueue.Dequeue();
                 onCostChange.Invoke();
+            }
+        }
+
+        private bool costDisableFlag;
+        private float costDisableTimer;
+        public void DisableCostRecovery(float time)
+        {
+            costDisableFlag = true;
+            costDisableTimer = time;
+            costFlag = false;
+        }
+
+        public void CostDisableUpdate()
+        {
+            if (!costDisableFlag)
+                return;
+
+            costDisableTimer -= Time.deltaTime;
+            if (costDisableTimer <= 0)
+            {
+                costDisableFlag = false;
+                costFlag = true;
             }
         }
     }

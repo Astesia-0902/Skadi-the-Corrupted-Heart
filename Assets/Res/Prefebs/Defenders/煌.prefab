@@ -83,7 +83,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723947563400124553}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -92,7 +92,7 @@ Transform:
   - {fileID: 4190288274604782619}
   m_Father: {fileID: 3009534493997260100}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &6619873449329137736
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +311,10 @@ MonoBehaviour:
   hitPoint: {fileID: 5606508524467649700}
   currentTarget: {fileID: 0}
   attackersBlocked: []
+  defaultRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
+  targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
+  skillEffectPrefeb1: {fileID: 0}
+  skillEffectPrefeb2: {fileID: 0}
   sanity: 0
   sanityRecoveryTimer: 0
   sanityRecoveryThreshold: 10

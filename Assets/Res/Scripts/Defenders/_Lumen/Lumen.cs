@@ -16,9 +16,9 @@ namespace Defenders._Lumen
 
         protected override void AttackUpdate()
         {
-            if(isDead)
+            if (isDead)
                 return;
-            
+
             currentHealTarget = GetPriorityHealTarget(GetAllHealTargetInRange());
 
             if (attackTimer > 0)
@@ -29,7 +29,7 @@ namespace Defenders._Lumen
                 if (!currentHealTarget.isDead)
                 {
                     attackTimer = attackTimerStandard;
-                    
+
                     if (skillReady)
                     {
                         HandleSkill();
@@ -37,8 +37,9 @@ namespace Defenders._Lumen
                         {
                             return;
                         }
+
                         skillPoint = 0;
-                        animatorManager.PlayTargetAnimation("Skill_2",true);
+                        animatorManager.PlayTargetAnimation("Skill_2", true);
                     }
                     else
                     {
@@ -54,15 +55,16 @@ namespace Defenders._Lumen
         }
 
         public List<Defender> skillTargets;
+
         private void HandleSkill()
         {
             skillTargets = new List<Defender>();
-            
+
             List<Defender> defenders = GetAllHealTargetInRange();
 
             if (defenders.Count == 0)
                 return;
-            
+
             defenders.Sort(new DefenderHealthStunComp());
 
             for (int i = 0; i < 2; i++)

@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b891a3b732270c418f939a4fdb5f8f6, type: 3}
-  m_Name: Grani
+  m_Script: {fileID: 11500000, guid: 1786a48cb6d7bda4bb613b1119ff63db, type: 3}
+  m_Name: "\u683C\u62C9\u5C3C"
   m_EditorClassIdentifier: 
-  defenderToWithdraw: "\u683C\u62C9\u5C3C(Clone)"
-  withdrawTime: 10
+  defenderPrefeb: {fileID: 645380832688261340, guid: 8c77b1d28e105124e9f0b18974bcc389, type: 3}
+  position: {x: -1, y: 0.5031543, z: -3.8}
+  deployTime: 10
