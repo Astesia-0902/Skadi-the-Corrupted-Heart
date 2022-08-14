@@ -1,11 +1,18 @@
+using System;
 using System.Collections.Generic;
 using Game_Managers;
 using Res.Scripts.Defenders;
+using Res.Scripts.Game_Managers;
 
 namespace Res.Scripts.Attackers.Lancer
 {
     public class Lancer : AttackerRange
     {
+        private void OnEnable()
+        {
+            EntitySummoner.Instance.attackerStationaryInGame.Add(this);
+        }
+
         protected override Defender GetPriorityTarget()
         {
             List<Defender> defenders = new List<Defender>(GameManager.Instance.defendersInGame);
@@ -20,6 +27,11 @@ namespace Res.Scripts.Attackers.Lancer
             }
 
             return null;
+        }
+
+        private void OnDisable()
+        {
+            EntitySummoner.Instance.attackerStationaryInGame.Remove(this);
         }
     }
 }

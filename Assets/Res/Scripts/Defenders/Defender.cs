@@ -305,14 +305,7 @@ namespace Res.Scripts.Defenders
 
         protected virtual void RefreshRotation()
         {
-            if (transform.position.x - targetToDeal.transform.position.x > 0)
-            {
-                targetRotation = Quaternion.Euler(-45, 180, 0);
-            }
-            else
-            {
-                targetRotation = defaultRotation;
-            }
+            targetRotation = transform.position.x - targetToDeal.transform.position.x > 0 ? Quaternion.Euler(-45, 180, 0) : defaultRotation;
         }
 
         /// <summary>
@@ -351,6 +344,15 @@ namespace Res.Scripts.Defenders
                         }
                     }
                 }
+            }
+
+            foreach (Attacker attacker in EntitySummoner.Instance.attackerStationaryInGame)
+            {
+                if (attacker == null || !attacker.isActiveAndEnabled || attacker.isDead)
+                    continue;
+                
+                if (CheckInRange(attacker.transform))
+                    targetsInRange.Add(attacker);
             }
 
             //如果是远程干员，则不考虑阻挡的问题

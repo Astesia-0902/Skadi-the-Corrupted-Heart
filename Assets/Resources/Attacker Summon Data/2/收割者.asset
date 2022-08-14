@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1786a48cb6d7bda4bb613b1119ff63db, type: 3}
-  m_Name: "\u871C\u8393"
+  m_Script: {fileID: 11500000, guid: 40deb6bf86c9d2b408a631b3786d2d85, type: 3}
+  m_Name: "\u6536\u5272\u8005"
   m_EditorClassIdentifier: 
-  defenderPrefeb: {fileID: 521758226940028566, guid: a7665cfac61dd5641b587328c863f013, type: 3}
-  position: {x: -3.08, y: 0.7782612, z: -2.75}
-  deployTime: 42
+  attackerPrefeb: {fileID: 9215596505547438896, guid: fb69db2351307b74c9f832210689f95d, type: 3}
+  uiImage: {fileID: 0}
+  attackerID: 5
+  cost: 10

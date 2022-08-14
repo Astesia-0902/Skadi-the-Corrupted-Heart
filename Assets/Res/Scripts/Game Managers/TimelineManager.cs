@@ -11,6 +11,7 @@ namespace Res.Scripts.Game_Managers
 {
     public class TimelineManager : Singleton<TimelineManager>
     {
+        public int waveCount = 1;
         private float timerAccumulator;
         private int timer;
         private int lighthouseTimer;
@@ -75,6 +76,7 @@ namespace Res.Scripts.Game_Managers
                     if (lighthouseTimer >= 60)
                     {
                         ActivateLighthouse();
+                        waveCount++;
                     }
 
                     timerAccumulator = 0f;
@@ -142,6 +144,8 @@ namespace Res.Scripts.Game_Managers
             {
                 lighthouseActivateTimerBuffer = 0f;
                 lighthouseFlag = false;
+                LoadNewAttackersData(waveCount.ToString());
+                //TODO:生成四个喷溅者
             }
 
             damageTimer += Time.deltaTime;

@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using Game_Managers;
+using Res.Scripts.Attackers;
 using Res.Scripts.Defenders._Kalts;
 using UnityEngine;
 
@@ -88,6 +90,7 @@ namespace Res.Scripts.Defenders._Mon3tr
             realDamageToDeal = 0;
             isSkillOn = false;
         }
+
         
     }
 }

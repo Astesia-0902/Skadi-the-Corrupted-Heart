@@ -7,12 +7,9 @@ using UnityEngine.UI;
 
 namespace Res.Scripts.UI
 {
-    /// <summary>
-    /// 部署按钮的UI
-    /// </summary>
     public class DeployButton : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
     {
-        public AttackerSummonData attackerSummonData;//当前按钮对应的海嗣种类
+        public AttackerSummonData attackerSummonData;
         private Image myImage;
 
         private void Awake()
@@ -23,7 +20,10 @@ namespace Res.Scripts.UI
         public void LoadNewAttackerData(AttackerSummonData newData)
         {
             attackerSummonData = newData;
-            myImage.sprite = newData.uiImage;
+            if (newData.uiImage != null)
+            {
+                myImage.sprite = newData.uiImage;
+            }
         }
 
         public void OnPointerDown(PointerEventData eventData)
