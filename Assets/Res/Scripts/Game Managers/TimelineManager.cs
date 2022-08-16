@@ -18,7 +18,7 @@ namespace Res.Scripts.Game_Managers
         private float lighthouseActivateTimer = 10f;
         private float lighthouseActivateTimerBuffer;
         public bool startFlag;
-        private bool lighthouseFlag;
+        public bool lighthouseFlag;
 
         private Queue<DefenderSummonData> defenderSummonQueue;
         private Queue<DefenderWithdrawData> defenderWithdrawQueue;
@@ -33,7 +33,6 @@ namespace Res.Scripts.Game_Managers
 
         private void Start()
         {
-            //从文件中读取干员的部署数据
             DefenderSummonData[] allDefenderSummonData = Resources.LoadAll<DefenderSummonData>("Defenders");
             DefenderWithdrawData[] allDefenderWithdrawData =
                 Resources.LoadAll<DefenderWithdrawData>("Defenders Withdraw");
@@ -43,13 +42,11 @@ namespace Res.Scripts.Game_Managers
 
             foreach (DefenderSummonData defenderSummonData in allDefenderSummonData)
             {
-                Debug.Log("记录防御方信息：" + defenderSummonData.name);
                 defenderSummonQueue.Enqueue(defenderSummonData);
             }
 
             foreach (DefenderWithdrawData defenderWithdrawData in allDefenderWithdrawData)
             {
-                Debug.Log("记录防御方撤退信息：" + defenderWithdrawData.name);
                 defenderWithdrawQueue.Enqueue(defenderWithdrawData);
             }
 
@@ -62,7 +59,7 @@ namespace Res.Scripts.Game_Managers
 
             if (startFlag)
             {
-                //整场战斗的计时器
+                //锟斤拷锟斤拷战锟斤拷锟侥硷拷时锟斤拷
                 if (!lighthouseFlag)
                 {
                     timerAccumulator += Time.deltaTime;
@@ -93,10 +90,7 @@ namespace Res.Scripts.Game_Managers
         {
             startFlag = false;
         }
-
-        /// <summary>
-        /// 检查当前时间戳是否有干员需要下场
-        /// </summary>
+        
         private void TimelineChecker()
         {
             if (defenderSummonQueue.Count != 0 && timer == defenderSummonQueue.Peek().deployTime)
@@ -111,29 +105,22 @@ namespace Res.Scripts.Game_Managers
                 Destroy(defenderToWithdraw);
             }
         }
-
-        /// <summary>
-        /// 激活灯塔
-        /// </summary>
+        
         public void ActivateLighthouse()
         {
             lighthouseTimer = 0;
             lighthouseFlag = true;
-            Debug.Log("灯塔启动！");
             foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
             {
                 attacker.GetStunned(3600f);
             }
 
-            GameManager.Instance.skadi.GetStunned(10f);
+            GameManager.Instance.skadi.GetStunned(9999f);
             CostManager.Instance.DisableCostRecovery(10f);
         }
 
         private float damageTimer;
-
-        /// <summary>
-        /// 灯塔激活后的持续效果
-        /// </summary>
+        
         private void LighthouseUpdate()
         {
             if (!lighthouseFlag)
@@ -145,7 +132,7 @@ namespace Res.Scripts.Game_Managers
                 lighthouseActivateTimerBuffer = 0f;
                 lighthouseFlag = false;
                 LoadNewAttackersData(waveCount.ToString());
-                //TODO:生成四个喷溅者
+                GameManager.Instance.skadi.WaveCheck(waveCount);
             }
 
             damageTimer += Time.deltaTime;
@@ -160,7 +147,7 @@ namespace Res.Scripts.Game_Managers
         }
 
         /// <summary>
-        /// 更新海嗣的部署按钮
+        /// 锟斤拷锟铰猴拷锟矫的诧拷锟斤拷钮
         /// </summary>
         /// <param name="wave"></param>
         private void LoadNewAttackersData(string wave)

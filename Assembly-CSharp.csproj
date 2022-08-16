@@ -148,6 +148,8 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeaborn.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeabornAm.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />
@@ -169,6 +171,7 @@
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\2_灯光慢闪\skeleton.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsexcu_2\enemy_1153_dsexcu.atlas.txt" />
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\1_灯光常亮\skeleton.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_haisi\token_10017_skadi2_dedant.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsexcu 1\enemy_1153_dsexcu.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbskr\enemy_1235_dsbskr.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsintc -2\enemy_1151_dslntc.atlas.txt" />

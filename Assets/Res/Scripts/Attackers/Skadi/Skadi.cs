@@ -7,6 +7,7 @@ namespace Res.Scripts.Attackers.Skadi
     public class Skadi : Attacker
     {
         public bool skillOn;
+        public GameObject littleSeaborn;
         private static readonly int SkillOn = Animator.StringToHash("skillOn");
         private static readonly int Interacting = Animator.StringToHash("isInteracting");
 
@@ -17,21 +18,44 @@ namespace Res.Scripts.Attackers.Skadi
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
         }
 
-        private void Start()
-        {
-            
-        }
-
         protected override void Update()
         {
             isInteracting = animatorManager.anim.GetBool(IsInteracting);
             StunTimerUpdate();
         }
 
+        public void WaveCheck(int wave)
+        {
+            if (wave == 2)
+            {
+                skillOn = true;
+                animatorManager.PlayTargetAnimation("Skill_2_Begin", true);
+            }
+            else if (wave == 3)
+            {
+                //TODO:å˜æˆç»¿çš„
+            }
+            else if (wave == 4)
+            {
+                //TODO:ç»¿çš„å¼€æŠ€èƒ½
+            }
+        }
+
+        public void StunRecover()
+        {
+            stunTimer = 0f;
+            isStunned = false;
+            animatorManager.anim.SetBool(Interacting, false);
+        }
+
         public override void GetStunned(float stunTime)
         {
+            if (!isStunned)
+            {
+                Instantiate(littleSeaborn, new Vector3(4, 0.5003526f, -1.85f), Quaternion.identity);
+                animatorManager.PlayTargetAnimation("Stun_Begin", true);
+            }
             isStunned = true;
-            animatorManager.PlayTargetAnimation("Stun_Begin", true);
             stunTimer = stunTime;
         }
 
@@ -42,9 +66,9 @@ namespace Res.Scripts.Attackers.Skadi
                 stunTimer -= Time.deltaTime;
                 if (stunTimer <= 0f)
                 {
+                    stunTimer = 0f;
                     isStunned = false;
                     animatorManager.anim.SetBool(Interacting, false);
-                    animatorManager.anim.speed = 1;
                 }
             }
         }
@@ -63,9 +87,9 @@ namespace Res.Scripts.Attackers.Skadi
                 : 0.05f * physicDamage;
             currentHealth -= magicDamage1 * (1 - magicResistance);
             currentHealth -= realDamage1;
-            
-            //TODO:Ë¹¿¨µÙµÄÑªÌõÊÇ¶ÀÁ¢µÄ
-            
+
+            //TODO:Ë¹ï¿½ï¿½ï¿½Ùµï¿½Ñªï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
             if (currentHealth <= 0)
             {
                 Die();

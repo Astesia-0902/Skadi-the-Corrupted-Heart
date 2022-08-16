@@ -322,6 +322,7 @@ MonoBehaviour:
   isStunned: 0
   imprisoned: 0
   skillOn: 0
+  littleSeaborn: {fileID: 1871046459335040142, guid: f24bf825a649f9e48ba7e7c91469ada7, type: 3}
 --- !u!1 &5766605189649513879
 GameObject:
   m_ObjectHideFlags: 0

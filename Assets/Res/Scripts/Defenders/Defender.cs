@@ -392,9 +392,6 @@ namespace Res.Scripts.Defenders
         /// <returns></returns>
         protected virtual Attacker GetPriorityTarget(List<Attacker> attackers)
         {
-            if (GameManager.Instance.skadi != null && CheckInRange(GameManager.Instance.skadi.transform))
-                return GameManager.Instance.skadi;
-            
             if (attackers.Count == 0)
                 return null;
 
