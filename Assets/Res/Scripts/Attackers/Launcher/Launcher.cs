@@ -1,12 +1,30 @@
+using System;
 using System.Collections.Generic;
 using Game_Managers;
 using Res.Scripts.Defenders;
+using Res.Scripts.Game_Managers;
 
 namespace Res.Scripts.Attackers.Launcher
 {
     public class Launcher : AttackerRange
     {
         public List<Defender> targetsToDeal;
+
+        protected override void Awake()
+        {
+            base.Awake();
+        }
+
+        private void Start()
+        {
+            EntitySummoner.Instance.attackerStationaryInGame.Add(this);
+        }
+
+        private void OnDisable()
+        {
+            if (EntitySummoner.Instance != null)
+                EntitySummoner.Instance.attackerStationaryInGame.Remove(this);
+        }
 
         protected override void AttackUpdate()
         {
@@ -52,6 +70,11 @@ namespace Res.Scripts.Attackers.Launcher
             }
 
             return null;
+        }
+
+        public override bool CanMove()
+        {
+            return false;
         }
     }
 }

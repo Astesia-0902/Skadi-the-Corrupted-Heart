@@ -1,5 +1,6 @@
 using System;
 using Game_Managers;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Res.Scripts.Attackers.Skadi
@@ -8,6 +9,7 @@ namespace Res.Scripts.Attackers.Skadi
     {
         public bool skillOn;
         public GameObject littleSeaborn;
+        public GameObject skadiGreen;
         private static readonly int SkillOn = Animator.StringToHash("skillOn");
         private static readonly int Interacting = Animator.StringToHash("isInteracting");
 
@@ -16,6 +18,11 @@ namespace Res.Scripts.Attackers.Skadi
             currentHealth = maxHealth;
             hitPoint = transform.GetChild(2);
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
+        }
+
+        private void Start()
+        {
+            animatorManager.PlayTargetAnimation("Start", true);
         }
 
         protected override void Update()
@@ -33,12 +40,20 @@ namespace Res.Scripts.Attackers.Skadi
             }
             else if (wave == 3)
             {
-                //TODO:变成绿的
+                Henshin();
             }
             else if (wave == 4)
             {
                 //TODO:绿的开技能
             }
+        }
+
+        public void Henshin()
+        {
+            Skadi green = Instantiate(skadiGreen, transform.position, quaternion.identity).GetComponent<Skadi>();
+            GameManager.Instance.skadi = green;
+            //TODO:变身的特效
+            Destroy(this.gameObject);
         }
 
         public void StunRecover()

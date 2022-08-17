@@ -133,7 +133,8 @@ MonoBehaviour:
   defenderWhoBlockMe: {fileID: 0}
   targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   isBlownUp: 0
-  imprisoned: 0
+  isStunned: 0
+  imprisoned: 1
   range: 1.1
   targetsToDeal: []
 --- !u!1 &6157831360324949267

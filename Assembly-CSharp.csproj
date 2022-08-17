@@ -55,6 +55,7 @@
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansDecalTools.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\Honeyberry.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Hoshiguma\HoshigumaAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeabornAm.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Hoshiguma\Hoshiguma.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Specter the Unchained\SpecterAm.cs" />
      <Compile Include="Assets\Res\Scripts\Tile\Tile.cs" />
@@ -124,6 +125,7 @@
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderSummonData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Reaper\ReaperAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeaborn.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\Blaze.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\Lumen.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\IndigoTracer.cs" />
@@ -148,8 +150,6 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeaborn.cs" />
-     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeabornAm.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
      <None Include="Assets\Res\Spine\version.txt" />

@@ -323,6 +323,7 @@ MonoBehaviour:
   imprisoned: 0
   skillOn: 0
   littleSeaborn: {fileID: 1871046459335040142, guid: f24bf825a649f9e48ba7e7c91469ada7, type: 3}
+  skadiGreen: {fileID: 4760086681739115995, guid: 5a70264fd10bc9947a14cfc80a308fe0, type: 3}
 --- !u!1 &5766605189649513879
 GameObject:
   m_ObjectHideFlags: 0
