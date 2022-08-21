@@ -96,6 +96,7 @@
      <Compile Include="Assets\Res\Scripts\ButtonTemp.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderWithdrawData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\Indigo.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\QueueUpdater.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Amiya\AmiyaAm.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansUtilities.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\BlazeAm.cs" />
@@ -120,7 +121,6 @@
      <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BluePAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Reaper\Reaper.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImageUtils.cs" />
-     <Compile Include="Assets\Res\Scripts\UI\QueueManager.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlags.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderSummonData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
@@ -142,6 +142,7 @@
      <Compile Include="Assets\Res\Scripts\Game Managers\GameManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Grani\Grani.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansBridgeLink.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\QueueData.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\Extension\HealTracer.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3TR.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Res.Scripts.Attackers;
+using Res.Scripts.UI;
 using Tool_Scripts;
 using UnityEngine;
 
@@ -14,11 +15,17 @@ namespace Res.Scripts.Game_Managers
         private Dictionary<int, GameObject> attackerPrefebs;
         private Dictionary<int, Queue<Attacker>> attackerSpawnPool;
 
-        public List<AttackerSummonData> attackerList;
-        private List<NodeLoopManager> nodeList;
+        public List<AttackerSummonData> attackerList34;
+        private List<NodeLoopManager> nodeList34;
+
+        public List<AttackerSummonData> attackerList2;
+        private List<NodeLoopManager> nodeList2;
 
         private Queue<AttackerSummonData> attackerListSingle;
         private Queue<NodeLoopManager> nodeListSingle;
+
+        public QueueUpdater queueUpdater34;
+        public QueueUpdater queueUpdater2;
 
         private static bool _isInitialized;
 
@@ -32,8 +39,10 @@ namespace Res.Scripts.Game_Managers
             {
                 attackerListSingle = new Queue<AttackerSummonData>();
                 nodeListSingle = new Queue<NodeLoopManager>();
-                attackerList = new List<AttackerSummonData>();
-                nodeList = new List<NodeLoopManager>();
+                attackerList34 = new List<AttackerSummonData>();
+                nodeList34 = new List<NodeLoopManager>();
+                attackerList2 = new List<AttackerSummonData>();
+                nodeList2 = new List<NodeLoopManager>();
                 attackersInGame = new List<Attacker>();
                 attackerStationaryInGame = new List<Attacker>();
                 attackerPrefebs = new Dictionary<int, GameObject>();
@@ -70,7 +79,7 @@ namespace Res.Scripts.Game_Managers
         /// <param name="nodeLoopManager"></param>
         public void AddAttacker(AttackerSummonData attackerSummonData, NodeLoopManager nodeLoopManager)
         {
-            //一号和五号出兵点是单次出兵点（二号也是，但是还没挂脚本）
+            //一号和五号出兵点是单次出兵点
             if (nodeLoopManager.spawnPointID == 1 || nodeLoopManager.spawnPointID == 5)
             {
                 if (CostManager.Instance.DrainCost(attackerSummonData.cost))
@@ -78,6 +87,7 @@ namespace Res.Scripts.Game_Managers
                     CostManager.Instance.StoreCost(attackerSummonData.cost);
                     attackerListSingle.Enqueue(attackerSummonData);
                     nodeListSingle.Enqueue(nodeLoopManager);
+                    SummonAttacker(attackerListSingle.Dequeue(), nodeListSingle.Dequeue());
                     return;
                 }
                 else
@@ -91,17 +101,74 @@ namespace Res.Scripts.Game_Managers
                 //三号和四号是多次出兵点（将怪物在这两个点部署一次后，每波都会出）
                 if (nodeLoopManager.spawnPointID == 3 || nodeLoopManager.spawnPointID == 4)
                 {
-                    attackerList.Add(attackerSummonData);
-                    nodeList.Add(nodeLoopManagers[0]);
-                    attackerList.Add(attackerSummonData);
-                    nodeList.Add(nodeLoopManagers[1]);
+                    if (attackerList34.Count >= 6)
+                    {
+                        attackerList34.Remove(attackerList34[1]);
+                        attackerList34.Remove(attackerList34[0]);
+                        nodeList34.Remove(nodeList34[1]);
+                        nodeList34.Remove(nodeList34[0]);
+                    }
+
+                    attackerList34.Add(attackerSummonData);
+                    nodeList34.Add(nodeLoopManagers[0]);
+                    attackerList34.Add(attackerSummonData);
+                    nodeList34.Add(nodeLoopManagers[1]);
+                    
+                    queueUpdater34.UpdateQueueManagers();
                     return;
                 }
-                
-                attackerList.Add(attackerSummonData);
-                nodeList.Add(nodeLoopManager);
+
+                if (attackerList2.Count >= 3)
+                {
+                    attackerList2.Remove(attackerList2[0]);
+                    nodeList2.Remove(nodeList2[0]);
+                }
+                attackerList2.Add(attackerSummonData);
+                nodeList2.Add(nodeLoopManager);
+                queueUpdater2.UpdateQueueManagers();
             }
             //TODO:更新UI
+        }
+
+        public bool ReplaceAttacker34(int queueIndex, AttackerSummonData attackerSummonData)
+        {
+            if (queueIndex < attackerList34.Count)
+            {
+                attackerList34[queueIndex] = attackerSummonData;
+                attackerList34[queueIndex + 1] = attackerSummonData;
+                nodeList34[queueIndex] = nodeLoopManagers[0];
+                nodeList34[queueIndex + 1] = nodeLoopManagers[1];
+                return true;
+            }
+            else if (queueIndex == attackerList34.Count)
+            {
+                attackerList34.Add(attackerSummonData);
+                attackerList34.Add(attackerSummonData);
+                nodeList34.Add(nodeLoopManagers[0]);
+                nodeList34.Add(nodeLoopManagers[1]);
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool ReplaceAttacker2(int queueIndex, AttackerSummonData attackerSummonData,
+            NodeLoopManager nodeLoopManager)
+        {
+            if (queueIndex == attackerList2.Count)
+            {
+                attackerList2.Add(attackerSummonData);
+                nodeList2.Add(nodeLoopManager);
+                return true;
+            }
+            else if (queueIndex < attackerList2.Count)
+            {
+                attackerList2[queueIndex] = attackerSummonData;
+                nodeList2[queueIndex] = nodeLoopManager;
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -109,16 +176,26 @@ namespace Res.Scripts.Game_Managers
         /// </summary>
         public void SummonAttackerAllInOnce()
         {
-            StartCoroutine(SummonAllAttackerMultiIE());
+            StartCoroutine(SummonAllAttacker34IE());
+            StartCoroutine(SummonAllAttacker2IE());
             StartCoroutine(SummonAllAttackerSingleIE());
         }
 
-        private IEnumerator SummonAllAttackerMultiIE()
+        private IEnumerator SummonAllAttacker34IE()
         {
-            for (int i = 0; i < attackerList.Count; i++)
+            for (int i = 0; i < attackerList34.Count; i++)
             {
-                SummonAttacker(attackerList[i], nodeList[i]);
-                yield return new WaitForSeconds(0.3f);
+                SummonAttacker(attackerList34[i], nodeList34[i]);
+                yield return new WaitForSeconds(2f);
+            }
+        }
+        
+        private IEnumerator SummonAllAttacker2IE()
+        {
+            for (int i = 0; i < attackerList2.Count; i++)
+            {
+                SummonAttacker(attackerList2[i], nodeList2[i]);
+                yield return new WaitForSeconds(2f);
             }
         }
 
@@ -128,12 +205,14 @@ namespace Res.Scripts.Game_Managers
         /// <returns></returns>
         private IEnumerator SummonAllAttackerSingleIE()
         {
-            while (attackerListSingle.Count > 0 && nodeListSingle.Count > 0)
-            {
-                CostManager.Instance.RegainCost();
-                SummonAttacker(attackerListSingle.Dequeue(), nodeListSingle.Dequeue());
-                yield return new WaitForSeconds(0.3f);
-            }
+            CostManager.Instance.RegainCost();
+            yield return new WaitForSeconds(0.3f);
+            // while (attackerListSingle.Count > 0 && nodeListSingle.Count > 0)
+            // {
+            //     
+            //     SummonAttacker(attackerListSingle.Dequeue(), nodeListSingle.Dequeue());
+            //     yield return new WaitForSeconds(0.3f);
+            // }
         }
 
         private void SummonAttacker(AttackerSummonData attackerSummonData, NodeLoopManager node)

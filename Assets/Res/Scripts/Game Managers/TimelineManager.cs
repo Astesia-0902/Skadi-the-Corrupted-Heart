@@ -115,6 +115,7 @@ namespace Res.Scripts.Game_Managers
                 attacker.GetStunned(3600f);
             }
 
+            //眩晕斯卡蒂
             GameManager.Instance.skadi.GetStunned(9999f);
             CostManager.Instance.DisableCostRecovery(10f);
         }

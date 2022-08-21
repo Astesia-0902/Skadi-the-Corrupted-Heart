@@ -4,6 +4,9 @@ using Res.Scripts.Game_Managers;
 
 namespace Res.Scripts.Attackers.LittleSeaborn
 {
+    /// <summary>
+    /// 斯卡蒂召唤出的小海嗣
+    /// </summary>
     public class LittleSeaborn : Attacker
     {
         private void Start()

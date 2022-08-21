@@ -10,6 +10,9 @@ namespace Defenders._Honeyberry
         
         protected override void Update()
         {
+            if (healTarget == null || healTarget.isDead)
+                Destroy(gameObject);
+            
             transform.position = Vector3.MoveTowards(transform.position, healTarget.hitPoint.position, 20f * Time.deltaTime);
             if (Vector3.Distance(transform.position, healTarget.hitPoint.position) < 0.1f)
             {

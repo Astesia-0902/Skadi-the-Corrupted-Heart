@@ -1,36 +1,34 @@
-using System;
 using System.Collections.Generic;
-using Defenders;
 using Res.Scripts.Attackers;
 using Res.Scripts.Attackers.Skadi;
 using Res.Scripts.Defenders;
-using Res.Scripts.Game_Managers;
+using Res.Scripts.UI;
 using Tool_Scripts;
 using UnityEngine;
 
-namespace Game_Managers
+namespace Res.Scripts.Game_Managers
 {
-    /// <summary>
-    /// 管理单位列表，以及单位的部署
-    /// </summary>
     public class GameManager : Singleton<GameManager>
     {
         public bool deployFlag;
         private bool lockedOnFlag;
-        
+        private bool lockedOnQueueFlag;
+
         public List<GameObject> unitsToSelect;
         private GameObject currentSelectedUnit;
         private NodeLoopManager nodeToDeploy;
+        private QueueData slotToReplace;
         private AttackerSummonData attackerToDeploy;
 
         public List<Defender> defendersInGame;
 
+        //褰撳墠鍦轰笂鏂崱钂傜殑寮曠敤
         public Skadi skadi;
 
         protected override void Awake()
         {
             base.Awake();
-            
+
             defendersInGame = new List<Defender>();
         }
 
@@ -58,7 +56,6 @@ namespace Game_Managers
         {
             deployFlag = true;
             attackerToDeploy = attackerSummonData;
-            //激活拖动时跟随鼠标的单位模型
             currentSelectedUnit = unitsToSelect[attackerSummonData.attackerID];
             currentSelectedUnit.SetActive(true);
             currentSelectedUnit.transform.position = Input.mousePosition;
@@ -73,13 +70,22 @@ namespace Game_Managers
 
                 if (Physics.Raycast(ray, out RaycastHit hit))
                 {
-                    //吸附在可部署的格子上
                     if (hit.collider.CompareTag("Spawn Point"))
                     {
+                        lockedOnQueueFlag = false;
                         Vector3 position = hit.collider.transform.position;
                         currentSelectedUnit.transform.position = position;
                         nodeToDeploy = hit.collider.GetComponent<NodeLoopManager>();
-                        lockedOnFlag = true;    //标记当前部署的工作已经准备好了
+                        lockedOnFlag = true;
+                        return;
+                    }
+                    else if (hit.collider.CompareTag("Queue"))
+                    {
+                        lockedOnFlag = false;
+                        Vector3 position = hit.collider.transform.position;
+                        currentSelectedUnit.transform.position = position;
+                        slotToReplace = hit.collider.GetComponent<QueueData>();
+                        lockedOnQueueFlag = true;
                         return;
                     }
 
@@ -87,22 +93,28 @@ namespace Game_Managers
                 }
             }
 
+            lockedOnQueueFlag = false;
             lockedOnFlag = false;
         }
 
         public void EndDrag()
         {
-            //如果已经可以部署
             if (lockedOnFlag)
             {
                 Debug.Log(attackerToDeploy, nodeToDeploy);
                 EntitySummoner.Instance.AddAttacker(attackerToDeploy, nodeToDeploy);
                 lockedOnFlag = false;
             }
+            else if (lockedOnQueueFlag)
+            {
+                lockedOnQueueFlag = false;
+                slotToReplace.OnModelChanged(attackerToDeploy);
+            }
 
             deployFlag = false;
             currentSelectedUnit.SetActive(false);
             attackerToDeploy = null;
+            slotToReplace = null;
             nodeToDeploy = null;
             Time.timeScale = 1f;
         }

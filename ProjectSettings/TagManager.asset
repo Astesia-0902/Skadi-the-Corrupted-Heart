@@ -9,6 +9,7 @@ TagManager:
   - Placeable High
   - Spawn Point
   - UI
+  - Queue
   layers:
   - Default
   - TransparentFX

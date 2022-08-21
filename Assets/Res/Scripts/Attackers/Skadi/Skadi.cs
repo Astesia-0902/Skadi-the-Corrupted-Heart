@@ -1,10 +1,14 @@
 using System;
 using Game_Managers;
+using Res.Scripts.Game_Managers;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace Res.Scripts.Attackers.Skadi
 {
+    /// <summary>
+    /// 斯卡蒂的类
+    /// </summary>
     public class Skadi : Attacker
     {
         public bool skillOn;
@@ -65,6 +69,7 @@ namespace Res.Scripts.Attackers.Skadi
 
         public override void GetStunned(float stunTime)
         {
+            //斯卡蒂被眩晕时会召唤出小海嗣
             if (!isStunned)
             {
                 Instantiate(littleSeaborn, new Vector3(4, 0.5003526f, -1.85f), Quaternion.identity);

@@ -12,6 +12,7 @@ namespace Res.Scripts.Attackers
         public int id;
 
         [Header("Combat Status")] public float maxHealth;
+        //海嗣当前的血量
         public float currentHealth;
         public float attackDamage;
         public float magicDamage;

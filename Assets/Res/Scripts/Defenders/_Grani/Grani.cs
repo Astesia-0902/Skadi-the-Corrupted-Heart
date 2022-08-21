@@ -1,5 +1,6 @@
 using Defenders;
 using Game_Managers;
+using Res.Scripts.Game_Managers;
 using UnityEngine;
 
 namespace Res.Scripts.Defenders._Grani
@@ -104,14 +105,7 @@ namespace Res.Scripts.Defenders._Grani
                         //每次攻击开始时播放起手式
                         animatorManager.PlayTargetAnimation("Skill_Begin", true);
                         
-                        if (transform.position.x - targetToDeal.transform.position.x > 0)
-                        {
-                            targetRotation = Quaternion.Euler(-90, 180, 0);
-                        }
-                        else
-                        {
-                            targetRotation = Quaternion.identity;
-                        }
+                        RefreshRotation();
 
                         //根据当前状态，决定进入哪个攻击动画的循环
                         if (isSkillOn)
