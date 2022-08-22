@@ -19,5 +19,13 @@ namespace Res.Scripts.UI
                 queueData.UpdateMyModel();
             }
         }
+
+        public void ClearQueueManagers()
+        {
+            foreach (QueueData queueData in queueDatas)
+            {
+                queueData.ClearMyModel();
+            }
+        }
     }
 }

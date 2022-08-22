@@ -54,6 +54,10 @@ namespace Res.Scripts.Game_Managers
 
         public void BeginDeploy(AttackerSummonData attackerSummonData)
         {
+            if (attackerSummonData == null)
+            {
+                return;
+            }
             deployFlag = true;
             attackerToDeploy = attackerSummonData;
             currentSelectedUnit = unitsToSelect[attackerSummonData.attackerID];

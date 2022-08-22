@@ -20,6 +20,8 @@ namespace Res.Scripts.Game_Managers
         public bool startFlag;
         public bool lighthouseFlag;
 
+        public DeployButton[] deployButtons;
+
         private Queue<DefenderSummonData> defenderSummonQueue;
         private Queue<DefenderWithdrawData> defenderWithdrawQueue;
 
@@ -51,6 +53,7 @@ namespace Res.Scripts.Game_Managers
             }
 
             startFlag = true;
+            LoadNewAttackersData(waveCount.ToString());
         }
 
         private void Update()
@@ -59,7 +62,6 @@ namespace Res.Scripts.Game_Managers
 
             if (startFlag)
             {
-                //����ս���ļ�ʱ��
                 if (!lighthouseFlag)
                 {
                     timerAccumulator += Time.deltaTime;
@@ -146,17 +148,18 @@ namespace Res.Scripts.Game_Managers
                 }
             }
         }
-
-        /// <summary>
-        /// ���º��õĲ���ť
-        /// </summary>
-        /// <param name="wave"></param>
+        
         private void LoadNewAttackersData(string wave)
         {
+            EntitySummoner.Instance.ClearQueue();
             AttackerSummonData[] attackerSummonDatas =
                 Resources.LoadAll<AttackerSummonData>("Attacker Summon Data/" + wave);
-            DeployButton[] deployButtons = FindObjectsOfType<DeployButton>();
-
+            
+            foreach (DeployButton deployButton in deployButtons)
+            {
+                deployButton.SetEmpty();
+            }
+            
             for (int i = 0; i < attackerSummonDatas.Length; i++)
             {
                 deployButtons[i].LoadNewAttackerData(attackerSummonDatas[i]);

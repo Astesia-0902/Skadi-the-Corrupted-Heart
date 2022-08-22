@@ -9,7 +9,7 @@ namespace Res.Scripts.Defenders._Indigo
 
         protected override void Update()
         {
-            if (target == null)
+            if (target == null || target.isDead)
             {
                 Destroy(this.gameObject);
             }

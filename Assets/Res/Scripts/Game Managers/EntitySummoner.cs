@@ -21,9 +21,6 @@ namespace Res.Scripts.Game_Managers
         public List<AttackerSummonData> attackerList2;
         private List<NodeLoopManager> nodeList2;
 
-        private Queue<AttackerSummonData> attackerListSingle;
-        private Queue<NodeLoopManager> nodeListSingle;
-
         public QueueUpdater queueUpdater34;
         public QueueUpdater queueUpdater2;
 
@@ -37,8 +34,6 @@ namespace Res.Scripts.Game_Managers
 
             if (!_isInitialized)
             {
-                attackerListSingle = new Queue<AttackerSummonData>();
-                nodeListSingle = new Queue<NodeLoopManager>();
                 attackerList34 = new List<AttackerSummonData>();
                 nodeList34 = new List<NodeLoopManager>();
                 attackerList2 = new List<AttackerSummonData>();
@@ -85,9 +80,7 @@ namespace Res.Scripts.Game_Managers
                 if (CostManager.Instance.DrainCost(attackerSummonData.cost))
                 {
                     CostManager.Instance.StoreCost(attackerSummonData.cost);
-                    attackerListSingle.Enqueue(attackerSummonData);
-                    nodeListSingle.Enqueue(nodeLoopManager);
-                    SummonAttacker(attackerListSingle.Dequeue(), nodeListSingle.Dequeue());
+                    SummonAttacker(attackerSummonData, nodeLoopManager);
                     return;
                 }
                 else
@@ -113,7 +106,7 @@ namespace Res.Scripts.Game_Managers
                     nodeList34.Add(nodeLoopManagers[0]);
                     attackerList34.Add(attackerSummonData);
                     nodeList34.Add(nodeLoopManagers[1]);
-                    
+
                     queueUpdater34.UpdateQueueManagers();
                     return;
                 }
@@ -123,6 +116,7 @@ namespace Res.Scripts.Game_Managers
                     attackerList2.Remove(attackerList2[0]);
                     nodeList2.Remove(nodeList2[0]);
                 }
+
                 attackerList2.Add(attackerSummonData);
                 nodeList2.Add(nodeLoopManager);
                 queueUpdater2.UpdateQueueManagers();
@@ -171,6 +165,16 @@ namespace Res.Scripts.Game_Managers
             return false;
         }
 
+        public void ClearQueue()
+        {
+            attackerList2.Clear();
+            attackerList34.Clear();
+            nodeList2.Clear();
+            nodeList34.Clear();
+            queueUpdater2.ClearQueueManagers();
+            queueUpdater34.ClearQueueManagers();
+        }
+
         /// <summary>
         /// 一次性弹射所有待命的海嗣
         /// </summary>
@@ -185,15 +189,19 @@ namespace Res.Scripts.Game_Managers
         {
             for (int i = 0; i < attackerList34.Count; i++)
             {
+                if (TimelineManager.Instance.lighthouseFlag)
+                    break;
                 SummonAttacker(attackerList34[i], nodeList34[i]);
                 yield return new WaitForSeconds(2f);
             }
         }
-        
+
         private IEnumerator SummonAllAttacker2IE()
         {
             for (int i = 0; i < attackerList2.Count; i++)
             {
+                if (TimelineManager.Instance.lighthouseFlag)
+                    break;
                 SummonAttacker(attackerList2[i], nodeList2[i]);
                 yield return new WaitForSeconds(2f);
             }

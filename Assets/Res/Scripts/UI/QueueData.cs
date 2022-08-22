@@ -64,5 +64,12 @@ namespace Res.Scripts.UI
             currentModel.transform.position = transform.position;
             currentModel.SetActive(true);
         }
+
+        public void ClearMyModel()
+        {
+            if (currentModel != null)
+                Destroy(currentModel);
+            mySeabornID = 0;
+        }
     }
 }

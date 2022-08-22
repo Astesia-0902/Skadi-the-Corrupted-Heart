@@ -1,5 +1,3 @@
-using System;
-using Game_Managers;
 using Res.Scripts.Attackers;
 using Res.Scripts.Game_Managers;
 using UnityEngine;
@@ -20,11 +18,23 @@ namespace Res.Scripts.UI
 
         public void LoadNewAttackerData(AttackerSummonData newData)
         {
-            attackerSummonData = newData;
-            if (newData.uiImage != null)
+            if (newData == null)
             {
-                myImage.sprite = newData.uiImage;
+                SetEmpty();
             }
+            else
+            {
+                attackerSummonData = newData;
+                myImage.color = new Color(1f, 1f, 1f, 0.6f);
+            }
+            
+            myImage.sprite = newData.uiImage != null ? newData.uiImage : null;
+        }
+
+        public void SetEmpty()
+        {
+            attackerSummonData = null;
+            myImage.color = new Color(0, 0, 0, 0f);
         }
 
         public void OnPointerDown(PointerEventData eventData)
