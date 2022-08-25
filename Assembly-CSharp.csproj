@@ -120,6 +120,7 @@
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansTerrainTools.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BluePAm.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Reaper\Reaper.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\TopBarUI.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImageUtils.cs" />
      <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlags.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\DefenderSummonData.cs" />
@@ -167,6 +168,7 @@
      <None Include="Assets\Res\Models\Seaborns\Unity_dshond2\enemy_1147_dshond.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbow_2\enemy_1149_dsbow_2.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbow\enemy_1149_dsbow.atlas.txt" />
+     <None Include="Assets\effect\Lickba\Shader\sea.shader" />
      <None Include="Assets\Res\Models\Defenders\unity_elysm\char_401_elysm.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\unity_ghost\char_1023_ghost2.atlas.txt" />
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\2_灯光慢闪\skeleton.atlas.txt" />
@@ -792,6 +794,12 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -840,8 +848,14 @@
  <Reference Include="Unity.Burst">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Jobs">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
