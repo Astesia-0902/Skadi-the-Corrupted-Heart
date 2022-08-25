@@ -29,6 +29,7 @@ namespace Res.Scripts.Attackers.LittleSeaborn
         public override void TakeDamage(float physicDamage, float magicDamage1, float realDamage1)
         {
             base.TakeDamage(physicDamage, magicDamage1, realDamage1);
+            TopBarUI.Instance.IconMovement(currentHealth);
         }
 
         protected override void Die()

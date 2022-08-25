@@ -14,7 +14,7 @@ namespace Res.Scripts.Game_Managers
         public int waveCount = 1;
         private float timerAccumulator;
         private int timer;
-        private int lighthouseTimer;
+        public int lighthouseTimer;
         private float lighthouseActivateTimer = 10f;
         private float lighthouseActivateTimerBuffer;
         public bool startFlag;
