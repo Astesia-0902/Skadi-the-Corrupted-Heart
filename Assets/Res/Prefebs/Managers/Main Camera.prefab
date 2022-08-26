@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2909301359433509903}
   - component: {fileID: 2909301359433509901}
   - component: {fileID: 2909301359433509900}
+  - component: {fileID: 9167053654923081707}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -157,3 +158,24 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: bf20218b82aa11645b6582b59938ecce, type: 2}
+--- !u!114 &9167053654923081707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909301359433509898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8601afa529b952e4cb1794e3f027c03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_matCopyDepth: {fileID: 0}
+  m_DisablePixelLights: 1
+  m_TextureSize: 256
+  m_ClipPlaneOffset: 0.07
+  m_ReflectLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ReflectionTexture: {fileID: 0}
+  m_ReflectionDepthTexture: {fileID: 0}
