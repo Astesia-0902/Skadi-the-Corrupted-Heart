@@ -92,8 +92,9 @@ namespace Res.Scripts.Game_Managers
                         lockedOnQueueFlag = true;
                         return;
                     }
-
+                    if (hit.point != null) { 
                     currentSelectedUnit.transform.position = hit.point;
+                    }
                 }
             }
 
