@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: "\u88C2\u7901\u8005"
   m_EditorClassIdentifier: 
   attackerPrefeb: {fileID: 7885833401379259096, guid: 2432641da6683cd4d99001769d3d6d9b, type: 3}
-  uiImage: {fileID: 0}
+  uiImage: {fileID: 21300000, guid: 30d7999de9567354586355b9b63249de, type: 3}
   attackerID: 8
   cost: 10

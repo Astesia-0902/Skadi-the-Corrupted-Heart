@@ -44,8 +44,8 @@ public class TopBarUI : Singleton<TopBarUI>
 
         if(0 >= health)
         {
-            Debug.Log("刷新血量记录" + health);
             health = currentHealth;
+            Debug.Log("刷新血量记录" + health);
         }
         else if(health > 0 && health >= currentHealth)
         {

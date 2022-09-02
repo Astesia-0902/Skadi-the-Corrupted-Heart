@@ -125,6 +125,12 @@ namespace Res.Scripts.Defenders
             isDead = true;
             animatorManager.PlayTargetAnimation("Die", true);
             Unblock();
+            Invoke(nameof(DestoryAfterDie), 1);
+        }
+
+        private void DestoryAfterDie()
+        {
+            Destroy(this.gameObject);
         }
 
         /// <summary>

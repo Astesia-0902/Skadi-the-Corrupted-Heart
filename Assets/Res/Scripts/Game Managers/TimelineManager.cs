@@ -154,12 +154,12 @@ namespace Res.Scripts.Game_Managers
             EntitySummoner.Instance.ClearQueue();
             AttackerSummonData[] attackerSummonDatas =
                 Resources.LoadAll<AttackerSummonData>("Attacker Summon Data/" + wave);
-            
+
             foreach (DeployButton deployButton in deployButtons)
             {
                 deployButton.SetEmpty();
             }
-            
+
             for (int i = 0; i < attackerSummonDatas.Length; i++)
             {
                 deployButtons[i].LoadNewAttackerData(attackerSummonDatas[i]);

@@ -34,7 +34,10 @@ namespace Res.Scripts.UI
         public void SetEmpty()
         {
             attackerSummonData = null;
-            myImage.color = new Color(0, 0, 0, 0f);
+            if(myImage != null)
+            {
+                myImage.color = new Color(0, 0, 0, 0f);
+            }
         }
 
         public void OnPointerDown(PointerEventData eventData)
