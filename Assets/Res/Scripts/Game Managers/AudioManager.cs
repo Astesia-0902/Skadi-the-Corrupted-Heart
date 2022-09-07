@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using Tool_Scripts;
 using UnityEngine;
 
-namespace Game_Managers
+namespace Res.Scripts.Game_Managers
 {
     public class AudioManager : Singleton<AudioManager>
     {
@@ -13,10 +12,14 @@ namespace Game_Managers
         protected override void Awake()
         {
             base.Awake();
-            fxSource = GetComponent<AudioSource>();
-            bgmSource = GetComponentInParent<AudioSource>();
+            if (Camera.main != null)
+            {
+                AudioSource[] audioSources = Camera.main.GetComponents<AudioSource>();
+                fxSource = audioSources[0];
+                bgmSource = audioSources[1];
+            }
         }
-        
+
 
         public void PlayTargetClip(AudioClip clip)
         {
@@ -25,7 +28,10 @@ namespace Game_Managers
 
         public void PlayTargetBGM(AudioClip bgmClip)
         {
-            StartCoroutine(PlayTargetMusicIE(bgmClip));
+            bgmSource.volume = 1f;
+            bgmSource.loop = true;
+            bgmSource.Play();
+            //StartCoroutine(PlayTargetMusicIE(bgmClip));
         }
 
         private IEnumerator PlayTargetMusicIE(AudioClip bgmClip)
@@ -33,12 +39,13 @@ namespace Game_Managers
             yield return BGMFadeOut();
             bgmSource.clip = bgmClip;
             bgmSource.volume = 1f;
+            bgmSource.loop = true;
             bgmSource.Play();
         }
 
         private IEnumerator BGMFadeOut()
         {
-            while (bgmSource.volume>0)
+            while (bgmSource.volume > 0)
             {
                 bgmSource.volume -= Time.deltaTime;
                 yield return null;

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Attackers/Skadi/Skadi.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/Extension/RangeAttackTracerDefender.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/_Grani/GraniAm.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/_Indigo/Indigo.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/_Thorns/Thorns.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Game Managers/TimelineManager.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/UI/TopBarUI.cs" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />

@@ -89,6 +89,7 @@
      <Compile Include="Assets\Res\Scripts\UI\CostUI.cs" />
      <Compile Include="Assets\Res\Scripts\UI\GameSpeedButton.cs" />
      <Compile Include="Assets\Res\Scripts\Tool Scripts\Singleton.cs" />
+     <Compile Include="Assets\effect\Lickba\Shader\MirrorReflection.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefenderHealer.cs" />
      <Compile Include="Assets\Res\Scripts\UI\DeployButton.cs" />
      <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChimeAm.cs" />
@@ -182,6 +183,7 @@
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\3_灯光快闪\skeleton.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_ingigo\char_469_indigo.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_huang\char_017_huang.atlas.txt" />
+     <None Include="Assets\effect\Lickba\Shader\PorDis_LB.shader" />
      <None Include="Assets\Res\Models\Defenders\unity_bluep\char_129_bluep.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_Amiya\char_1001_amiya2.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_hsguma\char_136_hsguma.atlas.txt" />

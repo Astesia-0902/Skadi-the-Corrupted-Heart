@@ -58,6 +58,7 @@ namespace Res.Scripts.Game_Managers
             {
                 return;
             }
+
             deployFlag = true;
             attackerToDeploy = attackerSummonData;
             currentSelectedUnit = unitsToSelect[attackerSummonData.attackerID];
@@ -78,6 +79,7 @@ namespace Res.Scripts.Game_Managers
                     {
                         lockedOnQueueFlag = false;
                         Vector3 position = hit.collider.transform.position;
+                        position.y += 0.2f;
                         currentSelectedUnit.transform.position = position;
                         nodeToDeploy = hit.collider.GetComponent<NodeLoopManager>();
                         lockedOnFlag = true;
@@ -92,8 +94,10 @@ namespace Res.Scripts.Game_Managers
                         lockedOnQueueFlag = true;
                         return;
                     }
-                    if (hit.point != null) { 
-                    currentSelectedUnit.transform.position = hit.point;
+
+                    if (hit.point != null)
+                    {
+                        currentSelectedUnit.transform.position = hit.point;
                     }
                 }
             }

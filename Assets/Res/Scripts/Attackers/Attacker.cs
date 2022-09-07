@@ -58,6 +58,8 @@ namespace Res.Scripts.Attackers
             hitPoint = transform.GetChild(2);
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
             uiForUnits = GetComponentInChildren<UiForUnits>();
+            targetRotation = Quaternion.Euler(71.6f, 0, 0);
+            defaultRotation = Quaternion.Euler(71.6f, 0, 0);
         }
 
         protected virtual void Update()

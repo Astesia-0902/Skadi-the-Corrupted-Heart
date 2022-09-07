@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Attackers;
-using Game_Managers;
 using Res.Scripts.Attackers;
 using Unity.Collections;
 using Unity.Jobs;

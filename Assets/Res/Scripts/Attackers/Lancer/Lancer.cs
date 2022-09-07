@@ -1,13 +1,19 @@
 using System;
 using System.Collections.Generic;
-using Game_Managers;
 using Res.Scripts.Defenders;
 using Res.Scripts.Game_Managers;
+using UnityEngine;
 
 namespace Res.Scripts.Attackers.Lancer
 {
     public class Lancer : AttackerRange
     {
+        protected override void Awake()
+        {
+            targetRotation = Quaternion.Euler(71.6f, 0, 0);
+            defaultRotation = Quaternion.Euler(71.6f, 0, 0);
+        }
+
         private void OnEnable()
         {
             EntitySummoner.Instance.attackerStationaryInGame.Add(this);

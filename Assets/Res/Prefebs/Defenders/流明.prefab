@@ -150,6 +150,10 @@ MonoBehaviour:
   hitPoint: {fileID: 0}
   currentTarget: {fileID: 0}
   attackersBlocked: []
+  defaultRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
+  targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
+  skillEffectPrefeb1: {fileID: 0}
+  skillEffectPrefeb2: {fileID: 0}
   sanity: 0
   sanityRecoveryTimer: 0
   sanityRecoveryThreshold: 10
@@ -949,11 +953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606508524294989532, guid: 947fdea1c27ee7947b1b7cc4fcc00e83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.55
+      value: 0.303
       objectReference: {fileID: 0}
     - target: {fileID: 5606508524294989532, guid: 947fdea1c27ee7947b1b7cc4fcc00e83, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0.295
       objectReference: {fileID: 0}
     - target: {fileID: 5606508524294989532, guid: 947fdea1c27ee7947b1b7cc4fcc00e83, type: 3}
       propertyPath: m_LocalRotation.w

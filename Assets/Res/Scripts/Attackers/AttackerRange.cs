@@ -1,4 +1,3 @@
-using Game_Managers;
 using Res.Scripts.Defenders;
 using Res.Scripts.Game_Managers;
 using Unity.Mathematics;
@@ -8,7 +7,7 @@ namespace Res.Scripts.Attackers
 {
     public class AttackerRange : Attacker
     {
-        [Header("Ô¶³Ì¹¥»÷")]
+        [Header("Ô¶ï¿½Ì¹ï¿½ï¿½ï¿½")]
         public float range;
 
         public override void Initialize(NodeLoopManager node)

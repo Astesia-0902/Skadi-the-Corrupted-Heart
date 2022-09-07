@@ -86,7 +86,7 @@ MonoBehaviour:
   blockPara: 1
   weightLevel: 3
   armor: 100
-  magicResistance: 0
+  magicResistance: 0.1
   standardMoveSpeed: 1
   moveSpeed: 1
   nodeIndex: 0
@@ -103,6 +103,8 @@ MonoBehaviour:
   defenderWhoBlockMe: {fileID: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
   isBlownUp: 0
+  isStunned: 0
+  imprisoned: 0
   range: 1.7
 --- !u!1 &3867386773129866880
 GameObject:
@@ -368,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  tracerFXPrefeb: {fileID: 0}
   hitFXPrefeb: {fileID: 0}
+  tracerFXPrefeb: {fileID: 0}
   tracerPivot: {fileID: 0}
   rangeAttackTracerAttacker: {fileID: 0}

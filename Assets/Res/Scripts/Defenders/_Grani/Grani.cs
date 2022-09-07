@@ -1,5 +1,4 @@
 using Defenders;
-using Game_Managers;
 using Res.Scripts.Game_Managers;
 using UnityEngine;
 
@@ -17,6 +16,7 @@ namespace Res.Scripts.Defenders._Grani
         public float attackAnimationSpeed;
         private static readonly int SkillTrigger = Animator.StringToHash("Skill Trigger");
         private static readonly int EndAttack = Animator.StringToHash("endAttack");
+        private static readonly int AttackTrigger = Animator.StringToHash("Attack Trigger");
 
         protected override void Awake()
         {
@@ -54,10 +54,7 @@ namespace Res.Scripts.Defenders._Grani
                     //如果技能结束时正在攻击，切换成普攻动画
                     if (isAttacking)
                     {
-                        animatorManager.PlayTargetAnimation(
-                            Mathf.Abs(targetToDeal.transform.position.z - transform.position.z) > 0.2f
-                                ? "Attack_Down"
-                                : "Attack", true);
+                        animatorManager.PlayTargetAnimation("Attack", true);
                     }
                 }
             }
@@ -104,7 +101,7 @@ namespace Res.Scripts.Defenders._Grani
 
                         //每次攻击开始时播放起手式
                         animatorManager.PlayTargetAnimation("Skill_Begin", true);
-                        
+
                         RefreshRotation();
 
                         //根据当前状态，决定进入哪个攻击动画的循环
@@ -114,10 +111,7 @@ namespace Res.Scripts.Defenders._Grani
                         }
                         else
                         {
-                            animatorManager.anim.SetTrigger(
-                                Mathf.Abs(targetToDeal.transform.position.z - transform.position.z) > 0.2f
-                                    ? "AttackDown Trigger"
-                                    : "Attack Trigger");
+                            animatorManager.anim.SetTrigger(AttackTrigger);
                         }
                     }
                     else

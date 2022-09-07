@@ -1,5 +1,4 @@
 using System;
-using Game_Managers;
 using Res.Scripts.Game_Managers;
 using Unity.Mathematics;
 using UnityEngine;
@@ -22,6 +21,8 @@ namespace Res.Scripts.Attackers.Skadi
             currentHealth = maxHealth;
             hitPoint = transform.GetChild(2);
             animatorManager = GetComponentInChildren<AnimatorManagerAttacker>();
+            targetRotation = Quaternion.Euler(71.6f, 0, 0);
+            defaultRotation = Quaternion.Euler(71.6f, 0, 0);
         }
 
         private void Start()
@@ -39,8 +40,7 @@ namespace Res.Scripts.Attackers.Skadi
         {
             if (wave == 2)
             {
-                skillOn = true;
-                animatorManager.PlayTargetAnimation("Skill_2_Begin", true);
+                SkillStart();
             }
             else if (wave == 3)
             {
@@ -48,7 +48,7 @@ namespace Res.Scripts.Attackers.Skadi
             }
             else if (wave == 4)
             {
-                //TODO:绿的开技能
+                SkillStart();
             }
         }
 

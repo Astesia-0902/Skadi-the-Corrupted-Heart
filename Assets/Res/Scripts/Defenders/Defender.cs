@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Attackers;
 using Defenders;
-using Game_Managers;
 using Res.Scripts.Attackers;
 using Res.Scripts.Game_Managers;
 using UI;
@@ -42,8 +41,8 @@ namespace Res.Scripts.Defenders
         public Action<float, float> onHealthChanged;
         public Action<float> onSanityChanged;
         
-        public Quaternion defaultRotation = Quaternion.Euler(45, 0, 0);
-        public Quaternion targetRotation = Quaternion.Euler(45, 0, 0);
+        public Quaternion defaultRotation = Quaternion.Euler(71.6f, 0, 0);
+        public Quaternion targetRotation = Quaternion.Euler(71.6f, 0, 0);
         
         public GameObject skillEffectPrefeb1;
         public GameObject skillEffectPrefeb2;
@@ -57,6 +56,8 @@ namespace Res.Scripts.Defenders
             animatorManager = GetComponentInChildren<AnimatorManagerDefender>();
             uiForUnits = GetComponentInChildren<UiForUnits>();
 
+            defaultRotation = Quaternion.Euler(71.6f, 0, 0);
+            targetRotation = Quaternion.Euler(71.6f, 0, 0);
             attackersBlocked = new List<Attacker>();
             attackTimer = attackTimerStandard;
             rangeParent = transform.GetChild(1);
@@ -91,6 +92,7 @@ namespace Res.Scripts.Defenders
         {
             if (GameManager.Instance != null)
                 GameManager.Instance.RemoveDefender(this);
+            Unblock();
         }
 
         #region Take Damage
@@ -125,12 +127,6 @@ namespace Res.Scripts.Defenders
             isDead = true;
             animatorManager.PlayTargetAnimation("Die", true);
             Unblock();
-            Invoke(nameof(DestoryAfterDie), 1);
-        }
-
-        private void DestoryAfterDie()
-        {
-            Destroy(this.gameObject);
         }
 
         /// <summary>
@@ -311,7 +307,7 @@ namespace Res.Scripts.Defenders
 
         protected virtual void RefreshRotation()
         {
-            targetRotation = transform.position.x - targetToDeal.transform.position.x > 0 ? Quaternion.Euler(-45, 180, 0) : defaultRotation;
+            targetRotation = transform.position.x - targetToDeal.transform.position.x > 0 ? Quaternion.Euler(-71.6f, 180, 0) : defaultRotation;
         }
 
         /// <summary>

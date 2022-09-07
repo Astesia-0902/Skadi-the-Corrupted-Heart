@@ -105,7 +105,7 @@ MonoBehaviour:
   blockPara: 1
   weightLevel: 3
   armor: 10
-  magicResistance: 5
+  magicResistance: 0.1
   standardMoveSpeed: 0.5
   moveSpeed: 0
   nodeIndex: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   defenderWhoBlockMe: {fileID: 0}
   targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   isBlownUp: 0
+  isStunned: 0
   imprisoned: 0
   range: 1.6
 --- !u!1 &5558854032891462617

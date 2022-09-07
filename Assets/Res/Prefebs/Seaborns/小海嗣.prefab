@@ -86,7 +86,7 @@ MonoBehaviour:
   blockPara: 0
   weightLevel: 0
   armor: 10
-  magicResistance: 10
+  magicResistance: 0.1
   standardMoveSpeed: 0
   moveSpeed: 0
   nodeIndex: 0
