@@ -50,9 +50,12 @@ public class TopBarUI : Singleton<TopBarUI>
         else if(health > 0 && health >= currentHealth)
         {
             Debug.Log("maxHealth" + maxHealth + "---health" + health + "---currentHealth" + currentHealth);
-
+            if(currentHealth <= 0)
+            {
+                currentHealth = 0;
+            }
             float difHealth = health - currentHealth;
-            seabornIcon.anchoredPosition3D = new Vector3(seabornIcon.anchoredPosition3D.x + difHealth / maxHealth * 73, seabornIcon.anchoredPosition3D.y, seabornIcon.anchoredPosition3D.z);
+            seabornIcon.anchoredPosition3D = new Vector3(seabornIcon.anchoredPosition3D.x + difHealth / maxHealth * 70, seabornIcon.anchoredPosition3D.y, seabornIcon.anchoredPosition3D.z);
         }
     }
 
