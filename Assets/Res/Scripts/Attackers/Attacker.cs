@@ -12,6 +12,7 @@ namespace Res.Scripts.Attackers
         public int id;
 
         [Header("Combat Status")] public float maxHealth;
+
         //海嗣当前的血量
         public float currentHealth;
         public float attackDamage;
@@ -50,8 +51,8 @@ namespace Res.Scripts.Attackers
 
         public Action<float, float> onHealthChanged;
 
-        public Quaternion targetRotation = Quaternion.Euler(45, 0, 0);
-        protected Quaternion defaultRotation = Quaternion.Euler(45, 0, 0);
+        public Quaternion targetRotation = Quaternion.Euler(71.6f, 0, 0);
+        protected Quaternion defaultRotation = Quaternion.Euler(71.6f, 0, 0);
 
         protected virtual void Awake()
         {
@@ -158,7 +159,7 @@ namespace Res.Scripts.Attackers
         {
             if (transform.position.x - currentAttackTarget.transform.position.x < 0)
             {
-                targetRotation = Quaternion.Euler(-45, 180, 0);
+                targetRotation = Quaternion.Euler(-71.6f, 180, 0);
             }
             else
             {
@@ -192,6 +193,7 @@ namespace Res.Scripts.Attackers
             Vector3 defenderPosition = defender.transform.position;
             Vector3 myPosition = transform.position;
             Vector3 targetPosition = new Vector3(0, 0, 0);
+            targetPosition.y = transform.position.y;
 
             if (defenderPosition.x - myPosition.x >= 0)
             {
@@ -211,7 +213,7 @@ namespace Res.Scripts.Attackers
                 targetPosition.z = defenderPosition.z - 0.5f;
             }
 
-            transform.position = Vector3.Slerp(myPosition, defenderPosition, Time.deltaTime * 10f);
+            transform.position = Vector3.Slerp(myPosition, targetPosition, Time.deltaTime * 10f);
         }
 
         public virtual void Unblocked()
@@ -331,12 +333,11 @@ namespace Res.Scripts.Attackers
         {
             return !isInteracting && !isBlocked && !isBlownUp && !imprisoned && !isStunned;
         }
-        
+
         public virtual bool CanAttack()
         {
             return !isInteracting && !isBlownUp && !isStunned;
         }
-
 
 
         /// <summary>

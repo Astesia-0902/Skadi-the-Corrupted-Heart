@@ -1,4 +1,5 @@
 using Defenders.Extension;
+using Res.Scripts.Defenders._Honeyberry;
 using UnityEngine;
 
 namespace Defenders._Honeyberry

@@ -43,13 +43,7 @@ namespace Res.Scripts.Game_Managers
 
             if (costRecoveryTimer >= 1f && costFlag)
             {
-                currentCost++;
-                if (currentCost >= 99)
-                {
-                    currentCost = 99;
-                }
-
-                onCostChange.Invoke();
+                AddCost(1);
                 costRecoveryTimer = 0f;
             }
         }
@@ -57,6 +51,11 @@ namespace Res.Scripts.Game_Managers
         public void AddCost(int amount)
         {
             currentCost += amount;
+            if (currentCost > 99)
+            {
+                currentCost = 99;
+            }
+            onCostChange.Invoke();
         }
 
         public bool DrainCost(int amount)
@@ -87,8 +86,7 @@ namespace Res.Scripts.Game_Managers
         {
             if (costToAddQueue.Count > 0)
             {
-                currentCost += costToAddQueue.Dequeue();
-                onCostChange.Invoke();
+                AddCost(costToAddQueue.Dequeue());
             }
         }
 

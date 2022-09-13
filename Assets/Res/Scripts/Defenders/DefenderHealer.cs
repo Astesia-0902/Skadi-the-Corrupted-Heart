@@ -32,7 +32,7 @@ namespace Defenders
 
             if (targetToHeal != null && CanAttack())
             {
-                if (!targetToHeal.isDead)
+                if (!targetToHeal.isDead && Math.Abs(targetToHeal.currentHealth - targetToHeal.maxHealth) > 1f )
                 {
                     attackTimer = attackTimerStandard;
                     animatorManager.PlayTargetAnimation("Attack", true);
@@ -84,7 +84,7 @@ namespace Defenders
 
             foreach (Defender defender in defenders)
             {
-                if( Math.Abs(defender.currentHealth - defender.maxHealth) < 0.01f )
+                if( Math.Abs(defender.currentHealth - defender.maxHealth) < 1f )
                     continue;
                 return defender;
             }

@@ -9,19 +9,22 @@ namespace Res.Scripts.Defenders._Indigo
 
         protected override void Update()
         {
-            if (target == null || target.isDead)
+            if (target != null && !target.isDead && target.gameObject.activeInHierarchy)
             {
-                Destroy(this.gameObject);
+                targetPosition = target.hitPoint.position;
             }
-            
-            transform.position = Vector3.MoveTowards(transform.position, target.hitPoint.position, 20f * Time.deltaTime);
-            if (Vector3.Distance(transform.position, target.hitPoint.position) < 0.1f)
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, 20f * Time.deltaTime);
+            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
                 if (isImprisoning)
                 {
-                    target.GetImprisoned(4f);
+                    if (target != null && !target.isDead && target.gameObject.activeInHierarchy)
+                        target.GetImprisoned(4f);
                 }
-                target.TakeDamage(physicDamage, magicDamage, realDamage);
+
+                if (target != null && !target.isDead && target.gameObject.activeInHierarchy)
+                    target.TakeDamage(physicDamage, magicDamage, realDamage);
                 Destroy(this.gameObject);
             }
         }

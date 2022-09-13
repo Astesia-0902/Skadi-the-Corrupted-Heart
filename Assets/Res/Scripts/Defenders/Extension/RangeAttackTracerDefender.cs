@@ -14,22 +14,30 @@ namespace Res.Scripts.Defenders.Extension
         public float realDamage;
 
         public GameObject hitFXPrefeb;
-    
+
+        public Vector3 targetPosition;
+
         protected virtual void Update()
         {
-            if (target == null)
+            GuideToTarget();
+        }
+
+        private void GuideToTarget()
+        {
+            if (target != null && !target.isDead && target.gameObject.activeInHierarchy)
             {
-                Destroy(this.gameObject);
+                targetPosition = target.hitPoint.position;
             }
-            
-            transform.position = Vector3.MoveTowards(transform.position, target.hitPoint.position, 20f * Time.deltaTime);
-            if (Vector3.Distance(transform.position, target.hitPoint.position) < 0.1f)
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, 20f * Time.deltaTime);
+            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
-                target.TakeDamage(physicDamage, magicDamage, realDamage);
+                if (target != null && !target.isDead && target.gameObject.activeInHierarchy)
+                    target.TakeDamage(physicDamage, magicDamage, realDamage);
                 Destroy(this.gameObject);
             }
         }
-    
+
         protected virtual void OnDestroy()
         {
             Instantiate(hitFXPrefeb, target.hitPoint);

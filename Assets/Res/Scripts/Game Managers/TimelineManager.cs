@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using Res.Scripts.Attackers;
 using Res.Scripts.Defenders;
+using Res.Scripts.Defenders._Elysium;
+using Res.Scripts.Defenders._Mon3tr;
 using Res.Scripts.UI;
 using Tool_Scripts;
 using UnityEngine;
@@ -79,6 +81,20 @@ namespace Res.Scripts.Game_Managers
 
                     timerAccumulator = 0f;
                 }
+                
+            }
+        }
+
+        public void SkillChecker()
+        {
+            if (timer == 12)
+            {
+                FindObjectOfType<Elysium>().CastSkill();
+            }
+
+            if (timer == 69)
+            {
+                FindObjectOfType<Mon3TR>().CastSkill();
             }
         }
 
@@ -143,7 +159,7 @@ namespace Res.Scripts.Game_Managers
                 damageTimer = 0f;
                 foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
                 {
-                    attacker.TakeDamage(0, 0, 3000f);
+                    attacker.TakeDamage(0, 0, 9000f);
                 }
             }
         }

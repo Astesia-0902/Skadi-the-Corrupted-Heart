@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Res.Scripts.Defenders;
+using Defenders;
 
-namespace Defenders._Honeyberry
+namespace Res.Scripts.Defenders._Honeyberry
 {
     public class Honeyberry : DefenderHealer
     {

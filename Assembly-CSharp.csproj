@@ -163,6 +163,7 @@
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\4_灯光熄灭\skeleton.atlas.txt" />
      <None Include="Assets\Res\model\effect\rain.shader" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsintc\enemy_1151_dslntc.atlas.txt" />
+     <None Include="Assets\effect\Xxs\shader\Xxs_TY_1.0.shader" />
      <None Include="Assets\Res\Models\Defenders\Unity_red\char_144_red.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\unity_thorns\char_293_thorns.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\unity_grani\char_220_grani.atlas.txt" />
