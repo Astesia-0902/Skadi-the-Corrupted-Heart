@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 001
+  m_Shader: {fileID: 4800000, guid: 82b4120f1683d7448bffda5c7061a4b6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Disslove_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Texture:
+        m_Texture: {fileID: 2800000, guid: d36ac7770a6a4d54ea9af8a7fee38c8a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AR_Main: 1
+    - _AlphaCutoff: 0.5
+    - _Alpha_Dst: 7
+    - _Alpha_Src: 5
+    - _Cull_Mode: 1
+    - _Custom12_Diosslve_U: 1
+    - _Custom12_Diosslve_V: 1
+    - _Custom12_Main_U: 0
+    - _Custom12_Main_V: 0
+    - _Custom12_Mask_U: 0
+    - _Custom12_Mask_V: 0
+    - _Custom12_Noise_Intensity: 1
+    - _Custom_DissloveCustom2_z: 0
+    - _Custom_Main: 0
+    - _Custom_Mask: 0
+    - _Custom_Noise_Intensity: 0
+    - _Custom_UV_Disslove: 0
+    - _Depth_Fade: 0
+    - _Depth_Fade_Distance: 1
+    - _Disslove_Factor: 0.5
+    - _Disslove_Noise: 0
+    - _Disslove_SoftSting: 0
+    - _Disslove_Tex_Power: 1
+    - _Main_Noise: 0
+    - _Mask_Noise: 0
+    - _Noise_Intensity: 1
+    - _RGB_Dst: 1
+    - _RGB_Src: 1
+    - _Rotator_Disslove: 0
+    - _Rotator_Main: 0
+    - _Rotator_Mask: 0
+    - _Rotator_Noise: 0
+    - _Soft_Disslove: 0.5
+    - _U_Clamp_Disslove: 0
+    - _U_Clamp_Main: 0
+    - _U_Clamp_Mask: 0
+    - _U_Speed_Disslove: 0
+    - _U_Speed_Main: 0
+    - _U_Speed_Mask: 0
+    - _U_Speed_Noise: 0
+    - _V_Clamp_Disslove: 0
+    - _V_Clamp_Main: 0
+    - _V_Clamp_Mask: 0
+    - _V_Speed_Disslove: 0
+    - _V_Speed_Main: 0
+    - _V_Speed_Mask: 0
+    - _V_Speed_Noise: 0
+    - _Wide_Disslove: 0
+    - _ZTest_Mode: 4
+    - _ZWrite_Mode: 0
+    - _xyzw_Disslove_U: 0
+    - _xyzw_Disslove_V: 1
+    - _xyzw_Main_U: 0
+    - _xyzw_Main_V: 1
+    - _xyzw_Mask_U: 2
+    - _xyzw_Mask_V: 3
+    - _xyzw_Noise_Intensity: 3
+    m_Colors:
+    - _Color: {r: 0.05490196, g: 0.3137255, b: 0.32156864, a: 1}
+    - _Color_Wide: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Refine_Main: {r: 1, g: 1, b: 2, a: 0}
+    - _Tex_ST_Main: {r: 1, g: 1, b: 0, a: 0}
+    - _Tex_ST_Mask: {r: 1, g: 1, b: 0, a: 0}
+    - _Tex_TS_Disslove: {r: 1, g: 1, b: 0, a: 0}
+    - _Tex_TS_Noise: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
