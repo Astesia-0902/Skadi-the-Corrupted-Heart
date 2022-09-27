@@ -318,11 +318,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f5283311222b844b3f703e89dd3443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2000
-  currentHealth: 0
-  armor: 10
-  magicResistance: 0
-  blockNumStandard: 0
+  maxHealth: 1435
+  currentHealth: 1435
+  armor: 117
+  magicResistance: 20
+  blockNumStandard: 1
   isDead: 0
   isInteracting: 0
   isRange: 1
@@ -341,8 +341,8 @@ MonoBehaviour:
   afterBurst: 0
   stunTimer: 0
   attackDamage: 0
-  magicDamage: 200
-  attackTimerStandard: 1.5
+  magicDamage: 1216
+  attackTimerStandard: 3
   physicalDamageToDeal: 0
   magicDamageToDeal: 0
   realDamageToDeal: 0
