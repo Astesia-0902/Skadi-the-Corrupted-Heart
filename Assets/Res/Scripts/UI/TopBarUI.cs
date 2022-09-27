@@ -34,27 +34,38 @@ public class TopBarUI : Singleton<TopBarUI>
         SkeletonAnimation.SetActive(TimelineManager.Instance.lighthouseFlag);
     }
 
-    public void IconMovement(float currentHealth)
+    public void IconMovement(float currentHealth ,float maxHealthOfSeaborn)
     {
+        if (maxHealthOfSeaborn <= 0)
+            return;
+
         if(0 == maxHealth)
         {
-            Debug.Log("刷新最高血量");
-            maxHealth = currentHealth;
+            maxHealth = maxHealthOfSeaborn;
+            health = maxHealth;
+            Debug.Log("最高血量" + maxHealth);
         }
 
-        if(0 >= health)
+        if (0 == health)
         {
-            health = currentHealth;
-            Debug.Log("刷新血量记录" + health);
+            health = maxHealth;
+
+            Debug.Log("当前血量为0，刷新至满血" + health);
         }
-        else if(health > 0 && health >= currentHealth)
+
+        if (health > currentHealth)
         {
-            Debug.Log("maxHealth" + maxHealth + "---health" + health + "---currentHealth" + currentHealth);
-            if(currentHealth <= 0)
+            if (currentHealth <= 0)
             {
                 currentHealth = 0;
             }
+
             float difHealth = health - currentHealth;
+            
+            Debug.Log("health:" + health + "--currentHealth:" + currentHealth);
+
+            health = currentHealth;
+
             seabornIcon.anchoredPosition3D = new Vector3(seabornIcon.anchoredPosition3D.x + difHealth / maxHealth * 70, seabornIcon.anchoredPosition3D.y, seabornIcon.anchoredPosition3D.z);
         }
     }
