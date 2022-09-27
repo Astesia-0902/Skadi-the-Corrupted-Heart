@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a687b667648668142896465b33e18026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 3850
   currentHealth: 0
-  armor: 0
+  armor: 813
   magicResistance: 0
-  blockNumStandard: 0
+  blockNumStandard: 3
   isDead: 0
   isInteracting: 0
   isRange: 0
@@ -57,15 +57,19 @@ MonoBehaviour:
   hitPoint: {fileID: 0}
   currentTarget: {fileID: 0}
   attackersBlocked: []
+  defaultRotation: {x: 0.58495766, y: 0, z: 0, w: 0.8110638}
+  targetRotation: {x: 0.58495766, y: 0, z: 0, w: 0.8110638}
+  skillEffectPrefeb1: {fileID: 0}
+  skillEffectPrefeb2: {fileID: 0}
   sanity: 0
   sanityRecoveryTimer: 0
   sanityRecoveryThreshold: 10
   resistance: 0
   afterBurst: 0
   stunTimer: 0
-  attackDamage: 0
+  attackDamage: 490
   magicDamage: 0
-  attackTimerStandard: 0
+  attackTimerStandard: 1.2
   physicalDamageToDeal: 0
   magicDamageToDeal: 0
   realDamageToDeal: 0
