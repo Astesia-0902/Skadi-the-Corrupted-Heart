@@ -1,7 +1,6 @@
-using Res.Scripts.Defenders;
 using UnityEngine;
 
-namespace Defenders.Extension
+namespace Res.Scripts.Defenders.Extension
 {
     /// <summary>
     /// 挂载在医疗干员的发射物上
@@ -22,21 +21,23 @@ namespace Defenders.Extension
             {
                 Destroy(this.gameObject);
             }
-            
-            transform.position = Vector3.MoveTowards(transform.position, healTarget.hitPoint.position, 20f * Time.deltaTime);
-            if (Vector3.Distance(transform.position, healTarget.hitPoint.position) < 0.1f)
+
+            transform.position =
+                Vector3.MoveTowards(transform.position, healTarget.hitPoint.position, 20f * Time.deltaTime);
+            if (Vector3.Distance(transform.position, healTarget.hitPoint.position) < 0.01f)
             {
                 HealTarget();
-                if(isElementHeal)
+                if (isElementHeal)
                     HealTargetSanity(healAmount);
-            
+
                 Destroy(this.gameObject);
             }
         }
 
         protected virtual void OnDestroy()
         {
-            Instantiate(healHitPrefeb, healTarget.hitPoint);
+            if (healTarget != null)
+                Instantiate(healHitPrefeb, healTarget.hitPoint);
         }
 
         public void HealTarget()

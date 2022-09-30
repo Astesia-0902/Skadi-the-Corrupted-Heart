@@ -448,6 +448,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4532834484172664368, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4887488421977853344, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
       propertyPath: m_Name
       value: UI Pivot Defender

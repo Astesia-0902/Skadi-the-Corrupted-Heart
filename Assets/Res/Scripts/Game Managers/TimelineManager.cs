@@ -131,6 +131,12 @@ namespace Res.Scripts.Game_Managers
             {
                 attacker.GetStunned(3600f);
             }
+            
+            EntitySummoner.Instance.ClearQueue();
+            foreach (DeployButton deployButton in deployButtons)
+            {
+                deployButton.SetEmpty();
+            }
 
             //眩晕斯卡蒂
             GameManager.Instance.skadi.GetStunned(9999f);
@@ -144,15 +150,6 @@ namespace Res.Scripts.Game_Managers
             if (!lighthouseFlag)
                 return;
 
-            lighthouseActivateTimerBuffer += Time.deltaTime;
-            if (lighthouseActivateTimerBuffer >= lighthouseActivateTimer)
-            {
-                lighthouseActivateTimerBuffer = 0f;
-                lighthouseFlag = false;
-                LoadNewAttackersData(waveCount.ToString());
-                GameManager.Instance.skadi.WaveCheck(waveCount);
-            }
-
             damageTimer += Time.deltaTime;
             if (damageTimer >= 1f)
             {
@@ -163,7 +160,16 @@ namespace Res.Scripts.Game_Managers
                 }
             }
         }
-        
+
+        public void NextWave()
+        {
+            lighthouseFlag = false;
+            GameManager.Instance.skadi.TakeDamage(0, 0, 0.25f * GameManager.Instance.skadi.maxHealth);
+            GameManager.Instance.skadi.StunRecover();
+            LoadNewAttackersData(waveCount.ToString());
+            GameManager.Instance.skadi.WaveCheck(waveCount);
+        }
+
         private void LoadNewAttackersData(string wave)
         {
             EntitySummoner.Instance.ClearQueue();

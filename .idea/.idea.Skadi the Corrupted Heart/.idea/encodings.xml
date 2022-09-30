@@ -3,7 +3,9 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Attackers/Skadi/Skadi.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/AnimatorManagerDefenderHealer.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/Extension/HealTracer.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/Extension/RangeAttackTracerDefender.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/_Amiya/Amiya.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/_Grani/GraniAm.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/_Indigo/Indigo.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Res/Scripts/Defenders/_Thorns/Thorns.cs" charset="GBK" />

@@ -72,6 +72,7 @@ namespace Res.Scripts.Attackers
             StunTimerUpdate();
             Rotate();
             ImprisonUpdate();
+            GetBounced();
         }
 
         public virtual void Initialize(NodeLoopManager node)
@@ -180,6 +181,8 @@ namespace Res.Scripts.Attackers
             return null;
         }
 
+        private Vector3 targetBouncePositon;
+
         /// <summary>
         /// 怪物被阻挡后被挤压到格子边缘的效果（大概
         /// </summary>
@@ -190,30 +193,37 @@ namespace Res.Scripts.Attackers
             isBlocked = true;
             defenderWhoBlockMe = defender;
 
-            Vector3 defenderPosition = defender.transform.position;
-            Vector3 myPosition = transform.position;
-            Vector3 targetPosition = new Vector3(0, 0, 0);
-            targetPosition.y = transform.position.y;
+            targetBouncePositon = defender.transform.position;
+            if (Mathf.Abs(transform.position.x - defender.transform.position.x) <= 0.2f)
+            {
+                if (transform.position.z < defender.transform.position.z)
+                {
+                    targetBouncePositon.z = defender.transform.position.z - 0.45f;
+                }
+                else
+                {
+                    targetBouncePositon.z = defender.transform.position.z + 0.45f;
+                }
+            }
+            else if (Mathf.Abs(transform.position.z - defender.transform.position.z) <= 0.2f)
+            {
+                if (transform.position.x < defender.transform.position.x)
+                {
+                    targetBouncePositon.x = defender.transform.position.x - 0.45f;
+                }
+                else
+                {
+                    targetBouncePositon.x = defender.transform.position.x + 0.45f;
+                }
+            }
+        }
 
-            if (defenderPosition.x - myPosition.x >= 0)
-            {
-                targetPosition.x = defenderPosition.x + 0.5f;
-            }
-            else
-            {
-                targetPosition.x = defenderPosition.x - 0.5f;
-            }
+        public void GetBounced()
+        {
+            if (!isBlocked)
+                return;
 
-            if (targetPosition.z - myPosition.z >= 0)
-            {
-                targetPosition.z = defenderPosition.z + 0.5f;
-            }
-            else
-            {
-                targetPosition.z = defenderPosition.z - 0.5f;
-            }
-
-            transform.position = Vector3.Slerp(myPosition, targetPosition, Time.deltaTime * 10f);
+            transform.position = Vector3.Slerp(transform.position, targetBouncePositon, Time.deltaTime * 20f);
         }
 
         public virtual void Unblocked()

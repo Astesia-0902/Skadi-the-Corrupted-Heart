@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using Res.Scripts.Game_Managers;
 using Unity.Mathematics;
 using UnityEngine;
@@ -13,6 +14,11 @@ namespace Res.Scripts.Attackers.Skadi
         public bool skillOn;
         public GameObject littleSeaborn;
         public GameObject skadiGreen;
+
+        [Header("Effects")] public GameObject skadiRedEffect;
+        public GameObject skadiGreenEffect;
+        private GameObject currentEffect;
+
         private static readonly int SkillOn = Animator.StringToHash("skillOn");
         private static readonly int Interacting = Animator.StringToHash("isInteracting");
 
@@ -41,6 +47,7 @@ namespace Res.Scripts.Attackers.Skadi
             if (wave == 2)
             {
                 SkillStart();
+                currentEffect = Instantiate(skadiRedEffect, transform);
             }
             else if (wave == 3)
             {
@@ -49,11 +56,13 @@ namespace Res.Scripts.Attackers.Skadi
             else if (wave == 4)
             {
                 SkillStart();
+                currentEffect = Instantiate(skadiGreenEffect, transform);
             }
         }
 
         public void Henshin()
         {
+            Destroy(currentEffect);
             Skadi green = Instantiate(skadiGreen, transform.position, quaternion.identity).GetComponent<Skadi>();
             GameManager.Instance.skadi = green;
             //TODO:变身的特效

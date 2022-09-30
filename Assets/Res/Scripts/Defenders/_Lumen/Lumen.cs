@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
-using Res.Scripts.Defenders;
+using Defenders;
 
-namespace Defenders._Lumen
+namespace Res.Scripts.Defenders._Lumen
 {
     public class Lumen : DefenderHealer
     {
@@ -20,12 +19,18 @@ namespace Defenders._Lumen
 
             currentHealTarget = GetPriorityHealTarget(GetAllHealTargetInRange());
 
+            if (currentHealTarget != null)
+                targetToHeal = currentHealTarget;
+
+            if (targetToHeal.maxHealth - targetToHeal.currentHealth < 0.1f)
+                targetToHeal = null;
+
             if (attackTimer > 0)
                 return;
 
-            if (currentHealTarget != null && CanAttack())
+            if (targetToHeal != null && CanAttack() && CheckInRange(targetToHeal.transform))
             {
-                if (!currentHealTarget.isDead)
+                if (!targetToHeal.isDead)
                 {
                     attackTimer = attackTimerStandard;
 
@@ -39,10 +44,12 @@ namespace Defenders._Lumen
 
                         skillPoint = 0;
                         animatorManager.PlayTargetAnimation("Skill_2", true);
+                        RefreshRotation();
                     }
                     else
                     {
                         animatorManager.PlayTargetAnimation("Attack", true);
+                        RefreshRotation();
                     }
                 }
                 else

@@ -1,4 +1,4 @@
-using Defenders.Extension;
+using Res.Scripts.Defenders.Extension;
 using UnityEngine;
 
 namespace Defenders._Lumen

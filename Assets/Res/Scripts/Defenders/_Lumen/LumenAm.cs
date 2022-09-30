@@ -1,12 +1,13 @@
-using Defenders.Extension;
+using Res.Scripts.Defenders._Lumen;
+using Res.Scripts.Defenders.Extension;
 using UnityEngine;
 
 namespace Defenders._Lumen
 {
     public class LumenAm : AnimatorManagerDefenderHealer
     {
-        [SerializeField] private GameObject skillTracerPrefeb;
-        [SerializeField] private GameObject skillHitPrefeb;
+        public GameObject skillHitPrefeb;
+        public GameObject skill2CastEffect;
         private HealTracer[] skillTracers;
         private Lumen lumen;
 
@@ -14,6 +15,11 @@ namespace Defenders._Lumen
         {
             base.Awake();
             lumen = GetComponentInParent<Lumen>();
+        }
+
+        public void Skill2Effect()
+        {
+            Instantiate(skill2CastEffect, defender.hitPoint);
         }
 
         public void HandleSkill2()
@@ -26,13 +32,12 @@ namespace Defenders._Lumen
                 {
                     continue;
                 }
-                skillTracers[i] = Instantiate(skillTracerPrefeb, healTracerPivot).GetComponent<HealTracer>();
-                skillTracers[i].healTarget = lumen.skillTargets[i];
-                skillTracers[i].healAmount = lumen.attackDamage * 2.2f;
-                skillTracers[i].healHitPrefeb = skillHitPrefeb;
+
+                lumen.skillTargets[i].GetHeal(lumen.attackDamage * 2.2f);
+                lumen.skillTargets[i].sanityRecoveryTimer = lumen.skillTargets[i].sanityRecoveryThreshold;
+                Instantiate(skillHitPrefeb, lumen.skillTargets[i].hitPoint);
             }
 
-            skillTracers = null;
             lumen.skillTargets = null;
         }
     }

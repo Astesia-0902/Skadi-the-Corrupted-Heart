@@ -34,8 +34,6 @@ namespace Res.Scripts.Defenders._Mon3tr
         protected override void AttackUpdate()
         {
             currentTarget = GetPriorityTarget(GetAllTargetsInRange());
-            if (CheckInRange(GameManager.Instance.skadi.transform))
-                currentTarget = GameManager.Instance.skadi;
 
             if (currentTarget != null)
                 targetToDeal = currentTarget;

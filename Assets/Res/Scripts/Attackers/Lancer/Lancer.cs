@@ -10,6 +10,7 @@ namespace Res.Scripts.Attackers.Lancer
     {
         protected override void Awake()
         {
+            base.Awake();
             targetRotation = Quaternion.Euler(71.6f, 0, 0);
             defaultRotation = Quaternion.Euler(71.6f, 0, 0);
         }

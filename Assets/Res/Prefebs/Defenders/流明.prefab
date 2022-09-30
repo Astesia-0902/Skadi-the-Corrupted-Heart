@@ -120,7 +120,7 @@ Transform:
   m_Children:
   - {fileID: 3311615752235479859}
   - {fileID: 8409052145287775253}
-  - {fileID: 3294590102060425983}
+  - {fileID: 1909646016166764013}
   - {fileID: 4573633088834291358}
   - {fileID: 6723505352902657894}
   m_Father: {fileID: 0}
@@ -834,8 +834,8 @@ MonoBehaviour:
   healTracerPrefeb: {fileID: 5927142214074823330, guid: cf3d96ee885a88941b7e4d5a8ad7ce1e, type: 3}
   healHitPrefeb: {fileID: 5502494464135064768, guid: eb2daba1aa1414346ad2a1980c90b8e6, type: 3}
   healTracerPivot: {fileID: 6723505352902657894}
-  skillTracerPrefeb: {fileID: 5927142214074823330, guid: e854db044af51e2429470113ad985170, type: 3}
   skillHitPrefeb: {fileID: 5502494464135064768, guid: eb2daba1aa1414346ad2a1980c90b8e6, type: 3}
+  skill2CastEffect: {fileID: 0}
 --- !u!1 &8399125864033980767
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ Transform:
   m_Father: {fileID: 8409052145287775253}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &193757431876774435
+--- !u!1001 &3857488706870121777
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -917,24 +917,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4390139343020506512, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
-      propertyPath: sanityBarPrefeb
-      value: 
-      objectReference: {fileID: 5635101115005066081, guid: 4f9a387ac2978ec4ca66b3bf031c8f7a, type: 3}
-    - target: {fileID: 4532834484172664368, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 4887488421977853344, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
       propertyPath: m_Name
-      value: UI Pivot
+      value: UI Pivot Defender
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
---- !u!4 &3294590102060425983 stripped
+--- !u!4 &1909646016166764013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3389206546093115612, guid: 0ae4f1a32fcad9546a5b7d8ddcb9fee0, type: 3}
-  m_PrefabInstance: {fileID: 193757431876774435}
+  m_PrefabInstance: {fileID: 3857488706870121777}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8265968729464873026
 PrefabInstance:

@@ -41,6 +41,7 @@ namespace Res.Scripts.Defenders
         public Action<float, float> onHealthChanged;
         public Action<float> onSanityChanged;
         
+        [Header("Rotation")]
         public Quaternion defaultRotation = Quaternion.Euler(71.6f, 0, 0);
         public Quaternion targetRotation = Quaternion.Euler(71.6f, 0, 0);
         
