@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using Res.Scripts.Attackers;
 using Res.Scripts.Defenders._Kalts;
-using Res.Scripts.Game_Managers;
 using UnityEngine;
 
 namespace Res.Scripts.Defenders._Mon3tr
@@ -18,11 +14,6 @@ namespace Res.Scripts.Defenders._Mon3tr
         {
             kalts = FindObjectOfType<Kalts>();
             kalts.FindMons3TR();
-        }
-
-        protected override void OnDisable()
-        {
-            base.OnDisable();
         }
 
         protected override void Update()
