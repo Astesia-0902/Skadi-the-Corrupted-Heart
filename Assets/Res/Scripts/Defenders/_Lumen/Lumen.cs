@@ -22,13 +22,10 @@ namespace Res.Scripts.Defenders._Lumen
             if (currentHealTarget != null)
                 targetToHeal = currentHealTarget;
 
-            if (targetToHeal.maxHealth - targetToHeal.currentHealth < 0.1f)
-                targetToHeal = null;
-
             if (attackTimer > 0)
                 return;
 
-            if (targetToHeal != null && CanAttack() && CheckInRange(targetToHeal.transform))
+            if (targetToHeal != null && CanAttack() && targetToHeal.maxHealth - targetToHeal.currentHealth > 0.1f && CheckInRange(targetToHeal.transform))
             {
                 if (!targetToHeal.isDead)
                 {
