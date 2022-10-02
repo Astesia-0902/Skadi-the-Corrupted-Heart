@@ -77,17 +77,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 6
-  maxHealth: 1000
+  maxHealth: 4000
   currentHealth: 0
-  attackDamage: 100
+  attackDamage: 650
   magicDamage: 0
   realDamage: 0
   sanityDamage: 20
   blockPara: 1
   weightLevel: 1
-  armor: 0
-  magicResistance: 0
-  standardMoveSpeed: 0.5
+  armor: 100
+  magicResistance: 50
+  standardMoveSpeed: 0.3
   moveSpeed: 0
   nodeIndex: 0
   spawnPoint: 0

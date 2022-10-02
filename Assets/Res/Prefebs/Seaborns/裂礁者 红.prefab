@@ -267,17 +267,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 16
-  maxHealth: 2000
+  maxHealth: 25000
   currentHealth: 0
-  attackDamage: 200
-  magicDamage: 200
+  attackDamage: 400
+  magicDamage: 400
   realDamage: 0
   sanityDamage: 0
   blockPara: 1
-  weightLevel: 3
-  armor: 100
-  magicResistance: 0.2
-  standardMoveSpeed: 0.7
+  weightLevel: 4
+  armor: 750
+  magicResistance: 40
+  standardMoveSpeed: 1.2
   moveSpeed: 0
   nodeIndex: 0
   spawnPoint: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
   isInteracting: 0
   isBlocked: 0
   hitPoint: {fileID: 0}
-  attackTimerStandard: 2
+  attackTimerStandard: 1.5
   currentAttackTarget: {fileID: 0}
   nodeLoopManager: {fileID: 0}
   uiForUnits: {fileID: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
   isBlownUp: 0
   isStunned: 0
   imprisoned: 0
-  range: 2
+  range: 1.5
 --- !u!1001 &3748961537904462103
 PrefabInstance:
   m_ObjectHideFlags: 0

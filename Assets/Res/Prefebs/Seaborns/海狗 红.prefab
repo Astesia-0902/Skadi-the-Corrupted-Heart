@@ -48,18 +48,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 9
-  maxHealth: 1000
+  maxHealth: 4000
   currentHealth: 0
-  attackDamage: 300
+  attackDamage: 340
   magicDamage: 0
   realDamage: 0
   sanityDamage: 0
   blockPara: 1
   weightLevel: 0
-  armor: 6
-  magicResistance: 0
-  standardMoveSpeed: 3
-  moveSpeed: 3
+  armor: 0
+  magicResistance: 20
+  standardMoveSpeed: 1.9
+  moveSpeed: 1.9
   nodeIndex: 0
   spawnPoint: 0
   isDead: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   isInteracting: 0
   isBlocked: 0
   hitPoint: {fileID: 0}
-  attackTimerStandard: 1
+  attackTimerStandard: 1.3
   currentAttackTarget: {fileID: 0}
   nodeLoopManager: {fileID: 0}
   uiForUnits: {fileID: 0}
