@@ -92,6 +92,11 @@ namespace Res.Scripts.Attackers
             transform.position = node.nodesPosition[0];
             moveSpeed = standardMoveSpeed;
             currentAttackTarget = null;
+
+            while (hitPoint.childCount > 0)
+            {
+                Destroy(hitPoint.GetChild(0).gameObject);
+            }
         }
 
         #region Take Damage
@@ -158,14 +163,7 @@ namespace Res.Scripts.Attackers
 
         protected void RefreshRotation()
         {
-            if (transform.position.x - currentAttackTarget.transform.position.x < 0)
-            {
-                targetRotation = Quaternion.Euler(-71.6f, 180, 0);
-            }
-            else
-            {
-                targetRotation = defaultRotation;
-            }
+            targetRotation = transform.position.x - currentAttackTarget.transform.position.x < 0 ? Quaternion.Euler(-71.6f, 180, 0) : defaultRotation;
         }
 
         /// <summary>
