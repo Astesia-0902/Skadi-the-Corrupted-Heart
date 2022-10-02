@@ -43,10 +43,17 @@ namespace Res.Scripts.Defenders._Kalts
             }
 
             base.SkillPointUpdate();
+            
+            if (skillPoint == maxSkillPoint)
+            {
+                CastSkill();
+            }
         }
 
         public void CastSkill()
         {
+            skillReady = false;
+            skillPoint = 0;
             mon3TR.CastSkill();
         }
     }

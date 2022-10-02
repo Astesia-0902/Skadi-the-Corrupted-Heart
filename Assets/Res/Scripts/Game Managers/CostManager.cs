@@ -36,7 +36,7 @@ namespace Res.Scripts.Game_Managers
 
         private void CostUpdate()
         {
-            if (!costFlag)
+            if (!costFlag || TimelineManager.Instance.lighthouseFlag)
                 return;
             
             costRecoveryTimer += Time.deltaTime;

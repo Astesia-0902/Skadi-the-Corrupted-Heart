@@ -93,9 +93,9 @@ namespace Res.Scripts.Attackers
             moveSpeed = standardMoveSpeed;
             currentAttackTarget = null;
 
-            while (hitPoint.childCount > 0)
+            for (int i = 0; i < hitPoint.childCount; i++)
             {
-                Destroy(hitPoint.GetChild(0).gameObject);
+                Destroy(hitPoint.GetChild(i).gameObject);
             }
         }
 
@@ -112,7 +112,7 @@ namespace Res.Scripts.Attackers
             currentHealth -= physicDamage - armor > 0.05f * physicDamage
                 ? physicDamage - armor
                 : 0.05f * physicDamage;
-            currentHealth -= magicDamage1 * (1 - magicResistance);
+            currentHealth -= magicDamage1 * (1 - magicResistance / 100);
             currentHealth -= realDamage1;
             onHealthChanged.Invoke(currentHealth, maxHealth);
 
@@ -163,7 +163,9 @@ namespace Res.Scripts.Attackers
 
         protected void RefreshRotation()
         {
-            targetRotation = transform.position.x - currentAttackTarget.transform.position.x < 0 ? Quaternion.Euler(-71.6f, 180, 0) : defaultRotation;
+            targetRotation = transform.position.x - currentAttackTarget.transform.position.x < 0
+                ? Quaternion.Euler(-71.6f, 180, 0)
+                : defaultRotation;
         }
 
         /// <summary>
@@ -196,22 +198,22 @@ namespace Res.Scripts.Attackers
             {
                 if (transform.position.z < defender.transform.position.z)
                 {
-                    targetBouncePositon.z = defender.transform.position.z - 0.45f;
+                    targetBouncePositon.z = defender.transform.position.z - 0.49f;
                 }
                 else
                 {
-                    targetBouncePositon.z = defender.transform.position.z + 0.45f;
+                    targetBouncePositon.z = defender.transform.position.z + 0.49f;
                 }
             }
             else if (Mathf.Abs(transform.position.z - defender.transform.position.z) <= 0.2f)
             {
                 if (transform.position.x < defender.transform.position.x)
                 {
-                    targetBouncePositon.x = defender.transform.position.x - 0.45f;
+                    targetBouncePositon.x = defender.transform.position.x - 0.49f;
                 }
                 else
                 {
-                    targetBouncePositon.x = defender.transform.position.x + 0.45f;
+                    targetBouncePositon.x = defender.transform.position.x + 0.49f;
                 }
             }
         }

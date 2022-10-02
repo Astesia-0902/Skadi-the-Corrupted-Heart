@@ -1,21 +1,23 @@
-using Attackers;
+using System.Collections.Generic;
+using Defenders;
 using Res.Scripts.Attackers;
 
-namespace Defenders._Blaze
+namespace Res.Scripts.Defenders._Blaze
 {
     public class BlazeAm : AnimatorManagerDefender
     {
         public override void OnAttack()
         {
-            foreach (Attacker attacker in defender.GetAllTargetsInRange())
+            List<Attacker> attackersInRange = defender.GetAllTargetsInRange();
+            for (int i = 0; i < attackersInRange.Count; i++)
             {
-                if (attacker != null && attacker.isActiveAndEnabled)
+                if (attackersInRange[i] != null && attackersInRange[i].isActiveAndEnabled)
                 {
                     if (hitFXPrefeb != null)
                     {
-                        Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
+                        Instantiate(hitFXPrefeb, attackersInRange[i].hitPoint);
                     }
-                    attacker.TakeDamage(defender.attackDamage, 0f, 0f);
+                    attackersInRange[i].TakeDamage(defender.attackDamage, 0f, 0f);
                 }
             }
             //TODO:攻击特效和敌人的受击特效

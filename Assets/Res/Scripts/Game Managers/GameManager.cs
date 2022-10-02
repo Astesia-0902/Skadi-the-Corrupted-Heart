@@ -22,6 +22,8 @@ namespace Res.Scripts.Game_Managers
 
         public List<Defender> defendersInGame;
 
+        public float gameSpeed;
+
         //当前场上斯卡蒂的引用
         public Skadi skadi;
 
@@ -29,6 +31,7 @@ namespace Res.Scripts.Game_Managers
         {
             base.Awake();
 
+            gameSpeed = 1f;
             defendersInGame = new List<Defender>();
         }
 
@@ -125,7 +128,7 @@ namespace Res.Scripts.Game_Managers
             attackerToDeploy = null;
             slotToReplace = null;
             nodeToDeploy = null;
-            Time.timeScale = 1f;
+            Time.timeScale = gameSpeed;
         }
 
         #endregion

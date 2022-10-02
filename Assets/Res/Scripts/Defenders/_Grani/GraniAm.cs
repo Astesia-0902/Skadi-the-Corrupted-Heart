@@ -50,5 +50,10 @@ namespace Res.Scripts.Defenders._Grani
                 }
             }
         }
+
+        public void RefreshRotation()
+        {
+            defender.RefreshRotation();
+        }
     }
 }

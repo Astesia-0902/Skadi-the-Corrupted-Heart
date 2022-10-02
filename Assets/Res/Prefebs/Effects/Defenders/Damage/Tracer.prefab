@@ -49,6 +49,7 @@ MonoBehaviour:
   magicDamage: 0
   realDamage: 0
   hitFXPrefeb: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &6363195750110655921
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +92,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 0.1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 1
   ringBufferLoopRange: {x: 0, y: 1}

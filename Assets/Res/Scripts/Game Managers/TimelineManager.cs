@@ -16,8 +16,6 @@ namespace Res.Scripts.Game_Managers
         private float timerAccumulator;
         private int timer;
         public int lighthouseTimer;
-        private float lighthouseActivateTimer = 10f;
-        private float lighthouseActivateTimerBuffer;
         public bool startFlag;
         public bool lighthouseFlag;
 

@@ -1,4 +1,5 @@
 using System;
+using Res.Scripts.Game_Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,14 +26,16 @@ namespace Res.Scripts.UI
 
         private void Button2XDown()
         {
-            Time.timeScale = 1f;
+            GameManager.Instance.gameSpeed = 1f;
+            Time.timeScale = GameManager.Instance.gameSpeed;
             button2X.gameObject.SetActive(false);
             button1X.gameObject.SetActive(true);
         }
 
         private void Button1XDown()
         {
-            Time.timeScale = 2f;
+            GameManager.Instance.gameSpeed = 2f;
+            Time.timeScale = GameManager.Instance.gameSpeed;
             button2X.gameObject.SetActive(true);
             button1X.gameObject.SetActive(false);
         }

@@ -45,7 +45,7 @@ namespace Defenders
             }
         }
 
-        protected override void RefreshRotation()
+        public override void RefreshRotation()
         {
             if (transform.position.x - targetToHeal.transform.position.x > 0)
             {

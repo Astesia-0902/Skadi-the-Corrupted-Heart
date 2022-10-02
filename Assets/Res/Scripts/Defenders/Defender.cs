@@ -111,7 +111,7 @@ namespace Res.Scripts.Defenders
             currentHealth -= physicDamage1 - armor > 0.05f * physicDamage1
                 ? physicDamage1 - armor
                 : 0.05f * physicDamage1;
-            currentHealth -= magicDamage1 * (1 - magicResistance);
+            currentHealth -= magicDamage1 * (1 - magicResistance / 100);
             currentHealth -= realDamage1;
 
             //更新血条UI
@@ -306,7 +306,7 @@ namespace Res.Scripts.Defenders
             }
         }
 
-        protected virtual void RefreshRotation()
+        public virtual void RefreshRotation()
         {
             targetRotation = transform.position.x - targetToDeal.transform.position.x > 0 ? Quaternion.Euler(-71.6f, 180, 0) : defaultRotation;
         }
@@ -367,7 +367,7 @@ namespace Res.Scripts.Defenders
             //优先攻击被阻挡的敌人
             if (attackersBlocked.Count > 0)
             {
-                return attackersBlocked.Concat(targetsInRange).ToList();
+                return attackersBlocked;
             }
 
             return targetsInRange;

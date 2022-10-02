@@ -116,6 +116,11 @@ namespace Res.Scripts.Defenders._Thorns
                 return;
 
             base.SkillPointOnAttack();
+            
+            if (skillPoint == maxSkillPoint)
+            {
+                CastSkill();
+            }
         }
 
         protected override void AttackUpdate()
