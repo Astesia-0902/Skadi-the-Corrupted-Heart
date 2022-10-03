@@ -15,4 +15,4 @@ MonoBehaviour:
   attackerPrefeb: {fileID: 2825228739459827267, guid: a1b42963128e587499e0467c364ee89a, type: 3}
   uiImage: {fileID: 21300000, guid: cb5e2febecdc94e46adb07ebc1380677, type: 3}
   attackerID: 7
-  cost: 10
+  cost: 60
