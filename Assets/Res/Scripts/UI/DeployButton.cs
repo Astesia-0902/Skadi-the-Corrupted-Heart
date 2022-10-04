@@ -47,11 +47,21 @@ namespace Res.Scripts.UI
     
         public void OnDrag(PointerEventData eventData)
         {
+            if (attackerSummonData == null)
+            {
+                return;
+            }
+            
             GameManager.Instance.DragDeploy();
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
+            if (attackerSummonData == null)
+            {
+                return;
+            }
+            
             GameManager.Instance.EndDrag();
         }
     }

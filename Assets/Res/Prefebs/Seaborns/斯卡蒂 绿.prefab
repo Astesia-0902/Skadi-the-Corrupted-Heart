@@ -325,7 +325,7 @@ MonoBehaviour:
   littleSeaborn: {fileID: 1871046459335040142, guid: f24bf825a649f9e48ba7e7c91469ada7, type: 3}
   skadiGreen: {fileID: 0}
   skadiRedEffect: {fileID: 0}
-  skadiGreenEffect: {fileID: 1733813864732549966, guid: 93e62c2f66a1a704a80e206a68da4576, type: 3}
+  skadiGreenEffect: {fileID: 872988955765500841, guid: e60ab3125c5693b41baf9207f5e01b12, type: 3}
 --- !u!1 &5766605189649513879
 GameObject:
   m_ObjectHideFlags: 0
