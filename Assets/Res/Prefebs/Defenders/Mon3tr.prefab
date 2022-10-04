@@ -219,6 +219,7 @@ MonoBehaviour:
   tracerPivot: {fileID: 0}
   rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
+  skillAttackEffect: {fileID: 8022121990671128114, guid: 9e1264ba6ab03574f9c8da90236d61e7, type: 3}
 --- !u!1 &3658080147231767642
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +335,7 @@ MonoBehaviour:
   additionalAttack: 130
   isSkillOn: 0
   skillTimer: 0
+  skillEffect: {fileID: 5402611074867002899, guid: 52733e1430c927941b47b3ad2f56cd28, type: 3}
 --- !u!1001 &3579629191066069828
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -585,11 +585,12 @@ MonoBehaviour:
   realDamageToDeal: 0
   targetToDeal: {fileID: 0}
   skillPoint: 0
-  maxSkillPoint: 25
+  maxSkillPoint: 5
   isAttackRecovering: 0
   skillReady: 0
   currentHealTarget: {fileID: 0}
   targetToHeal: {fileID: 0}
+  skillEffect: {fileID: 2605549183005311090, guid: 44058bae55463ae44b6e37a39f38b827, type: 3}
 --- !u!1 &6148647160854108128
 GameObject:
   m_ObjectHideFlags: 0

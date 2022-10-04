@@ -19,7 +19,7 @@ public class DestroyOnDeath : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Destroy(animator.gameObject);
+        Destroy(animator.transform.parent.gameObject);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

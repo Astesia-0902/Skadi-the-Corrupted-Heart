@@ -17,6 +17,9 @@ namespace Res.Scripts.Defenders._Elysium
 
         public void CastSkill()
         {
+            if (isSkillOn)
+                return;
+            
             isSkillOn = true;
             animatorManager.PlayTargetAnimation("Skill_1_Start", true);
         }

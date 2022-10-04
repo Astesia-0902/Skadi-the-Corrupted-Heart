@@ -79,7 +79,6 @@ namespace Res.Scripts.Game_Managers
 
                     timerAccumulator = 0f;
                 }
-                
             }
         }
 
@@ -105,7 +104,7 @@ namespace Res.Scripts.Game_Managers
         {
             startFlag = false;
         }
-        
+
         private void TimelineChecker()
         {
             if (defenderSummonQueue.Count != 0 && timer == defenderSummonQueue.Peek().deployTime)
@@ -120,16 +119,17 @@ namespace Res.Scripts.Game_Managers
                 Destroy(defenderToWithdraw);
             }
         }
-        
+
         public void ActivateLighthouse()
         {
             lighthouseTimer = 0;
             lighthouseFlag = true;
+            CostManager.Instance.DrainCost(CostManager.Instance.currentCost);
             foreach (Attacker attacker in EntitySummoner.Instance.attackersInGame)
             {
                 attacker.GetStunned(3600f);
             }
-            
+
             EntitySummoner.Instance.ClearQueue();
             foreach (DeployButton deployButton in deployButtons)
             {
@@ -142,7 +142,7 @@ namespace Res.Scripts.Game_Managers
         }
 
         private float damageTimer;
-        
+
         private void LighthouseUpdate()
         {
             if (!lighthouseFlag)
@@ -166,6 +166,7 @@ namespace Res.Scripts.Game_Managers
             GameManager.Instance.skadi.StunRecover();
             LoadNewAttackersData(waveCount.ToString());
             GameManager.Instance.skadi.WaveCheck(waveCount);
+            CostManager.Instance.AddCost(60 * (waveCount - 1));
         }
 
         private void LoadNewAttackersData(string wave)

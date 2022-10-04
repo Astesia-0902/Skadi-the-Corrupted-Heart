@@ -1,7 +1,7 @@
 using Res.Scripts.Defenders.Extension;
 using UnityEngine;
 
-namespace Defenders._Honeyberry
+namespace Res.Scripts.Defenders._Honeyberry
 {
     public class HoneyberrySkillTracer : HealTracer
     {
@@ -10,17 +10,21 @@ namespace Defenders._Honeyberry
         
         protected override void Update()
         {
-            if (healTarget == null || healTarget.isDead)
-                Destroy(gameObject);
-            
-            transform.position = Vector3.MoveTowards(transform.position, healTarget.hitPoint.position, 20f * Time.deltaTime);
-            if (Vector3.Distance(transform.position, healTarget.hitPoint.position) < 0.1f)
+            if (healTarget != null)
             {
-                if (!sanityRecovery)
+                target = healTarget.transform.position;
+            }
+
+            transform.position =
+                Vector3.MoveTowards(transform.position, target, 20f * Time.deltaTime);
+            if (Vector3.Distance(transform.position, target) < 0.1f)
+            {
+                if (!sanityRecovery && healTarget != null && !healTarget.isDead)
                 {
                     HealTarget();
                     sanityRecovery = true;
-                    Instantiate(healHitPrefeb, healTarget.hitPoint);
+                    if (healTarget != null)
+                        Instantiate(healHitPrefeb, healTarget.hitPoint);
                 }
 
                 SkillHeal();
@@ -32,10 +36,13 @@ namespace Defenders._Honeyberry
             if (!sanityRecovery)
                 return;
 
-            HealTargetSanity(healAmount * Time.deltaTime);
-            recoveryTimer += Time.deltaTime;
-            if(recoveryTimer>=2f)
-                Destroy(this.gameObject);
+            if (healTarget != null && !healTarget.isDead)
+            {
+                HealTargetSanity(healAmount * Time.deltaTime);
+                recoveryTimer += Time.deltaTime;
+                if (recoveryTimer >= 2f)
+                    Destroy(this.gameObject);
+            }
         }
 
         protected override void OnDestroy()

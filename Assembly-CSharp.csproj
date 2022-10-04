@@ -170,9 +170,11 @@
      <None Include="Assets\Res\Models\Seaborns\Unity_dshond2\enemy_1147_dshond.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbow_2\enemy_1149_dsbow_2.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsbow\enemy_1149_dsbow.atlas.txt" />
+     <None Include="Assets\UI\UI_Shader\UI.shader" />
      <None Include="Assets\effect\Lickba\Shader\sea.shader" />
      <None Include="Assets\Res\Models\Defenders\unity_elysm\char_401_elysm.atlas.txt" />
      <None Include="Assets\Res\Models\Defenders\unity_ghost\char_1023_ghost2.atlas.txt" />
+     <None Include="Assets\effect\Xxs\shader\Xxs_TY_1.1.shader" />
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\2_灯光慢闪\skeleton.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsexcu_2\enemy_1153_dsexcu.atlas.txt" />
      <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\1_灯光常亮\skeleton.atlas.txt" />

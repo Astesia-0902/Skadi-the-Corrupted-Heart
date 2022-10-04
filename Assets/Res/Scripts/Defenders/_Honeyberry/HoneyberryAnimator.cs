@@ -1,8 +1,8 @@
-using Res.Scripts.Defenders._Honeyberry;
+using Defenders;
 using Res.Scripts.Defenders.Extension;
 using UnityEngine;
 
-namespace Defenders._Honeyberry
+namespace Res.Scripts.Defenders._Honeyberry
 {
     public class HoneyberryAnimator : AnimatorManagerDefenderHealer
     {
@@ -43,6 +43,11 @@ namespace Defenders._Honeyberry
                 secondaryTracer.healHitPrefeb = healHitPrefeb;
                 secondaryTracer.isElementHeal = true;
             }
+        }
+
+        public void Die()
+        {
+            Destroy(defender.gameObject);
         }
     }
 }

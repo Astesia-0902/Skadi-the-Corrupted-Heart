@@ -49,7 +49,7 @@ namespace Defenders
         {
             if (transform.position.x - targetToHeal.transform.position.x > 0)
             {
-                targetRotation = Quaternion.Euler(71.6f, 180, 0);
+                targetRotation = Quaternion.Euler(-71.6f, 180, 0);
             }
             else
             {

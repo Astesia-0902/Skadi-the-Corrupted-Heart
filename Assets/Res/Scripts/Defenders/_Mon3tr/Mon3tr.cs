@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Res.Scripts.Defenders._Kalts;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ namespace Res.Scripts.Defenders._Mon3tr
         public float additionalAttack = 130;
         public bool isSkillOn;
         public float skillTimer;
+
+        private GameObject mySkillEffect;
+        public GameObject skillEffect;
 
         private void OnEnable()
         {
@@ -50,6 +54,13 @@ namespace Res.Scripts.Defenders._Mon3tr
 
         public void CastSkill()
         {
+            if (isSkillOn)
+                return;
+
+            if (mySkillEffect == null)
+            {
+                mySkillEffect = Instantiate(skillEffect, transform);
+            }
             isSkillOn = true;
             armor += armor;
             additionalAttack = 1.3f * attackDamage;
@@ -74,12 +85,22 @@ namespace Res.Scripts.Defenders._Mon3tr
 
         private void SkillEnd()
         {
+            if (mySkillEffect != null)
+            {
+                Destroy(mySkillEffect);
+            }
+            
             skillTimer = 0;
             attackDamage = realDamageToDeal;
             realDamageToDeal = 0;
             isSkillOn = false;
+            kalts.SkillEnd();
         }
 
-        
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            kalts.SkillEnd();
+        }
     }
 }

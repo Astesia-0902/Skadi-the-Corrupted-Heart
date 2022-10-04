@@ -89,18 +89,41 @@ namespace Res.Scripts.Game_Managers
                 }
             }
 
-            if (CostManager.Instance.DrainCost(attackerSummonData.cost))
+            //三号和四号是多次出兵点（将怪物在这两个点部署一次后，每波都会出）
+            if (nodeLoopManager.spawnPointID == 3 || nodeLoopManager.spawnPointID == 4)
             {
-                //三号和四号是多次出兵点（将怪物在这两个点部署一次后，每波都会出）
-                if (nodeLoopManager.spawnPointID == 3 || nodeLoopManager.spawnPointID == 4)
+                if (attackerList34.Count >= 6)
                 {
-                    if (attackerList34.Count >= 6)
+                    int compensateCost = attackerList34[0].cost - attackerSummonData.cost;
+                    if (compensateCost >= 0)
                     {
-                        attackerList34.Remove(attackerList34[1]);
-                        attackerList34.Remove(attackerList34[0]);
-                        nodeList34.Remove(nodeList34[1]);
-                        nodeList34.Remove(nodeList34[0]);
+                        CostManager.Instance.AddCost(compensateCost);
                     }
+                    else
+                    {
+                        if (!CostManager.Instance.DrainCost(-compensateCost))
+                        {
+                            return;
+                        }
+                    }
+
+                    attackerList34.Remove(attackerList34[1]);
+                    attackerList34.Remove(attackerList34[0]);
+                    nodeList34.Remove(nodeList34[1]);
+                    nodeList34.Remove(nodeList34[0]);
+                    
+                    attackerList34.Add(attackerSummonData);
+                    nodeList34.Add(nodeLoopManagers[0]);
+                    attackerList34.Add(attackerSummonData);
+                    nodeList34.Add(nodeLoopManagers[1]);
+
+                    queueUpdater34.UpdateQueueManagers();
+                    return;
+                }
+                else
+                {
+                    if (!CostManager.Instance.DrainCost(attackerSummonData.cost))
+                        return;
 
                     attackerList34.Add(attackerSummonData);
                     nodeList34.Add(nodeLoopManagers[0]);
@@ -110,17 +133,42 @@ namespace Res.Scripts.Game_Managers
                     queueUpdater34.UpdateQueueManagers();
                     return;
                 }
+            }
 
-                if (attackerList2.Count >= 3)
+            if (attackerList2.Count >= 3)
+            {
+                int compensateCost = attackerList2[0].cost - attackerSummonData.cost;
+                if (compensateCost >= 0)
                 {
-                    attackerList2.Remove(attackerList2[0]);
-                    nodeList2.Remove(nodeList2[0]);
+                    CostManager.Instance.AddCost(compensateCost);
+                }
+                else
+                {
+                    if (!CostManager.Instance.DrainCost(-compensateCost))
+                    {
+                        return;
+                    }
                 }
 
+                attackerList2.Remove(attackerList2[0]);
+                nodeList2.Remove(nodeList2[0]);
+                
                 attackerList2.Add(attackerSummonData);
                 nodeList2.Add(nodeLoopManager);
                 queueUpdater2.UpdateQueueManagers();
             }
+            else
+            {
+                if (!CostManager.Instance.DrainCost(attackerSummonData.cost))
+                    return;
+                
+                attackerList2.Add(attackerSummonData);
+                nodeList2.Add(nodeLoopManager);
+                queueUpdater2.UpdateQueueManagers();
+            }
+
+            
+
             //TODO:更新UI
         }
 
@@ -130,6 +178,7 @@ namespace Res.Scripts.Game_Managers
             {
                 attackerList34[queueIndex] = attackerSummonData;
                 attackerList34[queueIndex + 1] = attackerSummonData;
+
                 nodeList34[queueIndex] = nodeLoopManagers[0];
                 nodeList34[queueIndex + 1] = nodeLoopManagers[1];
                 return true;

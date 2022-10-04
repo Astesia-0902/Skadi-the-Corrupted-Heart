@@ -51,9 +51,9 @@ namespace Res.Scripts.Game_Managers
         public void AddCost(int amount)
         {
             currentCost += amount;
-            if (currentCost > 199)
+            if (currentCost > 999)
             {
-                currentCost = 199;
+                currentCost = 999;
             }
             onCostChange.Invoke();
         }

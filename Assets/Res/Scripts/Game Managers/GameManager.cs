@@ -30,7 +30,6 @@ namespace Res.Scripts.Game_Managers
         protected override void Awake()
         {
             base.Awake();
-
             gameSpeed = 1f;
             defendersInGame = new List<Defender>();
         }
@@ -113,7 +112,6 @@ namespace Res.Scripts.Game_Managers
         {
             if (lockedOnFlag)
             {
-                Debug.Log(attackerToDeploy, nodeToDeploy);
                 EntitySummoner.Instance.AddAttacker(attackerToDeploy, nodeToDeploy);
                 lockedOnFlag = false;
             }

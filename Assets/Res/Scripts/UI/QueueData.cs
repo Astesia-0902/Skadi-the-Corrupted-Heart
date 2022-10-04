@@ -8,6 +8,7 @@ namespace Res.Scripts.UI
     public class QueueData : MonoBehaviour
     {
         private GameObject currentModel;
+        private int myCost;
         public int mySeabornID;
         public int myQueueID;
         public int is34Or2;
@@ -17,6 +18,22 @@ namespace Res.Scripts.UI
         {
             if (attackerSummonData.attackerID == mySeabornID)
                 return;
+
+            if (myCost != 0)
+            {
+                int compensateCost = myCost - attackerSummonData.cost;
+                if (compensateCost >= 0)
+                {
+                    CostManager.Instance.AddCost(compensateCost);
+                }
+                else
+                {
+                    if (!CostManager.Instance.DrainCost(-compensateCost))
+                    {
+                        return;
+                    }
+                }
+            }
 
             bool res = false;
             if (is34Or2 == 34)
@@ -33,9 +50,12 @@ namespace Res.Scripts.UI
                 return;
 
             if (currentModel != null)
+            {
                 Destroy(currentModel);
+            }
 
             mySeabornID = attackerSummonData.attackerID;
+            myCost = attackerSummonData.cost;
             currentModel = Instantiate(GameManager.Instance.unitsToSelect[mySeabornID], transform);
             currentModel.transform.position = transform.position;
             currentModel.SetActive(true);

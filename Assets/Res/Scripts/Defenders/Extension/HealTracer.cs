@@ -11,24 +11,29 @@ namespace Res.Scripts.Defenders.Extension
         public Defender healTarget;
         public float healAmount;
         public GameObject healHitPrefeb;
+        protected Vector3 target;
 
         /// <summary>
         /// 持续向治疗目标前进，并且检测是否已经到达目标
         /// </summary>
         protected virtual void Update()
         {
-            if (healTarget == null)
+            if (healTarget != null && !healTarget.isDead)
             {
-                Destroy(this.gameObject);
+                target = healTarget.transform.position;
             }
 
             transform.position =
-                Vector3.MoveTowards(transform.position, healTarget.hitPoint.position, 20f * Time.deltaTime);
-            if (Vector3.Distance(transform.position, healTarget.hitPoint.position) < 0.01f)
+                Vector3.MoveTowards(transform.position, target, 20f * Time.deltaTime);
+            
+            if (Vector3.Distance(transform.position, target) < 0.01f)
             {
-                HealTarget();
-                if (isElementHeal)
-                    HealTargetSanity(healAmount);
+                if (healTarget != null && !healTarget.isDead)
+                {
+                    HealTarget();
+                    if (isElementHeal)
+                        HealTargetSanity(healAmount);
+                }
 
                 Destroy(this.gameObject);
             }
@@ -42,12 +47,14 @@ namespace Res.Scripts.Defenders.Extension
 
         public void HealTarget()
         {
-            healTarget.GetHeal(healAmount);
+            if (healTarget != null && !healTarget.isDead)
+                healTarget.GetHeal(healAmount);
         }
 
         public void HealTargetSanity(float value)
         {
-            healTarget.TakeNeuralHeal(value * 0.5f);
+            if (healTarget != null && !healTarget.isDead)
+                healTarget.TakeNeuralHeal(value * 0.5f);
         }
     }
 }
