@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Res.Scripts.Game_Managers;
 using UnityEngine;
+using UnityEngine.UI;
 using Tool_Scripts;
 
 public class TopBarUI : Singleton<TopBarUI>
@@ -10,6 +11,7 @@ public class TopBarUI : Singleton<TopBarUI>
     private RectTransform lighthouseMask;
     private RectTransform seabornIcon;
     public GameObject SkeletonAnimation;
+    private Scrollbar seabornHP;
     private float originalWidth;
     private float originalHeight;
 
@@ -21,6 +23,7 @@ public class TopBarUI : Singleton<TopBarUI>
     {
         lighthouseMask = transform.Find("lighthouseMask").GetComponent<RectTransform>();
         seabornIcon = transform.Find("seabornIcon").GetComponent<RectTransform>();
+        seabornHP = transform.Find("SeabornHP").GetComponent<Scrollbar>();
         originalWidth = lighthouseMask.rect.width;
         originalHeight = lighthouseMask.rect.height;
     }
@@ -49,8 +52,6 @@ public class TopBarUI : Singleton<TopBarUI>
         if (0 == health)
         {
             health = maxHealth;
-
-            Debug.Log("当前血量为0，刷新至满血" + health);
         }
 
         if (health > currentHealth)
@@ -61,12 +62,11 @@ public class TopBarUI : Singleton<TopBarUI>
             }
 
             float difHealth = health - currentHealth;
-            
-            Debug.Log("health:" + health + "--currentHealth:" + currentHealth);
 
             health = currentHealth;
 
-            seabornIcon.anchoredPosition3D = new Vector3(seabornIcon.anchoredPosition3D.x + difHealth / maxHealth * 70, seabornIcon.anchoredPosition3D.y, seabornIcon.anchoredPosition3D.z);
+            seabornHP.size -= difHealth / (maxHealth * 4);
+            Debug.Log(difHealth / (maxHealth * 4));
         }
     }
 
