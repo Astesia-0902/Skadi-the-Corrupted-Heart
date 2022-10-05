@@ -53,14 +53,14 @@ Shader "Unlit/UI"
                    fixed4 frag(v2f i):SV_TARGET{
                        fixed4 color;
                        fixed4 tex = tex2D( _MainTex,i.uv.xy);//一般在片段采样
-                 
+                      
                        fixed4 dissolvetex = tex2D(_DissolveTex,i.uv.zw);
                          clip(dissolvetex.b-_Clip);//对片段的舍弃只能在片段着色器
                        fixed dissolveValue = saturate((dissolvetex.b-_Clip)/(_Clip+0.1-_Clip));//等于smooth
                        fixed4 ramptex = tex1D(_RampTex,dissolveValue);
-                      
+                      color =tex-ramptex*_Color;
                      
-                       color = tex*ramptex +_Color;
+                      // color = tex*ramptex +_Color;
                
                        return color;
                    }
