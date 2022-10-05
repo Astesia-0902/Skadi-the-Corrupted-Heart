@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1786a48cb6d7bda4bb613b1119ff63db, type: 3}
-  m_Name: "\u6781\u5883"
+  m_Name: "\u7EA2"
   m_EditorClassIdentifier: 
-  defenderPrefeb: {fileID: 5580325980644357749, guid: b78b984df92e8734bb8f555bd7b9eedb, type: 3}
-  position: {x: -3.92, y: 0.6158213, z: -1.7488809}
-  deployTime: 2
+  defenderPrefeb: {fileID: 23649184452841702, guid: 4e3bb89df52098e48843dd2b479520f4, type: 3}
+  position: {x: 0.9, y: 0.297435, z: -2.6}
+  deployTime: 112

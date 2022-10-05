@@ -81,7 +81,7 @@ namespace Res.Scripts.Attackers.Skadi
             //斯卡蒂被眩晕时会召唤出小海嗣
             if (!isStunned)
             {
-                Instantiate(littleSeaborn, new Vector3(4, 0.5003526f, -1.85f), Quaternion.identity);
+                Instantiate(littleSeaborn, new Vector3(3.86f, 0.5003526f, -1.67f), Quaternion.identity);
                 animatorManager.PlayTargetAnimation("Stun_Begin", true);
             }
             isStunned = true;

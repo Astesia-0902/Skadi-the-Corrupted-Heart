@@ -40,6 +40,8 @@ namespace Res.Scripts.UI
             }
         }
 
+        
+
         public void OnPointerDown(PointerEventData eventData)
         {
             GameManager.Instance.BeginDeploy(attackerSummonData);

@@ -537,16 +537,6 @@ namespace Res.Scripts.Defenders
                 skillReady = false;
             }
         }
-        
-        protected virtual void DestroySkillEffect()
-        {
-            if (skillEffectPointer != null)
-            {
-                Destroy(skillEffectPointer);
-                skillEffectPointer = null;
-            }
-        }
-
         #endregion
 
         #region Combat Status

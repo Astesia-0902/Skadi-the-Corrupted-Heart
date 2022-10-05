@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1786a48cb6d7bda4bb613b1119ff63db, type: 3}
-  m_Name: "\u6781\u5883"
+  m_Script: {fileID: 11500000, guid: 8b891a3b732270c418f939a4fdb5f8f6, type: 3}
+  m_Name: "\u7EA2"
   m_EditorClassIdentifier: 
-  defenderPrefeb: {fileID: 5580325980644357749, guid: b78b984df92e8734bb8f555bd7b9eedb, type: 3}
-  position: {x: -3.92, y: 0.6158213, z: -1.7488809}
-  deployTime: 2
+  defenderToWithdraw: "\u7EA2(Clone)"
+  withdrawTime: 118

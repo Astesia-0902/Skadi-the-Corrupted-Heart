@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "\u68D8\u523A"
   m_EditorClassIdentifier: 
   defenderPrefeb: {fileID: 569057862715926592, guid: afae169a110cabe468ecb13198c23a72, type: 3}
-  position: {x: -4, y: 0.50035286, z: -3.8}
+  position: {x: -4.0630436, y: 0.33356524, z: -3.5436049}
   deployTime: 18

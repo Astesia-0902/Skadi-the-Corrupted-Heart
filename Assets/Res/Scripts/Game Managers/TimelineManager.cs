@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.Principal;
 using Res.Scripts.Attackers;
 using Res.Scripts.Defenders;
 using Res.Scripts.Defenders._Elysium;
@@ -20,10 +22,13 @@ namespace Res.Scripts.Game_Managers
         public bool lighthouseFlag;
 
         public DeployButton[] deployButtons;
+        public Material[] material;
 
         private Queue<DefenderSummonData> defenderSummonQueue;
         private Queue<DefenderWithdrawData> defenderWithdrawQueue;
 
+        public Transform sunLight;
+        public Vector3 sunLightRotation;
 
         protected override void Awake()
         {
@@ -34,6 +39,10 @@ namespace Res.Scripts.Game_Managers
 
         private void Start()
         {
+            sunLightRotation = new Vector3(250f, -17.56f, 243f);
+            material = Resources.LoadAll<Material>("Mat");
+            dissolveValue = 0f;
+            material[0].SetFloat(Clip, dissolveValue);
             DefenderSummonData[] allDefenderSummonData = Resources.LoadAll<DefenderSummonData>("Defenders");
             DefenderWithdrawData[] allDefenderWithdrawData =
                 Resources.LoadAll<DefenderWithdrawData>("Defenders Withdraw");
@@ -57,20 +66,24 @@ namespace Res.Scripts.Game_Managers
 
         private void Update()
         {
+            sunLightRotation.x -= 0.4f * Time.deltaTime;
+            sunLight.rotation = Quaternion.Euler(sunLightRotation);
             LighthouseUpdate();
 
             if (startFlag)
             {
-                if (!lighthouseFlag)
-                {
-                    timerAccumulator += Time.deltaTime;
-                }
-
+                timerAccumulator += Time.deltaTime;
+                
                 if (timerAccumulator >= 1f)
                 {
                     timer++;
                     TimelineChecker();
-                    lighthouseTimer++;
+
+                    if (!lighthouseFlag)
+                    {
+                        lighthouseTimer++;
+                    }
+
                     if (lighthouseTimer >= 60)
                     {
                         ActivateLighthouse();
@@ -131,10 +144,7 @@ namespace Res.Scripts.Game_Managers
             }
 
             EntitySummoner.Instance.ClearQueue();
-            foreach (DeployButton deployButton in deployButtons)
-            {
-                deployButton.SetEmpty();
-            }
+            StartCoroutine(EmptyAttackerSummonDataIE());
 
             //眩晕斯卡蒂
             GameManager.Instance.skadi.GetStunned(9999f);
@@ -169,22 +179,49 @@ namespace Res.Scripts.Game_Managers
             CostManager.Instance.AddCost(60 * (waveCount - 1));
         }
 
+        private float dissolveValue;
+        private static readonly int Clip = Shader.PropertyToID("_Clip");
+
         private void LoadNewAttackersData(string wave)
         {
             EntitySummoner.Instance.ClearQueue();
             AttackerSummonData[] attackerSummonDatas =
                 Resources.LoadAll<AttackerSummonData>("Attacker Summon Data/" + wave);
 
+            StartCoroutine(LoadAttackerSummonDataIE(attackerSummonDatas));
+        }
+
+        private IEnumerator EmptyAttackerSummonDataIE()
+        {
+            while (dissolveValue < 1f)
+            {
+                dissolveValue += Time.deltaTime;
+                material[0].SetFloat(Clip, dissolveValue);
+                yield return null;
+            }
+
             foreach (DeployButton deployButton in deployButtons)
             {
                 deployButton.SetEmpty();
             }
+        }
 
+        private IEnumerator LoadAttackerSummonDataIE(AttackerSummonData[] attackerSummonDatas)
+        {
             for (int i = 0; i < attackerSummonDatas.Length; i++)
             {
                 deployButtons[i].LoadNewAttackerData(attackerSummonDatas[i]);
             }
+
+            while (dissolveValue > 0f)
+            {
+                dissolveValue -= Time.deltaTime;
+                material[0].SetFloat(Clip, dissolveValue);
+                yield return null;
+            }
         }
+        
+        
     }
 
     public class DefenderSummonDataComp : IComparer<DefenderSummonData>

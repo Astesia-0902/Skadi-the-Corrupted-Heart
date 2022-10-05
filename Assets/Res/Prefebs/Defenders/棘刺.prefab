@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tracerFXPrefeb: {fileID: 5196714609715901704, guid: d2a413a481fb4174396940b92078ed93, type: 3}
   hitFXPrefeb: {fileID: 6555208936675239666, guid: 8dc52b9c941b3d34a8924bae3d73e98a, type: 3}
-  tracerPivot: {fileID: 0}
+  tracerPivot: {fileID: 2144252039036098209}
   rangeAttackTracerDefender: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &569057862715926592
@@ -191,6 +191,7 @@ Transform:
   - {fileID: 1382922178609544106}
   - {fileID: 1897284410991804295}
   - {fileID: 1831606977335460464}
+  - {fileID: 2144252039036098209}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -239,6 +240,7 @@ MonoBehaviour:
   maxSkillPoint: 15
   isAttackRecovering: 1
   skillReady: 0
+  skillEffect: {fileID: 8943299550639479190, guid: d5338c0a8d748e541b77566dfe0e4427, type: 3}
 --- !u!1 &1190534153729312298
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +300,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1382922178609544106}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2989106368978031129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144252039036098209}
+  m_Layer: 0
+  m_Name: Tracer Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2144252039036098209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989106368978031129}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1, y: 0.313, z: 0.5189909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 569057862715926595}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3053902093156006205
 GameObject:

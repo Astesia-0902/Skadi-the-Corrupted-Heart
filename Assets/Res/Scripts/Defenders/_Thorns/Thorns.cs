@@ -16,6 +16,9 @@ namespace Res.Scripts.Defenders._Thorns
         private float attackStandard;
         private float attackTimeBuffer;
 
+        private GameObject mySkillEffect;
+        public GameObject skillEffect;
+
         protected override void Start()
         {
             base.Start();
@@ -51,13 +54,15 @@ namespace Res.Scripts.Defenders._Thorns
             idleTimerHelper = 0;
         }
 
-        public void CastSkill()
+        private void CastSkill()
         {
             if (!skillReady || skillCount >= 2)
                 return;
 
             skillReady = false;
             skillPoint = 0;
+
+            mySkillEffect = Instantiate(skillEffect, transform);
 
             for (int i = 8; i < rangeParent.childCount; i++)
             {
@@ -98,6 +103,11 @@ namespace Res.Scripts.Defenders._Thorns
             if (skillCount >= 2)
                 return;
 
+            if (mySkillEffect != null)
+            {
+                Destroy(mySkillEffect);
+            }
+            
             for (int i = 8; i < rangeParent.childCount; i++)
             {
                 rangeParent.GetChild(i).gameObject.SetActive(false);
@@ -106,8 +116,7 @@ namespace Res.Scripts.Defenders._Thorns
             isSkillOn = false;
             attackDamage = attackStandard;
             attackTimerStandard = attackTimeBuffer;
-
-            DestroySkillEffect();
+            
         }
 
         public override void SkillPointOnAttack()

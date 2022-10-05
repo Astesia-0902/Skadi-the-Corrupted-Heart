@@ -40,7 +40,6 @@ namespace Res.Scripts.Defenders._Amiya
                 isSkillOn = false;
                 skillTimer = 0;
                 magicDamage /= 1.8f;
-                DestroySkillEffect();
             }
         }
 
