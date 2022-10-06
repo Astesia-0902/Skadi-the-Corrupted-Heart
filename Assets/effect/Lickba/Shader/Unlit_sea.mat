@@ -44,7 +44,7 @@ Material:
     - _FoamRange: 5
     - _Smoothness: 3.94
     - _Specular: -0.02
-    - _Speed: 0
+    - _Speed: 0.5
     m_Colors:
     - _Color01: {r: 0.039159823, g: 0.105233155, b: 0.11320752, a: 1}
     - _Color02: {r: 0, g: 1, b: 1, a: 1}
