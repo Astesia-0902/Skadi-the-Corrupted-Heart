@@ -10,6 +10,7 @@ namespace Res.Scripts.Defenders._Thorns
             if (defender.targetToDeal == null || defender.targetToDeal.isDead)
                 return;
             
+            defender.PlayRandomSFX(defender.attackSFX);
             rangeAttackTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracerDefender>();
             if (rangeAttackTracerDefender != null)
             {

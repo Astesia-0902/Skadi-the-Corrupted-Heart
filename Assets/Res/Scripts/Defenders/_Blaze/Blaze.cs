@@ -40,10 +40,12 @@ namespace Res.Scripts.Defenders._Blaze
                     attackTimer = attackTimerStandard;
                     if (Mathf.Abs(targetToDeal.transform.position.z - transform.position.z) > 0.2f)
                     {
+                        PlayRandomSFX(attackSFX);
                         animatorManager.PlayTargetAnimation(chainSawExtensionOn ? "Skill_1_Down" : "Attack_Down", true);
                     }
                     else
                     {
+                        PlayRandomSFX(attackSFX);
                         animatorManager.PlayTargetAnimation(chainSawExtensionOn ? "Skill_1" : "Attack", true);
                     }
                 }

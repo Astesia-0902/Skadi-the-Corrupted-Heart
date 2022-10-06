@@ -22,7 +22,7 @@ namespace Defenders
 
         public override void OnAttack()
         {
-            //????????????????
+            defender.PlayRandomSFX(defender.attackSFX);
             healTracer = Instantiate(healTracerPrefeb, healTracerPivot).GetComponent<HealTracer>();
             healTracer.healTarget = defenderHealer.targetToHeal;
             healTracer.healAmount = defenderHealer.attackDamage;

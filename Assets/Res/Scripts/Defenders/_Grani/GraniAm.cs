@@ -35,6 +35,7 @@ namespace Res.Scripts.Defenders._Grani
                         {
                             Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
                         }
+                        defender.PlayRandomSFX(defender.attackSFX);
                         attacker.TakeDamage(defender.attackDamage, 0f, 0f);
                         Instantiate(hitFXPrefeb, attacker.hitPoint);
                     }
@@ -42,6 +43,7 @@ namespace Res.Scripts.Defenders._Grani
             }
             else
             {
+                defender.PlayRandomSFX(defender.attackSFX);
                 defender.targetToDeal.TakeDamage(defender.attackDamage, defender.magicDamage,
                     defender.realDamageToDeal);
                 if (hitFXPrefeb != null)

@@ -58,6 +58,7 @@ namespace Defenders
             {
                 if (defender.isRange)
                 {
+                    defender.PlayRandomSFX(defender.attackSFX);
                     rangeAttackTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracerDefender>();
                     if (rangeAttackTracerDefender != null)
                     {
@@ -75,6 +76,7 @@ namespace Defenders
                         Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
                     }
 
+                    defender.PlayRandomSFX(defender.attackSFX);
                     defender.targetToDeal.TakeDamage(defender.attackDamage, defender.magicDamage,
                         defender.realDamageToDeal);
                 }

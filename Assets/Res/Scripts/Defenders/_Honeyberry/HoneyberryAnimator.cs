@@ -20,6 +20,7 @@ namespace Res.Scripts.Defenders._Honeyberry
 
         public override void OnAttack()
         {
+            defender.PlayRandomSFX(defender.attackSFX);
             healTracer = Instantiate(healTracerPrefeb, healTracerPivot).GetComponent<HealTracer>();
             healTracer.healTarget = defenderHealer.targetToHeal;
             healTracer.healAmount = defenderHealer.attackDamage;
@@ -29,6 +30,7 @@ namespace Res.Scripts.Defenders._Honeyberry
 
         public void OnSkill()
         {
+            defender.PlayRandomSFX(defender.attackSFX);
             healTracer = Instantiate(skillPrefeb, healTracerPivot).GetComponent<HealTracer>();
             healTracer.healTarget = defenderHealer.targetToHeal;
             healTracer.healAmount = defenderHealer.attackDamage;

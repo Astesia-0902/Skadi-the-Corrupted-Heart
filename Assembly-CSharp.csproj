@@ -155,6 +155,7 @@
      <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
      <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
+     <None Include="Assets\Res\红蒂音效\readme.txt" />
      <None Include="Assets\Res\Spine\version.txt" />
      <None Include="Assets\Res\Models\Defenders\Unity_kalts\char_003_kalts.atlas.txt" />
      <None Include="Assets\Res\Models\Seaborns\unity_skadi23\char_1012_skadi2_boc_4.atlas.txt" />

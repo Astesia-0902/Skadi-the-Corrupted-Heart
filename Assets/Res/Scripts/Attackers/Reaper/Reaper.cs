@@ -11,6 +11,7 @@ namespace Res.Scripts.Attackers.Reaper
         private void OnEnable()
         {
             standardMoveSpeed = 0.3f;
+            moveSpeed = standardMoveSpeed;
             isTriggered = false;
         }
 
@@ -31,6 +32,7 @@ namespace Res.Scripts.Attackers.Reaper
                 isTriggered = true;
                 animatorManager.PlayTargetAnimation("Skill_Begin", true);
                 standardMoveSpeed = 1.5f;
+                moveSpeed = standardMoveSpeed;
             }
         }
 

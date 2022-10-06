@@ -7,6 +7,7 @@ using Res.Scripts.Attackers;
 using Res.Scripts.Game_Managers;
 using UI;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Res.Scripts.Defenders
 {
@@ -48,6 +49,8 @@ namespace Res.Scripts.Defenders
         public GameObject skillEffectPrefeb1;
         public GameObject skillEffectPrefeb2;
         protected GameObject skillEffectPointer;
+
+        public AudioClip[] attackSFX; 
 
         protected virtual void Awake()
         {
@@ -561,6 +564,18 @@ namespace Res.Scripts.Defenders
 
         #endregion
 
+        public void PlayRandomSFX(AudioClip[] audioClips)
+        {
+            if (audioClips.Length == 0)
+            {
+                return;
+            }
+            
+            int size = audioClips.Length;
+            int index = Random.Range(0, size - 1);
+            AudioManager.Instance.PlayTargetClip(audioClips[index]);
+        }
+        
         private void OnDestroy()
         {
             uiForUnits.DestroyBar();

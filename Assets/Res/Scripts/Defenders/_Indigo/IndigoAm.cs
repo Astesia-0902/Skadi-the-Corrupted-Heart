@@ -21,6 +21,7 @@ namespace Res.Scripts.Defenders._Indigo
                 return;
             }
             
+            defender.PlayRandomSFX(defender.attackSFX);
             indigoTracer = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<IndigoTracer>();
             if (indigoTracer != null)
             {

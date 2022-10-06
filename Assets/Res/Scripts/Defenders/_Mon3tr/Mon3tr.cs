@@ -42,6 +42,7 @@ namespace Res.Scripts.Defenders._Mon3tr
                 {
                     attackTimer = attackTimerStandard;
                     float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
+                    PlayRandomSFX(attackSFX);
                     animatorManager.PlayTargetAnimation(isSkillOn ? "Skill_2" : "Attack", true, attackAnimationSpeed);
                     RefreshRotation();
                 }

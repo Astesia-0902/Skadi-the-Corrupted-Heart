@@ -40,11 +40,13 @@ namespace Res.Scripts.Defenders._Lumen
                         }
 
                         skillPoint = 0;
+                        PlayRandomSFX(attackSFX);
                         animatorManager.PlayTargetAnimation("Skill_2", true);
                         RefreshRotation();
                     }
                     else
                     {
+                        PlayRandomSFX(attackSFX);
                         animatorManager.PlayTargetAnimation("Attack", true);
                         RefreshRotation();
                     }

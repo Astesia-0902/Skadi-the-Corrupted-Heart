@@ -25,7 +25,7 @@ namespace Defenders._BlueP
                     {
                         defender.skillReady = false;
                         defender.skillPoint = 0;
-                        
+                        defender.PlayRandomSFX(defender.attackSFX);
                         rangeAttackTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracerDefender>();
                         if (rangeAttackTracerDefender != null)
                         {
@@ -53,6 +53,7 @@ namespace Defenders._BlueP
                         return;
                     }
                     
+                    defender.PlayRandomSFX(defender.attackSFX);
                     rangeAttackTracerDefender = Instantiate(tracerFXPrefeb, tracerPivot).GetComponent<RangeAttackTracerDefender>();
                     if (rangeAttackTracerDefender != null)
                     {
