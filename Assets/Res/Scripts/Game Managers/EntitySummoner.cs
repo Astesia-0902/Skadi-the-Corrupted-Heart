@@ -276,6 +276,8 @@ namespace Res.Scripts.Game_Managers
         {
             AddAttackerData(attackerSummonData);
             SpawnAttacker(attackerSummonData.attackerID, node);
+            int index = TimelineManager.Instance.waveCount == 1 || TimelineManager.Instance.waveCount == 2 ? 0 : 1;
+            node.PlaySpwanEffect(index);
         }
 
         /// <summary>

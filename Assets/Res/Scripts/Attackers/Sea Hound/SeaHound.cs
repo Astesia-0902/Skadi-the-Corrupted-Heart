@@ -1,7 +1,4 @@
-using Res.Scripts.Attackers;
-using UnityEngine.PlayerLoop;
-
-namespace Attackers
+namespace Res.Scripts.Attackers.Sea_Hound
 {
     public class SeaHound : Attacker
     {

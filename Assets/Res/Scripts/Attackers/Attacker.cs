@@ -181,7 +181,7 @@ namespace Res.Scripts.Attackers
             return null;
         }
 
-        private Vector3 targetBouncePositon;
+        public Vector3 targetBouncePositon;
 
         /// <summary>
         /// 怪物被阻挡后被挤压到格子边缘的效果（大概
@@ -194,7 +194,7 @@ namespace Res.Scripts.Attackers
             defenderWhoBlockMe = defender;
 
             targetBouncePositon = defender.transform.position;
-            if (Mathf.Abs(transform.position.x - defender.transform.position.x) <= 0.2f)
+            if (Mathf.Abs(transform.position.x - defender.transform.position.x) <= 0.4f)
             {
                 if (transform.position.z < defender.transform.position.z)
                 {
@@ -205,7 +205,7 @@ namespace Res.Scripts.Attackers
                     targetBouncePositon.z = defender.transform.position.z + 0.49f;
                 }
             }
-            else if (Mathf.Abs(transform.position.z - defender.transform.position.z) <= 0.2f)
+            else if (Mathf.Abs(transform.position.z - defender.transform.position.z) <= 0.4f)
             {
                 if (transform.position.x < defender.transform.position.x)
                 {

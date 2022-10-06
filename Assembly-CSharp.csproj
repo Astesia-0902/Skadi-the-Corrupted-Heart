@@ -140,6 +140,7 @@
      <Compile Include="Assets\Res\Scripts\Game Managers\NodeLoopManager.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\TimelineManager.cs" />
      <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansMeshUtils.cs" />
+     <Compile Include="Assets\Res\Scripts\LightRotation.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Grani\GraniAm.cs" />
      <Compile Include="Assets\Res\Scripts\Game Managers\GameManager.cs" />
      <Compile Include="Assets\Res\Scripts\Defenders\_Grani\Grani.cs" />

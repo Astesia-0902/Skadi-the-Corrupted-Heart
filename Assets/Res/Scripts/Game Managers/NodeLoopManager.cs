@@ -22,11 +22,16 @@ namespace Res.Scripts.Game_Managers
         public Transform nodesParent;
         public Vector3[] nodesPosition;
 
+        public GameObject seabornSpawnEffectRed;
+        public GameObject seabornSpawnEffectGreen;
+
         public int spawnPointID;
 
         private void Awake()
         {
             nodesParent = transform.GetChild(0);
+            seabornSpawnEffectRed = transform.GetChild(1).gameObject;
+            seabornSpawnEffectGreen = transform.GetChild(2).gameObject;
         }
 
         private void Start()
@@ -136,6 +141,26 @@ namespace Res.Scripts.Game_Managers
         public void EnqueueAttackerToRemove(Attacker attacker)
         {
             attackersToRemove.Enqueue(attacker);
+        }
+
+        public void PlaySpwanEffect(int index)
+        {
+            if (index == 0)
+            {
+                int childCount = seabornSpawnEffectRed.transform.childCount;
+                for (int i = 0; i < childCount; i++)
+                {
+                    seabornSpawnEffectRed.transform.GetChild(i).gameObject.SetActive(true);
+                }
+            }
+            else if (index == 1)
+            {
+                int childCount = seabornSpawnEffectGreen.transform.childCount;
+                for (int i = 0; i < childCount; i++)
+                {
+                    seabornSpawnEffectGreen.transform.GetChild(i).gameObject.SetActive(true);
+                }
+            }
         }
     }
 

@@ -10,5 +10,16 @@ namespace Defenders._Mon3tr
         {
             Instantiate(skillAttackEffect, transform);
         }
+
+        public override void OnAttack()
+        {
+            if (hitFXPrefeb != null)
+            {
+                Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
+            }
+
+            defender.targetToDeal.TakeDamage(defender.attackDamage, defender.magicDamage,
+                defender.realDamageToDeal);
+        }
     }
 }
