@@ -243,8 +243,8 @@ MonoBehaviour:
   weightLevel: 2
   armor: 800
   magicResistance: 75
-  standardMoveSpeed: 0.3
-  moveSpeed: 1.5
+  standardMoveSpeed: 1.5
+  moveSpeed: 0.3
   nodeIndex: 0
   spawnPoint: 0
   isDead: 0
