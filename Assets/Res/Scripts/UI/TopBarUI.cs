@@ -9,20 +9,17 @@ public class TopBarUI : Singleton<TopBarUI>
 {
 
     private RectTransform lighthouseMask;
-    private RectTransform seabornIcon;
     public GameObject SkeletonAnimation;
     private Scrollbar seabornHP;
     private float originalWidth;
     private float originalHeight;
 
-    //小海嗣血量关联图标移动
     private float health = 0;
     private float maxHealth = 0;
 
     private void Start()
     {
         lighthouseMask = transform.Find("lighthouseMask").GetComponent<RectTransform>();
-        seabornIcon = transform.Find("seabornIcon").GetComponent<RectTransform>();
         seabornHP = transform.Find("SeabornHP").GetComponent<Scrollbar>();
         originalWidth = lighthouseMask.rect.width;
         originalHeight = lighthouseMask.rect.height;
@@ -46,7 +43,6 @@ public class TopBarUI : Singleton<TopBarUI>
         {
             maxHealth = maxHealthOfSeaborn;
             health = maxHealth;
-            Debug.Log("最高血量" + maxHealth);
         }
 
         if (0 == health)
@@ -68,8 +64,4 @@ public class TopBarUI : Singleton<TopBarUI>
             seabornHP.size -= difHealth / (maxHealth * 4);
         }
     }
-
-    /*其他脚本内容修改：
-     LittleSeaborn.cs:32行-调用IconMovement
-    TimelineManager.cs：17行-修改为public*/
 }
