@@ -78,6 +78,7 @@ Material:
     - _BlendTemp: 0
     - _BumpScale: 1
     - _CullMode: 2
+    - _CullMode2: 0
     - _CustomdataDis: 0
     - _CustomdataDist: 0
     - _CustomdataMainTexUV: 0
@@ -100,16 +101,20 @@ Material:
     - _DistortTexUSpeed: 0
     - _DistortTexVSpeed: 0
     - _DoubFace: 0
+    - _DoubFace2: 0
     - _DoubleDiss_ON: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _InFrenel_ON: 0
     - _MainAlpha: 1
+    - _Main_rotate: 0
     - _Main_u: 0
     - _Main_v: 0
     - _MaskTexAR: 0
     - _Mask_ON: 0
+    - _Mask_rotate: 0
     - _Mask_u: 0
     - _Mask_v: 0
     - _Metallic: 0
@@ -122,8 +127,9 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _Ztest: 4
-    - _Zwrite: 0
+    - _Ztest: 8
+    - _Zwrite: 1
+    - _softPow: 0
     m_Colors:
     - _BackColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
