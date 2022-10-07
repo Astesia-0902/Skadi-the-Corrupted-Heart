@@ -11,6 +11,8 @@ public class TopBarUI : Singleton<TopBarUI>
     private RectTransform lighthouseMask;
     public GameObject SkeletonAnimation;
     private Scrollbar seabornHP;
+    public AudioSource lightHouseAudio;
+    private bool audioPlayed = false;
     private float originalWidth;
     private float originalHeight;
 
@@ -27,11 +29,28 @@ public class TopBarUI : Singleton<TopBarUI>
 
     private void Update()
     {
-        if(!TimelineManager.Instance.lighthouseFlag)
+        LightHouseProgressBarcheck();
+        LightHouseAudioCheck();
+    }
+
+    private void LightHouseProgressBarcheck()
+    {
+        if (!TimelineManager.Instance.lighthouseFlag)
         {
             lighthouseMask.sizeDelta = new Vector2(originalWidth, (1 - ((float)TimelineManager.Instance.lighthouseTimer / 60)) * originalHeight);
         }
         SkeletonAnimation.SetActive(TimelineManager.Instance.lighthouseFlag);
+    }
+
+    private void LightHouseAudioCheck()
+    {
+        if (TimelineManager.Instance.lighthouseFlag && !audioPlayed)
+        {
+            audioPlayed = true;
+            lightHouseAudio.Play();
+        }
+        else if (!TimelineManager.Instance.lighthouseFlag)
+            audioPlayed = false;
     }
 
     public void IconMovement(float currentHealth ,float maxHealthOfSeaborn)
