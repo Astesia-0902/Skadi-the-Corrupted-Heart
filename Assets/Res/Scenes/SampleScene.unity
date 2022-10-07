@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkeletonAnimation: {fileID: 1569940925}
+  eff_Saoguang: {fileID: 1654861643}
   lightHouseAudio: {fileID: 1638736}
 --- !u!82 &1638736
 AudioSource:
@@ -13844,6 +13845,11 @@ Transform:
   m_Father: {fileID: 958573655}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1654861643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2202175249189361079, guid: d512930a40a8106468aa6314ffab8104, type: 3}
+  m_PrefabInstance: {fileID: 179204594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1655682146
 GameObject:
   m_ObjectHideFlags: 0

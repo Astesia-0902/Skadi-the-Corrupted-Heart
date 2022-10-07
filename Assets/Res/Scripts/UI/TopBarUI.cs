@@ -7,12 +7,13 @@ using Tool_Scripts;
 
 public class TopBarUI : Singleton<TopBarUI>
 {
-
-    private RectTransform lighthouseMask;
     public GameObject SkeletonAnimation;
-    private Scrollbar seabornHP;
+    public GameObject eff_Saoguang;
     public AudioSource lightHouseAudio;
-    private bool audioPlayed = false;
+    private RectTransform lighthouseMask;
+    private Scrollbar seabornHP;
+
+    private bool lightHouseOn = false;
     private float originalWidth;
     private float originalHeight;
 
@@ -30,7 +31,7 @@ public class TopBarUI : Singleton<TopBarUI>
     private void Update()
     {
         LightHouseProgressBarcheck();
-        LightHouseAudioCheck();
+        AudioAndLightCheck();
     }
 
     private void LightHouseProgressBarcheck()
@@ -42,15 +43,19 @@ public class TopBarUI : Singleton<TopBarUI>
         SkeletonAnimation.SetActive(TimelineManager.Instance.lighthouseFlag);
     }
 
-    private void LightHouseAudioCheck()
+    private void AudioAndLightCheck()
     {
-        if (TimelineManager.Instance.lighthouseFlag && !audioPlayed)
+        if (TimelineManager.Instance.lighthouseFlag && !lightHouseOn)
         {
-            audioPlayed = true;
+            lightHouseOn = true;
             lightHouseAudio.Play();
+            eff_Saoguang.SetActive(true);
         }
         else if (!TimelineManager.Instance.lighthouseFlag)
-            audioPlayed = false;
+        {
+            eff_Saoguang.SetActive(false);
+            lightHouseOn = false;
+        }
     }
 
     public void IconMovement(float currentHealth ,float maxHealthOfSeaborn)
