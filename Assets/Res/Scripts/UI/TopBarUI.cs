@@ -66,7 +66,6 @@ public class TopBarUI : Singleton<TopBarUI>
             health = currentHealth;
 
             seabornHP.size -= difHealth / (maxHealth * 4);
-            Debug.Log(difHealth / (maxHealth * 4));
         }
     }
 
