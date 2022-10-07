@@ -590,7 +590,7 @@ MonoBehaviour:
   realDamageToDeal: 0
   targetToDeal: {fileID: 0}
   skillPoint: 0
-  maxSkillPoint: 5
+  maxSkillPoint: 10
   isAttackRecovering: 0
   skillReady: 0
   currentHealTarget: {fileID: 0}

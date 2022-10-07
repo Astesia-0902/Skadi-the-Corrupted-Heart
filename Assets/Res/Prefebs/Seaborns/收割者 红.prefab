@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 13
-  maxHealth: 25000
+  maxHealth: 10000
   currentHealth: 0
   attackDamage: 500
   magicDamage: 0
@@ -258,6 +258,7 @@ MonoBehaviour:
   uiForUnits: {fileID: 0}
   defenderWhoBlockMe: {fileID: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetBouncePositon: {x: 0, y: 0, z: 0}
   isBlownUp: 0
   isStunned: 0
   imprisoned: 0

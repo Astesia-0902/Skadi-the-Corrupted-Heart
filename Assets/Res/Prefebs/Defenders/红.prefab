@@ -72,7 +72,7 @@ MonoBehaviour:
   resistance: 0
   afterBurst: 0
   stunTimer: 0
-  attackDamage: 605
+  attackDamage: 805
   magicDamage: 0
   attackTimerStandard: 0.93
   physicalDamageToDeal: 0

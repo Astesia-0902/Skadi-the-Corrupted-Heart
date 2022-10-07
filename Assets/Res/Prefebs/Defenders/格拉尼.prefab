@@ -82,7 +82,7 @@ MonoBehaviour:
   realDamageToDeal: 0
   targetToDeal: {fileID: 0}
   skillPoint: 50
-  maxSkillPoint: 74
+  maxSkillPoint: 2000
   isAttackRecovering: 0
   skillReady: 0
   isAttacking: 0

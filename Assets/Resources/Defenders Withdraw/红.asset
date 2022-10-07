@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: "\u7EA2"
   m_EditorClassIdentifier: 
   defenderToWithdraw: "\u7EA2(Clone)"
-  withdrawTime: 118
+  withdrawTime: 124
