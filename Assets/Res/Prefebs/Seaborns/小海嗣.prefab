@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  maxHealth: 8500
+  maxHealth: 7500
   currentHealth: 0
   attackDamage: 0
   magicDamage: 0

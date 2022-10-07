@@ -105,7 +105,7 @@ MonoBehaviour:
   isBlownUp: 0
   isStunned: 0
   imprisoned: 1
-  range: 1.1
+  range: 1.5
   targetsToDeal: []
 --- !u!1 &7975225413605729959
 GameObject:

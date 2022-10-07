@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: mon3tr 1
   m_EditorClassIdentifier: 
   defenderToWithdraw: Mon3tr(Clone)
-  withdrawTime: 220
+  withdrawTime: 210
