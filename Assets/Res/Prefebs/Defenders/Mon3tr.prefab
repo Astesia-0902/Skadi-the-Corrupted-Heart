@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8869990379548142387}
   - component: {fileID: 3117688115139798179}
   - component: {fileID: 3472458416788407118}
-  - component: {fileID: 6931776308223355811}
+  - component: {fileID: 7978430756364868540}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (token_10002_kalts_mon3tr)
   m_TagString: Untagged
@@ -202,7 +202,7 @@ MonoBehaviour:
     useCustomMixMode: 1
     layerMixModes: 01000000
     layerBlendModes: 01000000
---- !u!114 &6931776308223355811
+--- !u!114 &7978430756364868540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,9 +317,7 @@ MonoBehaviour:
   skillEffectPrefeb1: {fileID: 0}
   skillEffectPrefeb2: {fileID: 0}
   attackSFX:
-  - {fileID: 8300000, guid: 37e992c83063f5d4bae50ea83e84eb23, type: 3}
-  - {fileID: 8300000, guid: b6ee76b5c65f1324ab7067b0a58d7fe3, type: 3}
-  - {fileID: 8300000, guid: bce1a8a8880701f4e93f9a4a05570390, type: 3}
+  - {fileID: 8300000, guid: 0dfbbc491a274e745b2678cc26ca6d75, type: 3}
   sanity: 0
   sanityRecoveryTimer: 0
   sanityRecoveryThreshold: 10
@@ -341,6 +339,8 @@ MonoBehaviour:
   isSkillOn: 0
   skillTimer: 0
   skillEffect: {fileID: 5402611074867002899, guid: 52733e1430c927941b47b3ad2f56cd28, type: 3}
+  spawnSFX:
+  - {fileID: 8300000, guid: 57a2d771a30090b488337523b69002eb, type: 3}
 --- !u!1001 &3579629191066069828
 PrefabInstance:
   m_ObjectHideFlags: 0

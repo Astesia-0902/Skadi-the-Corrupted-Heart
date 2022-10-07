@@ -1,10 +1,13 @@
 using Res.Scripts.Attackers;
 using Res.Scripts.Game_Managers;
+using UnityEngine;
 
 namespace Res.Scripts.Defenders._Red
 {
     public class Red : Defender
     {
+        public AudioClip[] spawnSFX;
+
         public void CastSkill()
         {
             for (int i = 2; i < rangeParent.childCount; i++)

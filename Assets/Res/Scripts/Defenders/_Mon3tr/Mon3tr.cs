@@ -14,10 +14,18 @@ namespace Res.Scripts.Defenders._Mon3tr
         private GameObject mySkillEffect;
         public GameObject skillEffect;
 
+        public AudioClip[] spawnSFX;
+
         private void OnEnable()
         {
             kalts = FindObjectOfType<Kalts>();
             kalts.FindMons3TR();
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+            PlayRandomSFX(spawnSFX);
         }
 
         protected override void Update()
@@ -42,7 +50,6 @@ namespace Res.Scripts.Defenders._Mon3tr
                 {
                     attackTimer = attackTimerStandard;
                     float attackAnimationSpeed = attackTimerStandard < 1f ? 1 / attackTimerStandard : 1f;
-                    PlayRandomSFX(attackSFX);
                     animatorManager.PlayTargetAnimation(isSkillOn ? "Skill_2" : "Attack", true, attackAnimationSpeed);
                     RefreshRotation();
                 }

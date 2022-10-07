@@ -16,7 +16,7 @@ namespace Res.Scripts.Game_Managers
             {
                 AudioSource[] audioSources = Camera.main.GetComponents<AudioSource>();
                 fxSource = audioSources[0];
-                fxSource.volume = 0.3f;
+                fxSource.volume = 0.75f;
                 bgmSource = audioSources[1];
             }
         }

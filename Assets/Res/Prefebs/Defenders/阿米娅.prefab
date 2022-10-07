@@ -64,7 +64,8 @@ MonoBehaviour:
   targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   skillEffectPrefeb1: {fileID: 0}
   skillEffectPrefeb2: {fileID: 0}
-  attackSFX: []
+  attackSFX:
+  - {fileID: 8300000, guid: 27bb90f05344ec440bf99221decf107a, type: 3}
   sanity: 0
   sanityRecoveryTimer: 0
   sanityRecoveryThreshold: 10

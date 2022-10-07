@@ -14,6 +14,7 @@ namespace Res.Scripts.Defenders._Red
         public void OnStart()
         {
             red.CastSkill();
+            red.PlayRandomSFX(red.spawnSFX);
         }
     }
 }

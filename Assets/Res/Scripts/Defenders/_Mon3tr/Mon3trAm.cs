@@ -1,8 +1,9 @@
+using Defenders;
 using UnityEngine;
 
-namespace Defenders._Mon3tr
+namespace Res.Scripts.Defenders._Mon3tr
 {
-    public class Mon3trAm : AnimatorManagerDefender
+    public class Mon3TRAm : AnimatorManagerDefender
     {
         public GameObject skillAttackEffect;
 
@@ -10,16 +11,6 @@ namespace Defenders._Mon3tr
         {
             Instantiate(skillAttackEffect, transform);
         }
-
-        public override void OnAttack()
-        {
-            if (hitFXPrefeb != null)
-            {
-                Instantiate(hitFXPrefeb, defender.targetToDeal.hitPoint);
-            }
-
-            defender.targetToDeal.TakeDamage(defender.attackDamage, defender.magicDamage,
-                defender.realDamageToDeal);
-        }
+        
     }
 }
