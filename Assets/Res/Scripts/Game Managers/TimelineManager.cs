@@ -30,6 +30,8 @@ namespace Res.Scripts.Game_Managers
         public Transform sunLight;
         public Vector3 sunLightRotation;
 
+        public GameObject lightHouseEffect;
+
         protected override void Awake()
         {
             base.Awake();
@@ -143,6 +145,12 @@ namespace Res.Scripts.Game_Managers
                 attacker.GetStunned(3600f);
             }
 
+            // int childCount = lightHouseEffect.transform.childCount;
+            // for (int i = 0; i < childCount; i++)
+            // {
+            //     lightHouseEffect.transform.GetChild(i).gameObject.SetActive(true);
+            // }
+
             EntitySummoner.Instance.ClearQueue();
             StartCoroutine(EmptyAttackerSummonDataIE());
 
@@ -172,6 +180,13 @@ namespace Res.Scripts.Game_Managers
         public void NextWave()
         {
             lighthouseFlag = false;
+            
+            // int childCount = lightHouseEffect.transform.childCount;
+            // for (int i = 0; i < childCount; i++)
+            // {
+            //     lightHouseEffect.transform.GetChild(i).gameObject.SetActive(false);
+            // }
+            
             GameManager.Instance.skadi.TakeDamage(0, 0, 0.25f * GameManager.Instance.skadi.maxHealth);
             GameManager.Instance.skadi.StunRecover();
             LoadNewAttackersData(waveCount.ToString());
