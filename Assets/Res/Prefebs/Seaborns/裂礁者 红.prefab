@@ -267,16 +267,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 16
-  maxHealth: 25000
+  maxHealth: 10000
   currentHealth: 0
-  attackDamage: 400
-  magicDamage: 400
+  attackDamage: 200
+  magicDamage: 200
   realDamage: 0
   sanityDamage: 0
   blockPara: 1
   weightLevel: 4
-  armor: 750
-  magicResistance: 40
+  armor: 450
+  magicResistance: 20
   standardMoveSpeed: 1.2
   moveSpeed: 0
   nodeIndex: 0
@@ -292,6 +292,7 @@ MonoBehaviour:
   uiForUnits: {fileID: 0}
   defenderWhoBlockMe: {fileID: 0}
   targetRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
+  targetBouncePositon: {x: 0, y: 0, z: 0}
   isBlownUp: 0
   isStunned: 0
   imprisoned: 0
