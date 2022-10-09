@@ -52,108 +52,155 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Defenders\_Honeyberry\Honeyberry.cs" />
-     <Compile Include="Assets\Scripts\Defenders\AnimatorManagerDefender.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\GameLoopManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Specter the Unchained\SpecterAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\DefenderHealer.cs" />
-     <Compile Include="Assets\Scripts\Tile\Tile.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Lumen\LumenAm.cs" />
-     <Compile Include="Assets\Scripts\Attackers\AnimatorManagerAttacker.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_BlueP\BlueP.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_BlueP\BluePAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Irene\Irene.cs" />
-     <Compile Include="Assets\Scripts\Animation Behavior\ResetFlags.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Blaze\Blaze.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Lumen\Lumen.cs" />
-     <Compile Include="Assets\Scripts\Attackers\Sea Hound\SeaHound.cs" />
-     <Compile Include="Assets\Scripts\Attackers\AttackerSummonData.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Indigo\IndigoAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Honeyberry\HoneyberryAnimator.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Elysium\Elysium.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\NodeLoopManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
-     <Compile Include="Assets\Scripts\Attackers\Sea Hound\SeaHoundAnimatorManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Irene\IreneAnimatorManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Specter the Unchained\Specter.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Grani\GraniAm.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Grani\Grani.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\Singleton.cs" />
-     <Compile Include="Assets\Scripts\Defenders\DefenderHealerAnimatorManager.cs" />
-     <Compile Include="Assets\Scripts\UI\DeployButton.cs" />
-     <Compile Include="Assets\Scripts\Game Managers\EntitySummoner.cs" />
-     <Compile Include="Assets\Scripts\ButtonTemp.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Indigo\Indigo.cs" />
-     <Compile Include="Assets\Scripts\Attackers\Attacker.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Blaze\BlazeAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Hoshiguma\Hoshiguma.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Hoshiguma\HoshigumaAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Kalts\Kalts.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Kalts\KaltsAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Mon3tr\Mon3tr.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Mon3tr\Mon3trAm.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Red\Red.cs" />
-     <Compile Include="Assets\Scripts\Defenders\_Red\RedAm.cs" />
-     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.atlas.txt" />
-     <None Include="Assets\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
-     <None Include="Assets\Spine\version.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr_2.skel.txt" />
-     <None Include="Assets\Models\Defenders\Unity_kalts\char_003_kalts.atlas.txt" />
-     <None Include="Assets\Models\Defenders\unity_skadi23\char_1012_skadi2_boc_4.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsbskr_2\enemy_1235_dsbskr_2.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr.atlas.txt" />
-     <None Include="Assets\Models\Defenders\Unity_irene\char_4009_irene.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr.skel.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr.skel.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr.skel.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsintc\enemy_1151_dslntc.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl_2.atlas.txt" />
-     <None Include="Assets\Models\Defenders\Unity_red\char_144_red.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl_2.skel.txt" />
-     <None Include="Assets\Models\Defenders\unity_grani\char_220_grani.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dshond2\enemy_1147_dshond.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsbow_2\enemy_1149_dsbow_2.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr_2.skel.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsbow\enemy_1149_dsbow.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1234_dsubrl.skel.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr_2.skel.txt" />
-     <None Include="Assets\Models\Defenders\unity_elysm\char_401_elysm.atlas.txt" />
-     <None Include="Assets\Models\Defenders\unity_ghost\char_1023_ghost2.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsexcu_2\enemy_1153_dsexcu.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsexcu 1\enemy_1153_dsexcu.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsbskr\enemy_1235_dsbskr.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr_2.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsintc -2\enemy_1151_dslntc.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsubrl2\enemy_1234_dsubrl.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr.atlas.txt" />
-     <None Include="Assets\Models\Defenders\Unity_ingigo\char_469_indigo.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr.atlas.txt" />
-     <None Include="Assets\Models\Defenders\Unity_huang\char_017_huang.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr.skel.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1529_dsdevr.atlas.txt" />
-     <None Include="Assets\Models\Defenders\unity_bluep\char_129_bluep.atlas.txt" />
-     <None Include="Assets\Models\Defenders\Unity_hsguma\char_136_hsguma.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr_2.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1233_dsshtr_2.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsubrl\enemy_1234_dsubrl.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1231_dsrunr.skel.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1230_dsbudr_2.atlas.txt" />
-     <None Include="Assets\Models\Defenders\unity_skadi2\char_1012_skadi2.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dshond\enemy_1147_dshond.atlas.txt" />
-     <None Include="Assets\Models\Defenders\Unity_lumen\char_4042_lumen.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1232_dssalr_2.skel.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1529_dsdevr.skel.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dssbr\enemy_1148_dssbr.atlas.txt" />
-     <None Include="Assets\愚人号 spine资源\enemy_1235_dsbskr_2.skel.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dssbr2\enemy_1148_dssbr.atlas.txt" />
-     <None Include="Assets\Models\Seaborns\Unity_dsshtr2\enemy_1233_dsshtr.atlas.txt" />
-     <None Include="Assets\Models\Defenders\unity_mon3tr\token_10002_kalts_mon3tr.atlas.txt" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansDecalTools.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\Honeyberry.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Hoshiguma\HoshigumaAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeabornAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Hoshiguma\Hoshiguma.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Specter the Unchained\SpecterAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Tile\Tile.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\AudioManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\Ghost.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsTracer.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\OnExit.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\AnimatorManagerAttacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Lancer\LancerAm.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansPostProcess.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Skadi\SkadiAm.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImporter.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Red\Red.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Irene\Irene.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Launcher\Launcher.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\UiForUnits.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImporterWindow.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\AttackerSummonData.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\IndigoAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\AnimatorManagerAttackerRange.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\Defender.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Ghost\GhostAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlagExit.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHoundAnimatorManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\DestroyOnDeath.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Irene\IreneAnimatorManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Kalts\KaltsAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Specter the Unchained\Specter.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Kalts\Kalts.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\CostUI.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\GameSpeedButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Tool Scripts\Singleton.cs" />
+     <Compile Include="Assets\effect\Lickba\Shader\MirrorReflection.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefenderHealer.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\DeployButton.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChimeAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Amiya\Amiya.cs" />
+     <Compile Include="Assets\Res\Scripts\ButtonTemp.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\DefenderWithdrawData.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\Indigo.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\QueueUpdater.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Amiya\AmiyaAm.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansUtilities.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\BlazeAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsNeuralDamageEffect.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3trAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\AnimatorManagerDefender.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\GameLoopManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\LumenSkillTracer.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\Extension\RangeAttackTracerDefender.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\DefenderHealer.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\FlagOnStateUpdate.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\AttackerRange.cs" />
+     <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Extension\RangeAttackTracerAttacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Wind Chime\WindChime.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Red\RedAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Spitter\SpitterAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BlueP.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\CostManager.cs" />
+     <Compile Include="Assets\Res\model\timeControl.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansTerrainTools.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_BlueP\BluePAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\Reaper.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\TopBarUI.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansImageUtils.cs" />
+     <Compile Include="Assets\Res\Scripts\Animation Behavior\ResetFlags.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\DefenderSummonData.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\ElysiumAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Reaper\ReaperAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\LittleSeaborn\LittleSeaborn.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Blaze\Blaze.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Lumen\Lumen.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Indigo\IndigoTracer.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\Thorns.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\HoneyberrySkillTracer.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Sea Hound\SeaHound.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Spitter\Spitter.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Honeyberry\HoneyberryAnimator.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Elysium\Elysium.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\NodeLoopManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\TimelineManager.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansMeshUtils.cs" />
+     <Compile Include="Assets\Res\Scripts\LightRotation.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Grani\GraniAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\GameManager.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Grani\Grani.cs" />
+     <Compile Include="Assets\Res\Quixel\Scripts\BridgeImporter\MegascansBridgeLink.cs" />
+     <Compile Include="Assets\Res\Scripts\UI\QueueData.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\Extension\HealTracer.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Mon3tr\Mon3TR.cs" />
+     <Compile Include="Assets\Res\Scripts\Game Managers\EntitySummoner.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Launcher\LauncherAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Lancer\Lancer.cs" />
+     <Compile Include="Assets\Res\Scripts\Defenders\_Thorns\ThornsAm.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Attacker.cs" />
+     <Compile Include="Assets\Res\Scripts\Attackers\Skadi\Skadi.cs" />
+     <None Include="Assets\Res\Models\Defenders\Unity_glider\char_449_glider.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr\enemy_1233_dsshtr.atlas.txt" />
+     <None Include="Assets\Res\红蒂音效\readme.txt" />
+     <None Include="Assets\Res\Spine\version.txt" />
+     <None Include="Assets\Res\Models\Defenders\Unity_kalts\char_003_kalts.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\unity_skadi23\char_1012_skadi2_boc_4.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsbskr_2\enemy_1235_dsbskr_2.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\Unity_irene\char_4009_irene.atlas.txt" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\4_灯光熄灭\skeleton.atlas.txt" />
+     <None Include="Assets\Res\model\effect\rain.shader" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsintc\enemy_1151_dslntc.atlas.txt" />
+     <None Include="Assets\effect\Xxs\shader\Xxs_TY_1.0.shader" />
+     <None Include="Assets\Res\Models\Defenders\Unity_red\char_144_red.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\unity_thorns\char_293_thorns.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\unity_grani\char_220_grani.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dshond2\enemy_1147_dshond.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsbow_2\enemy_1149_dsbow_2.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsbow\enemy_1149_dsbow.atlas.txt" />
+     <None Include="Assets\UI\UI_Shader\UI.shader" />
+     <None Include="Assets\effect\Lickba\Shader\sea.shader" />
+     <None Include="Assets\Res\Models\Defenders\unity_elysm\char_401_elysm.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\unity_ghost\char_1023_ghost2.atlas.txt" />
+     <None Include="Assets\effect\Xxs\shader\Xxs_TY_1.1.shader" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\2_灯光慢闪\skeleton.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsexcu_2\enemy_1153_dsexcu.atlas.txt" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\1_灯光常亮\skeleton.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_haisi\token_10017_skadi2_dedant.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsexcu 1\enemy_1153_dsexcu.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsbskr\enemy_1235_dsbskr.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsintc -2\enemy_1151_dslntc.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsubrl2\enemy_1234_dsubrl.atlas.txt" />
+     <None Include="Assets\UI\战斗界面UI资源\灯塔光线spine\3_灯光快闪\skeleton.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\Unity_ingigo\char_469_indigo.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\Unity_huang\char_017_huang.atlas.txt" />
+     <None Include="Assets\effect\Lickba\Shader\PorDis_LB.shader" />
+     <None Include="Assets\Res\Models\Defenders\unity_bluep\char_129_bluep.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\Unity_Amiya\char_1001_amiya2.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\Unity_hsguma\char_136_hsguma.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsubrl\enemy_1234_dsubrl.atlas.txt" />
+     <None Include="Assets\effect\Lickba\Shader\VFX_Normal.shader" />
+     <None Include="Assets\Res\Models\Seaborns\unity_skadi2\char_1012_skadi2.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dshond\enemy_1147_dshond.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\Unity_lumen\char_4042_lumen.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dssbr\enemy_1148_dssbr.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dssbr2\enemy_1148_dssbr.atlas.txt" />
+     <None Include="Assets\Res\Models\Seaborns\Unity_dsshtr2\enemy_1233_dsshtr.atlas.txt" />
+     <None Include="Assets\Res\Models\Defenders\unity_mon3tr\token_10002_kalts_mon3tr.atlas.txt" />
  <Reference Include="UnityEngine">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -385,6 +432,9 @@
  <Reference Include="Unity.Collections.LowLevel.ILSupport">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.collections@1.2.3/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
  </Reference>
+ <Reference Include="Mono.Cecil">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
@@ -400,8 +450,8 @@
  <Reference Include="Unity.Burst.Cecil.Rocks">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
  </Reference>
- <Reference Include="Mono.Cecil">
- <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/UnityEditor/2020.3.24f1c2/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -751,6 +801,12 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -766,6 +822,12 @@
  <Reference Include="Unity.Burst.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Searcher.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
@@ -774,6 +836,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
@@ -784,20 +849,35 @@
  <Reference Include="Unity.Mathematics">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Burst">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Collections">
  <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>D:/UnityProject/Skadi the Corrupted Heart/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

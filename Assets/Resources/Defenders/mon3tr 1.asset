@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1786a48cb6d7bda4bb613b1119ff63db, type: 3}
+  m_Name: mon3tr 1
+  m_EditorClassIdentifier: 
+  defenderPrefeb: {fileID: 4209146984031734321, guid: 4fbaaecdd8aad0d43812198c6a1e22fb, type: 3}
+  position: {x: 2.8, y: 0.50316143, z: -1.95}
+  deployTime: 192

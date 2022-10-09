@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1786a48cb6d7bda4bb613b1119ff63db, type: 3}
+  m_Name: "\u84DD\u6BD2"
+  m_EditorClassIdentifier: 
+  defenderPrefeb: {fileID: 3323954560002510073, guid: 4eff15a5f07c7d446963cc5dccc21e0a, type: 3}
+  position: {x: -1.98, y: 0.66, z: -1.86}
+  deployTime: 20
